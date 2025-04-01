@@ -1,0 +1,65 @@
+.logo-slider {
+  width: 100%;
+  background-color: white;
+  padding: 1.25rem 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-track {
+  width: calc(180px * 14); /* ロゴ×2セット分の横幅 */
+  animation: scroll 40s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-180px * 7)); /* 1セット分だけ移動 */
+  }
+}
+
+.slide {
+  flex-shrink: 0;
+  width: 180px;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.logo-wrapper {
+  position: relative;
+  width: 100%;
+  height: 4rem;
+}
+
+.logo-image {
+  object-fit: contain;
+  object-position: left;
+}
+
+/* メディアクエリ - 画面サイズに応じて速度調整 */
+@media (max-width: 768px) {
+  .slider-track {
+    animation-duration: 30s; /* モバイルではやや速く */
+  }
+}
+
+/* 画面サイズ変更時にちらつきを防ぐ */
+@media (prefers-reduced-motion: no-preference) {
+  .slider-track {
+    transition: none;
+  }
+}

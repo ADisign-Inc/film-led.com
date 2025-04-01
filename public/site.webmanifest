@@ -1,0 +1,11 @@
+{
+  "name": "透過フィルムデジタルサイネージ",
+  "short_name": "デジタルサイネージ",
+  "description": "革新的なデジタルサイネージで空間を変える。ビジネスの集客力を最大化する最先端ディスプレイ。",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/",
+  "orientation": "portrait",
+  "lang": "ja"
+}
