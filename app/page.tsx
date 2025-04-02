@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { ArrowRight, Check, Menu, X } from "lucide-react";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import Button from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import LogoSlider from "../components/LogoSlider";
@@ -58,10 +58,12 @@ export default function LandingPage() {
                   ビジネスの集客力を最大化する最先端デジタルサイネージ
                 </p>
 
-                <Button size="lg" className="gap-2">
-                  無料相談・お申し込みはこちら
-                  <ArrowRight className="h-4 w-4" />
-                </Button>
+                <div className="inline-block">
+                  <Button>
+                    無料相談・お申し込みはこちら
+                    <ArrowRight className="h-4 w-4" />
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
@@ -76,14 +78,14 @@ export default function LandingPage() {
           </h2>
 
           <div className="grid gap-5 grid-cols-1 xs:grid-cols-2 md:grid-cols-3 mb-20">
-            <div className="border-[0.5px] border-yellow-300 p-6 md:px-8 py-16 rounded-xl shadow-sm">
+            <div className="border-[0.5px] border-yellow-300 p-6 md:px-8 py-12 rounded-xl shadow-sm">
               <div className="flex items-center justify-center mb-5 md:mb-8">
                 <Image
                   src="/images/icons/sales.svg"
                   alt=""
                   width={80}
                   height={80}
-                  className="object-cover"
+                  layout="intrinsic"
                   priority
                 />
               </div>
@@ -93,7 +95,8 @@ export default function LandingPage() {
                 屋内・屋外用のLEDビジョンを幅広く取り扱っています。シースルービジョンや高解像度屋内LEDビジョン、一体型LEDビジョンなど、様々なニーズに応える最先端の製品と、最適な映像ソリューションをご提案しています。
               </p>
             </div>
-            <div className="border-[0.5px] border-yellow-300 p-6 md:px-8 py-16 rounded-xl shadow-sm">
+
+            <div className="border-[0.5px] border-yellow-300 p-6 md:px-8 py-12 rounded-xl shadow-sm">
               <div className="flex items-center justify-center mb-5 md:mb-8">
                 <Image
                   src="/images/icons/rental.svg"
@@ -110,7 +113,7 @@ export default function LandingPage() {
                 弊社のLEDビジョンレンタル事業では、高品質なLEDパネルの貸出を行っています。イベントや展示会、プロモーションに最適な映像ソリューションを提供し、設置から撤去までトータルサポートいたします。
               </p>
             </div>
-            <div className="border-[0.5px] border-yellow-300 p-6 md:px-8 py-16 rounded-xl shadow-sm">
+            <div className="border-[0.5px] border-yellow-300 p-6 md:px-8 py-12 rounded-xl shadow-sm">
               <div className="flex items-center justify-center mb-5 md:mb-8">
                 <Image
                   src="/images/icons/video.svg"
@@ -180,16 +183,25 @@ export default function LandingPage() {
         </section>
 
         {/* LED BLOG */}
-        <section className="container max-w-6xl py-10 md:py-20 mb-10">
+        <section className="container max-w-6xl mb-10">
           <h2>
             LED BLOG
             <span>LED ブログ</span>
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10 md:mb-20">
             {blogs.map((post) => (
               <BlogList key={post.id} post={post} />
             ))}
+          </div>
+
+          <div className="flex justify-center">
+            <Link href="/blog" className="inline-block">
+              <Button variant="default">
+                LED ブログ一覧へ
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </section>
 

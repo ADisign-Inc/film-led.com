@@ -4,7 +4,6 @@ import React from "react";
 import Image from "next/image";
 import "../styles/logo-slider.css";
 
-// ロゴ画像のパス
 const logoSlides = [
   "/images/logo-light.svg",
   "/images/logo-light.svg",
@@ -32,7 +31,7 @@ export default function LogoSlider() {
                   src={logo}
                   alt={`Partner Logo ${index + 1}`}
                   fill
-                  className="object-contain object-left"
+                  className="object-contain object-left w-auto h-auto"
                   priority={true}
                   unoptimized={true}
                 />

@@ -17,7 +17,7 @@ export type Blog = {
 export const blogs: Blog[] = [
   {
     id: "1",
-    title: "LEDビジョンの選び方ガイド",
+    title: "LEDビジョンとは？",
     description: "用途に合わせた最適なLEDビジョンの選び方をご紹介します。",
     content: "LEDビジョンを選ぶ際の重要なポイントについて解説します...",
     image: "/images/blog/0001.jpg",
@@ -26,6 +26,15 @@ export const blogs: Blog[] = [
   },
   {
     id: "2",
+    title: "LEDビジョンの選び方ガイド",
+    description: "用途に合わせた最適なLEDビジョンの選び方をご紹介します。",
+    content: "LEDビジョンを選ぶ際の重要なポイントについて解説します...",
+    image: "/images/blog/0001.jpg",
+    date: "2024-03-20",
+    category: "ガイド",
+  },
+  {
+    id: "3",
     title: "シースルーLEDビジョンの活用事例",
     description:
       "実際の導入事例から、シースルーLEDビジョンの効果を解説します。",
@@ -35,7 +44,7 @@ export const blogs: Blog[] = [
     category: "活用事例",
   },
   {
-    id: "3",
+    id: "4",
     title: "透明フィルム型LEDビジョンの技術解説と最新トレンド",
     description:
       "透明フィルム型LEDビジョンの技術的な仕組みと最新の研究動向を詳しく解説。",
@@ -67,7 +76,7 @@ export const blogs: Blog[] = [
     },
   },
   {
-    id: "4",
+    id: "5",
     title: "導入事例から学ぶ！透明フィルム型LEDビジョンの活用法",
     description:
       "透明フィルム型LEDビジョンの活用事例を紹介し、実際の導入効果を解説。",
@@ -99,7 +108,7 @@ export const blogs: Blog[] = [
     },
   },
   {
-    id: "5",
+    id: "6",
     title: "透明フィルム型LEDビジョンの選び方と導入ガイド",
     description:
       "透明フィルム型LEDビジョンの選定基準や導入のポイントを徹底解説。",

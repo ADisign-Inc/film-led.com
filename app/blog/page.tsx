@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Header } from "@/components/Header";
-import { Button } from "@/components/ui/button";
+import Button from "@/components/ui/button";
 import { BlogList } from "@/components/blog/BlogList";
 import { blogs } from "@/data/blog";
 import Link from "next/link";

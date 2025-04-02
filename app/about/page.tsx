@@ -2,8 +2,10 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import Image from "next/image";
 import { X, Check } from "lucide-react";
+import Button from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
-export default function AboutPage() {
+export default async function AboutPage() {
   return (
     <div className="flex min-h-screen flex-col relative">
       <div className="fixed inset-0 -z-10">
@@ -18,386 +20,692 @@ export default function AboutPage() {
       <Header />
 
       <main className="flex-1">
-        <section className="container max-w-6xl py-10 md:py-40">
+        <div className="container max-w-5xl py-10 md:py-40">
           <h2>
             About
             <span>透明フィルムLEDビジョンとは？</span>
           </h2>
 
-          <div className="container">
-            <h2 className="text-3xl font-bold text-center mb-12">
-              現状の課題と解決策
-            </h2>
+          <article className="bg-white/85 text-black px-5 md:px-16 py-16 md:py-20">
+            {/* 透明フィルムLEDビジョンとは？ */}
+            <section className="mb-10 md:mb-20">
+              <h3 className="text-2xl text-start font-bold mb-5 md:mb-8 flex items-center gap-6">
+                <span className="w-1 h-10 bg-yellow-400"></span>
+                透明フィルムLEDビジョンとは？
+              </h3>
 
-            <div className="text-black grid gap-8 md:grid-cols-3">
-              <div className="bg-red-50 p-6 rounded-xl">
-                <h3 className="text-xl font-semibold mb-4">
-                  伝えたい情報が埋もれていませんか？
-                </h3>
-                <ul className="space-y-3">
-                  <li className="flex gap-2">
-                    <X className="h-5 w-5 text-red-500 flex-shrink-0 mt-1" />
-                    <p>
-                      店舗や商業施設で、ディスプレイやポスターを活用しても視認性が悪く、通行人に気づかれにくい。
-                    </p>
-                  </li>
-                  <li className="flex gap-2">
-                    <X className="h-5 w-5 text-red-500 flex-shrink-0 mt-1" />
-                    <p>
-                      従来のデジタルサイネージでは、設置場所に制約があり、効果的な位置に配置できない。
-                    </p>
-                  </li>
-                  <li className="flex gap-2">
-                    <X className="h-5 w-5 text-red-500 flex-shrink-0 mt-1" />
-                    <p>
-                      内装や空間デザインの美観を損なうことで、ブランド価値が低下してしまう。
-                    </p>
-                  </li>
-                </ul>
+              <div>
+                <div className="flex justify-center mb-5 md:mb-8">
+                  <Image
+                    src="/images/about/01.jpg"
+                    alt=""
+                    width={500}
+                    height={300}
+                    className="object-cover"
+                  />
+                </div>
+                <p className="mb-3">
+                  透明フィルム型LEDビジョンは、ガラスやアクリルなどの透明な素材に直接取り付けることで、視界を遮らずに映像や情報を表示できる革新的なディスプレイ技術です。
+                  <br />
+                  従来のLEDディスプレイや液晶ディスプレイ（LCD）とは異なり、透過性を維持しながらも高輝度・高解像度の映像を表示できるため、商業施設、オフィスビル、ショールーム、交通機関、イベント会場など、さまざまな場所で活用されています。
+                </p>
+
+                <p className="mb-3">
+                  このディスプレイは、透明なフィルム上に微細なLEDチップを均等に配置し、電子制御によって映像を形成する仕組みを採用しています。
+                  <br />
+                  LEDチップ間の隙間が最適化されており、視認性を確保しながらも透明度を損なわないのが大きな特徴です。
+                  <br />
+                  通常のLEDディスプレイと異なり、設置場所のデザインや空間の開放感を維持しつつ、情報発信が可能なため、広告や案内表示、装飾用途として非常に高い評価を受けています。
+                </p>
+
+                <p className="mb-3">
+                  透明フィルム型LEDビジョンは、薄型・軽量で、設置の自由度が高い点も大きな利点です。
+                  <br />
+                  一般的なディスプレイは、壁面やスタンドに固定する必要がありますが、この技術を用いることで、窓ガラスやガラス製のパーテーションなど、従来のディスプレイが設置できなかった場所にも導入できます。
+                  <br />
+                  これにより、空間の有効活用が可能となり、建築デザインやインテリアの美観を損なわずに情報を発信できるのです。
+                </p>
+
+                <p className="mb-3">
+                  さらに、透明フィルム型LEDビジョンは、明るい環境でも高い視認性を確保できる点が優れています。
+                  <br />
+                  従来のプロジェクターを使用した透明スクリーンと比べ、LEDの自己発光技術により、直射日光下でも鮮明な映像を表示できます。
+                  <br />
+                  このため、屋外のショーウィンドウや駅、空港などの公共空間での使用にも適しており、昼夜を問わずクリアな視認性を提供します。
+                </p>
+
+                <p className="mb-3">
+                  技術の進化に伴い、透明フィルム型LEDビジョンには、タッチスクリーン機能を組み込んだインタラクティブディスプレイモデルも登場しています。
+                  <br />
+                  これにより、ユーザーが直接画面に触れて操作できるようになり、製品情報の検索やショッピング、施設案内などの用途で活用される機会が増えています。
+                  <br />
+                  加えて、IoT（モノのインターネット）と連携することで、遠隔操作によるコンテンツ管理や、センサーとの連携によるインタラクティブな情報表示が可能となるなど、さらなる進化が期待されています。
+                </p>
+
+                <p className="mb-3">
+                  このように、透明フィルム型LEDビジョンは、従来のディスプレイ技術の枠を超え、さまざまな環境での情報表示や広告活用を可能にする新しいソリューションです。
+                  <br />
+                  省エネルギーで環境負荷が少なく、設置やメンテナンスも容易なため、今後ますます幅広い分野での導入が進むと考えられています。
+                </p>
               </div>
+            </section>
 
-              <div className="bg-yellow-50 p-6 rounded-xl">
-                <h3 className="text-xl font-semibold mb-4">
-                  従来のデジタルサイネージの限界とは？
-                </h3>
-                <ul className="space-y-3">
-                  <li className="flex gap-2">
-                    <X className="h-5 w-5 text-yellow-600 flex-shrink-0 mt-1" />
-                    <p>
-                      一般的な液晶ディスプレイやLEDビジョンは、場所を取るため設置が難しい。
-                    </p>
-                  </li>
-                  <li className="flex gap-2">
-                    <X className="h-5 w-5 text-yellow-600 flex-shrink-0 mt-1" />
-                    <p>
-                      既存のインテリアやガラス面と調和せず、視界を遮ってしまう。
-                    </p>
-                  </li>
-                  <li className="flex gap-2">
-                    <X className="h-5 w-5 text-yellow-600 flex-shrink-0 mt-1" />
-                    <p>高額な導入コストや維持費がかかる。</p>
-                  </li>
-                </ul>
-              </div>
+            {/* 透明フィルムLEDビジョンの技術的な仕組み */}
+            <section className="mb-10 md:mb-20">
+              <h3 className="text-2xl text-start font-bold mb-5 md:mb-8 flex items-center gap-6">
+                <span className="w-1 h-10 bg-yellow-400"></span>
+                透明フィルムLEDビジョンの技術的な仕組み
+              </h3>
 
-              <div className="bg-green-50 p-6 rounded-xl">
-                <h3 className="text-xl font-semibold mb-4">
-                  透過フィルム デジタルサイネージなら解決！
-                </h3>
-                <ul className="space-y-3">
-                  <li className="flex gap-2">
-                    <Check className="h-5 w-5 text-green-600 flex-shrink-0 mt-1" />
-                    <p>
-                      透明なフィルムに映像を映し出し、空間を活かしたPRが可能。
-                    </p>
-                  </li>
-                  <li className="flex gap-2">
-                    <Check className="h-5 w-5 text-green-600 flex-shrink-0 mt-1" />
-                    <p>
-                      窓やガラス面に直接貼り付けられ、場所を取らずに設置可能。
-                    </p>
-                  </li>
-                  <li className="flex gap-2">
-                    <Check className="h-5 w-5 text-green-600 flex-shrink-0 mt-1" />
-                    <p>
-                      美しいデザインと高い視認性で、商業施設・イベントなどの集客力を向上。
-                    </p>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Product Explanation */}
-        <section id="features" className="py-16 md:py-24 bg-background/50">
-          <div className="container">
-            <h2 className="text-3xl font-bold text-center mb-12">
-              デジタルサイネージとは？
-            </h2>
-
-            <div className="grid gap-8 md:grid-cols-2">
-              <div className="border border-white p-6 md:p-12 rounded-xl shadow-sm">
-                <h3 className="text-xl font-semibold mb-4">
-                  透明なのに高輝度表示！最新テクノロジーの仕組み
-                </h3>
-                <div className="space-y-4">
+              <div className="mb-5 md:mb-8">
+                <p className="text-xl font-semibold mb-4">
+                  ・透明なのに高輝度表示！最先端テクノロジー
+                </p>
+                <div className="space-y-4 ml-5">
                   <p>
-                    透過フィルムに映像を投影する技術を採用。高輝度・高解像度で鮮やかな映像を表示しながら、視界を遮らない革新的なディスプレイです。
+                    透明フィルム型LEDビジョンは、透過フィルムに微細なLEDチップを埋め込み、映像や情報を高輝度で表示できる革新的なディスプレイ技術です。
+                    <br />
+                    これにより、ガラス面をそのまま利用しながら、視界を遮ることなく鮮やかな映像を映し出します。
+                    <br />
+                    最新技術により、高解像度で細部まで鮮明に表示可能で、直射日光の中でも視認性を維持できます。
                   </p>
-                  <div className="relative h-[250px] rounded-lg overflow-hidden">
+                  <p>
+                    透明フィルム型LEDビジョンは、従来のディスプレイ技術に比べ、スペースを節約しつつ効果的な広告表示を実現します。
+                    <br />
+                    屋外でも屋内でも使用でき、昼夜を問わず安定した表示が可能です。これにより、公共施設や商業施設など、幅広い業界で活用されるようになっています。
+                  </p>
+                </div>
+              </div>
+
+              <div className="">
+                <p className="text-xl font-semibold mb-4">
+                  ・空間を活かす！ガラス面に設置できる斬新なディスプレイ
+                </p>
+                <div className="space-y-4 ml-5">
+                  <p>
+                    透明フィルム型LEDビジョンの最大の特徴は、ガラス面に直接設置できることです。これにより、建物の外観や内装を損なうことなく、広告や情報を表示することができます。
+                    <br />
+                    店舗のウィンドウやビルのガラスパネルに取り付けることで、スペースを有効活用しつつ、視覚的な効果を最大化できます。
+                  </p>
+                  <p>
+                    また、ガラス面に設置するため、ディスプレイが目立ちすぎず、周囲の空間に調和します。
+                    <br />
+                    これにより、店舗や企業のブランドイメージを洗練された形で演出できます。例えば、高級ブランド店では、店舗の外観を美しく保ちながら、動的な広告を表示することが可能になります。
+                  </p>
+                  <p>
+                    空間デザインと情報発信を両立させる透明フィルム型LEDビジョンは、都市型ビジネスにおいて非常に効果的なツールであり、今後ますます需要が高まることが予想されます。
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            {/* 透明フィルムLEDビジョンの主な特徴 */}
+            <section className="mb-10 md:mb-20">
+              <h3 className="text-2xl text-start font-bold mb-5 md:mb-8 flex items-center gap-6">
+                <span className="w-1 h-10 bg-yellow-400"></span>
+                透明フィルムLEDビジョンの主な特徴
+              </h3>
+
+              <div className="flex justify-center gap-5">
+                <div className="flex justify-center mb-5 md:mb-8">
+                  <Image
+                    src="/images/blog/0003.jpg"
+                    alt=""
+                    width={500}
+                    height={300}
+                    className="object-cover"
+                  />
+                </div>
+                <div className="flex justify-center mb-5 md:mb-8">
+                  <Image
+                    src="/images/about/02.jpg"
+                    alt=""
+                    width={500}
+                    height={300}
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+              <div>
+                <div className="mb-8">
+                  <p className="mb-3">
+                    1、
+                    <span className="text-lg md:text-xl font-semibold">
+                      透明性
+                    </span>
+                  </p>
+                  <p className="ml-5">
+                    透明フィルム型LEDビジョンの最大の特徴は、「透明性」にあります。
+                    <br />
+                    透明なフィルムにLEDチップが組み込まれているため、映像を表示していない部分はそのまま透明で、視界を遮りません。
+                    <br />
+                    このため、ガラス面や窓に設置しても、視界が確保され、空間全体の美観を損ねることがありません。
+                  </p>
+                </div>
+                <div className="mb-8">
+                  <p className="mb-3">
+                    2、
+                    <span className="text-lg md:text-xl font-semibold">
+                      高輝度・高解像度表示
+                    </span>
+                  </p>
+                  <p className="ml-5">
+                    最新のLED技術を活用しており、非常に高輝度・高解像度で映像を表示できます。
+                    <br />
+                    直射日光下でも高い視認性を誇り、屋外の過酷な環境でも明るく鮮明な映像を提供できます。
+                    <br />
+                    このため、広告や情報表示に適しており、夜間・昼間を問わず効果的に使用できます。
+                  </p>
+                </div>
+                <div className="mb-8">
+                  <p className="mb-3">
+                    3、
+                    <span className="text-lg md:text-xl font-semibold">
+                      薄型・軽量
+                    </span>
+                  </p>
+                  <p className="ml-5">
+                    透明フィルム型LEDビジョンは、非常に薄く、軽量であるため、設置が簡単で、既存の構造物に対しても負担をかけません。
+                    <br />
+                    さらに、軽量性を活かして、移動や設置変更が簡単に行えます。
+                  </p>
+                </div>
+                <div className="mb-8">
+                  <p className="mb-3">
+                    4、
+                    <span className="text-lg md:text-xl font-semibold">
+                      インタラクティブ機能
+                    </span>
+                  </p>
+                  <p className="ml-5">
+                    一部のモデルでは、タッチスクリーン機能やジェスチャー認識機能を搭載したインタラクティブなディスプレイとして使用することも可能です。
+                    <br />
+                    これにより、ユーザーはディスプレイに触れて操作することができ、エンターテインメント性や顧客の関与を高めることができます。
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            {/* 現状の課題 */}
+            <section className="mb-10 md:mb-20">
+              <h3 className="text-2xl text-start font-bold mb-5 md:mb-8 flex items-center gap-6">
+                <span className="w-1 h-10 bg-yellow-400"></span>
+                現状の課題
+              </h3>
+
+              <div className="mb-5">
+                <div className="mb-5 md:mb-8">
+                  <p className="text-lg md:text-xl font-semibold mb-3">
+                    ・伝えたい情報が埋もれていませんか？
+                  </p>
+                  <ul className="ml-5 space-y-3">
+                    <li className="flex gap-2">
+                      <X className="h-5 w-5 text-red-600 flex-shrink-0 mt-1" />
+                      <p>
+                        店舗や商業施設で、ディスプレイやポスターを活用しても視認性が悪く、通行人に気づかれにくい。
+                      </p>
+                    </li>
+                    <li className="flex gap-2">
+                      <X className="h-5 w-5 text-red-600 flex-shrink-0 mt-1" />
+                      <p>
+                        従来のLEDビジョンでは、設置場所に制約があり、効果的な位置に配置できない。
+                      </p>
+                    </li>
+                    <li className="flex gap-2">
+                      <X className="h-5 w-5 text-red-600 flex-shrink-0 mt-1" />
+                      <p>
+                        内装や空間デザインの美観を損なうことで、ブランド価値が低下してしまう。
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="mb-5 md:mb-8">
+                  <p className="text-lg md:text-xl font-semibold mb-3">
+                    ・従来のLEDビジョンの限界とは？
+                  </p>
+                  <ul className="ml-5 space-y-3">
+                    <li className="flex gap-2">
+                      <X className="h-5 w-5 text-red-600 flex-shrink-0 mt-1" />
+                      <p>
+                        一般的な液晶ディスプレイやLEDビジョンは、場所を取るため設置が難しい。
+                      </p>
+                    </li>
+                    <li className="flex gap-2">
+                      <X className="h-5 w-5 text-red-600 flex-shrink-0 mt-1" />
+                      <p>
+                        既存のインテリアやガラス面と調和せず、視界を遮ってしまう。
+                      </p>
+                    </li>
+                    <li className="flex gap-2">
+                      <X className="h-5 w-5 text-red-600 flex-shrink-0 mt-1" />
+                      <p>高額な導入コストや維持費がかかる。</p>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="mb-5 md:mb-8">
+                  <p className="text-lg md:text-xl font-semibold mb-3">
+                    ・透明フィルムLEDビジョンなら解決！
+                  </p>
+                  <ul className="ml-5 space-y-3">
+                    <li className="flex gap-2">
+                      <Check className="h-5 w-5 text-green-600 flex-shrink-0 mt-1" />
+                      <p>
+                        透明なフィルムに映像を映し出し、空間を活かしたPRが可能。
+                      </p>
+                    </li>
+                    <li className="flex gap-2">
+                      <Check className="h-5 w-5 text-green-600 flex-shrink-0 mt-1" />
+                      <p>
+                        窓やガラス面に直接貼り付けられ、場所を取らずに設置可能。
+                      </p>
+                    </li>
+                    <li className="flex gap-2">
+                      <Check className="h-5 w-5 text-green-600 flex-shrink-0 mt-1" />
+                      <p>
+                        美しいデザインと高い視認性で、商業施設・イベントなどの集客力を向上。
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="flex justify-center">
+                <Image
+                  src="/images/about/01.jpg"
+                  alt=""
+                  width={600}
+                  height={300}
+                  className="object-cover"
+                />
+              </div>
+            </section>
+
+            {/* 使用例と活用シーン */}
+            <section className="mb-10 md:mb-20">
+              <h3 className="text-2xl text-start font-bold mb-5 md:mb-8 flex items-center gap-6">
+                <span className="w-1 h-10 bg-yellow-400"></span>
+                使用例と活用シーン
+              </h3>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div>
+                  <div className="flex justify-center mb-3">
                     <Image
-                      src="/images/placeholder.svg?height=250&width=400"
-                      alt="透過フィルム技術"
-                      fill
+                      src="/images/about/03.jpg"
+                      alt=""
+                      width={500}
+                      height={300}
                       className="object-cover"
                     />
                   </div>
-                </div>
-              </div>
-
-              <div className="border border-white p-6 md:p-12 rounded-xl shadow-sm">
-                <h3 className="text-xl font-semibold mb-4">
-                  空間を活かす！ガラス面に設置できる斬新なディスプレイ
-                </h3>
-                <div className="space-y-4">
-                  <p>
-                    ガラスをそのままディスプレイとして活用。壁や窓を塞がずに情報発信が可能で、空間デザインを損なわず、洗練された演出を実現します。
+                  <p className="font-semibold mb-3">
+                    商業施設や店舗のウィンドウディスプレイ
                   </p>
-                  <div className="relative h-[250px] rounded-lg overflow-hidden">
+                  <p>
+                    高級ブランド店やショッピングモールでは、ガラスのウィンドウに透明フィルム型LEDビジョンを設置することで、商品展示や広告をダイナミックに行うことができます。
+                    <br />
+                    ディスプレイと商品が一体化することで、視覚的な演出効果が高まり、より洗練されたブランドイメージを創出します。
+                  </p>
+                </div>
+                <div>
+                  <div className="flex justify-center mb-3">
                     <Image
-                      src="/images/placeholder.svg?height=250&width=400"
-                      alt="ガラス面設置例"
-                      fill
+                      src="/images/about/04.jpg"
+                      alt=""
+                      width={500}
+                      height={300}
                       className="object-cover"
                     />
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Product Explanation */}
-        <section id="features" className="py-16 md:py-24">
-          <div className="container">
-            <h2 className="text-3xl font-bold text-center mb-12">
-              透過フィルム デジタルサイネージとは？
-            </h2>
-
-            <div className="grid gap-8 md:grid-cols-2">
-              <div className="bg-white p-6 rounded-xl shadow-sm">
-                <h3 className="text-xl font-semibold mb-4">
-                  透明なのに高輝度表示！最新テクノロジーの仕組み
-                </h3>
-                <div className="space-y-4">
-                  <p>
-                    透過フィルムに映像を投影する技術を採用。高輝度・高解像度で鮮やかな映像を表示しながら、視界を遮らない革新的なディスプレイです。
+                  <p className="font-semibold mb-3">
+                    ビルやオフィスのファサードディスプレイ
                   </p>
-                  <div className="relative h-[250px] rounded-lg overflow-hidden">
+                  <p>
+                    商業ビルやオフィスビルの外壁にも活用され、空間デザインを損なうことなく、外部に向けて広告や情報を発信することができます。
+                    <br />
+                    透明フィルム型LEDビジョンは、外観の美しさを保ちながら、ディスプレイ効果を最大化できるため、建築デザインにも調和します。
+                  </p>
+                </div>
+                <div>
+                  <div className="flex justify-center mb-3">
                     <Image
-                      src="/images/placeholder.svg?height=250&width=400"
-                      alt="透過フィルム技術"
-                      fill
+                      src="/images/about/03.jpg"
+                      alt=""
+                      width={500}
+                      height={300}
                       className="object-cover"
                     />
                   </div>
-                </div>
-              </div>
-
-              <div className="bg-white p-6 rounded-xl shadow-sm">
-                <h3 className="text-xl font-semibold mb-4">
-                  空間を活かす！ガラス面に設置できる斬新なディスプレイ
-                </h3>
-                <div className="space-y-4">
+                  <p className="font-semibold mb-3">公共交通機関の案内板</p>
                   <p>
-                    ガラスをそのままディスプレイとして活用。壁や窓を塞がずに情報発信が可能で、空間デザインを損なわず、洗練された演出を実現します。
+                    透明フィルム型LEDビジョンは、駅や空港、バス停などの公共交通機関の案内板としても利用されます。
+                    <br />
+                    透明なフィルムによる視認性の確保と、高輝度表示によって、日中でも視認性が高く、利用者にとって有益な情報提供ができます。
                   </p>
-                  <div className="relative h-[250px] rounded-lg overflow-hidden">
+                </div>
+                <div>
+                  <div className="flex justify-center mb-3">
                     <Image
-                      src="/images/placeholder.svg?height=250&width=400"
-                      alt="ガラス面設置例"
-                      fill
+                      src="/images/about/03.jpg"
+                      alt=""
+                      width={500}
+                      height={300}
                       className="object-cover"
                     />
                   </div>
+                  <p className="font-semibold mb-3">展示会やイベントの演出</p>
+                  <p>
+                    展示会やイベントでは、透明フィルム型LEDビジョンを活用して来場者の注意を引くことができます。
+                    <br />
+                    ブースのガラス面に映像を映し出すことで、視覚的にインパクトを与え、ブランドイメージの強化や注目を集めることが可能です。
+                  </p>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
+              <div className="bg-gray-300 inline-block px-10 py-4 mt-10">
+                <p>
+                  関連記事 :
+                  <span className="ml-2">
+                    <a
+                      href=""
+                      className="border-b border-black hover:border-gray-500 transition-colors"
+                    >
+                      透明フィルムLEDビジョンの主な特徴と技術的な仕組み
+                    </a>
+                  </span>
+                </p>
+              </div>
+            </section>
 
-        {/* Benefits Section */}
-        <section id="benefits" className="py-16 md:py-24">
-          <div className="container">
-            <h2 className="text-3xl font-bold text-center mb-12">
-              導入するメリット
-            </h2>
+            {/* 導入するメリット */}
+            <section className="mb-10 md:mb-20">
+              <h3 className="text-2xl text-start font-bold mb-5 md:mb-8 flex items-center gap-6">
+                <span className="w-1 h-10 bg-yellow-400"></span>
+                導入するメリット
+              </h3>
 
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              <div className="bg-blue-50 p-6 rounded-xl">
-                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-blue-100">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="text-blue-700"
-                  >
-                    <path d="M2 9V5c0-1.1.9-2 2-2h4"></path>
-                    <path d="M2 13v4c0 1.1.9 2 2 2h4"></path>
-                    <path d="M22 9V5c0-1.1-.9-2-2-2h-4"></path>
-                    <path d="M22 13v4c0 1.1-.9 2-2 2h-4"></path>
-                    <rect x="9" y="1" width="6" height="22" rx="2"></rect>
-                  </svg>
+              <div className="">
+                <div className="md:flex md:gap-5 mb-5 md:mb-8">
+                  <div>
+                    <div className="flex items-center gap-4 mb-3">
+                      <div className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-yellow-100/80">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="text-yellow-700"
+                        >
+                          <path d="M2 9V5c0-1.1.9-2 2-2h4"></path>
+                          <path d="M2 13v4c0 1.1.9 2 2 2h4"></path>
+                          <path d="M22 9V5c0-1.1-.9-2-2-2h-4"></path>
+                          <path d="M22 13v4c0 1.1-.9 2-2 2h-4"></path>
+                          <rect x="9" y="1" width="6" height="22" rx="2"></rect>
+                        </svg>
+                      </div>
+                      <p className="text-lg font-semibold">
+                        空間デザインを損なわず、訴求力を向上
+                      </p>
+                    </div>
+                    <p className="ml-10">
+                      透明フィルム型LEDビジョンは、ガラスやアクリルなどの透明な面に直接設置できるため、空間の開放感を維持しながら情報発信が可能です。
+                      <br />
+                      特に、高級感のあるブティック、ホテル、レストラン、オフィスエントランスなどでは、デザイン性を損なうことなく、ブランドイメージを保ちながら訴求力を高めることができます。
+                      <br />
+                      通常のLEDディスプレイのように壁を塞ぐことがないため、店舗の雰囲気を壊さずに、洗練された演出が可能です。
+                      <br />
+                      また、映像コンテンツを動的に変化させることで、シンプルなデザインの店舗でも目を引くインパクトのある演出ができ、視認性の向上につながります。
+                    </p>
+                  </div>
+                  {/* <div className="flex justify-center mt-5 md:mt-0">
+                    <Image
+                      src="/images/about/01.jpg"
+                      alt=""
+                      width={900}
+                      height={10}
+                      className="object-cover"
+                    />
+                  </div> */}
                 </div>
-                <h3 className="text-lg font-semibold mb-2">
-                  空間デザインを損なわず、訴求力を向上
-                </h3>
-                <p className="text-muted-foreground">
-                  高級感のある店舗や施設のブランドイメージを維持。シンプルなデザインでも、動的な映像で目を引きます。
+
+                <div className="mb-5 md:mb-8">
+                  <div className="flex items-center gap-4 mb-3">
+                    <div className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-yellow-100/80">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="text-yellow-700"
+                      >
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                      </svg>
+                    </div>
+                    <p className="text-lg font-semibold">
+                      目を引く演出で集客力UP
+                    </p>
+                  </div>
+                  <p className="ml-10">
+                    透明フィルム型LEDビジョンは、従来の固定看板やポスターと異なり、映像やアニメーションを活用したダイナミックな表現が可能です。
+                    <br />
+                    特に、ショッピングモールや繁華街のウィンドウディスプレイでは、遠くからでも視認しやすく、通行人の興味を引きやすいという特長があります。
+                    <br />
+                    例えば、昼間の明るい時間帯でも高輝度なLEDが鮮明に映像を映し出すため、広告効果が高まります。
+                    <br />
+                    さらに、タッチパネル機能やセンサー技術を組み合わせることで、インタラクティブなコンテンツを提供でき、より効果的なマーケティングが可能になります。
+                    <br />
+                    ユーザーが自らコンテンツを操作することで、エンゲージメントが向上し、購買意欲の促進につながるでしょう。
+                  </p>
+                </div>
+
+                <div className="mb-5 md:mb-8">
+                  <div className="flex items-center gap-4 mb-3">
+                    <div className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-yellow-100/80">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="text-yellow-700"
+                      >
+                        <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
+                        <path d="m9 12 2 2 4-4"></path>
+                      </svg>
+                    </div>
+                    <p className="text-lg font-semibold">
+                      設置自由度が高く、施工も簡単
+                    </p>
+                  </div>
+                  <p className="ml-10">
+                    従来の大型LEDビジョンやLCDディスプレイは、設置に大掛かりな工事が必要な場合が多く、設置場所が限られていました。
+                    <br />
+                    しかし、透明フィルム型LEDビジョンは、軽量で柔軟なフィルムタイプのため、窓ガラスやアクリルパネルに直接貼り付けるだけで使用できます。
+                    <br />
+                    これにより、設置の自由度が大幅に向上し、スペースを最大限に活用することができます。
+                    <br />
+                    また、施工に関しても、特殊なフレームや大型スタンドを必要とせず、比較的短期間での設置が可能です。
+                    <br />
+                    特に、リニューアル工事や店舗の改装時など、時間的な制約がある場合にも適しており、スピーディに導入できます。電源や配線の設計もシンプルなため、追加の工事費用を抑えることができ、メンテナンスも容易です。
+                  </p>
+                </div>
+
+                <div className="mb-5 md:mb-8">
+                  <div className="flex items-center gap-4 mb-3">
+                    <div className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-yellow-100/80">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="text-yellow-700"
+                      >
+                        <path d="M12 2v20"></path>
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                      </svg>
+                    </div>
+                    <p className="text-lg font-semibold">
+                      レンタルプランで手軽に導入可能
+                    </p>
+                  </div>
+                  <p className="ml-10">
+                    透明フィルム型LEDビジョンは、購入だけでなくレンタルプランも提供されているため、短期間のイベントやキャンペーンにも手軽に導入できます。
+                    <br />
+                    例えば、期間限定のポップアップストアや展示会、プロモーションイベントなどでは、設置コストを抑えつつ、インパクトのある演出を行うことができます。
+                    <br />
+                    レンタルなら、初期投資を抑えながら運用できるため、まずは試験導入して効果を確認したい企業にとっても最適な選択肢となります。
+                    <br />
+                    また、イベント終了後には簡単に撤去できるため、不要な保管コストがかからず、スペースを有効活用できます。
+                    <br />
+                    さらに、最新の機種を試せる機会にもなり、導入前に技術的な適合性を確認することが可能です。このように、レンタルプランを活用すれば、低リスクかつ柔軟に透明フィルム型LEDビジョンを導入できます。
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            {/* 選ばれる理由・他商材との比較 */}
+            <section className="mb-10 md:mb-20">
+              <h3 className="text-2xl text-start font-bold mb-5 md:mb-8 flex items-center gap-6">
+                <span className="w-1 h-10 bg-yellow-400"></span>
+                選ばれる理由・他商材との比較
+              </h3>
+
+              <div className="px-5 mb-5 md:mb-8">
+                <p className="mb-3">
+                  透明フィルム型LEDビジョンは、従来の液晶ディスプレイやプロジェクション型ディスプレイと比較して、いくつかの点で優れています。
+                  <br />
+                  例えば、液晶ディスプレイはどうしても厚みがあり、視界を遮るため、スペースを取ってしまうことがあります。
+                  <br />
+                  プロジェクション型ディスプレイも設置場所に制約があり、特に光の反射や映像の鮮明さが問題になる場合があります。
+                </p>
+                <p>
+                  一方で、透明フィルム型LEDビジョンは、透過性を保ちつつ高輝度で鮮明な映像を表示できるため、空間を最大限に活用できるだけでなく、他のディスプレイ技術に比べて設置の自由度が高く、より柔軟な運用が可能です。
                 </p>
               </div>
 
-              <div className="bg-blue-50 p-6 rounded-xl">
-                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-blue-100">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="text-blue-700"
-                  >
-                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                  </svg>
-                </div>
-                <h3 className="text-lg font-semibold mb-2">
-                  目を引く演出で集客力UP
-                </h3>
-                <p className="text-muted-foreground">
-                  ダイナミックな映像で、遠くからでも注目を集める。インタラクティブなコンテンツと組み合わせることで、より高い訴求力を実現。
-                </p>
+              <div className="mx-5">
+                <table className="w-full">
+                  <thead>
+                    <tr className="bg-white/90">
+                      <th className="border border-gray-400 p-4 text-left"></th>
+                      <th className="border border-gray-400 p-4 text-center bg-yellow-200">
+                        透明フィルム型LEDビジョン
+                      </th>
+                      <th className="border border-gray-400 p-4 text-center bg-gray-200">
+                        従来のLEDビジョン
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="bg-white/90">
+                    <tr>
+                      <td className="bg-gray-100 border border-gray-400 p-4 font-medium">
+                        設置スペース
+                      </td>
+                      <td className="border border-gray-400 p-4 text-center bg-yellow-50">
+                        <Check className="h-5 w-5 text-green-600 mx-auto" />
+                        <span className="block mt-1">
+                          既存のガラス面に設置可能
+                        </span>
+                      </td>
+                      <td className="border border-gray-400 p-4 text-center">
+                        <X className="h-5 w-5 text-red-500 mx-auto" />
+                        <span className="block mt-1">専用スペースが必要</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="bg-gray-100 border border-gray-400 p-4 font-medium">
+                        視界の確保
+                      </td>
+                      <td className="border border-gray-400 p-4 text-center bg-yellow-50">
+                        <Check className="h-5 w-5 text-green-600 mx-auto" />
+                        <span className="block mt-1">透明で視界を遮らない</span>
+                      </td>
+                      <td className="border border-gray-400 p-4 text-center">
+                        <X className="h-5 w-5 text-red-500 mx-auto" />
+                        <span className="block mt-1">不透明で視界を遮る</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="bg-gray-100 border border-gray-400 p-4 font-medium">
+                        設置工事
+                      </td>
+                      <td className="border border-gray-400 p-4 text-center bg-yellow-50">
+                        <Check className="h-5 w-5 text-green-600 mx-auto" />
+                        <span className="block mt-1">簡易な施工で設置可能</span>
+                      </td>
+                      <td className="border border-gray-400 p-4 text-center">
+                        <X className="h-5 w-5 text-red-500 mx-auto" />
+                        <span className="block mt-1">大掛かりな工事が必要</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="bg-gray-100 border border-gray-400 p-4 font-medium">
+                        コスト
+                      </td>
+                      <td className="border border-gray-400 p-4 text-center bg-yellow-50">
+                        <Check className="h-5 w-5 text-green-600 mx-auto" />
+                        <span className="block mt-1">
+                          レンタルプランあり、低コスト
+                        </span>
+                      </td>
+                      <td className="border border-gray-400 p-4 text-center">
+                        <X className="h-5 w-5 text-red-500 mx-auto" />
+                        <span className="block mt-1">高額な初期投資が必要</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
+            </section>
 
-              <div className="bg-blue-50 p-6 rounded-xl">
-                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-blue-100">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="text-blue-700"
-                  >
-                    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
-                    <path d="m9 12 2 2 4-4"></path>
-                  </svg>
-                </div>
-                <h3 className="text-lg font-semibold mb-2">
-                  設置自由度が高く、施工も簡単
-                </h3>
-                <p className="text-muted-foreground">
-                  大掛かりな工事不要で、短期間で設置可能。レンタルプランなら低コストで試験運用も可能です。
+            {/* まとめ */}
+            <section>
+              <h3 className="text-2xl text-start font-bold mb-5 md:mb-8 flex items-center gap-6">
+                <span className="w-1 h-10 bg-yellow-400"></span>
+                まとめ
+              </h3>
+
+              <div>
+                <p>
+                  透明フィルム型LEDビジョンは、最新のディスプレイ技術を駆使し、視界を遮らずに高品質な映像を提供できる革新的な製品です。
+                  <br />
+                  商業施設や公共施設、企業のブランディングや広告に最適で、今後ますます多くの分野で活用されることが期待されています。
+                  <br />
+                  その特長と利点を活かし、他のディスプレイ技術と比較して、ユニークで効果的な情報発信手段として注目されています。
+                  <br />
+                  貴社のビジネスにも透明フィルム型LEDビジョンを導入して、視覚的なインパクトを最大限に活かしませんか？
+                  <br />
+                  設置方法や活用事例、レンタルプランなど、詳しく知りたい方はぜひお気軽にお問い合わせください。専門スタッフが最適な導入プランをご提案いたします。
                 </p>
-              </div>
-
-              <div className="bg-blue-50 p-6 rounded-xl">
-                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-blue-100">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="text-blue-700"
-                  >
-                    <path d="M12 2v20"></path>
-                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                  </svg>
+                <div className="inline-block mt-10">
+                  <Button>
+                    無料相談・お申し込みはこちら
+                    <ArrowRight className="h-4 w-4" />
+                  </Button>
                 </div>
-                <h3 className="text-lg font-semibold mb-2">
-                  レンタルプランで手軽に導入可能
-                </h3>
-                <p className="text-muted-foreground">
-                  期間限定のイベントやキャンペーンに最適。初期費用を抑えて導入できるため、リスクが少ないです。
-                </p>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Comparison */}
-        <section className="py-16 md:py-24">
-          <div className="container">
-            <h2 className="text-3xl font-bold text-center mb-12">
-              選ばれる理由・他商材との比較
-            </h2>
-
-            <div className="overflow-x-auto">
-              <table className="w-full border-collapse">
-                <thead>
-                  <tr className="bg-blue-50">
-                    <th className="border p-4 text-left">比較項目</th>
-                    <th className="border p-4 text-center bg-blue-100">
-                      透過フィルムデジタルサイネージ
-                    </th>
-                    <th className="border p-4 text-center">
-                      従来のデジタルサイネージ
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="border p-4 font-medium">設置スペース</td>
-                    <td className="border p-4 text-center bg-blue-50">
-                      <Check className="h-5 w-5 text-green-600 mx-auto" />
-                      <span className="block mt-1">
-                        既存のガラス面に設置可能
-                      </span>
-                    </td>
-                    <td className="border p-4 text-center">
-                      <X className="h-5 w-5 text-red-500 mx-auto" />
-                      <span className="block mt-1">専用スペースが必要</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="border p-4 font-medium">視界の確保</td>
-                    <td className="border p-4 text-center bg-blue-50">
-                      <Check className="h-5 w-5 text-green-600 mx-auto" />
-                      <span className="block mt-1">透明で視界を遮らない</span>
-                    </td>
-                    <td className="border p-4 text-center">
-                      <X className="h-5 w-5 text-red-500 mx-auto" />
-                      <span className="block mt-1">不透明で視界を遮る</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="border p-4 font-medium">設置工事</td>
-                    <td className="border p-4 text-center bg-blue-50">
-                      <Check className="h-5 w-5 text-green-600 mx-auto" />
-                      <span className="block mt-1">簡易な施工で設置可能</span>
-                    </td>
-                    <td className="border p-4 text-center">
-                      <X className="h-5 w-5 text-red-500 mx-auto" />
-                      <span className="block mt-1">大掛かりな工事が必要</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="border p-4 font-medium">コスト</td>
-                    <td className="border p-4 text-center bg-blue-50">
-                      <Check className="h-5 w-5 text-green-600 mx-auto" />
-                      <span className="block mt-1">
-                        レンタルプランあり、低コスト
-                      </span>
-                    </td>
-                    <td className="border p-4 text-center">
-                      <X className="h-5 w-5 text-red-500 mx-auto" />
-                      <span className="block mt-1">高額な初期投資が必要</span>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
+            </section>
+          </article>
+        </div>
       </main>
       <Footer />
     </div>

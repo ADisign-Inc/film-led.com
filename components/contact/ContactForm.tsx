@@ -1,6 +1,6 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import Button from "@/components/ui/button";
 import { useState } from "react";
 
 interface FormData {
@@ -34,7 +34,8 @@ export function ContactForm() {
     const { name, value, type } = e.target;
     setFormData((prev) => ({
       ...prev,
-      [name]: type === "checkbox" ? (e.target as HTMLInputElement).checked : value,
+      [name]:
+        type === "checkbox" ? (e.target as HTMLInputElement).checked : value,
     }));
   };
 
@@ -42,10 +43,7 @@ export function ContactForm() {
     <form onSubmit={handleSubmit} className="space-y-4">
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div className="space-y-2">
-          <label
-            htmlFor="name"
-            className="text-sm font-medium text-gray-900"
-          >
+          <label htmlFor="name" className="text-sm font-medium text-gray-900">
             お名前
           </label>
           <input
@@ -79,10 +77,7 @@ export function ContactForm() {
       </div>
 
       <div className="space-y-2">
-        <label
-          htmlFor="email"
-          className="text-sm font-medium text-gray-900"
-        >
+        <label htmlFor="email" className="text-sm font-medium text-gray-900">
           メールアドレス
         </label>
         <input
@@ -98,10 +93,7 @@ export function ContactForm() {
       </div>
 
       <div className="space-y-2">
-        <label
-          htmlFor="phone"
-          className="text-sm font-medium text-gray-900"
-        >
+        <label htmlFor="phone" className="text-sm font-medium text-gray-900">
           電話番号
         </label>
         <input
@@ -116,10 +108,7 @@ export function ContactForm() {
       </div>
 
       <div className="space-y-2">
-        <label
-          htmlFor="inquiry"
-          className="text-sm font-medium text-gray-900"
-        >
+        <label htmlFor="inquiry" className="text-sm font-medium text-gray-900">
           お問い合わせ内容
         </label>
         <textarea
@@ -160,4 +149,4 @@ export function ContactForm() {
       </div>
     </form>
   );
-} 
+}

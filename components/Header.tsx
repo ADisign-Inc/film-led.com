@@ -1,11 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 import { Navigation } from "./Navigation";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -33,10 +33,10 @@ export function Header() {
             <Link href="/">
               <Image
                 src="/images/logo-dark.svg"
-                alt="Transparent Signage"
-                width={150}
-                height={40}
-                className="h-10 w-auto"
+                alt="Logo"
+                width={160}
+                height={100}
+                layout="intrinsic"
               />
             </Link>
           </div>

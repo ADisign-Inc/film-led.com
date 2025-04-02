@@ -11,9 +11,9 @@ export function Footer() {
               <Image
                 src="/images/logo-dark.svg"
                 alt="Logo"
-                width={200}
-                height={200}
-                className=""
+                width={160}
+                height={100}
+                layout="intrinsic"
               />
             </div>
             <p className="text-sm text-gray-300">
