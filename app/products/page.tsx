@@ -20,7 +20,7 @@ export default function ProductsPage() {
       <Header />
 
       <main className="flex-1">
-        <section className="container max-w-6xl py-10 md:py-40">
+        <section className="container max-w-6xl py-28 md:py-40">
           <h2>
             Products
             <span>サービス・料金</span>

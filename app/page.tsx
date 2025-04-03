@@ -6,7 +6,7 @@ import Link from "next/link";
 import Button from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import LogoSlider from "../components/LogoSlider";
+import LogoSlider from "@/components/ui/LogoSlider";
 import { Cta } from "@/components/contact/Cta";
 import { cases } from "@/data/cases";
 import { blogs } from "@/data/blog";
@@ -156,7 +156,7 @@ export default function LandingPage() {
               <div key={case_.id} className="">
                 <div className=" flex items-center justify-center mb-3 md:mb-5">
                   <Image
-                    src={case_.image}
+                    src={case_.image[0]}
                     alt={case_.title}
                     width={400}
                     height={400}

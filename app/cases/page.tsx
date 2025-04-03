@@ -18,33 +18,60 @@ export default function CasesPage() {
       <Header />
 
       <main className="flex-1">
-        <section className="container max-w-6xl py-10 md:py-40">
+        <section className="container max-w-6xl py-28 md:py-40">
           <h2>
             Case Studies
             <span>活用事例</span>
           </h2>
 
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-            {cases.map((case_) => (
-              <div
-                key={case_.id}
-                className="bg-white rounded-xl overflow-hidden shadow-sm"
-              >
-                <div className="relative h-48">
-                  <Image
-                    src={case_.image}
-                    alt={case_.title}
-                    fill
-                    className="object-cover"
-                  />
+          <section className="bg-white/85 text-black px-5 md:px-16 py-16 md:py-20 mb-10 md:mb-20">
+            <div className="mb-10">
+              {cases.map((cases_) => (
+                <div className="mb-10 md:mb-16 last:mb-0">
+                  <div className="mb-5">
+                    <h4 className="mb-5">
+                      <span className="text-yellow-400 mr-2">●</span>
+                      {cases_.title}
+                    </h4>
+                    <p className="px-10">{cases_.description}</p>
+                  </div>
+                  <div className="flex justify-center gap-5 px-10 mb-3">
+                    <div className="flex justify-center gap-5 mb-3">
+                      <Image
+                        src={cases_.image[0]}
+                        alt={cases_.title}
+                        width={500}
+                        height={300}
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="flex justify-center gap-5 mb-3">
+                      <Image
+                        src={cases_.image[1]}
+                        alt={cases_.title}
+                        width={500}
+                        height={300}
+                        className="object-cover"
+                      />
+                    </div>
+                  </div>
                 </div>
-                <div className="p-4">
-                  <h3 className="text-lg font-semibold mb-2">{case_.title}</h3>
-                  <p className="text-muted-foreground">{case_.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+            <div className="bg-gray-300 inline-block px-10 py-4 mt-10">
+              <p>
+                関連記事 :
+                <span className="ml-2">
+                  <a
+                    href=""
+                    className="border-b border-black hover:border-gray-500 transition-colors"
+                  >
+                    透明フィルムLEDビジョンの主な特徴と技術的な仕組み
+                  </a>
+                </span>
+              </p>
+            </div>
+          </section>
         </section>
       </main>
 

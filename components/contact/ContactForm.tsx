@@ -41,39 +41,35 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-        <div className="space-y-2">
-          <label htmlFor="name" className="text-sm font-medium text-gray-900">
-            お名前
-          </label>
-          <input
-            id="name"
-            name="name"
-            type="text"
-            value={formData.name}
-            onChange={handleChange}
-            className="w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900"
-            placeholder="山田 太郎"
-            required
-          />
-        </div>
-        <div className="space-y-2">
-          <label
-            htmlFor="company"
-            className="text-sm font-medium text-gray-900"
-          >
-            会社名
-          </label>
-          <input
-            id="company"
-            name="company"
-            type="text"
-            value={formData.company}
-            onChange={handleChange}
-            className="w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900"
-            placeholder="株式会社〇〇"
-          />
-        </div>
+      <div className="space-y-2">
+        <label htmlFor="name" className="text-sm font-medium text-gray-900">
+          お名前
+        </label>
+        <input
+          id="name"
+          name="name"
+          type="text"
+          value={formData.name}
+          onChange={handleChange}
+          className="w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900"
+          placeholder="山田 太郎"
+          required
+        />
+      </div>
+
+      <div className="space-y-2">
+        <label htmlFor="company" className="text-sm font-medium text-gray-900">
+          会社名
+        </label>
+        <input
+          id="company"
+          name="company"
+          type="text"
+          value={formData.company}
+          onChange={handleChange}
+          className="w-full rounded-md border border-gray-300 px-3 py-2 text-gray-900"
+          placeholder="株式会社〇〇"
+        />
       </div>
 
       <div className="space-y-2">
@@ -142,8 +138,8 @@ export function ContactForm() {
         </label>
       </div>
 
-      <div className="pt-2">
-        <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700">
+      <div className="flex justify-center">
+        <Button type="submit" variant="default">
           送信する
         </Button>
       </div>

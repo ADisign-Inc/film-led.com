@@ -19,7 +19,7 @@ export default function BlogPage() {
       <Header />
 
       <main className="flex-1">
-        <section className="container max-w-6xl py-10 md:py-40">
+        <section className="container max-w-6xl py-28 md:py-40">
           <h2>
             LED BLOG
             <span>LED ブログ</span>

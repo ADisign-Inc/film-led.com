@@ -18,16 +18,16 @@ export default function ContactPage() {
       <Header />
 
       <main className="flex-1">
-        <section className="container max-w-6xl py-10 md:py-40">
+        <section className="container max-w-6xl py-28 md:py-40">
           <h2>
             Contact
             <span>お申し込み・お問い合わせ</span>
           </h2>
 
           <p className="max-w-2xl mx-auto mb-8 md:mb-16">
-            革新的な透過フィルムデジタルサイネージで、あなたのビジネスの集客力を最大化しませんか？まずは無料相談・デモ体験からお気軽にお問い合わせください。
+            革新的な透明フィルムLED型LEDビジョンで、あなたのビジネスの集客力を最大化しませんか？まずは無料相談・デモ体験からお気軽にお問い合わせください。
           </p>
-          <div className="max-w-2xl mx-auto bg-white/90 rounded-lg p-10 text-left">
+          <div className="max-w-2xl mx-auto bg-white/80 rounded-lg p-10 text-left">
             <ContactForm />
           </div>
         </section>

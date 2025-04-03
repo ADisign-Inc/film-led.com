@@ -4,6 +4,8 @@ import Image from "next/image";
 import { X, Check } from "lucide-react";
 import Button from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Cta } from "@/components/contact/Cta";
+import { cases } from "@/data/cases";
 
 export default async function AboutPage() {
   return (
@@ -23,7 +25,7 @@ export default async function AboutPage() {
         <div className="container max-w-5xl py-10 md:py-40">
           <h2>
             About
-            <span>透明フィルムLEDビジョンとは？</span>
+            <span>透明フィルムLED型LEDビジョンとは？</span>
           </h2>
 
           <article className="bg-white/85 text-black px-5 md:px-16 py-16 md:py-20">
@@ -31,7 +33,7 @@ export default async function AboutPage() {
             <section className="mb-10 md:mb-20">
               <h3 className="text-2xl text-start font-bold mb-5 md:mb-8 flex items-center gap-6">
                 <span className="w-1 h-10 bg-yellow-400"></span>
-                透明フィルムLEDビジョンとは？
+                透明フィルム型LEDビジョンとは？
               </h3>
 
               <div>
@@ -39,7 +41,7 @@ export default async function AboutPage() {
                   <Image
                     src="/images/about/01.jpg"
                     alt=""
-                    width={500}
+                    width={700}
                     height={300}
                     className="object-cover"
                   />
@@ -57,6 +59,18 @@ export default async function AboutPage() {
                   <br />
                   通常のLEDディスプレイと異なり、設置場所のデザインや空間の開放感を維持しつつ、情報発信が可能なため、広告や案内表示、装飾用途として非常に高い評価を受けています。
                 </p>
+
+                <div className="flex justify-center w-2/3 mx-auto my-5">
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover"
+                  >
+                    <source src="/videos/01.mp4" type="video/mp4" />
+                  </video>
+                </div>
 
                 <p className="mb-3">
                   透明フィルム型LEDビジョンは、薄型・軽量で、設置の自由度が高い点も大きな利点です。
@@ -88,6 +102,12 @@ export default async function AboutPage() {
                   省エネルギーで環境負荷が少なく、設置やメンテナンスも容易なため、今後ますます幅広い分野での導入が進むと考えられています。
                 </p>
               </div>
+
+              <div>
+                COB (Chip on board) LED RGB発光素子を透明PETフィルムに直接
+                搭載する技術で、LEDが小さく薄くなって小さなピッチでも高い透明度を維持することができます。
+                ※最小ピッチ：3.75mm
+              </div>
             </section>
 
             {/* 透明フィルムLEDビジョンの技術的な仕組み */}
@@ -103,16 +123,16 @@ export default async function AboutPage() {
                 </p>
                 <div className="space-y-4 ml-5">
                   <p>
-                    透明フィルム型LEDビジョンは、透過フィルムに微細なLEDチップを埋め込み、映像や情報を高輝度で表示できる革新的なディスプレイ技術です。
+                    透明フィルム型LEDビジョンは、50～92%の透明度で、コンテンツを送出している時も光の透過ができます。
                     <br />
                     これにより、ガラス面をそのまま利用しながら、視界を遮ることなく鮮やかな映像を映し出します。
                     <br />
-                    最新技術により、高解像度で細部まで鮮明に表示可能で、直射日光の中でも視認性を維持できます。
+                    最新技術により、ディスプレーを点灯してない状態では、設置面の反対側がそのまま見える高い透明度を保ち、直射日光の中でも視認性を維持できます。
                   </p>
                   <p>
                     透明フィルム型LEDビジョンは、従来のディスプレイ技術に比べ、スペースを節約しつつ効果的な広告表示を実現します。
                     <br />
-                    屋外でも屋内でも使用でき、昼夜を問わず安定した表示が可能です。これにより、公共施設や商業施設など、幅広い業界で活用されるようになっています。
+                    屋外でも屋内でも使用でき、昼夜を問わず安定した表示が可能です。これにより、コンテンツ映像と同時に内部の環境または製品を見せることができ、公共施設や商業施設など、幅広い業界で活用されるようになっています。
                   </p>
                 </div>
               </div>
@@ -214,13 +234,13 @@ export default async function AboutPage() {
                   <p className="mb-3">
                     4、
                     <span className="text-lg md:text-xl font-semibold">
-                      インタラクティブ機能
+                      優れた熱放出と安定
                     </span>
                   </p>
                   <p className="ml-5">
-                    一部のモデルでは、タッチスクリーン機能やジェスチャー認識機能を搭載したインタラクティブなディスプレイとして使用することも可能です。
+                    COBパッケージは、従来のIC内蔵型LEDより発熱が少なく、LEDフィルムの表面温度が周辺温度と約2°C程度高いため、室内での使用に適しています。
                     <br />
-                    これにより、ユーザーはディスプレイに触れて操作することができ、エンターテインメント性や顧客の関与を高めることができます。
+                    また、損傷しやすい敏感な部品の外部露出を最小化し、過酷な環境でも高い安定性を持ちます。
                   </p>
                 </div>
               </div>
@@ -312,9 +332,9 @@ export default async function AboutPage() {
               </div>
               <div className="flex justify-center">
                 <Image
-                  src="/images/about/01.jpg"
+                  src="/images/about/07.jpg"
                   alt=""
-                  width={600}
+                  width={700}
                   height={300}
                   className="object-cover"
                 />
@@ -329,78 +349,21 @@ export default async function AboutPage() {
               </h3>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                <div>
-                  <div className="flex justify-center mb-3">
-                    <Image
-                      src="/images/about/03.jpg"
-                      alt=""
-                      width={500}
-                      height={300}
-                      className="object-cover"
-                    />
+                {cases.slice(0, 4).map((cases_) => (
+                  <div>
+                    <div className="flex justify-center mb-3">
+                      <Image
+                        src={cases_.image[0]}
+                        alt={cases_.title}
+                        width={500}
+                        height={300}
+                        className="object-cover"
+                      />
+                    </div>
+                    <p className="font-semibold mb-3">{cases_.title}</p>
+                    <p>{cases_.description}</p>
                   </div>
-                  <p className="font-semibold mb-3">
-                    商業施設や店舗のウィンドウディスプレイ
-                  </p>
-                  <p>
-                    高級ブランド店やショッピングモールでは、ガラスのウィンドウに透明フィルム型LEDビジョンを設置することで、商品展示や広告をダイナミックに行うことができます。
-                    <br />
-                    ディスプレイと商品が一体化することで、視覚的な演出効果が高まり、より洗練されたブランドイメージを創出します。
-                  </p>
-                </div>
-                <div>
-                  <div className="flex justify-center mb-3">
-                    <Image
-                      src="/images/about/04.jpg"
-                      alt=""
-                      width={500}
-                      height={300}
-                      className="object-cover"
-                    />
-                  </div>
-                  <p className="font-semibold mb-3">
-                    ビルやオフィスのファサードディスプレイ
-                  </p>
-                  <p>
-                    商業ビルやオフィスビルの外壁にも活用され、空間デザインを損なうことなく、外部に向けて広告や情報を発信することができます。
-                    <br />
-                    透明フィルム型LEDビジョンは、外観の美しさを保ちながら、ディスプレイ効果を最大化できるため、建築デザインにも調和します。
-                  </p>
-                </div>
-                <div>
-                  <div className="flex justify-center mb-3">
-                    <Image
-                      src="/images/about/03.jpg"
-                      alt=""
-                      width={500}
-                      height={300}
-                      className="object-cover"
-                    />
-                  </div>
-                  <p className="font-semibold mb-3">公共交通機関の案内板</p>
-                  <p>
-                    透明フィルム型LEDビジョンは、駅や空港、バス停などの公共交通機関の案内板としても利用されます。
-                    <br />
-                    透明なフィルムによる視認性の確保と、高輝度表示によって、日中でも視認性が高く、利用者にとって有益な情報提供ができます。
-                  </p>
-                </div>
-                <div>
-                  <div className="flex justify-center mb-3">
-                    <Image
-                      src="/images/about/03.jpg"
-                      alt=""
-                      width={500}
-                      height={300}
-                      className="object-cover"
-                    />
-                  </div>
-                  <p className="font-semibold mb-3">展示会やイベントの演出</p>
-                  <p>
-                    展示会やイベントでは、透明フィルム型LEDビジョンを活用して来場者の注意を引くことができます。
-                    <br />
-                    ブースのガラス面に映像を映し出すことで、視覚的にインパクトを与え、ブランドイメージの強化や注目を集めることが可能です。
-                  </p>
-                </div>
+                ))}
               </div>
               <div className="bg-gray-300 inline-block px-10 py-4 mt-10">
                 <p>
@@ -414,6 +377,43 @@ export default async function AboutPage() {
                     </a>
                   </span>
                 </p>
+              </div>
+              <div className="flex justify-center">
+                <div className="inline-block mt-10">
+                  <Button>
+                    使用例と活用シーンについて詳しく見る
+                    <ArrowRight className="h-4 w-4" />
+                  </Button>
+                </div>
+              </div>
+            </section>
+
+            {/* 透明フィルムLEDビジョンの仕様 */}
+            <section className="mb-10 md:mb-20">
+              <h3 className="text-2xl text-start font-bold mb-5 md:mb-8 flex items-center gap-6">
+                <span className="w-1 h-10 bg-yellow-400"></span>
+                透明フィルムLEDビジョンの仕様
+              </h3>
+
+              <div>
+                <div className="flex justify-center mb-3">
+                  <Image
+                    src="/images/about/specification01.jpg"
+                    alt=""
+                    width={700}
+                    height={300}
+                    className="object-cover"
+                  />
+                </div>
+                <div className="flex justify-center mb-3">
+                  <Image
+                    src="/images/about/0_specification.jpg"
+                    alt=""
+                    width={700}
+                    height={300}
+                    className="object-cover"
+                  />
+                </div>
               </div>
             </section>
 
@@ -685,27 +685,46 @@ export default async function AboutPage() {
               </h3>
 
               <div>
-                <p>
-                  透明フィルム型LEDビジョンは、最新のディスプレイ技術を駆使し、視界を遮らずに高品質な映像を提供できる革新的な製品です。
-                  <br />
-                  商業施設や公共施設、企業のブランディングや広告に最適で、今後ますます多くの分野で活用されることが期待されています。
-                  <br />
-                  その特長と利点を活かし、他のディスプレイ技術と比較して、ユニークで効果的な情報発信手段として注目されています。
-                  <br />
-                  貴社のビジネスにも透明フィルム型LEDビジョンを導入して、視覚的なインパクトを最大限に活かしませんか？
-                  <br />
-                  設置方法や活用事例、レンタルプランなど、詳しく知りたい方はぜひお気軽にお問い合わせください。専門スタッフが最適な導入プランをご提案いたします。
-                </p>
-                <div className="inline-block mt-10">
-                  <Button>
-                    無料相談・お申し込みはこちら
-                    <ArrowRight className="h-4 w-4" />
-                  </Button>
+                <div className="md:flex gap-5">
+                  <div>
+                    <p className="mb-3">
+                      透明フィルム型LEDビジョンは、最新のディスプレイ技術を駆使し、視界を遮らずに高品質な映像を提供できる革新的な製品です。
+                      <br />
+                      商業施設や公共施設、企業のブランディングや広告に最適で、今後ますます多くの分野で活用されることが期待されています。
+                    </p>
+                    <p>
+                      その特長と利点を活かし、他のディスプレイ技術と比較して、ユニークで効果的な情報発信手段として注目されています。
+                      <br />
+                      貴社のビジネスにも透明フィルム型LEDビジョンを導入して、視覚的なインパクトを最大限に活かしませんか？
+                      <br />
+                      設置方法や活用事例、レンタルプランなど、詳しく知りたい方はぜひお気軽にお問い合わせください。専門スタッフが最適な導入プランをご提案いたします。
+                    </p>
+                  </div>
+                  <div className="flex justify-center mb-3">
+                    <Image
+                      src="/images/about/08.jpg"
+                      alt=""
+                      width={600}
+                      height={300}
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+
+                <div className="flex justify-center">
+                  <div className="inline-block mt-10">
+                    <Button>
+                      無料相談・お申し込みはこちら
+                      <ArrowRight className="h-4 w-4" />
+                    </Button>
+                  </div>
                 </div>
               </div>
             </section>
           </article>
         </div>
+        {/* CTA */}
+        <Cta />
       </main>
       <Footer />
     </div>
