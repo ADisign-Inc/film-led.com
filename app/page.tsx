@@ -67,7 +67,7 @@ export default function LandingPage() {
               </div>
             </div>
           </div>
-          <LogoSlider />
+          {/* <LogoSlider /> */}
         </section>
 
         {/* Service */}
@@ -152,7 +152,7 @@ export default function LandingPage() {
           </h2>
 
           <div className="grid gap-5 grid-cols-1 xs:grid-cols-2 md:grid-cols-3 mb-20">
-            {cases.map((case_) => (
+            {cases.slice(0, 6).map((case_) => (
               <div key={case_.id} className="">
                 <div className=" flex items-center justify-center mb-3 md:mb-5">
                   <Image

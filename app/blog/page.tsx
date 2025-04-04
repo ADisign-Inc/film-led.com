@@ -3,6 +3,9 @@ import { Header } from "@/components/Header";
 import Button from "@/components/ui/button";
 import { BlogList } from "@/components/blog/BlogList";
 import { blogs } from "@/data/blog";
+import { Cta } from "@/components/contact/Cta";
+import { Footer } from "@/components/Footer";
+
 import Link from "next/link";
 export default function BlogPage() {
   return (
@@ -37,7 +40,12 @@ export default function BlogPage() {
             </Link>
           </div>
         </section>
+
+        {/* CTA */}
+        <Cta />
       </main>
+
+      <Footer />
     </div>
   );
 }
