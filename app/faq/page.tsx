@@ -7,6 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Cta } from "@/components/contact/Cta";
 
 export default function FAQPage() {
   return (
@@ -80,6 +81,9 @@ export default function FAQPage() {
             </div>
           </section>
         </div>
+
+        {/* CTA */}
+        <Cta />
       </main>
       <Footer />
     </div>

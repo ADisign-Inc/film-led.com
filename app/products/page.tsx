@@ -4,6 +4,7 @@ import { Footer } from "@/components/Footer";
 import Image from "next/image";
 import Button from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Cta } from "@/components/contact/Cta";
 
 export default function ProductsPage() {
   return (
@@ -44,22 +45,20 @@ export default function ProductsPage() {
                       <span className="text-base font-normal">/月〜</span>
                     </div>
                     <ul className="space-y-2 mb-6">
-                      <li className="flex items-start gap-2">
-                        <Check className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-                        <span>透過フィルム（標準サイズ）</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Check className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-                        <span>プロジェクター・コントローラー一式</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Check className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-                        <span>基本コンテンツ制作（1点）</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Check className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-                        <span>設置・撤去サポート</span>
-                      </li>
+                      {[
+                        "透過フィルム（標準サイズ）",
+                        "プロジェクター・コントローラー一式",
+                        "基本コンテンツ制作（1点）",
+                        "設置・撤去サポート",
+                      ].map((item, index) => (
+                        <li
+                          key={`standard-${index}`}
+                          className="flex items-start gap-2"
+                        >
+                          <Check className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
                     </ul>
                     <Button className="w-full">お問い合わせ</Button>
                   </div>
@@ -116,26 +115,21 @@ export default function ProductsPage() {
                       <span className="text-base font-normal">〜</span>
                     </div>
                     <ul className="space-y-2 mb-6">
-                      <li className="flex items-start gap-2">
-                        <Check className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-                        <span>透過フィルム（標準サイズ）</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Check className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-                        <span>プロジェクター・コントローラー一式</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Check className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-                        <span>基本コンテンツ制作（1点）</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Check className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-                        <span>設置サポート</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <Check className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-                        <span>1年間保証</span>
-                      </li>
+                      {[
+                        "透過フィルム（標準サイズ）",
+                        "プロジェクター・コントローラー一式",
+                        "基本コンテンツ制作（1点）",
+                        "設置サポート",
+                        "1年間保証",
+                      ].map((item, index) => (
+                        <li
+                          key={`premium-${index}`}
+                          className="flex items-start gap-2"
+                        >
+                          <Check className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
                     </ul>
                     <Button className="w-full">お問い合わせ</Button>
                   </div>
@@ -187,6 +181,9 @@ export default function ProductsPage() {
             </Tabs>
           </div>
         </section>
+
+        {/* CTA */}
+        <Cta />
       </main>
       <Footer />
     </div>

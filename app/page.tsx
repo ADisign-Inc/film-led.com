@@ -58,12 +58,10 @@ export default function LandingPage() {
                   ビジネスの集客力を最大化する最先端デジタルサイネージ
                 </p>
 
-                <div className="inline-block">
-                  <Button>
-                    無料相談・お申し込みはこちら
-                    <ArrowRight className="h-4 w-4" />
-                  </Button>
-                </div>
+                <Button>
+                  無料相談・お申し込みはこちら
+                  <ArrowRight className="h-4 w-4" />
+                </Button>
               </div>
             </div>
           </div>
@@ -135,7 +133,7 @@ export default function LandingPage() {
           </div>
 
           <div className="flex justify-center">
-            <Link href="/services" className="inline-block">
+            <Link href="/services">
               <Button variant="default">
                 サービス内容を詳しく見る
                 <ArrowRight className="h-4 w-4" />
@@ -173,7 +171,7 @@ export default function LandingPage() {
           </div>
 
           <div className="flex justify-center">
-            <Link href="/cases" className="inline-block">
+            <Link href="/cases">
               <Button variant="default">
                 活用事例を詳しく見る
                 <ArrowRight className="h-4 w-4" />
@@ -190,13 +188,15 @@ export default function LandingPage() {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10 md:mb-20">
-            {blogs.map((post) => (
-              <BlogList key={post.id} post={post} />
+            {blogs.slice(0, 3).map((post) => (
+              <div key={post.id}>
+                <BlogList post={post} />
+              </div>
             ))}
           </div>
 
           <div className="flex justify-center">
-            <Link href="/blog" className="inline-block">
+            <Link href="/blog">
               <Button variant="default">
                 LED ブログ一覧へ
                 <ArrowRight className="h-4 w-4" />

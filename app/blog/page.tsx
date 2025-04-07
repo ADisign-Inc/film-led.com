@@ -28,7 +28,7 @@ export default function BlogPage() {
             <span>LED ブログ</span>
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {blogs.map((post) => (
               <BlogList key={post.id} post={post} />
             ))}

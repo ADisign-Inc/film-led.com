@@ -17,8 +17,9 @@ export function Cta() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-3">
           <a
-            className="group flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl hover:shadow-md focus:outline-hidden focus:shadow-md transition dark:bg-neutral-900 dark:border-neutral-800"
-            href="#"
+            className="group flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl hover:shadow-md focus:outline-hidden focus:shadow-md transition hover:bg-yellow-100"
+            href="https://adisign.net/contact_form.html"
+            target="_blank"
           >
             <div className="p-4 md:p-5">
               <div className="flex justify-between gap-x-3">
@@ -32,7 +33,7 @@ export function Cta() {
                       className="w-12 h-12 md:w-16 md:h-16"
                       priority
                     />
-                    <div className="grow group-hover:text-yellow-800 text-black space-y-2">
+                    <div className="grow group-hover:text-gray-900 text-black space-y-2">
                       <p>メールでお問合せ</p>
                       <p className="text-xl md:text-2xl font-semibold">
                         お問合せフォームへ
@@ -46,8 +47,8 @@ export function Cta() {
           </a>
 
           <a
-            className="group flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl hover:shadow-md focus:outline-hidden focus:shadow-md transition dark:bg-neutral-900 dark:border-neutral-800"
-            href="#"
+            className="group flex flex-col bg-white border border-gray-200 shadow-2xs rounded-xl hover:shadow-md focus:outline-hidden focus:shadow-md transition hover:bg-yellow-100"
+            href="tel:092-433-3302"
           >
             <div className="p-4 md:p-5">
               <div className="flex justify-between items-center gap-x-3">
@@ -61,10 +62,10 @@ export function Cta() {
                       className="w-12 h-12 md:w-16 md:h-16"
                       priority
                     />
-                    <div className="grow group-hover:text-yellow-800 text-black space-y-2">
+                    <div className="grow group-hover:text-gray-900 text-black space-y-2">
                       <p>お電話でのお問い合わせ</p>
                       <p className="text-2xl md:text-3xl font-semibold">
-                        0120-387-048
+                        092-433-3302
                       </p>
                       <p>受付時間：平日10時〜18時</p>
                     </div>

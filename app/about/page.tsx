@@ -712,7 +712,7 @@ export default async function AboutPage() {
                 </div>
 
                 <div className="flex justify-center">
-                  <div className="inline-block mt-10">
+                  <div className="mt-10">
                     <Button>
                       無料相談・お申し込みはこちら
                       <ArrowRight className="h-4 w-4" />
@@ -723,6 +723,7 @@ export default async function AboutPage() {
             </section>
           </article>
         </div>
+
         {/* CTA */}
         <Cta />
       </main>

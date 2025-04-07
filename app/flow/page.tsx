@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import Image from "next/image";
 import Button from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Cta } from "@/components/contact/Cta";
 
 export default function FlowPage() {
   return (
@@ -43,12 +44,11 @@ export default function FlowPage() {
                     <br />
                     オンライン相談も対応可能ですので、遠方のお客様でもお気軽にご利用いただけます。
                   </p>
-                  <div className="inline-block">
-                    <Button variant="default">
-                      無料相談・お申し込みはこちら
-                      <ArrowRight className="h-4 w-4" />
-                    </Button>
-                  </div>
+
+                  <Button variant="default">
+                    無料相談・お申し込みはこちら
+                    <ArrowRight className="h-4 w-4" />
+                  </Button>
                 </div>
               </div>
 
@@ -160,6 +160,9 @@ export default function FlowPage() {
             </div>
           </div>
         </section>
+
+        {/* CTA */}
+        <Cta />
       </main>
       <Footer />
     </div>

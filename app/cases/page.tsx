@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import Image from "next/image";
 import { cases } from "@/data/cases";
+import { Cta } from "@/components/contact/Cta";
 
 export default function CasesPage() {
   return (
@@ -73,6 +74,9 @@ export default function CasesPage() {
             </div>
           </section>
         </section>
+
+        {/* CTA */}
+        <Cta />
       </main>
 
       <Footer />

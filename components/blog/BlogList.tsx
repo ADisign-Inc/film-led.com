@@ -9,8 +9,8 @@ type BlogListProps = {
 export function BlogList({ post }: BlogListProps) {
   return (
     <Link href={`/blog/${post.id}`} className="group">
-      <article className="bg-white/90 shadow-sm hover:shadow-md transition-shadow">
-        <div className="relative h-48">
+      <article className="bg-white/90 group-hover:bg-yellow-100 transition-all">
+        <div className="relative min-h-52">
           <Image
             src={post.image}
             alt={post.title}
@@ -27,7 +27,7 @@ export function BlogList({ post }: BlogListProps) {
           <div className="text-gray-500 text-sm mb-2">
             <time dateTime={post.date}>{post.date}</time>
           </div>
-          <h3 className="text-xl text-black font-semibold mb-2 group-hover:text-yellow-300 transition-colors">
+          <h3 className="text-xl text-black text-start font-semibold mb-2">
             {post.title}
           </h3>
           <p className="text-gray-600">{post.description}</p>

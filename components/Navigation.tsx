@@ -20,9 +20,9 @@ export function Navigation() {
     <>
       {/* PC版ナビゲーション */}
       <nav className="hidden md:flex items-center gap-6">
-        {menuItems.map((item) => (
+        {menuItems.map((item, index) => (
           <Link
-            key={item.href}
+            key={`${item.href}-${index}`}
             href={item.href}
             className="text-sm font-medium text-white hover:text-yellow-300 transition-colors"
           >
@@ -48,9 +48,9 @@ export function Navigation() {
           <div className="fixed inset-0 top-20 bg-black/80 z-50">
             <nav className="container mx-auto px-5 py-8">
               <div className="flex flex-col gap-6">
-                {menuItems.map((item) => (
+                {menuItems.map((item, index) => (
                   <Link
-                    key={item.href}
+                    key={`${item.href}-${index}`}
                     href={item.href}
                     className="text-lg font-medium text-white hover:text-yellow-200 transition-colors"
                     onClick={() => setIsOpen(false)}
