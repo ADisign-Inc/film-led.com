@@ -9,13 +9,13 @@ type BlogListProps = {
 export function BlogList({ post }: BlogListProps) {
   return (
     <Link href={`/blog/${post.id}`} className="group">
-      <article className="bg-white/90 group-hover:bg-yellow-100 transition-all">
+      <article className="bg-white/90 group-hover:bg-yellow-100 transition-all rounded-xl">
         <div className="relative min-h-52">
           <Image
             src={post.image}
             alt={post.title}
             fill
-            className="object-cover"
+            className="object-cover rounded-t-xl"
           />
           <div className="absolute top-1 -left-2 flex items-center gap-2 text-sm mb-2 z-10">
             <span className="bg-yellow-900  px-2 py-1 rounded">

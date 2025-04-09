@@ -4,7 +4,7 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const menuItems = [
-  { href: "/about", label: "透明フィルム型LEDビジョンとは？" },
+  { href: "/about", label: "透明LEDフィルムとは？" },
   { href: "/blog", label: "LED ブログ" },
   { href: "/products", label: "サービス・料金" },
   { href: "/cases", label: "活用事例" },
