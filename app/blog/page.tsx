@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { Header } from "@/components/Header";
-import Button from "@/components/ui/button";
+import Button from "@/components/ui/Button";
 import { BlogList } from "@/components/blog/BlogList";
 import { blogs } from "@/data/blog";
-import { Cta } from "@/components/contact/Cta";
+import { Cta } from "@/components/ui/Cta";
 import { Footer } from "@/components/Footer";
 
 import Link from "next/link";

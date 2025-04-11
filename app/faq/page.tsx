@@ -7,7 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Cta } from "@/components/contact/Cta";
+import { Cta } from "@/components/ui/Cta";
 
 export default function FAQPage() {
   return (

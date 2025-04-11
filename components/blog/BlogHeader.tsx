@@ -48,10 +48,7 @@ export function BlogHeader({ title, date, category, image, author }: BlogHeaderP
               className="object-cover"
             />
           </div>
-          <div>
-            <div className="font-medium">{author}</div>
-            <div className="text-sm text-gray-600">執筆者</div>
-          </div>
+        
         </div>
       </div>
     </>

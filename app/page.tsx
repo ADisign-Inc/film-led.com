@@ -3,11 +3,11 @@
 import Image from "next/image";
 import { ArrowRight, Check, Menu, X } from "lucide-react";
 import Link from "next/link";
-import Button from "@/components/ui/button";
+import Button from "@/components/ui/Button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import LogoSlider from "@/components/ui/LogoSlider";
-import { Cta } from "@/components/contact/Cta";
+import { Cta } from "@/components/ui/Cta";
 import { cases } from "@/data/cases";
 import { blogs } from "@/data/blog";
 import { BlogList } from "@/components/blog/BlogList";
