@@ -5,12 +5,13 @@ import { useState } from "react";
 
 const menuItems = [
   { href: "/about", label: "透明LEDフィルムとは？" },
-  { href: "/blog", label: "LED ブログ" },
-  { href: "/products", label: "サービス・料金" },
   { href: "/cases", label: "活用事例" },
-  { href: "/faq", label: "FAQ" },
+  { href: "/products", label: "製品一覧" },
+  { href: "/products", label: "コンテンツ制作について" },
   { href: "/flow", label: "導入までの流れ" },
-  { href: "/contact", label: "お問い合わせ" },
+  { href: "/faq", label: "FAQ" },
+  { href: "/blog", label: "LED ブログ" },
+  { href: "https://adisignage.com/contact_form.html", label: "お問い合わせ" },
 ];
 
 export function Navigation() {
@@ -25,6 +26,7 @@ export function Navigation() {
             key={`${item.href}-${index}`}
             href={item.href}
             className="text-sm font-medium text-white hover:text-yellow-300 transition-colors"
+            {...(item.href === "https://adisignage.com/contact_form.html" ? { target: "_blank" } : {})}
           >
             {item.label}
           </Link>
@@ -54,6 +56,7 @@ export function Navigation() {
                     href={item.href}
                     className="text-lg font-medium text-white hover:text-yellow-200 transition-colors"
                     onClick={() => setIsOpen(false)}
+                    {...(item.href === "https://adisignage.com/contact_form.html" ? { target: "_blank" } : {})}
                   >
                     {item.label}
                   </Link>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { mainData } from "@/data/main_data";
 
 export function Footer() {
   return (
@@ -51,7 +52,11 @@ export function Footer() {
             <p className="text-lg font-semibold mb-4 text-white">会社情報</p>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="#" className="hover:text-white">
+                <Link
+                  href="https://adisignage.com/about.html"
+                  className="hover:text-white"
+                  target="_blank"
+                >
                   会社概要
                 </Link>
               </li>
@@ -78,17 +83,21 @@ export function Footer() {
               お問い合わせ
             </p>
             <ul className="space-y-2 text-sm">
-              <li>〒123-4567</li>
-              <li>東京都〇〇区〇〇町1-2-3</li>
-              <li>TEL: 03-1234-5678</li>
-              <li>Email: info@example.com</li>
+              <li>{mainData.companyAddress.postalCode}</li>
+              <li>
+                {mainData.companyAddress.prefecture}
+                {mainData.companyAddress.city}
+                {mainData.companyAddress.street}
+              </li>
+              <li>TEL: {mainData.contact.tel}</li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-gray-300 mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center">
           <p className="text-xs text-gray-300">
-            © {new Date().getFullYear()} Adisign All Rights Reserved.
+            © {new Date().getFullYear()} {mainData.companyNameEn} All Rights
+            Reserved.
           </p>
           <div className="flex gap-4 mt-4 sm:mt-0">
             <Link href="#" className="text-xs hover:text-white">

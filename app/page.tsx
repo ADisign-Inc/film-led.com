@@ -78,7 +78,7 @@ export default function LandingPage() {
             What's Transparent LED Film ?<span>透明LEDフィルムとは？</span>
           </h2>
 
-          <div className="flex gap-10">
+          <div className="flex gap-10 mb-24">
             <Image
               src="/images/about/01.jpg"
               alt=""
@@ -101,6 +101,214 @@ export default function LandingPage() {
                 昼と夜で異なる印象を与えることができるのも魅力です。
               </p>
             </div>
+          </div>
+
+          <div className="flex justify-center">
+            <Button>透明LEDフィルムについて詳しく知る</Button>
+          </div>
+        </section>
+
+        {/* Benefits */}
+        <section className="container max-w-6xl py-10 md:py-20 mb-10">
+          <h2>
+            Benefits<span>導入のメリット</span>
+          </h2>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-5 text-black mb-20 md:mb-24">
+            <div className="relative mx-auto w-full max-w-xs sm:max-w-sm md:max-w-md bg-[#f1f1f1] py-4 md:py-6 px-4 md:px-8">
+              <p
+                className="relative inline-block box-border font-semibold w-[calc(100%+20px)] ml-[-3.3rem] px-5 py-2.5 text-lg sm:text-lg md:text-xl bg-gray-700 text-yellow-300 text-center mb-5
+                           before:absolute before:top-full before:left-0 before:content-[''] before:border-b-[15px] before:border-b-transparent before:border-r-[20px] before:border-r-gray-800"
+              >
+                視覚的インパクト
+              </p>
+              <div className="flex gap-10 mb-5">
+                <Image
+                  src="/images/about/01.jpg"
+                  alt=""
+                  width={500}
+                  height={500}
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <p>
+                ガラス面やウィンドウに直接取り付けることで、空間デザインをそのまま活かしたまま、動的で鮮やかな映像を表示可能です。高級感のある施設や店舗でも、ブランドイメージを維持しながら目を引くディスプレイが実現します。
+              </p>
+            </div>
+
+            <div className="relative mx-auto w-full max-w-xs sm:max-w-sm md:max-w-md bg-[#f1f1f1] py-4 md:py-6 px-4 md:px-8">
+              <p
+                className="relative inline-block box-border font-semibold w-[calc(100%+20px)] ml-[-3.3rem] px-5 py-2.5 text-lg sm:text-lg md:text-xl bg-gray-700 text-yellow-300 text-center mb-5
+                           before:absolute before:top-full before:left-0 before:content-[''] before:border-b-[15px] before:border-b-transparent before:border-r-[20px] before:border-r-gray-800"
+              >
+                自由度が高く、施工も簡単
+              </p>
+              <div className="flex gap-10 mb-5">
+                <Image
+                  src="/images/about/01.jpg"
+                  alt=""
+                  width={500}
+                  height={500}
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <p>
+                比較的簡単な施工で、スピーディーに設置が可能です。店舗やオフィスなど、限られたスペースにも簡単に導入でき、配置変更や移設も柔軟に対応できます。短期間で効果的な運用を開始できます。
+              </p>
+            </div>
+
+            <div className="relative mx-auto w-full max-w-xs sm:max-w-sm md:max-w-md bg-[#f1f1f1] py-4 md:py-6 px-4 md:px-8">
+              <p
+                className="relative inline-block box-border font-semibold w-[calc(100%+20px)] ml-[-3.3rem] px-5 py-2.5 text-lg sm:text-lg md:text-xl bg-gray-700 text-yellow-300 text-center mb-5
+                           before:absolute before:top-full before:left-0 before:content-[''] before:border-b-[15px] before:border-b-transparent before:border-r-[20px] before:border-r-gray-800"
+              >
+                集客力・訴求力向上
+              </p>
+              <div className="flex gap-10 mb-5">
+                <Image
+                  src="/images/about/01.jpg"
+                  alt=""
+                  width={500}
+                  height={500}
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <p>
+                動的なコンテンツやインタラクティブな演出が、通行人や来客の目を引きます。視覚的に印象に残りやすく、集客効果が高まります。また、遠くからでも目を引くため、屋外や大規模施設でも効果的です。
+              </p>
+            </div>
+
+            <div className="relative mx-auto w-full max-w-xs sm:max-w-sm md:max-w-md bg-[#f1f1f1] py-4 md:py-6 px-4 md:px-8">
+              <p
+                className="relative inline-block box-border font-semibold w-[calc(100%+20px)] ml-[-3.3rem] px-5 py-2.5 text-lg sm:text-lg md:text-xl bg-gray-700 text-yellow-300 text-center mb-5
+                           before:absolute before:top-full before:left-0 before:content-[''] before:border-b-[15px] before:border-b-transparent before:border-r-[20px] before:border-r-gray-800"
+              >
+                最新技術で次世代の広告表現
+              </p>
+              <div className="flex gap-10 mb-5">
+                <Image
+                  src="/images/about/01.jpg"
+                  alt=""
+                  width={500}
+                  height={500}
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <p>
+                透明LEDフィルムは最新のディスプレイ技術を駆使しており、通常のLEDディスプレイでは実現できない「透明性」と「高解像度」を両立させます。これにより、視覚的な美しさと機能性を兼ね備えた未来的な広告手法を提供します。
+              </p>
+            </div>
+
+            <div className="relative mx-auto w-full max-w-xs sm:max-w-sm md:max-w-md bg-[#f1f1f1] py-4 md:py-6 px-4 md:px-8">
+              <p
+                className="relative inline-block box-border font-semibold w-[calc(100%+20px)] ml-[-3.3rem] px-5 py-2.5 text-lg sm:text-lg md:text-xl bg-gray-700 text-yellow-300 text-center mb-5
+                           before:absolute before:top-full before:left-0 before:content-[''] before:border-b-[15px] before:border-b-transparent before:border-r-[20px] before:border-r-gray-800"
+              >
+                優れたコストパフォーマンス
+              </p>
+              <div className="flex gap-10 mb-5">
+                <Image
+                  src="/images/about/01.jpg"
+                  alt=""
+                  width={500}
+                  height={500}
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <p>
+                初期投資を抑えたい場合、レンタルプランを選択することができます。短期間のキャンペーンやイベントでも導入可能で、リスクを抑えつつ最新技術を試せます。さらに、レンタル期間後の移設や再契約も柔軟に対応可能です。
+              </p>
+            </div>
+
+            <div className="relative mx-auto w-full max-w-xs sm:max-w-sm md:max-w-md bg-[#f1f1f1] py-4 md:py-6 px-4 md:px-8">
+              <p
+                className="relative inline-block box-border font-semibold w-[calc(100%+20px)] ml-[-3.3rem] px-5 py-2.5 text-lg sm:text-lg md:text-xl bg-gray-700 text-yellow-300 text-center mb-5
+                           before:absolute before:top-full before:left-0 before:content-[''] before:border-b-[15px] before:border-b-transparent before:border-r-[20px] before:border-r-gray-800"
+              >
+                簡便なメンテナンス
+              </p>
+              <div className="flex gap-10 mb-5">
+                <Image
+                  src="/images/about/01.jpg"
+                  alt=""
+                  width={500}
+                  height={500}
+                  className="object-cover"
+                  priority
+                />
+              </div>
+              <p>
+                透明LEDフィルムは耐久性が高く、メンテナンスが簡単で長期的に安定した運用が可能です。定期的な清掃やコンテンツ更新も簡単に行えるため、管理が楽で安心です。
+              </p>
+            </div>
+          </div>
+
+          <div className="flex justify-center">
+            <Link href="/services">
+              <Button variant="default">
+                透明LEDフィルムについて詳しく知る
+              </Button>
+            </Link>
+          </div>
+        </section>
+
+        {/* Case Studies */}
+        <section className="container max-w-6xl bg-white/15 px-5 md:px-10 py-10 md:py-20 mb-10">
+          <h2>
+            Case Studies
+            <span>活用事例</span>
+          </h2>
+
+          <div className="grid gap-5 grid-cols-1 xs:grid-cols-2 md:grid-cols-3 mb-20">
+            {cases.slice(0, 3).map((case_) => (
+              <div key={case_.id} className="">
+                <div className=" flex items-center justify-center mb-3 md:mb-5">
+                  <Image
+                    src={case_.image[0]}
+                    alt={case_.title}
+                    width={400}
+                    height={400}
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+                <h3 className="text-xl md:text-xl text-yellow-300 mb-3">
+                  {case_.title}
+                </h3>
+                <p className="px-3">{case_.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex justify-center">
+            <Link href="/cases">
+              <Button variant="default">
+                活用事例を詳しく見る
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </Link>
+          </div>
+        </section>
+
+        {/* Product Lineup */}
+        <section className="container max-w-6xl py-10 md:py-20 mb-10">
+          <h2>
+            Product Lineup
+            <span>製品ラインナップ</span>
+          </h2>
+
+          <div className="flex justify-center">
+            <Link href="/blog">
+              <Button variant="default">
+                製品ラインナップを詳しく見る
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </section>
 
@@ -178,130 +386,6 @@ export default function LandingPage() {
           </div>
         </section>
 
-        {/* Advantages of Introduction */}
-        <section className="container max-w-6xl py-10 md:py-20 mb-10">
-          <h2>
-            Advantages of Introduction
-            <span>導入のメリット</span>
-          </h2>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-5 text-black mb-20">
-            <div className="bg-white/90 p-10 rounded-xl">
-              1. 空間デザインを損なわず、視覚的インパクトを与える
-              透明LEDフィルムは、ガラス面やウィンドウに直接取り付けることで、空間デザインをそのまま活かしたまま、動的で鮮やかな映像を表示可能です。高級感のある施設や店舗でも、ブランドイメージを維持しながら目を引くディスプレイが実現します。
-            </div>
-            <div className="bg-white/90 p-10 rounded-xl">
-              2. 設置の自由度が高く、施工も簡単
-              大規模な工事を必要とせず、スピーディーに設置が可能です。店舗やオフィスなど、限られたスペースにも簡単に導入でき、配置変更や移設も柔軟に対応できます。短期間で効果的な運用を開始できます。
-            </div>
-            <div className="bg-white/90 p-10 rounded-xl">
-              3. 集客力・訴求力の向上
-              動的なコンテンツやインタラクティブな演出が、通行人や来客の目を引きます。視覚的に印象に残りやすく、集客効果が高まります。また、遠くからでも目を引くため、屋外や大規模施設でも効果的です。
-            </div>
-            <div className="bg-white/90 p-10 rounded-xl">
-              4. 最新技術で次世代の広告表現が可能
-              透明LEDフィルムは最新のディスプレイ技術を駆使しており、通常のLEDディスプレイでは実現できない「透明性」と「高解像度」を両立させます。これにより、視覚的な美しさと機能性を兼ね備えた未来的な広告手法を提供します。
-            </div>
-            <div className="bg-white/90 p-10 rounded-xl">
-              5. コストパフォーマンスに優れたレンタルプラン
-              初期投資を抑えたい場合、レンタルプランを選択することができます。短期間のキャンペーンやイベントでも導入可能で、リスクを抑えつつ最新技術を試せます。さらに、レンタル期間後の移設や再契約も柔軟に対応可能です。
-            </div>
-            <div className="bg-white/90 p-10 rounded-xl">
-              6. メンテナンスの簡便さ
-              透明LEDフィルムは耐久性が高く、メンテナンスが簡単で長期的に安定した運用が可能です。定期的な清掃やコンテンツ更新も簡単に行えるため、管理が楽で安心です。
-            </div>
-          </div>
-
-          <div className="flex justify-center">
-            <Link href="/services">
-              <Button variant="default">
-                透明LEDフィルムについて詳しく知る
-                <ArrowRight className="h-4 w-4" />
-              </Button>
-            </Link>
-          </div>
-        </section>
-
-        {/* Case Studies */}
-        <section className="container max-w-6xl bg-white/15 px-5 md:px-10 py-10 md:py-20 mb-10">
-          <h2>
-            Case Studies
-            <span>活用事例</span>
-          </h2>
-
-          <div className="grid gap-5 grid-cols-1 xs:grid-cols-2 md:grid-cols-3 mb-20">
-            {cases.slice(0, 6).map((case_) => (
-              <div key={case_.id} className="">
-                <div className=" flex items-center justify-center mb-3 md:mb-5">
-                  <Image
-                    src={case_.image[0]}
-                    alt={case_.title}
-                    width={400}
-                    height={400}
-                    className="object-cover"
-                    priority
-                  />
-                </div>
-                <h3 className="text-xl md:text-xl text-yellow-300 mb-3">
-                  {case_.title}
-                </h3>
-                <p className="px-3">{case_.description}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="flex justify-center">
-            <Link href="/cases">
-              <Button variant="default">
-                活用事例を詳しく見る
-                <ArrowRight className="h-4 w-4" />
-              </Button>
-            </Link>
-          </div>
-        </section>
-
-        {/* LED BLOG */}
-        <section className="container max-w-6xl mb-10">
-          <h2>
-            LED BLOG
-            <span>LED ブログ</span>
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10 md:mb-20">
-            {blogs.slice(0, 3).map((post) => (
-              <div key={post.id}>
-                <BlogList post={post} />
-              </div>
-            ))}
-          </div>
-
-          <div className="flex justify-center">
-            <Link href="/blog">
-              <Button variant="default">
-                LED ブログ一覧へ
-                <ArrowRight className="h-4 w-4" />
-              </Button>
-            </Link>
-          </div>
-        </section>
-
-        {/* Product Lineup */}
-        <section className="container max-w-6xl py-10 md:py-20 mb-10">
-          <h2>
-            Product Lineup
-            <span>製品ラインナップ</span>
-          </h2>
-
-          <div className="flex justify-center">
-            <Link href="/blog">
-              <Button variant="default">
-                製品ラインナップを詳しく見る
-                <ArrowRight className="h-4 w-4" />
-              </Button>
-            </Link>
-          </div>
-        </section>
-
         {/* Flow */}
         <section className="container max-w-6xl py-10 md:py-20 mb-10">
           <h2>
@@ -330,6 +414,31 @@ export default function LandingPage() {
             <Link href="/blog">
               <Button variant="default">
                 よくある質問を詳しく見る
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </Link>
+          </div>
+        </section>
+
+        {/* LED BLOG */}
+        <section className="container max-w-6xl mb-10">
+          <h2>
+            LED BLOG
+            <span>LED ブログ</span>
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10 md:mb-20">
+            {blogs.slice(0, 3).map((post) => (
+              <div key={post.id}>
+                <BlogList post={post} />
+              </div>
+            ))}
+          </div>
+
+          <div className="flex justify-center">
+            <Link href="/blog">
+              <Button variant="default">
+                LED ブログ一覧へ
                 <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
