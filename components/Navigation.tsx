@@ -11,7 +11,7 @@ const menuItems = [
   { href: "/flow", label: "導入までの流れ" },
   { href: "/faq", label: "FAQ" },
   { href: "/blog", label: "LED ブログ" },
-  { href: "https://adisignage.com/contact_form.html", label: "お問い合わせ" },
+  { href: "{mainData.contact.urll}", label: "お問い合わせ" },
 ];
 
 export function Navigation() {
@@ -26,7 +26,9 @@ export function Navigation() {
             key={`${item.href}-${index}`}
             href={item.href}
             className="text-sm font-medium text-white hover:text-yellow-300 transition-colors"
-            {...(item.href === "https://adisignage.com/contact_form.html" ? { target: "_blank" } : {})}
+            {...(item.href === "{mainData.contact.urll}"
+              ? { target: "_blank" }
+              : {})}
           >
             {item.label}
           </Link>
@@ -56,7 +58,9 @@ export function Navigation() {
                     href={item.href}
                     className="text-lg font-medium text-white hover:text-yellow-200 transition-colors"
                     onClick={() => setIsOpen(false)}
-                    {...(item.href === "https://adisignage.com/contact_form.html" ? { target: "_blank" } : {})}
+                    {...(item.href === "{mainData.contact.urll}"
+                      ? { target: "_blank" }
+                      : {})}
                   >
                     {item.label}
                   </Link>

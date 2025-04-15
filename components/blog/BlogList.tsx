@@ -9,28 +9,34 @@ type BlogListProps = {
 export function BlogList({ post }: BlogListProps) {
   return (
     <Link href={`/blog/${post.id}`} className="group">
-      <article className="bg-white/90 group-hover:bg-yellow-100 transition-all rounded-xl">
-        <div className="relative min-h-52">
+      <article className="bg-white/90 group-hover:bg-white/10 transition-all shadow-lg group-hover:shadow-[0_0_15px_rgba(255,255,255,0.6)] flex flex-col h-full">
+        <div className="relative aspect-[16/9] group-hover:after:absolute group-hover:after:inset-0 group-hover:after:bg-black/20 group-hover:after:transition-all">
           <Image
             src={post.image}
             alt={post.title}
             fill
-            className="object-cover rounded-t-xl"
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
-          <div className="absolute top-1 -left-2 flex items-center gap-2 text-sm mb-2 z-10">
-            <span className="bg-yellow-900  px-2 py-1 rounded">
-              {post.category}
-            </span>
-          </div>
         </div>
-        <div className="p-4">
-          <div className="text-gray-500 text-sm mb-2">
-            <time dateTime={post.date}>{post.date}</time>
+
+        <div className="p-4 md:px-6 md:py-5 flex flex-col flex-grow">
+          <div className="flex items-center gap-2 mb-2 md:mb-4">
+            <div className="text-gray-500 group-hover:text-white/70 transition-all text-sm">
+              <time dateTime={post.date}>{post.date}</time>
+            </div>
+            <p className="!text-xs">
+              <span className="bg-yellow-900  px-2 py-1 rounded">
+                {post.category}
+              </span>
+            </p>
           </div>
-          <h3 className="text-xl text-black text-start font-semibold mb-2">
+          <h3 className="text-xl text-black group-hover:text-yellow-400 transition-all text-start font-semibold mb-2 md:mb-5">
             {post.title}
           </h3>
-          <p className="text-gray-600">{post.description}</p>
+          <p className="text-gray-600 group-hover:text-white/70 transition-all !leading-5 mb-3 flex-grow">
+            {post.description}
+          </p>
         </div>
       </article>
     </Link>
