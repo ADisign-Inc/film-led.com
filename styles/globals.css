@@ -63,7 +63,7 @@ body {
 }
 
 h2 {
-  @apply text-3xl xs:text-4xl md:text-5xl font-bold text-center !tracking-wider mb-10 md:mb-24 after:content-[''] after:block after:w-16 after:h-[2px] after:bg-gray-400 after:mx-auto after:mt-8;
+  @apply text-4xl md:text-5xl font-bold text-center !tracking-wider mb-10 md:mb-24 after:content-[''] after:block after:w-16 after:h-[2px] after:bg-gray-400 after:mx-auto after:mt-8;
   span {
     @apply text-sm md:text-lg font-normal block mt-8;
   }
@@ -78,5 +78,5 @@ h4 {
 }
 
 p {
-  @apply text-sm md:text-base !leading-8 !tracking-wide;
+  @apply text-sm md:text-base !leading-6 md:!leading-8 !tracking-wide;
 }
