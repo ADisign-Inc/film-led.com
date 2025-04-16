@@ -78,5 +78,5 @@ h4 {
 }
 
 p {
-  @apply text-sm md:text-base !leading-6 md:!leading-8 !tracking-wide;
+  @apply text-sm md:text-base !leading-6 md:!leading-7 !tracking-wide;
 }

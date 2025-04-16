@@ -1,9 +1,6 @@
-import { Check } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import Image from "next/image";
-import Button from "@/components/ui/Button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Cta } from "@/components/ui/Cta";
 
 export default function ProductsPage() {
@@ -24,10 +21,12 @@ export default function ProductsPage() {
         <section className="container max-w-6xl py-28 md:py-40">
           <h2>
             Products
-            <span>サービス・料金</span>
+            <span>製品一覧</span>
           </h2>
 
-          <div className="bg-white/15 text-black py-20">
+          <div className="max-w-3xl mx-auto"></div>
+
+          {/* <div className="bg-white/15 text-black py-20">
             <Tabs defaultValue="rental" className="w-full max-w-3xl mx-auto">
               <TabsList className="grid w-full grid-cols-2 mb-8">
                 <TabsTrigger value="rental">レンタルプラン</TabsTrigger>
@@ -179,7 +178,7 @@ export default function ProductsPage() {
                 </p>
               </TabsContent>
             </Tabs>
-          </div>
+          </div> */}
         </section>
 
         {/* CTA */}
