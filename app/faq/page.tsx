@@ -8,7 +8,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/Accordion";
 import { Cta } from "@/components/ui/Cta";
-import { faqData } from "@/app/data/faq";
+import { faqData } from "@/data/faq";
 
 export const dynamic = "force-dynamic";
 

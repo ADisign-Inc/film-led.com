@@ -11,7 +11,7 @@ import { Cta } from "@/components/ui/Cta";
 import { cases } from "@/data/cases";
 import { blogs } from "@/data/blog";
 import { BlogList } from "@/components/blog/BlogList";
-import { faqData } from "@/app/data/faq";
+import { faqData } from "@/data/faq";
 import {
   Accordion,
   AccordionContent,
@@ -358,7 +358,7 @@ export default function LandingPage() {
 
                 <div className="w-full lg:w-1/2 relative -z-10 px-8 md:pt-20">
                   <div className="absolute top-0 left-0 right-0 bottom-0 w-screen bg-white/20 -z-10 translate-x-4 -translate-y-4 lg:-translate-x-20 lg:translate-y-10"></div>
-                  <div className="relative">
+                  <div className="relative flex flex-col justify-end h-full">
                     <div className="flex items-baseline mb-8 md:mb-14">
                       <h3 className="text-yellow-300 text-4xl md:text-5xl font-bold leading-none">
                         販売
