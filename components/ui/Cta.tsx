@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { mainData } from "@/data/main_data";
+import { mainData } from "@/data/main";
 export function Cta() {
   return (
     <section className="container max-w-6xl md:py-20">

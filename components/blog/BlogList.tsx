@@ -2,15 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { Blog } from "@/data/blog";
 
-type BlogListProps = {
-  post: Blog;
-};
-
-export function BlogList({ post }: BlogListProps) {
+export function BlogList({ post }: { post: Blog }) {
   return (
-    <Link href={`/blog/${post.id}`} className="group">
-      <article className="bg-white/90 group-hover:bg-white/10 transition-all shadow-lg group-hover:shadow-[0_0_15px_rgba(255,255,255,0.6)] flex flex-col h-full">
-        <div className="relative aspect-[16/9] group-hover:after:absolute group-hover:after:inset-0 group-hover:after:bg-black/20 group-hover:after:transition-all">
+    <Link href={`/blog/${post.url}`} className="group">
+      <article className="bg-white/90 group-hover:bg-white/5 transition-all shadow-lg group-hover:shadow-[0_0_15px_rgba(255,255,255,0.6)] flex flex-col h-full">
+        <div className="relative aspect-[16/9] group-hover:after:absolute group-hover:after:inset-0 group-hover:after:bg-black/30 group-hover:after:transition-all">
           <Image
             src={post.image}
             alt={post.title}

@@ -6,7 +6,7 @@ import Button from "@/components/ui/Button";
 import { ArrowRight } from "lucide-react";
 import { Cta } from "@/components/ui/Cta";
 import { cases } from "@/data/cases";
-import { mainData } from "@/data/main_data";
+import { mainData } from "@/data/main";
 
 export default async function AboutPage() {
   return (

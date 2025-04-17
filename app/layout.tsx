@@ -7,9 +7,12 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "透明フィルム型LEDビジョン | ADisignage",
+  title: {
+    default: "FILM LED - LEDビジュアルウォールの専門会社",
+    template: "%s | FILM LED",
+  },
   description:
-    "革新的なデジタルサイネージで空間を変える。ビジネスの集客力を最大化する最先端ディスプレイをご提供します。",
+    "FILM LEDは、LEDビジュアルウォールの専門会社です。高輝度で高品質なLEDディスプレイを提供しています。",
   icons: {
     icon: [
       { url: "/favicon.ico" },

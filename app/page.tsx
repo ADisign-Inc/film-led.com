@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import { ArrowRight, Check, Menu, X } from "lucide-react";
 import Link from "next/link";
@@ -18,11 +16,13 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/Accordion";
-import { mainData } from "@/data/main_data";
+import { mainData } from "@/data/main";
 import { ImageSlider } from "@/components/ui/ImageSlider";
 import { benefits } from "@/data/benefits";
 
-export default function LandingPage() {
+export const dynamic = "force-dynamic";
+
+export default async function LandingPage() {
   return (
     <>
       <div className="flex min-h-screen flex-col relative">
@@ -64,7 +64,7 @@ export default function LandingPage() {
                     <br />
                     空間を変える
                     <br />
-                    次世代型LEDビジョン
+                    次世代型{mainData.keyWords}
                   </h1>
 
                   <p className="text-2xl md:text-3xl font-semibold text-yellow-300">
@@ -166,15 +166,36 @@ export default function LandingPage() {
                         priority
                       />
                     ) : (
-                      <video
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        className="w-full h-full object-cover"
-                      >
-                        <source src={benefit.mediaUrl} type="video/mp4" />
-                      </video>
+                      <div className="relative w-full pb-[56.25%] overflow-hidden">
+                        <div className="absolute inset-0">
+                          <video
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            className={`w-full h-full object-cover ${
+                              benefit.videoType === "sideways"
+                                ? "brightness-[0.3]"
+                                : ""
+                            }`}
+                          >
+                            <source src={benefit.mediaUrl} type="video/mp4" />
+                          </video>
+                        </div>
+                        {benefit.videoType === "sideways" && (
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <video
+                              autoPlay
+                              loop
+                              muted
+                              playsInline
+                              className="h-[150%] w-auto"
+                            >
+                              <source src={benefit.mediaUrl} type="video/mp4" />
+                            </video>
+                          </div>
+                        )}
+                      </div>
                     )}
                   </div>
                   <p>{benefit.description}</p>
@@ -234,13 +255,13 @@ export default function LandingPage() {
           <section className="container max-w-6xl py-10 md:py-20 mb-10">
             <h2>
               Product Lineup
-              <span>製品ラインナップ</span>
+              <span>製品一覧</span>
             </h2>
 
             <div className="flex justify-center">
               <Link href="/products">
                 <Button>
-                  製品ラインナップについて詳しく見る
+                  製品一覧を見る
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>
@@ -267,7 +288,7 @@ export default function LandingPage() {
                 </div>
 
                 <div className="w-full lg:w-1/2 relative -z-10 px-8 md:pt-20">
-                  <div className="absolute top-0 left-0 right-0 bottom-0 lg:w-[112%] bg-white/15 -z-10 mdtranslate-x-4 -translate-y-4 lg:-translate-x-20 lg:translate-y-10"></div>
+                  <div className="absolute top-0 left-0 right-0 bottom-0 lg:w-[112%] bg-white/15 -z-10 translate-x-4 -translate-y-4 lg:-translate-x-20 md:translate-y-10 lg:translate-y-20"></div>
                   <div className="relative flex flex-col justify-end h-full py-12 md:pt-0 lg:py-0">
                     <div className="flex items-baseline mb-8 md:mb-14">
                       <h3 className="text-yellow-300 text-4xl md:text-5xl font-bold leading-none">
@@ -306,7 +327,7 @@ export default function LandingPage() {
                 </div>
 
                 <div className="w-full lg:w-1/2 relative -z-10 px-8 md:pt-20">
-                  <div className="absolute top-0 left-0 right-0 bottom-0 lg:w-[112%] bg-white/15 -z-10 mdtranslate-x-4 -translate-y-4 lg:-translate-x-20 lg:translate-y-10"></div>
+                  <div className="absolute top-0 left-0 right-0 bottom-0 lg:w-[112%] bg-white/15 -z-10 translate-x-4 -translate-y-4 lg:-translate-x-20 md:translate-y-10 lg:translate-y-20"></div>
                   <div className="relative flex flex-col justify-end h-full py-12 md:pt-0 lg:py-0">
                     <div className="flex items-baseline mb-8 md:mb-14">
                       <h3 className="text-yellow-300 text-2xl md:text-4xl font-bold leading-none">

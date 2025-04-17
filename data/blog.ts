@@ -1,174 +1,69 @@
+export type BlogContent = {
+  introduction: string;
+  sections: {
+    title: string;
+    content: string;
+    code?: {
+      language: string;
+      code: string;
+    };
+    image?: string;
+  }[];
+  conclusion: string;
+};
+
 export type Blog = {
   id: string;
+  url: string;
   title: string;
   description: string;
-  content:
-    | string
-    | {
-        introduction: string;
-        sections: { title: string; content: string }[];
-        conclusion: string;
-      };
   image: string;
   date: string;
   category: string;
+  slug: string;
 };
 
 export const blogs: Blog[] = [
   {
     id: "1",
+    url: "/aboutFilmLed",
     title: "LEDビジョンとは？",
     description: "用途に合わせた最適なLEDビジョンの選び方をご紹介します。",
-    content: "LEDビジョンを選ぶ際の重要なポイントについて解説します...",
     image: "/images/blog/0001.jpg",
     date: "2024-03-20",
     category: "ガイド",
+    slug: "what-is-led-vision",
   },
   {
     id: "2",
+    url: "/aboutFilmLed",
     title: "LEDビジョンの選び方ガイド",
     description: "用途に合わせた最適なLEDビジョンの選び方をご紹介します。",
-    content: "LEDビジョンを選ぶ際の重要なポイントについて解説します...",
     image: "/images/blog/0001.jpg",
     date: "2024-03-20",
     category: "ガイド",
+    slug: "how-to-choose-led-vision",
   },
   {
     id: "3",
+    url: "/aboutFilmLed",
     title: "シースルーLEDビジョンの活用事例",
     description:
       "実際の導入事例から、シースルーLEDビジョンの効果を解説します。",
-    content: "シースルーLEDビジョンの特徴と活用方法について...",
     image: "/images/blog/0002.jpg",
     date: "2024-03-15",
     category: "活用事例",
+    slug: "use-case-of-sear-led-vision",
   },
   {
     id: "4",
+    url: "/aboutFilmLed",
     title: "透明フィルム型LEDビジョンの技術解説と最新トレンド",
     description:
       "透明フィルム型LEDビジョンの技術的な仕組みと最新の研究動向を詳しく解説。",
     image: "/images/blog/0003.jpg",
-    category: "技術解説",
     date: "2024-03-20",
-    content: {
-      introduction:
-        "透明フィルム型LEDビジョンは、最新のディスプレイ技術の一つであり、空間デザインを損なわずに情報発信を可能にする革新的な製品です。本記事では、その技術的な仕組みと最新トレンドについて詳しく解説します。",
-      sections: [
-        {
-          title: "透明フィルム型LEDビジョンの基本構造と仕組み",
-          content:
-            "透明フィルム型LEDビジョンは、超薄型の透明フィルムに微細なLEDチップを配置し、電圧制御によって映像を表示する技術を採用しています。LEDチップ間の間隔を最適化することで、視界を確保しながら高輝度な映像を実現します。",
-        },
-        {
-          title: "従来のディスプレイ技術との比較",
-          content:
-            "従来の液晶ディスプレイ（LCD）やプロジェクション型ディスプレイと比較すると、透明フィルム型LEDビジョンは省スペースであり、視認性の確保が容易で、設置の自由度が高い点が大きな利点です。",
-        },
-        {
-          title: "最新の研究開発動向と市場トレンド",
-          content:
-            "近年では、より高解像度・高輝度な製品が開発され、屋外対応型やインタラクティブ機能を持つ製品も登場しています。また、スマートシティやIoTとの連携による新たな活用法も注目されています。",
-        },
-      ],
-      conclusion:
-        "透明フィルム型LEDビジョンは、技術の進化とともに今後ますます多様な分野で活用されることが期待されます。",
-    },
-  },
-  {
-    id: "5",
-    title: "導入事例から学ぶ！透明フィルム型LEDビジョンの活用法",
-    description:
-      "透明フィルム型LEDビジョンの活用事例を紹介し、実際の導入効果を解説。",
-    image: "/images/blog/0004.jpg",
-    category: "活用事例",
-    date: "2024-03-15",
-    content: {
-      introduction:
-        "透明フィルム型LEDビジョンは、多様な業界で活用されています。本記事では、具体的な導入事例を紹介しながら、その効果と活用ポイントを解説します。",
-      sections: [
-        {
-          title: "小売・商業施設での活用事例",
-          content:
-            "高級ブランド店やショッピングモールでは、ガラスウィンドウに透明フィルム型LEDビジョンを設置し、広告・プロモーションを行っています。商品ディスプレイと一体化することで、より洗練された演出が可能になります。",
-        },
-        {
-          title: "展示会・イベントでのインパクト事例",
-          content:
-            "展示会では、来場者の注目を集めるため、透明フィルム型LEDビジョンを活用したダイナミックなコンテンツが用いられています。特に、ブース全体の演出に組み込むことで、ブランドイメージの向上につながります。",
-        },
-        {
-          title: "オフィス・建築デザインへの応用",
-          content:
-            "企業のエントランスや会議室のガラスパーティションに透明フィルム型LEDビジョンを設置し、社内ブランディングや情報共有に活用する事例が増えています。",
-        },
-      ],
-      conclusion:
-        "透明フィルム型LEDビジョンは、空間を活かした情報発信に最適なツールであり、今後さらに多くの業界での導入が進むと考えられます。",
-    },
-  },
-  {
-    id: "6",
-    title: "透明フィルム型LEDビジョンの選び方と導入ガイド",
-    description:
-      "透明フィルム型LEDビジョンの選定基準や導入のポイントを徹底解説。",
-    image: "/images/blog/0005.jpg",
-    category: "導入ガイド",
-    date: "2024-03-10",
-    content: {
-      introduction:
-        "透明フィルム型LEDビジョンを導入する際には、適切な製品を選び、適切な設置方法を考慮することが重要です。本記事では、選定基準と導入のポイントを解説します。",
-      sections: [
-        {
-          title: "透明フィルム型LEDビジョンの種類と選定基準",
-          content:
-            "透過率、輝度、解像度、耐久性など、選定時に考慮すべきポイントを解説。用途によって最適な製品を選ぶことが重要です。",
-        },
-        {
-          title: "設置方法と注意点",
-          content:
-            "窓ガラスやアクリルパネルへの取り付け方、電源・配線の設計、メンテナンスのしやすさなどを解説。",
-        },
-        {
-          title: "導入コストとランニングコストの比較",
-          content:
-            "購入とレンタルのコスト比較、運用コスト（電気代・メンテナンス費用）を具体的にシミュレーション。",
-        },
-      ],
-      conclusion:
-        "適切な製品選定と設置計画を行うことで、透明フィルム型LEDビジョンの効果を最大化できます。",
-    },
-  },
-  {
-    id: "7",
-    title: "シースルーLEDビジョンの比較",
-    description:
-      "透明フィルム型LEDビジョンの選定基準や導入のポイントを徹底解説。",
-    image: "/images/blog/0005.jpg",
-    category: "導入ガイド",
-    date: "2024-03-10",
-    content: {
-      introduction:
-        "透明フィルム型LEDビジョンを導入する際には、適切な製品を選び、適切な設置方法を考慮することが重要です。本記事では、選定基準と導入のポイントを解説します。",
-      sections: [
-        {
-          title: "透明フィルム型LEDビジョンの種類と選定基準",
-          content:
-            "透過率、輝度、解像度、耐久性など、選定時に考慮すべきポイントを解説。用途によって最適な製品を選ぶことが重要です。",
-        },
-        {
-          title: "設置方法と注意点",
-          content:
-            "窓ガラスやアクリルパネルへの取り付け方、電源・配線の設計、メンテナンスのしやすさなどを解説。",
-        },
-        {
-          title: "導入コストとランニングコストの比較",
-          content:
-            "購入とレンタルのコスト比較、運用コスト（電気代・メンテナンス費用）を具体的にシミュレーション。",
-        },
-      ],
-      conclusion:
-        "適切な製品選定と設置計画を行うことで、透明フィルム型LEDビジョンの効果を最大化できます。",
-    },
+    category: "技術解説",
+    slug: "technical-explanation-and-latest-trends-of-transparent-film-led-vision",
   },
 ];
