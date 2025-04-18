@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Blog } from "@/data/blog";
+import { Blog } from "../../data/blog";
 
 export function BlogList({ post }: { post: Blog }) {
   return (

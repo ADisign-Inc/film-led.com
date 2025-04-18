@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { Cta } from "@/components/ui/Cta";
-import { Button } from "@/components/ui/Button";
-import { mainData } from "@/data/main";
-import { cases } from "@/data/cases";
+import { Header } from "../../components/Header";
+import { Footer } from "../../components/Footer";
+import { Cta } from "../../components/ui/Cta";
+import { Button } from "../../components/ui/Button";
+import { mainData } from "../../data/main";
+import { cases } from "../../data/cases";
 
 export default function CasesPage() {
   return (

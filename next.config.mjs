@@ -41,18 +41,10 @@ const nextConfig = {
         path: false,
       };
     }
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      "@": path.resolve(__dirname),
-      "@/components": path.resolve(__dirname, "components"),
-      "@/lib": path.resolve(__dirname, "lib"),
-      "@/components/ui": path.resolve(__dirname, "components", "ui"),
-    };
     config.resolve.extensions = [".js", ".jsx", ".ts", ".tsx", ".mjs"];
     return config;
   },
   transpilePackages: [
-    "@/components/ui",
     "@radix-ui/react-accordion",
     "@radix-ui/react-slot",
     "clsx",
