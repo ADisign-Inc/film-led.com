@@ -47,3 +47,5 @@ export function LogoSlider({ logos }: LogoSliderProps) {
     </Swiper>
   );
 }
+
+export default LogoSlider;
