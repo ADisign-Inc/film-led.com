@@ -1,35 +1,11 @@
-import Button from "./Button";
-import {
+export { default as Button } from "./Button";
+export {
   Accordion,
   AccordionItem,
   AccordionTrigger,
   AccordionContent,
 } from "./Accordion";
-import { Cta } from "./Cta";
-import { ImageSlider } from "./ImageSlider";
-import LogoSlider from "./LogoSlider";
-import { Tabs } from "./Tabs";
-
-export {
-  Button,
-  Accordion,
-  AccordionItem,
-  AccordionTrigger,
-  AccordionContent,
-  Cta,
-  ImageSlider,
-  LogoSlider,
-  Tabs,
-};
-
-export default {
-  Button,
-  Accordion,
-  AccordionItem,
-  AccordionTrigger,
-  AccordionContent,
-  Cta,
-  ImageSlider,
-  LogoSlider,
-  Tabs,
-};
+export { Cta } from "./Cta";
+export { ImageSlider } from "./ImageSlider";
+export { default as LogoSlider } from "./LogoSlider";
+export { Tabs } from "./Tabs";
