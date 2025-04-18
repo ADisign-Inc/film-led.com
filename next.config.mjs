@@ -1,3 +1,5 @@
+import path from "path";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   eslint: {
@@ -37,10 +39,10 @@ const nextConfig = {
     }
     config.resolve.alias = {
       ...config.resolve.alias,
-      "@": process.cwd(),
-      "@/components": `${process.cwd()}/components`,
-      "@/lib": `${process.cwd()}/lib`,
-      "@/components/ui": `${process.cwd()}/components/ui`,
+      "@": path.resolve(__dirname),
+      "@/components": path.resolve(__dirname, "components"),
+      "@/lib": path.resolve(__dirname, "lib"),
+      "@/components/ui": path.resolve(__dirname, "components", "ui"),
     };
     config.resolve.extensions = [".js", ".jsx", ".ts", ".tsx", ".mjs"];
     return config;
