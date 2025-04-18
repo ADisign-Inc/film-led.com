@@ -44,7 +44,11 @@ const nextConfig = {
     };
     return config;
   },
-  transpilePackages: ["@/components/ui"],
+  transpilePackages: [
+    "@/components/ui",
+    "@radix-ui/react-accordion",
+    "@radix-ui/react-slot",
+  ],
 };
 
 mergeConfig(nextConfig, userConfig);
