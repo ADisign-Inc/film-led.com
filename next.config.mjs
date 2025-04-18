@@ -40,9 +40,11 @@ const nextConfig = {
       "@": process.cwd(),
       "@/components": `${process.cwd()}/components`,
       "@/lib": `${process.cwd()}/lib`,
+      "@/components/ui": `${process.cwd()}/components/ui`,
     };
     return config;
   },
+  transpilePackages: ["@/components/ui"],
 };
 
 mergeConfig(nextConfig, userConfig);
