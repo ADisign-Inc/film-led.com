@@ -42,7 +42,7 @@ const nextConfig = {
       "@/lib": `${process.cwd()}/lib`,
       "@/components/ui": `${process.cwd()}/components/ui`,
     };
-    config.resolve.extensions = [".js", ".jsx", ".ts", ".tsx"];
+    config.resolve.extensions = [".js", ".jsx", ".ts", ".tsx", ".mjs"];
     return config;
   },
   transpilePackages: [
