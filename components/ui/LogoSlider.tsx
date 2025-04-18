@@ -1,45 +1,49 @@
 "use client";
+import * as React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 
-import React from "react";
-import Image from "next/image";
-import "@/styles/logo-slider.css";
+interface LogoSliderProps {
+  logos: {
+    src: string;
+    alt: string;
+  }[];
+}
 
-const logoSlides = [
-  "/images/logo-light.svg",
-  "/images/logo-light.svg",
-  "/images/logo-light.svg",
-  "/images/logo-light.svg",
-  "/images/logo-light.svg",
-  "/images/logo-light.svg",
-  "/images/logo-light.svg",
-];
-
-export default function LogoSlider() {
-  const logos = [...logoSlides, ...logoSlides];
-
+export function LogoSlider({ logos }: LogoSliderProps) {
   return (
-    <div className="w-full bg-white/60 py-3 overflow-hidden relative">
-      <div className="w-full overflow-hidden relative">
-        <div className="flex slider-track">
-          {logos.map((logo, index) => (
-            <div
-              key={index}
-              className="flex-shrink-0 w-[180px] md:w-[200px] px-8 box-border"
-            >
-              <div className="relative w-full h-16">
-                <Image
-                  src={logo}
-                  alt={`Partner Logo ${index + 1}`}
-                  fill
-                  className="object-contain object-left w-auto h-auto"
-                  priority={true}
-                  unoptimized={true}
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
+    <Swiper
+      modules={[Autoplay]}
+      spaceBetween={30}
+      slidesPerView={2}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
+      breakpoints={{
+        640: {
+          slidesPerView: 3,
+        },
+        768: {
+          slidesPerView: 4,
+        },
+        1024: {
+          slidesPerView: 5,
+        },
+      }}
+    >
+      {logos.map((logo, index) => (
+        <SwiperSlide key={index}>
+          <div className="flex items-center justify-center h-20">
+            <img
+              src={logo.src}
+              alt={logo.alt}
+              className="max-h-16 w-auto object-contain"
+            />
+          </div>
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
 }
