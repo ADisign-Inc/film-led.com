@@ -27,10 +27,19 @@ const nextConfig = {
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
   },
-  webpack: (config) => {
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        path: false,
+      };
+    }
     config.resolve.alias = {
       ...config.resolve.alias,
       "@": process.cwd(),
+      "@/components": `${process.cwd()}/components`,
+      "@/lib": `${process.cwd()}/lib`,
     };
     return config;
   },
