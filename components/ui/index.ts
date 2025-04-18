@@ -1,4 +1,4 @@
-import Button, { Button as NamedButton } from "./Button";
+import { Button } from "./Button";
 import {
   Accordion,
   AccordionItem,
@@ -12,7 +12,6 @@ import { Tabs } from "./Tabs";
 
 export {
   Button,
-  NamedButton,
   Accordion,
   AccordionItem,
   AccordionTrigger,
@@ -25,7 +24,6 @@ export {
 
 export default {
   Button,
-  NamedButton,
   Accordion,
   AccordionItem,
   AccordionTrigger,

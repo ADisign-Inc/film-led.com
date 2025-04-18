@@ -11,13 +11,13 @@ interface ButtonProps {
   type?: "button" | "submit" | "reset";
 }
 
-export function Button({
+const Button = ({
   children,
   size,
   className,
   variant,
   onClick,
-}: ButtonProps) {
+}: ButtonProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -41,6 +41,7 @@ export function Button({
       </div>
     </div>
   );
-}
+};
 
+export { Button };
 export default Button;
