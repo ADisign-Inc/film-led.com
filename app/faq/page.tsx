@@ -3,10 +3,10 @@ import { Footer } from "@/components/Footer";
 import Image from "next/image";
 import {
   Accordion,
-  AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/Accordion";
+  AccordionContent,
+} from "@/components/ui";
 import { Cta } from "@/components/ui/Cta";
 import { faqData } from "@/data/faq";
 

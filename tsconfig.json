@@ -22,8 +22,7 @@
     "paths": {
       "@/*": ["./*"],
       "@/components/*": ["./components/*"],
-      "@/lib/*": ["./lib/*"],
-      "@/components/ui/*": ["./components/ui/*"]
+      "@/lib/*": ["./lib/*"]
     },
     "typeRoots": ["./node_modules/@types", "./types"]
   },
