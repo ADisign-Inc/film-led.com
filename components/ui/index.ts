@@ -21,3 +21,15 @@ export {
   LogoSlider,
   Tabs,
 };
+
+export default {
+  Button,
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+  Cta,
+  ImageSlider,
+  LogoSlider,
+  Tabs,
+};

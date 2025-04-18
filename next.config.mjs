@@ -48,6 +48,8 @@ const nextConfig = {
     "@/components/ui",
     "@radix-ui/react-accordion",
     "@radix-ui/react-slot",
+    "clsx",
+    "tailwind-merge",
   ],
 };
 
