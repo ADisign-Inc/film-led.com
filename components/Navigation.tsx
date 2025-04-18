@@ -19,7 +19,7 @@ export function Navigation() {
 
   return (
     <>
-      {/* PC版ナビゲーション */}
+      {/* PC */}
       <nav className="hidden md:flex items-center gap-6">
         {menuItems.map((item, index) => (
           <Link
@@ -35,7 +35,7 @@ export function Navigation() {
         ))}
       </nav>
 
-      {/* SP版ナビゲーション */}
+      {/* SP */}
       <div className="md:hidden">
         <Button
           variant="outline"
@@ -47,7 +47,7 @@ export function Navigation() {
           <span className="sr-only">メニュー</span>
         </Button>
 
-        {/* SP版メニュー */}
+        {/* SP メニュー */}
         {isOpen && (
           <div className="fixed inset-0 top-20 bg-black/80 z-50">
             <nav className="container mx-auto px-5 py-8">
