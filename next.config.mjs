@@ -26,6 +26,13 @@ const nextConfig = {
     webpackBuildWorker: true,
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
+    optimizeCss: true,
+    optimizePackageImports: [
+      "@radix-ui/react-accordion",
+      "@radix-ui/react-slot",
+      "clsx",
+      "tailwind-merge",
+    ],
   },
   webpack: (config, { isServer }) => {
     if (!isServer) {
