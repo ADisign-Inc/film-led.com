@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { mainData } from "@/data/main";
+import { mainData } from "../data/main";
 
 export function Footer() {
   return (

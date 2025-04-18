@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { Button } from "@/components/ui/Button";
-import { Cta } from "@/components/ui/Cta";
+import { Header } from "../../components/Header";
+import { Footer } from "../../components/Footer";
+import { Button } from "../../components/ui/Button";
+import { Cta } from "../../components/ui/Cta";
 
 export default function FlowPage() {
   return (

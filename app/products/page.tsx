@@ -1,10 +1,10 @@
 import Image from "next/image";
 import { Metadata } from "next";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { Cta } from "@/components/ui/Cta";
-import { mainData } from "@/data/main";
-import { products } from "@/data/products";
+import { Header } from "../../components/Header";
+import { Footer } from "../../components/Footer";
+import { Cta } from "../../components/ui/Cta";
+import { mainData } from "../../data/main";
+import { products } from "../../data/products";
 
 export const metadata: Metadata = {
   title: "製品情報 | FILM LED",

@@ -1,12 +1,12 @@
 import Image from "next/image";
 import { X, Check } from "lucide-react";
 import { ArrowRight } from "lucide-react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { Button } from "@/components/ui/Button";
-import { Cta } from "@/components/ui/Cta";
-import { mainData } from "@/data/main";
-import { cases } from "@/data/cases";
+import { Header } from "../../../components/Header";
+import { Footer } from "../../../components/Footer";
+import { Button } from "../../../components/ui/Button";
+import { Cta } from "../../../components/ui/Cta";
+import { mainData } from "../../../data/main";
+import { cases } from "../../../data/cases";
 
 export default async function AboutPage() {
   return (
