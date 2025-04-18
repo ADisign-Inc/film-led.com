@@ -86,11 +86,11 @@ export default async function LandingPage() {
 
             <LogoSlider
               logos={[
-                { src: "/images/logos/logo1.png", alt: "Logo 1" },
-                { src: "/images/logos/logo2.png", alt: "Logo 2" },
-                { src: "/images/logos/logo3.png", alt: "Logo 3" },
-                { src: "/images/logos/logo4.png", alt: "Logo 4" },
-                { src: "/images/logos/logo5.png", alt: "Logo 5" },
+                { src: "/images/logo-light.svg", alt: "Logo 1" },
+                { src: "/images/logo-light.svg", alt: "Logo 2" },
+                { src: "/images/logo-light.svg", alt: "Logo 3" },
+                { src: "/images/logo-light.svg", alt: "Logo 4" },
+                { src: "/images/logo-light.svg", alt: "Logo 5" },
               ]}
             />
           </section>

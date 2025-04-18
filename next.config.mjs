@@ -13,7 +13,7 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    domains: ["localhost"],
+    domains: ["localhost", "film-led.com"],
     remotePatterns: [
       {
         protocol: "https",
