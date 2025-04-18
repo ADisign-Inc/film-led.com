@@ -3,8 +3,8 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
-import { Cta } from "../../components/ui/Cta";
-import { Button } from "../../components/ui/Button";
+import { Cta } from "../../components/Cta";
+import { Button } from "../../components/Button";
 import { mainData } from "../../data/main";
 import { cases } from "../../data/cases";
 

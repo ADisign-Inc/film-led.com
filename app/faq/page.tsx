@@ -1,13 +1,13 @@
 import Image from "next/image";
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
-import { Cta } from "../../components/ui/Cta";
+import { Cta } from "../../components/Cta";
 import {
   Accordion,
   AccordionItem,
   AccordionTrigger,
   AccordionContent,
-} from "../../components/ui/Accordion";
+} from "../../components/Accordion";
 import { faqData } from "../../data/faq";
 
 export const dynamic = "force-dynamic";

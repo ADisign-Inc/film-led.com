@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Button } from "./ui/Button";
+import { Button } from "./Button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 

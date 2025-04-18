@@ -4,16 +4,16 @@ import { ArrowRight } from "lucide-react";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { BlogList } from "../components/blog/BlogList";
-import { Button } from "../components/ui/Button";
-import { Cta } from "../components/ui/Cta";
-import { ImageSlider } from "../components/ui/ImageSlider";
-import { LogoSlider } from "../components/ui/LogoSlider";
+import { Button } from "../components/Button";
+import { Cta } from "../components/Cta";
+import { ImageSlider } from "../components/ImageSlider";
+import { LogoSlider } from "../components/LogoSlider";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "../components/ui/Accordion";
+} from "../components/Accordion";
 import { mainData } from "../data/main";
 import { benefits } from "../data/benefits";
 import { cases } from "../data/cases";
