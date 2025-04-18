@@ -1,8 +1,12 @@
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import Image from "next/image";
-import { cases } from "@/data/cases";
 import { Cta } from "@/components/ui/Cta";
+import { Button } from "@/components/ui/Button";
+import { mainData } from "@/data/main";
+import { cases } from "@/data/cases";
 
 export default function CasesPage() {
   return (
@@ -73,6 +77,13 @@ export default function CasesPage() {
               </p>
             </div>
           </section>
+
+          <Link href={mainData.contact.url}>
+            <Button>
+              無料相談・お申し込みはこちら
+              <ArrowRight className="h-4 w-4" />
+            </Button>
+          </Link>
         </section>
 
         {/* CTA */}

@@ -1,12 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Header } from "@/components/Header";
-import Button from "@/components/ui/Button";
+import { Footer } from "@/components/Footer";
+import { Button } from "@/components/ui/Button";
+import { Cta } from "@/components/ui/Cta";
 import { BlogList } from "@/components/blog/BlogList";
 import { blogs } from "@/data/blog";
-import { Cta } from "@/components/ui/Cta";
-import { Footer } from "@/components/Footer";
 
-import Link from "next/link";
 export default function BlogPage() {
   return (
     <div className="flex min-h-screen flex-col relative">

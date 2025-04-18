@@ -1,15 +1,13 @@
 import Image from "next/image";
-import { ArrowRight, Check, Menu, X } from "lucide-react";
 import Link from "next/link";
-import Button from "@/components/ui/Button";
+import { ArrowRight } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import LogoSlider from "@/components/ui/LogoSlider";
-import { Cta } from "@/components/ui/Cta";
-import { cases } from "@/data/cases";
-import { blogs } from "@/data/blog";
 import { BlogList } from "@/components/blog/BlogList";
-import { faqData } from "@/data/faq";
+import { Button } from "@/components/ui/Button";
+import { Cta } from "@/components/ui/Cta";
+import { ImageSlider } from "@/components/ui/ImageSlider";
+import { LogoSlider } from "@/components/ui/LogoSlider";
 import {
   Accordion,
   AccordionContent,
@@ -17,8 +15,10 @@ import {
   AccordionTrigger,
 } from "@/components/ui/Accordion";
 import { mainData } from "@/data/main";
-import { ImageSlider } from "@/components/ui/ImageSlider";
 import { benefits } from "@/data/benefits";
+import { cases } from "@/data/cases";
+import { blogs } from "@/data/blog";
+import { faqData } from "@/data/faq";
 
 export const dynamic = "force-dynamic";
 
@@ -84,7 +84,15 @@ export default async function LandingPage() {
               </div>
             </div>
 
-            <LogoSlider />
+            <LogoSlider
+              logos={[
+                { src: "/images/logos/logo1.png", alt: "Logo 1" },
+                { src: "/images/logos/logo2.png", alt: "Logo 2" },
+                { src: "/images/logos/logo3.png", alt: "Logo 3" },
+                { src: "/images/logos/logo4.png", alt: "Logo 4" },
+                { src: "/images/logos/logo5.png", alt: "Logo 5" },
+              ]}
+            />
           </section>
 
           {/* What's this ? */}
