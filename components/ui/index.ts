@@ -1,14 +1,14 @@
-import { Button } from "./Button";
+import { Button } from "@/components/ui/Button";
 import {
   Accordion,
   AccordionItem,
   AccordionTrigger,
   AccordionContent,
-} from "./Accordion";
-import { Cta } from "./Cta";
-import { ImageSlider } from "./ImageSlider";
-import LogoSlider from "./LogoSlider";
-import { Tabs } from "./Tabs";
+} from "@/components/ui/Accordion";
+import { Cta } from "@/components/ui/Cta";
+import { ImageSlider } from "@/components/ui/ImageSlider";
+import LogoSlider from "@/components/ui/LogoSlider";
+import { Tabs } from "@/components/ui/Tabs";
 
 export {
   Button,
