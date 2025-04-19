@@ -18,7 +18,8 @@ export function Footer() {
               />
             </div>
             <p className="text-sm text-gray-300">
-              革新的なデジタルサイネージで空間を変える。ビジネスの集客力を最大化する最先端ディスプレイをご提供します。
+              革新的なデジタルサイネージで空間を変える。ビジネスの集客力を最大化する最先端ディスプレイ
+              {mainData.keyWords}をご提供します。
             </p>
           </div>
 

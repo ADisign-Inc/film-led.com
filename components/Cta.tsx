@@ -91,7 +91,7 @@ export function Cta() {
                       </div>
                       <div className="grow text-black space-y-2">
                         <p className="group-hover:text-white">
-                          お電話でのお問い合わせ
+                          お電話でお問い合わせ
                         </p>
                         <p className="text-xl md:text-2xl font-semibold group-hover:text-yellow-400 transition-all">
                           092-433-3302

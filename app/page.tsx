@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { BlogList } from "../components/blog/BlogList";
+import { productData, Product } from "../data/products";
 import { Button } from "../components/Button";
 import { Cta } from "../components/Cta";
 import { ImageSlider } from "../components/ImageSlider";
@@ -15,9 +16,9 @@ import {
   AccordionTrigger,
 } from "../components/Accordion";
 import { mainData } from "../data/main";
-import { benefits } from "../data/benefits";
-import { cases } from "../data/cases";
-import { blogs } from "../data/blog";
+import { benefitData } from "../data/benefits";
+import { caseData } from "../data/cases";
+import { blogData } from "../data/blog";
 import { faqData } from "../data/faq";
 
 export const dynamic = "force-dynamic";
@@ -98,7 +99,7 @@ export default async function LandingPage() {
           {/* What's this ? */}
           <section className="container max-w-6xl py-10 md:py-20 mb-10">
             <h2>
-              What's this ?<span>透明LEDフィルムとは？</span>
+              What's this ?<span>{mainData.keyWords}とは？</span>
             </h2>
 
             <div className="flex flex-col md:flex-row gap-10 mb-16 md:mb-24">
@@ -148,7 +149,7 @@ export default async function LandingPage() {
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 text-black mb-16 md:mb-24">
-              {benefits.map((benefit) => (
+              {benefitData.map((benefit) => (
                 <div
                   key={benefit.id}
                   className="relative mx-auto bg-white/90 py-4 md:py-5 px-4 md:px-6"
@@ -229,7 +230,7 @@ export default async function LandingPage() {
             </h2>
 
             <div className="grid gap-8 grid-cols-1 xs:grid-cols-2 md:grid-cols-3 mb-16 md:mb-24">
-              {cases.slice(0, 3).map((case_) => (
+              {caseData.slice(0, 3).map((case_) => (
                 <div key={case_.id} className="">
                   <div className=" flex items-center justify-center mb-3 md:mb-5">
                     <Image
@@ -262,14 +263,88 @@ export default async function LandingPage() {
           {/* Product Lineup */}
           <section className="container max-w-6xl py-10 md:py-20 mb-10">
             <h2>
-              Product Lineup
-              <span>製品一覧</span>
+              Product
+              <span>製品情報</span>
             </h2>
+
+            <div className="overflow-x-auto rounded-lg shadow-lg relative">
+              <div className="min-w-[1200px]">
+                <table className="w-full table-auto border-separate border-spacing-y-2">
+                  <thead>
+                    <tr className="text-left font-bold text-yellow-300 [&_th]:text-xl [&_th]:px-4 [&_th]:md:px-6 [&_th]:py-2 [&_span]:text-sm">
+                      <th>
+                        型名
+                        <br />
+                        <span>Model</span>
+                      </th>
+                      <th>
+                        販売価格
+                        <br />
+                        <span>Sales Price</span>
+                      </th>
+                      <th>
+                        ピッチ
+                        <br />
+                        <span>Pitch</span>
+                      </th>
+                      <th>
+                        最大サイズ
+                        <br />
+                        <span>Max Size</span>
+                      </th>
+
+                      <th>
+                        消費電力
+                        <br />
+                        <span>Power Consumption</span>
+                        <div className="flex gap-1 mt-2">
+                          <div className="w-1/2">
+                            <p className="text-white">最大</p>
+                          </div>
+                          <div className="w-1/2">
+                            <p className="text-white">平均</p>
+                          </div>
+                        </div>
+                      </th>
+                      <th className="px-4 py-2">
+                        輝度
+                        <br />
+                        <span>Brightness</span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody className="[&_td]:px-4 [&_td]:md:px-6 [&_td]:py-2">
+                    {productData.map((product: Product, idx: number) => (
+                      <tr
+                        key={product.model}
+                        className={idx % 2 === 0 ? "bg-white/15" : "bg-white/5"}
+                      >
+                        <td className="text-base md:text-lg font-bold">
+                          {product.model}
+                        </td>
+                        <td>{product.price}</td>
+                        <td>{product.pitch} mm</td>
+                        <td>{product.maxSize} Mm</td>
+                        <td className="flex gap-1">
+                          <div className="w-1/2">
+                            {product.powerConsumption.max} W/㎡
+                          </div>
+                          <div className="w-1/2">
+                            {product.powerConsumption.average} W/㎡
+                          </div>
+                        </td>
+                        <td>{product.brightness} cd/㎡</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
 
             <div className="flex justify-center">
               <Link href="/products">
                 <Button>
-                  製品一覧を見る
+                  製品情報を詳しく見る
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>
@@ -362,15 +437,6 @@ export default async function LandingPage() {
                 </div>
               </div>
             </div>
-
-            {/* <div className="flex justify-center">
-              <Link href="/services">
-                <Button variant="default">
-                  サービス内容を詳しく見る
-                  <ArrowRight className="h-4 w-4" />
-                </Button>
-              </Link>
-            </div> */}
           </section>
 
           {/* Flow */}
@@ -523,7 +589,7 @@ export default async function LandingPage() {
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10 md:mb-20">
-              {blogs.slice(0, 3).map((post) => (
+              {blogData.slice(0, 3).map((post) => (
                 <div key={post.id}>
                   <BlogList post={post} />
                 </div>

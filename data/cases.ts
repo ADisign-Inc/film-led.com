@@ -6,7 +6,7 @@ export type Case = {
   category: string;
 };
 
-export const cases: Case[] = [
+export const caseData: Case[] = [
   {
     id: "case-1",
     title: "商業施設や店舗のウィンドウディスプレイ",

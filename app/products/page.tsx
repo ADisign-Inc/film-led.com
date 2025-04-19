@@ -4,7 +4,7 @@ import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 import { Cta } from "../../components/Cta";
 import { mainData } from "../../data/main";
-import { products } from "../../data/products";
+import { productData } from "../../data/products";
 
 export const metadata: Metadata = {
   title: "製品情報 | FILM LED",
@@ -224,7 +224,7 @@ export default async function ProductsPage() {
                     </tr>
                   </thead>
                   <tbody className="[&_td]:px-4 [&_td]:md:px-6 [&_td]:py-2">
-                    {products.map((product, idx) => (
+                    {productData.map((product, idx) => (
                       <tr
                         key={product.model}
                         className={idx % 2 === 0 ? "bg-white/15" : "bg-white/5"}

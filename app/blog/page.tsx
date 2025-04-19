@@ -5,7 +5,7 @@ import { Footer } from "../../components/Footer";
 import { Button } from "../../components/Button";
 import { Cta } from "../../components/Cta";
 import { BlogList } from "../../components/blog/BlogList";
-import { blogs } from "../../data/blog";
+import { blogData } from "../../data/blog";
 
 export default function BlogPage() {
   return (
@@ -29,7 +29,7 @@ export default function BlogPage() {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {blogs.map((post) => (
+            {blogData.map((post) => (
               <BlogList key={post.id} post={post} />
             ))}
           </div>

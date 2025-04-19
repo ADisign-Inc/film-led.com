@@ -6,7 +6,7 @@ import { Footer } from "../../../components/Footer";
 import { Button } from "../../../components/Button";
 import { Cta } from "../../../components/Cta";
 import { mainData } from "../../../data/main";
-import { cases } from "../../../data/cases";
+import { caseData } from "../../../data/cases";
 
 export default async function AboutPage() {
   return (
@@ -408,7 +408,7 @@ export default async function AboutPage() {
               </h3>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-x-8 md:gap-y-10">
-                {cases.slice(0, 4).map((cases_) => (
+                {caseData.slice(0, 4).map((cases_) => (
                   <div>
                     <div className="flex justify-center mb-3 md:mb-5">
                       <Image
@@ -465,7 +465,7 @@ export default async function AboutPage() {
                 </div>
                 <div className="flex justify-center mb-3">
                   <Image
-                    src="/images/about/0_specification.jpg"
+                    src="/images/about/01.jpg"
                     alt=""
                     width={700}
                     height={300}

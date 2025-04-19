@@ -23,7 +23,7 @@ export type Blog = {
   slug: string;
 };
 
-export const blogs: Blog[] = [
+export const blogData: Blog[] = [
   {
     id: "1",
     url: "/aboutFilmLed",

@@ -7,7 +7,7 @@ export interface Benefit {
   description: string;
 }
 
-export const benefits: Benefit[] = [
+export const benefitData: Benefit[] = [
   {
     id: "visual-impact",
     title: "視覚的インパクトで集客力・訴求力向上",

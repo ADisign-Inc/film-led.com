@@ -6,7 +6,7 @@ import { Footer } from "../../components/Footer";
 import { Cta } from "../../components/Cta";
 import { Button } from "../../components/Button";
 import { mainData } from "../../data/main";
-import { cases } from "../../data/cases";
+import { caseData } from "../../data/cases";
 
 export default function CasesPage() {
   return (
@@ -31,7 +31,7 @@ export default function CasesPage() {
 
           <section className="bg-white/85 text-black px-5 md:px-16 py-16 md:py-20 mb-10 md:mb-20">
             <div className="mb-10">
-              {cases.map((cases_) => (
+              {caseData.map((cases_) => (
                 <div className="mb-10 md:mb-16 last:mb-0">
                   <div className="mb-5">
                     <h4 className="mb-5">

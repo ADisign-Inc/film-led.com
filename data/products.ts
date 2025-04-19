@@ -1,5 +1,6 @@
 export interface Product {
   model: string;
+  price: string;
   pitch: string;
   maxSize: string;
   powerConsumption: {
@@ -7,10 +8,20 @@ export interface Product {
     average: string;
   };
   brightness: string;
-  price: string;
 }
 
-export const products: Product[] = [
+export const productData: Product[] = [
+  {
+    model: "FL-1000",
+    price: "¥1,000,000",
+    pitch: "3.75",
+    maxSize: "2000x1000",
+    powerConsumption: {
+      max: "500",
+      average: "300",
+    },
+    brightness: "5000",
+  },
   {
     model: "Film-P0375",
     pitch: "3.75*3.75",
