@@ -33,9 +33,9 @@ export function Header() {
               <Image
                 src="/images/logo-dark.svg"
                 alt="Logo"
-                width={160}
+                width={200}
                 height={100}
-                layout="intrinsic"
+                className="w-40 h-auto"
               />
             </Link>
           </div>

@@ -31,6 +31,7 @@ const nextConfig = {
       "@radix-ui/react-slot",
       "clsx",
       "tailwind-merge",
+      "tailwindcss",
     ],
   },
   webpack: (config, { isServer }) => {
@@ -49,6 +50,7 @@ const nextConfig = {
     "@radix-ui/react-slot",
     "clsx",
     "tailwind-merge",
+    "tailwindcss",
   ],
 };
 

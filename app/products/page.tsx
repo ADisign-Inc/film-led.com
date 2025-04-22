@@ -16,13 +16,15 @@ export default async function ProductsPage() {
   return (
     <div className="flex min-h-screen flex-col relative">
       <div className="fixed inset-0 -z-10">
-        <Image
-          src="/images/bg01.jpg"
-          alt=""
-          fill
-          className="object-cover"
-          priority
-        />
+        <div className="relative w-full h-full">
+          <Image
+            src="/images/bg01.jpg"
+            alt=""
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
       </div>
       <Header />
 

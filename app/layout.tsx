@@ -1,10 +1,8 @@
 import type React from "react";
 import "../styles/globals.css";
+import "../styles/output.css";
 import type { Metadata } from "next";
 import { ThemeProvider } from "../components/theme-provider";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
@@ -55,10 +53,13 @@ export default function RootLayout({
         />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
-      <body className={inter.className} suppressHydrationWarning>
+      <body
+        className="min-h-screen font-mincho bg-black text-white antialiased"
+        suppressHydrationWarning
+      >
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >

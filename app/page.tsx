@@ -85,7 +85,7 @@ export default async function LandingPage() {
               </div>
             </div>
 
-            <LogoSlider
+            {/* <LogoSlider
               logos={[
                 { src: "/images/logo-light.svg", alt: "Logo 1" },
                 { src: "/images/logo-light.svg", alt: "Logo 2" },
@@ -93,7 +93,7 @@ export default async function LandingPage() {
                 { src: "/images/logo-light.svg", alt: "Logo 4" },
                 { src: "/images/logo-light.svg", alt: "Logo 5" },
               ]}
-            />
+            /> */}
           </section>
 
           {/* What's this ? */}

@@ -10,10 +10,16 @@ interface BlogHeaderProps {
   author: string;
 }
 
-export function BlogHeader({ title, date, category, image, author }: BlogHeaderProps) {
+export function BlogHeader({
+  title,
+  date,
+  category,
+  image,
+  author,
+}: BlogHeaderProps) {
   return (
     <>
-      <Link 
+      <Link
         href="/blog"
         className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-8"
       >
@@ -22,12 +28,7 @@ export function BlogHeader({ title, date, category, image, author }: BlogHeaderP
       </Link>
 
       <div className="relative h-[400px] mb-8 rounded-lg overflow-hidden">
-        <Image
-          src={image}
-          alt={title}
-          fill
-          className="object-cover"
-        />
+        <Image src={image} alt={title} fill className="object-cover" />
       </div>
 
       <div className="space-y-6">
@@ -48,9 +49,8 @@ export function BlogHeader({ title, date, category, image, author }: BlogHeaderP
               className="object-cover"
             />
           </div>
-        
         </div>
       </div>
     </>
   );
-} 
+}
