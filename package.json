@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build --no-lint",
     "start": "next start",
     "lint": "next lint",
     "postcss": "npx tailwindcss -i ./styles/globals.css -o ./styles/output.css --watch"
