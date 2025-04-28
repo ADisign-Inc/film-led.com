@@ -4,13 +4,14 @@ import { mainData } from "../data/main";
 export function Cta() {
   return (
     <section className="container max-w-6xl md:py-20">
-      <div className="bg-white/20 px-5 xs:px-10 py-16">
+      <div className="bg-white/20 px-5 xs:px-10 lg:px-20 py-16 md:py-20">
         <h2>
           Contact
           <span>お問い合わせ・お申し込み</span>
         </h2>
         <p className="text-center mb-8 md:mb-16">
-          革新的な透過フィルムデジタルサイネージで、あなたのビジネスの集客力を最大化しませんか？
+          革新的な{mainData.keyWords}
+          で、あなたのビジネスの集客力を最大化しませんか？
           <br />
           まずは無料相談からお気軽にお問い合わせください。
         </p>
@@ -44,7 +45,7 @@ export function Cta() {
                           priority
                         />
                       </div>
-                      <div className="grow  text-black space-y-2">
+                      <div className="grow [&_p]:text-black space-y-2">
                         <p className="group-hover:text-white">
                           メールでお問合せ
                         </p>
@@ -89,7 +90,7 @@ export function Cta() {
                           priority
                         />
                       </div>
-                      <div className="grow text-black space-y-2">
+                      <div className="grow [&_p]:text-black space-y-2">
                         <p className="group-hover:text-white">
                           お電話でお問い合わせ
                         </p>

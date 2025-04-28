@@ -73,7 +73,7 @@ export default function CasesPage() {
                     href=""
                     className="border-b border-black hover:border-gray-500 transition-colors"
                   >
-                    透明フィルムLEDビジョンの主な特徴と技術的な仕組み
+                    {mainData.keyWords}の主な特徴と技術的な仕組み
                   </a>
                 </span>
               </p>

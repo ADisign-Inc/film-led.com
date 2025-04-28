@@ -4,6 +4,7 @@ import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 import { Button } from "../../components/Button";
 import { Cta } from "../../components/Cta";
+import { mainData } from "../../data/main";
 
 export default function FlowPage() {
   return (
@@ -117,7 +118,8 @@ export default function FlowPage() {
                   <p className="">
                     コンテンツの制作が必要な場合、映像制作を専門のチームが行い、貴社のブランドやメッセージにマッチしたデザインを仕上げます。
                     <br />
-                    映像の効果的な構成や演出を考えた上で、透明フィルム型LEDビジョンに最適なサイネージを構築します。
+                    映像の効果的な構成や演出を考えた上で、{mainData.keyWords}
+                    に最適なサイネージを構築します。
                     <br />
                     システムの導入に際しては、機器の設置や接続、各種設定を専門スタッフが行いますので、スムーズに進行できます。
                   </p>
@@ -131,7 +133,7 @@ export default function FlowPage() {
                 <div className="pt-3">
                   <h4 className="text-xl md:text-2xl mb-5">設置工事</h4>
                   <p className="">
-                    透明フィルム型LEDビジョンの設置工事を実施します。
+                    {mainData.keyWords}の設置工事を実施します。
                     <br />
                     設置場所の詳細な確認を行い、必要な調整を施しながら施工を進めます。
                     <br />
@@ -151,7 +153,8 @@ export default function FlowPage() {
                     操作説明・運用サポート
                   </h4>
                   <p className="">
-                    設置後、透明フィルム型LEDビジョンの操作方法について、専門スタッフから詳しい説明を行います。
+                    設置後、{mainData.keyWords}
+                    の操作方法について、専門スタッフから詳しい説明を行います。
                     <br />
                     映像コンテンツの更新方法やシステム管理、日常的なメンテナンスについても丁寧にレクチャーいたします。
                     <br />

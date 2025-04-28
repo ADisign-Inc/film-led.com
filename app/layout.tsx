@@ -54,7 +54,7 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body
-        className="min-h-screen font-mincho bg-black text-white antialiased"
+        className="min-h-screen bg-black text-white antialiased"
         suppressHydrationWarning
       >
         <ThemeProvider

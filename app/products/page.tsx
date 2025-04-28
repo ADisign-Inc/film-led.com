@@ -49,7 +49,7 @@ export default async function ProductsPage() {
                   playsInline
                   className="w-full h-full object-cover brightness-[0.3]"
                 >
-                  <source src="/videos/06.mp4" type="video/mp4" />
+                  <source src="/videos/construction/01.mp4" type="video/mp4" />
                 </video>
               </div>
               <div className="absolute inset-0 flex items-center justify-center">
@@ -60,7 +60,7 @@ export default async function ProductsPage() {
                   playsInline
                   className="h-[150%] w-auto"
                 >
-                  <source src="/videos/06.mp4" type="video/mp4" />
+                  <source src="/videos/construction/01.mp4" type="video/mp4" />
                 </video>
               </div>
             </div>

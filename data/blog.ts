@@ -39,7 +39,7 @@ export const blogData: Blog[] = [
     url: "/aboutFilmLed",
     title: "LEDビジョンの選び方ガイド",
     description: "用途に合わせた最適なLEDビジョンの選び方をご紹介します。",
-    image: "/images/blog/0001.jpg",
+    image: "/images/blog/0002.jpg",
     date: "2024-03-20",
     category: "ガイド",
     slug: "how-to-choose-led-vision",

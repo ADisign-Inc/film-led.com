@@ -28,25 +28,42 @@ export default async function AboutPage() {
         <div className="container max-w-5xl py-10 md:py-40">
           <h2>
             About
-            <span>透明フィルムLED型LEDビジョンとは？</span>
+            <span>{mainData.keyWords}とは？</span>
           </h2>
 
-          <article className="bg-white/85 text-black px-5 md:px-16 py-16 md:py-20">
-            <section className="mb-10 md:mb-24">
+          <article className="bg-white/85 [&_p]:text-black [&_h3]:text-black px-5 md:px-16 py-16 md:py-20">
+            <section className="mb-10 md:mb-20">
               <h3 className="text-2xl text-start font-bold flex items-center gap-6 mb-5 md:mb-10">
                 <span className="w-1 h-10 bg-yellow-400"></span>
                 店舗の集客力を劇的に変える ── 高輝度 {mainData.keyWords}
               </h3>
 
+              <div className="w-4/5 mx-auto mb-10">
+                <div className="relative w-full pb-[56.25%] overflow-hidden">
+                  <div className="absolute inset-0">
+                    <video
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="w-full h-full object-cover"
+                    >
+                      <source src="/videos/01.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                </div>
+              </div>
+
               <div>
+                <p className="text-xl md:text-2xl font-semibold mb-5">
+                  「通りすがりの一瞬を、確実に掴む。」
+                </p>
                 <p>
-                  <span className="md:text-xl font-semibold pb-5">
-                    「通りすがりの一瞬を、確実に掴む。」
-                  </span>
-                  <br />
                   そんな広告運用を目指すなら、透明LEDフィルムがベストな選択です。
                   <br />
-                  明るい場所でも見やすく、4K解像度の鮮やかな映像で、訴求力は段違い。映像・音声・文字情報を組み合わせた多彩な演出が可能な本機は、集客・情報発信に革新をもたらします。
+                  明るい場所でも見やすく、4K解像度の鮮やかな映像で、訴求力は段違い。
+                  <br />
+                  映像・音声・文字情報を組み合わせた多彩な演出が可能な本機は、集客・情報発信に革新をもたらします。
                 </p>
               </div>
             </section>
@@ -55,15 +72,16 @@ export default async function AboutPage() {
             <section className="mb-10 md:mb-24">
               <h3 className="text-2xl text-start font-bold flex items-center gap-6 mb-5 md:mb-10">
                 <span className="w-1 h-10 bg-yellow-400"></span>
-                透明フィルム型LEDビジョンとは？
+                {mainData.keyWords}とは？
               </h3>
 
               <div className="mb-5 md:mb-10">
                 <p className="text-lg md:text-xl font-semibold mb-4 md:mb-6">
-                  1. 技術の仕組み（透過型LEDフィルムの原理や構造）
+                  1. 技術の仕組み（{mainData.keyWords}の原理や構造）
                 </p>
                 <p className="ml-5">
-                  透過型LEDフィルムは、非常に薄い透明フィルムに微細なLEDチップを配置したディスプレイ技術です。
+                  {mainData.keyWords}
+                  は、非常に薄い透明フィルムに微細なLEDチップを配置したディスプレイ技術です。
                   <br />
                   このフィルムは、ガラスやアクリルなどの透明素材に貼り付けて使用され、ディスプレイとしての機能を発揮しながらも視界を遮ることがありません。
                   <br />
@@ -79,14 +97,18 @@ export default async function AboutPage() {
                   2. 通常のLEDディスプレイとの違い
                 </p>
                 <p className="ml-5">
-                  通常のLEDディスプレイと透過型LEDフィルムの最大の違いは、ディスプレイの設置方法と視覚的な影響です。
+                  通常のLEDディスプレイと{mainData.keyWords}
+                  の最大の違いは、ディスプレイの設置方法と視覚的な影響です。
                   <br />
                   通常のLEDディスプレイは、完全に光を発するパネルが前面に配置されるため、設置するには十分なスペースと深さが必要です。
                   <br />
                   このため、従来のディスプレイは設置場所や空間に制約が多いというデメリットがあります。
-                  一方、透過型LEDフィルムは非常に薄く、透明な素材に設置できるため、物理的なスペースをほとんど占有せず、さらに視覚的にも設置場所が目立たず、インテリアや景観に影響を与えません。
+                  一方、{mainData.keyWords}
+                  は非常に薄く、透明な素材に設置できるため、物理的なスペースをほとんど占有せず、さらに視覚的にも設置場所が目立たず、インテリアや景観に影響を与えません。
                   <br />
-                  従来のLEDディスプレイが背面にLEDパネルが搭載されているのに対し、透過型LEDフィルムは前面やガラス面に張り付けて使えるため、視覚的にも「透明感」が感じられます。
+                  従来のLEDディスプレイが背面にLEDパネルが搭載されているのに対し、
+                  {mainData.keyWords}
+                  は前面やガラス面に張り付けて使えるため、視覚的にも「透明感」が感じられます。
                 </p>
               </div>
               <div className="mb-5 md:mb-10">
@@ -94,7 +116,7 @@ export default async function AboutPage() {
                   3. 「透明」であることによる独自の価値・メリット
                 </p>
                 <p className="ml-5">
-                  透過型LEDフィルムの最大の特徴は、その透明性です。
+                  {mainData.keyWords}の最大の特徴は、その透明性です。
                   <br />
                   ガラスや窓、アクリル板などの透過する素材に貼り付けることができるため、ディスプレイとして機能しながらも空間を占有せず、景観を損なうことなく使用できます。
                   <br />
@@ -119,7 +141,8 @@ export default async function AboutPage() {
                   />
                 </div>
                 <p className="mb-3 md:mb-10">
-                  透明フィルム型LEDビジョンは、ガラスやアクリルなどの透明な素材に直接取り付けることで、視界を遮らずに映像や情報を表示できる革新的なディスプレイ技術です。
+                  {mainData.keyWords}
+                  は、ガラスやアクリルなどの透明な素材に直接取り付けることで、視界を遮らずに映像や情報を表示できる革新的なディスプレイ技術です。
                   <br />
                   従来のLEDディスプレイや液晶ディスプレイ（LCD）とは異なり、透過性を維持しながらも高輝度・高解像度の映像を表示できるため、商業施設、オフィスビル、ショールーム、交通機関、イベント会場など、さまざまな場所で活用されています。
                 </p>
@@ -145,7 +168,8 @@ export default async function AboutPage() {
                 </div>
 
                 <p className="mb-5 md:mb-10">
-                  透明フィルム型LEDビジョンは、薄型・軽量で、設置の自由度が高い点も大きな利点です。
+                  {mainData.keyWords}
+                  は、薄型・軽量で、設置の自由度が高い点も大きな利点です。
                   <br />
                   一般的なディスプレイは、壁面やスタンドに固定する必要がありますが、この技術を用いることで、窓ガラスやガラス製のパーテーションなど、従来のディスプレイが設置できなかった場所にも導入できます。
                   <br />
@@ -153,7 +177,8 @@ export default async function AboutPage() {
                 </p>
 
                 <p className="mb-5 md:mb-10">
-                  さらに、透明フィルム型LEDビジョンは、明るい環境でも高い視認性を確保できる点が優れています。
+                  さらに、{mainData.keyWords}
+                  は、明るい環境でも高い視認性を確保できる点が優れています。
                   <br />
                   従来のプロジェクターを使用した透明スクリーンと比べ、LEDの自己発光技術により、直射日光下でも鮮明な映像を表示できます。
                   <br />
@@ -161,7 +186,8 @@ export default async function AboutPage() {
                 </p>
 
                 <p className="mb-5 md:mb-10">
-                  技術の進化に伴い、透明フィルム型LEDビジョンには、タッチスクリーン機能を組み込んだインタラクティブディスプレイモデルも登場しています。
+                  技術の進化に伴い、{mainData.keyWords}
+                  には、タッチスクリーン機能を組み込んだインタラクティブディスプレイモデルも登場しています。
                   <br />
                   これにより、ユーザーが直接画面に触れて操作できるようになり、製品情報の検索やショッピング、施設案内などの用途で活用される機会が増えています。
                   <br />
@@ -169,15 +195,18 @@ export default async function AboutPage() {
                 </p>
 
                 <p className="mb-5 md:mb-10">
-                  このように、透明フィルム型LEDビジョンは、従来のディスプレイ技術の枠を超え、さまざまな環境での情報表示や広告活用を可能にする新しいソリューションです。
+                  このように、{mainData.keyWords}
+                  は、従来のディスプレイ技術の枠を超え、さまざまな環境での情報表示や広告活用を可能にする新しいソリューションです。
                   <br />
                   省エネルギーで環境負荷が少なく、設置やメンテナンスも容易なため、今後ますます幅広い分野での導入が進むと考えられています。
                 </p>
               </div>
               <div>
-                COB (Chip on board) LED RGB発光素子を透明PETフィルムに直接
-                搭載する技術で、LEDが小さく薄くなって小さなピッチでも高い透明度を維持することができます。
-                ※最小ピッチ：3.75mm
+                <p>
+                  COB (Chip on board) LED RGB発光素子を透明PETフィルムに直接
+                  搭載する技術で、LEDが小さく薄くなって小さなピッチでも高い透明度を維持することができます。
+                  ※最小ピッチ：3.75mm
+                </p>
               </div>
             </section>
 
@@ -185,7 +214,7 @@ export default async function AboutPage() {
             <section className="mb-10 md:mb-24">
               <h3 className="text-2xl text-start font-bold flex items-center gap-6 mb-5 md:mb-10">
                 <span className="w-1 h-10 bg-yellow-400"></span>
-                透明フィルムLEDビジョンの技術的な仕組み
+                {mainData.keyWords}の技術的な仕組み
               </h3>
 
               <div className="mb-5 md:mb-8">
@@ -194,14 +223,16 @@ export default async function AboutPage() {
                 </p>
                 <div className="space-y-4 ml-5">
                   <p>
-                    透明フィルム型LEDビジョンは、50～92%の透明度で、コンテンツを送出している時も光の透過ができます。
+                    {mainData.keyWords}
+                    は、50～92%の透明度で、コンテンツを送出している時も光の透過ができます。
                     <br />
                     これにより、ガラス面をそのまま利用しながら、視界を遮ることなく鮮やかな映像を映し出します。
                     <br />
                     最新技術により、ディスプレーを点灯してない状態では、設置面の反対側がそのまま見える高い透明度を保ち、直射日光の中でも視認性を維持できます。
                   </p>
                   <p>
-                    透明フィルム型LEDビジョンは、従来のディスプレイ技術に比べ、スペースを節約しつつ効果的な広告表示を実現します。
+                    {mainData.keyWords}
+                    は、従来のディスプレイ技術に比べ、スペースを節約しつつ効果的な広告表示を実現します。
                     <br />
                     屋外でも屋内でも使用でき、昼夜を問わず安定した表示が可能です。これにより、コンテンツ映像と同時に内部の環境または製品を見せることができ、公共施設や商業施設など、幅広い業界で活用されるようになっています。
                   </p>
@@ -214,7 +245,8 @@ export default async function AboutPage() {
                 </p>
                 <div className="space-y-4 ml-5">
                   <p>
-                    透明フィルム型LEDビジョンの最大の特徴は、ガラス面に直接設置できることです。これにより、建物の外観や内装を損なうことなく、広告や情報を表示することができます。
+                    {mainData.keyWords}
+                    の最大の特徴は、ガラス面に直接設置できることです。これにより、建物の外観や内装を損なうことなく、広告や情報を表示することができます。
                     <br />
                     店舗のウィンドウやビルのガラスパネルに取り付けることで、スペースを有効活用しつつ、視覚的な効果を最大化できます。
                   </p>
@@ -224,7 +256,8 @@ export default async function AboutPage() {
                     これにより、店舗や企業のブランドイメージを洗練された形で演出できます。例えば、高級ブランド店では、店舗の外観を美しく保ちながら、動的な広告を表示することが可能になります。
                   </p>
                   <p>
-                    空間デザインと情報発信を両立させる透明フィルム型LEDビジョンは、都市型ビジネスにおいて非常に効果的なツールであり、今後ますます需要が高まることが予想されます。
+                    空間デザインと情報発信を両立させる{mainData.keyWords}
+                    は、都市型ビジネスにおいて非常に効果的なツールであり、今後ますます需要が高まることが予想されます。
                   </p>
                 </div>
               </div>
@@ -234,7 +267,7 @@ export default async function AboutPage() {
             <section className="mb-10 md:mb-24">
               <h3 className="text-2xl text-start font-bold flex items-center gap-6 mb-5 md:mb-10">
                 <span className="w-1 h-10 bg-yellow-400"></span>
-                透明フィルムLEDビジョンの主な特徴
+                {mainData.keyWords}の主な特徴
               </h3>
 
               <div className="flex justify-center gap-5 mb-5 md:mb-10">
@@ -264,7 +297,7 @@ export default async function AboutPage() {
                     1、透明性
                   </p>
                   <p className="ml-5">
-                    透明フィルム型LEDビジョンの最大の特徴は、「透明性」にあります。
+                    {mainData.keyWords}の最大の特徴は、「透明性」にあります。
                     <br />
                     透明なフィルムにLEDチップが組み込まれているため、映像を表示していない部分はそのまま透明で、視界を遮りません。
                     <br />
@@ -288,7 +321,8 @@ export default async function AboutPage() {
                     3、薄型・軽量
                   </p>
                   <p className="ml-5">
-                    透明フィルム型LEDビジョンは、非常に薄く、軽量であるため、設置が簡単で、既存の構造物に対しても負担をかけません。
+                    {mainData.keyWords}
+                    は、非常に薄く、軽量であるため、設置が簡単で、既存の構造物に対しても負担をかけません。
                     <br />
                     さらに、軽量性を活かして、移動や設置変更が簡単に行えます。
                   </p>
@@ -320,19 +354,19 @@ export default async function AboutPage() {
                   </p>
                   <ul className="ml-5 space-y-3">
                     <li className="flex gap-2">
-                      <X className="h-6 w-6 text-red-600 flex-shrink-0 mt-1" />
+                      <X className="h-6 w-6 !text-red-600 flex-shrink-0 mt-1" />
                       <p>
                         店舗や商業施設で、ディスプレイやポスターを活用しても視認性が悪く、通行人に気づかれにくい。
                       </p>
                     </li>
                     <li className="flex gap-2">
-                      <X className="h-6 w-6 text-red-600 flex-shrink-0 mt-1" />
+                      <X className="h-6 w-6 !text-red-600 flex-shrink-0 mt-1" />
                       <p>
                         従来のLEDビジョンでは、設置場所に制約があり、効果的な位置に配置できない。
                       </p>
                     </li>
                     <li className="flex gap-2">
-                      <X className="h-6 w-6 text-red-600 flex-shrink-0 mt-1" />
+                      <X className="h-6 w-6 !text-red-600 flex-shrink-0 mt-1" />
                       <p>
                         内装や空間デザインの美観を損なうことで、ブランド価値が低下してしまう。
                       </p>
@@ -346,19 +380,19 @@ export default async function AboutPage() {
                   </p>
                   <ul className="ml-5 space-y-3">
                     <li className="flex gap-2">
-                      <X className="h-6 w-6 text-red-600 flex-shrink-0 mt-1" />
+                      <X className="h-6 w-6 !text-red-600 flex-shrink-0 mt-1" />
                       <p>
                         一般的な液晶ディスプレイやLEDビジョンは、場所を取るため設置が難しい。
                       </p>
                     </li>
                     <li className="flex gap-2">
-                      <X className="h-6 w-6 text-red-600 flex-shrink-0 mt-1" />
+                      <X className="h-6 w-6 !text-red-600 flex-shrink-0 mt-1" />
                       <p>
                         既存のインテリアやガラス面と調和せず、視界を遮ってしまう。
                       </p>
                     </li>
                     <li className="flex gap-2">
-                      <X className="h-6 w-6 text-red-600 flex-shrink-0 mt-1" />
+                      <X className="h-6 w-6 !text-red-600 flex-shrink-0 mt-1" />
                       <p>高額な導入コストや維持費がかかる。</p>
                     </li>
                   </ul>
@@ -366,7 +400,7 @@ export default async function AboutPage() {
 
                 <div className="mb-5 md:mb-8">
                   <p className="text-lg md:text-xl font-semibold mb-3">
-                    ・透明フィルムLEDビジョンなら解決！
+                    ・{mainData.keyWords}なら解決！
                   </p>
                   <ul className="ml-5 space-y-3">
                     <li className="flex gap-2">
@@ -436,7 +470,7 @@ export default async function AboutPage() {
                       href=""
                       className="border-b border-black hover:border-gray-500 transition-colors"
                     >
-                      透明フィルムLEDビジョンの主な特徴と技術的な仕組み
+                      {mainData.keyWords}の主な特徴と技術的な仕組み
                     </a>
                   </span>
                 </p>
@@ -452,7 +486,7 @@ export default async function AboutPage() {
             <section className="mb-10 md:mb-24">
               <h3 className="text-2xl text-start font-bold flex items-center gap-6 mb-5 md:mb-10">
                 <span className="w-1 h-10 bg-yellow-400"></span>
-                透明フィルムLEDビジョンの仕様
+                {mainData.keyWords}の仕様
               </h3>
 
               <div>
@@ -512,7 +546,8 @@ export default async function AboutPage() {
                     </p>
                   </div>
                   <p className="ml-5">
-                    透明フィルム型LEDビジョンは、ガラスやアクリルなどの透明な面に直接設置できるため、空間の開放感を維持しながら情報発信が可能です。
+                    {mainData.keyWords}
+                    は、ガラスやアクリルなどの透明な面に直接設置できるため、空間の開放感を維持しながら情報発信が可能です。
                     <br />
                     特に、高級感のあるブティック、ホテル、レストラン、オフィスエントランスなどでは、デザイン性を損なうことなく、ブランドイメージを保ちながら訴求力を高めることができます。
                     <br />
@@ -545,7 +580,8 @@ export default async function AboutPage() {
                     </p>
                   </div>
                   <p className="ml-5">
-                    透明フィルム型LEDビジョンは、従来の固定看板やポスターと異なり、映像やアニメーションを活用したダイナミックな表現が可能です。
+                    {mainData.keyWords}
+                    は、従来の固定看板やポスターと異なり、映像やアニメーションを活用したダイナミックな表現が可能です。
                     <br />
                     特に、ショッピングモールや繁華街のウィンドウディスプレイでは、遠くからでも視認しやすく、通行人の興味を引きやすいという特長があります。
                     <br />
@@ -583,7 +619,8 @@ export default async function AboutPage() {
                   <p className="ml-5">
                     従来の大型LEDビジョンやLCDディスプレイは、設置に大掛かりな工事が必要な場合が多く、設置場所が限られていました。
                     <br />
-                    しかし、透明フィルム型LEDビジョンは、軽量で柔軟なフィルムタイプのため、窓ガラスやアクリルパネルに直接貼り付けるだけで使用できます。
+                    しかし、{mainData.keyWords}
+                    は、軽量で柔軟なフィルムタイプのため、窓ガラスやアクリルパネルに直接貼り付けるだけで使用できます。
                     <br />
                     これにより、設置の自由度が大幅に向上し、スペースを最大限に活用することができます。
                     <br />
@@ -617,7 +654,8 @@ export default async function AboutPage() {
                     </p>
                   </div>
                   <p className="ml-5">
-                    透明フィルム型LEDビジョンは、購入だけでなくレンタルプランも提供されているため、短期間のイベントやキャンペーンにも手軽に導入できます。
+                    {mainData.keyWords}
+                    は、購入だけでなくレンタルプランも提供されているため、短期間のイベントやキャンペーンにも手軽に導入できます。
                     <br />
                     例えば、期間限定のポップアップストアや展示会、プロモーションイベントなどでは、設置コストを抑えつつ、インパクトのある演出を行うことができます。
                     <br />
@@ -625,7 +663,8 @@ export default async function AboutPage() {
                     <br />
                     また、イベント終了後には簡単に撤去できるため、不要な保管コストがかからず、スペースを有効活用できます。
                     <br />
-                    さらに、最新の機種を試せる機会にもなり、導入前に技術的な適合性を確認することが可能です。このように、レンタルプランを活用すれば、低リスクかつ柔軟に透明フィルム型LEDビジョンを導入できます。
+                    さらに、最新の機種を試せる機会にもなり、導入前に技術的な適合性を確認することが可能です。このように、レンタルプランを活用すれば、低リスクかつ柔軟に
+                    {mainData.keyWords}を導入できます。
                   </p>
                 </div>
               </div>
@@ -640,14 +679,16 @@ export default async function AboutPage() {
 
               <div className="px-5 mb-5 md:mb-8">
                 <p className="mb-5 md:mb-10">
-                  透明フィルム型LEDビジョンは、従来の液晶ディスプレイやプロジェクション型ディスプレイと比較して、いくつかの点で優れています。
+                  {mainData.keyWords}
+                  は、従来の液晶ディスプレイやプロジェクション型ディスプレイと比較して、いくつかの点で優れています。
                   <br />
                   例えば、液晶ディスプレイはどうしても厚みがあり、視界を遮るため、スペースを取ってしまうことがあります。
                   <br />
                   プロジェクション型ディスプレイも設置場所に制約があり、特に光の反射や映像の鮮明さが問題になる場合があります。
                 </p>
                 <p>
-                  一方で、透明フィルム型LEDビジョンは、透過性を保ちつつ高輝度で鮮明な映像を表示できるため、空間を最大限に活用できるだけでなく、他のディスプレイ技術に比べて設置の自由度が高く、より柔軟な運用が可能です。
+                  一方で、{mainData.keyWords}
+                  は、透過性を保ちつつ高輝度で鮮明な映像を表示できるため、空間を最大限に活用できるだけでなく、他のディスプレイ技術に比べて設置の自由度が高く、より柔軟な運用が可能です。
                 </p>
               </div>
 
@@ -657,7 +698,7 @@ export default async function AboutPage() {
                     <tr className="bg-white/90">
                       <th className="border border-gray-400 p-4 text-left"></th>
                       <th className="border border-gray-400 p-4 text-center bg-yellow-200">
-                        透明フィルム型LEDビジョン
+                        {mainData.keyWords}
                       </th>
                       <th className="border border-gray-400 p-4 text-center bg-gray-200">
                         従来のLEDビジョン
@@ -737,14 +778,16 @@ export default async function AboutPage() {
                 <div className="md:flex gap-5">
                   <div>
                     <p className="mb-5 md:mb-8">
-                      透明フィルム型LEDビジョンは、最新のディスプレイ技術を駆使し、視界を遮らずに高品質な映像を提供できる革新的な製品です。
+                      {mainData.keyWords}
+                      は、最新のディスプレイ技術を駆使し、視界を遮らずに高品質な映像を提供できる革新的な製品です。
                       <br />
                       商業施設や公共施設、企業のブランディングや広告に最適で、今後ますます多くの分野で活用されることが期待されています。
                     </p>
                     <p className="mb-5 md:mb-8">
                       その特長と利点を活かし、他のディスプレイ技術と比較して、ユニークで効果的な情報発信手段として注目されています。
                       <br />
-                      貴社のビジネスにも透明フィルム型LEDビジョンを導入して、視覚的なインパクトを最大限に活かしませんか？
+                      貴社のビジネスにも{mainData.keyWords}
+                      を導入して、視覚的なインパクトを最大限に活かしませんか？
                       <br />
                       設置方法や活用事例、レンタルプランなど、詳しく知りたい方はぜひお気軽にお問い合わせください。専門スタッフが最適な導入プランをご提案いたします。
                     </p>

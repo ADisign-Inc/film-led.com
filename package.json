@@ -9,9 +9,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build --no-lint",
+    "postcss": "npx tailwindcss -i ./styles/globals.css -o ./styles/output.css --watch",
     "start": "next start",
-    "lint": "next lint",
-    "postcss": "npx tailwindcss -i ./styles/globals.css -o ./styles/output.css --watch"
+    "lint": "next lint"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",

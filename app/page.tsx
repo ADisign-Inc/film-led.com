@@ -53,26 +53,30 @@ export default async function LandingPage() {
               >
                 <source src="/videos/01.mp4" type="video/mp4" />
               </video>
-              <div className="absolute inset-0 bg-black/40" />
+              <div className="absolute inset-0 bg-black/50" />
             </div>
             <div className="container relative z-10 mb-20">
-              <div className="max-w-6xl mx-auto text-white">
-                <div className="space-y-8 mt-14 mb-10">
-                  <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl !leading-normal mb-20">
-                    革新的な
+              <div className="max-w-6xl mx-auto">
+                <div className="mt-20 mb-10">
+                  <h1 className="text-4xl sm:text-5xl md:text-5xl !leading-loose tracking-widest font-bold [&_span]:text-yellow-300 [&_span]:font-bold mb-10">
+                    最先端技術で<span>視界を遮らず、</span>
                     <br />
-                    テクノロジーで
+                    <span>広告</span>・<span>店舗集客</span>に革新を。
                     <br />
-                    空間を変える
+                    屋外・大型対応の
+                    <span>{mainData.keyWords}</span>
+                    、
                     <br />
-                    次世代型{mainData.keyWords}
+                    <span>最安値</span>でご用意。
                   </h1>
 
-                  <p className="text-2xl md:text-3xl font-semibold text-yellow-300">
-                    透明LEDフィルム【レンタル・販売】
-                  </p>
-                  <p className="text-xl">
-                    店舗・オフィス・イベントに最適。視覚のインパクトと空間演出を両立します。
+                  {/* <p className="text-2xl md:text-3xl font-bold text-yellow-300 mb-10">
+                    {mainData.keyWords}【販売】
+                  </p> */}
+                  <p className="text-xl md:text-2xl font-semibold !leading-loose !tracking-widest">
+                    ガラス面を広告空間に。
+                    <br />
+                    シンプルな空間に、ダイナミックな演出で圧倒的な集客効果を実現します。
                   </p>
                 </div>
 
@@ -109,6 +113,7 @@ export default async function LandingPage() {
                     "/images/about/01.jpg",
                     "/images/about/02.jpg",
                     "/images/about/07.jpg",
+                    "/images/about/08.jpg",
                   ]}
                 />
               </div>
@@ -120,7 +125,8 @@ export default async function LandingPage() {
                 </p>
                 <div className="[&_p]:text-base md:[&_p]:text-lg">
                   <p className="mb-5 md:mb-10">
-                    透明LEDフィルムは、ガラスやアクリルなどの透明素材に貼り付けて使用する最先端のディスプレイ技術です。
+                    {mainData.keyWords}
+                    は、ガラスやアクリルなどの透明素材に貼り付けて使用する最先端のディスプレイ技術です。
                   </p>
                   <p className="mb-5 md:mb-10">
                     これにより、空間デザインを損なうことなく、鮮やかな映像を表示でき、視界を遮ることなく、広告やインフォメーションを発信できます。
@@ -135,10 +141,12 @@ export default async function LandingPage() {
             </div>
 
             <div className="flex justify-center">
-              <Button>
-                {mainData.keyWords} について詳しく知る
-                <ArrowRight className="h-4 w-4" />
-              </Button>
+              <Link href="/blog/aboutFilmLed">
+                <Button>
+                  {mainData.keyWords} について詳しく知る
+                  <ArrowRight className="h-4 w-4" />
+                </Button>
+              </Link>
             </div>
           </section>
 
@@ -148,14 +156,14 @@ export default async function LandingPage() {
               Benefits<span>導入のメリット</span>
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 text-black mb-16 md:mb-24">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8 text-black mb-16 md:mb-24">
               {benefitData.map((benefit) => (
                 <div
                   key={benefit.id}
-                  className="relative mx-auto bg-white/90 py-4 md:py-5 px-4 md:px-6"
+                  className="relative mx-auto bg-white/90 py-4 md:py-6 px-4 md:px-8"
                 >
                   <p
-                    className="relative inline-block box-border font-semibold w-[calc(100%+24px)] ml-[-2.3rem] md:ml-[-2.8rem] px-5 py-2.5 text-lg sm:text-lg md:text-xl text-white text-center mb-5
+                    className="relative inline-block box-border w-[calc(100%+24px)] ml-[-2.3rem] md:ml-[-3.2rem] px-5 py-2.5 text-lg sm:text-lg md:text-xl text-white font-bold text-center mb-5
                              before:absolute before:top-full before:left-0 before:content-[''] before:border-b-[15px] before:border-b-transparent before:border-r-[20px] before:border-r-gray-700"
                     style={{
                       backgroundImage:
@@ -207,7 +215,7 @@ export default async function LandingPage() {
                       </div>
                     )}
                   </div>
-                  <p>{benefit.description}</p>
+                  <p className="text-black">{benefit.description}</p>
                 </div>
               ))}
             </div>
@@ -267,7 +275,7 @@ export default async function LandingPage() {
               <span>製品情報</span>
             </h2>
 
-            <div className="overflow-x-auto rounded-lg shadow-lg relative">
+            <div className="overflow-x-auto rounded-lg shadow-lg relative mb-20">
               <div className="min-w-[1200px]">
                 <table className="w-full table-auto border-separate border-spacing-y-2">
                   <thead>

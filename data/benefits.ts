@@ -48,7 +48,7 @@ export const benefitData: Benefit[] = [
     title: "簡便なメンテナンス",
     mediaType: "video",
     videoType: "lengthwise",
-    mediaUrl: "/videos/06.mp4",
+    mediaUrl: "/videos/construction/01.mp4",
     description:
       "透明LEDフィルムは耐久性が高く、メンテナンスが簡単で長期的に安定した運用が可能です。定期的な清掃やコンテンツ更新も簡単に行えるため、管理が楽で安心です。",
   },

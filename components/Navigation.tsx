@@ -25,7 +25,7 @@ export function Navigation() {
           <Link
             key={`${item.href}-${index}`}
             href={item.href}
-            className="text-sm font-medium text-white hover:text-yellow-300 transition-colors"
+            className="text-base font-semibold text-white hover:text-yellow-300 transition-colors"
             {...(item.href === "{mainData.contact.urll}"
               ? { target: "_blank" }
               : {})}

@@ -51,7 +51,7 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply font-serif font-medium border-border;
   }
   body {
     @apply bg-background text-foreground;
@@ -59,11 +59,11 @@
 }
 
 body {
-  @apply font-mincho text-white;
+  @apply text-white;
 }
 
 h2 {
-  @apply text-4xl md:text-5xl font-bold text-center !tracking-wider mb-10 md:mb-24 after:content-[''] after:block after:w-16 after:h-[2px] after:bg-gray-400 after:mx-auto after:mt-8;
+  @apply text-4xl md:text-5xl font-bold text-center !tracking-wider mb-10 md:mb-24 after:content-[''] after:block after:w-16 after:h-[1.5px] after:bg-gray-400 after:mx-auto after:mt-8;
   span {
     @apply text-sm md:text-lg font-normal block mt-8;
   }
