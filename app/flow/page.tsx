@@ -30,13 +30,15 @@ export default function FlowPage() {
 
           <div className="max-w-3xl mx-auto">
             <div className="relative">
-              <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-white" />
+              <div className="absolute left-5 md:left-6 top-0 bottom-0 w-0.5 bg-white/80" />
 
-              <div className="relative z-10 flex gap-6 md:gap-8 mb-12">
-                <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-yellow-300 border-4 border-white">
-                  <span className="text-xl font-bold text-black">1</span>
+              <div className="relative z-10 flex gap-3 md:gap-8 mb-12">
+                <div className="flex-shrink-0 flex items-center justify-center w-10 md:w-12 h-10 md:h-12 rounded-full bg-yellow-300 border-4 border-white">
+                  <span className="text-lg md:text-xl font-bold text-black">
+                    1
+                  </span>
                 </div>
-                <div className="pt-3">
+                <div className="pt-1 md:pt-3">
                   <h4 className="text-xl md:text-2xl mb-5">
                     無料相談・お申し込み
                   </h4>
@@ -56,10 +58,12 @@ export default function FlowPage() {
               </div>
 
               <div className="relative z-10 flex gap-6 md:gap-8 mb-12">
-                <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-yellow-300 border-4 border-white">
-                  <span className="text-xl font-bold text-black">2</span>
+                <div className="flex-shrink-0 flex items-center justify-center w-10 md:w-12 h-10 md:h-12 rounded-full bg-yellow-300 border-4 border-white">
+                  <span className="text-lg md:text-xl font-bold text-black">
+                    2
+                  </span>
                 </div>
-                <div className="pt-3">
+                <div className="pt-1 md:pt-3">
                   <h4 className="text-xl md:text-2xl mb-5">
                     ヒアリング・最適プランのご提案
                   </h4>
@@ -74,10 +78,12 @@ export default function FlowPage() {
               </div>
 
               <div className="relative z-10 flex gap-6 md:gap-8 mb-12">
-                <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-yellow-300 border-4 border-white">
-                  <span className="text-xl font-bold text-black">3</span>
+                <div className="flex-shrink-0 flex items-center justify-center w-10 md:w-12 h-10 md:h-12 rounded-full bg-yellow-300 border-4 border-white">
+                  <span className="text-lg md:text-xl font-bold text-black">
+                    3
+                  </span>
                 </div>
-                <div className="pt-3">
+                <div className="pt-1 md:pt-3">
                   <h4 className="text-xl md:text-2xl mb-5">お見積もり</h4>
                   <p className="">
                     専門スタッフが、設置から運用に至るまでの全体的なサポート体制を整えたうえで、お見積もりをご提案します。
@@ -92,10 +98,12 @@ export default function FlowPage() {
               </div>
 
               <div className="relative z-10 flex gap-6 md:gap-8 mb-12">
-                <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-yellow-300 border-4 border-white">
-                  <span className="text-xl font-bold text-black">4</span>
+                <div className="flex-shrink-0 flex items-center justify-center w-10 md:w-12 h-10 md:h-12 rounded-full bg-yellow-300 border-4 border-white">
+                  <span className="text-lg md:text-xl font-bold text-black">
+                    4
+                  </span>
                 </div>
-                <div className="pt-3">
+                <div className="pt-1 md:pt-3">
                   <h4 className="text-xl md:text-2xl mb-5">ご発注</h4>
                   <p className="">
                     お見積もりにご納得いただけましたら、正式にご発注となります。
@@ -108,10 +116,12 @@ export default function FlowPage() {
               </div>
 
               <div className="relative z-10 flex gap-6 md:gap-8 mb-12">
-                <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-yellow-300 border-4 border-white">
-                  <span className="text-xl font-bold text-black">5</span>
+                <div className="flex-shrink-0 flex items-center justify-center w-10 md:w-12 h-10 md:h-12 rounded-full bg-yellow-300 border-4 border-white">
+                  <span className="text-lg md:text-xl font-bold text-black">
+                    5
+                  </span>
                 </div>
-                <div className="pt-3">
+                <div className="pt-1 md:pt-3">
                   <h4 className="text-xl md:text-2xl mb-5">
                     コンテンツ制作・サイネージ構築・導入
                   </h4>
@@ -127,10 +137,12 @@ export default function FlowPage() {
               </div>
 
               <div className="relative z-10 flex gap-6 md:gap-8 mb-12">
-                <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-yellow-300 border-4 border-white">
-                  <span className="text-xl font-bold text-black">6</span>
+                <div className="flex-shrink-0 flex items-center justify-center w-10 md:w-12 h-10 md:h-12 rounded-full bg-yellow-300 border-4 border-white">
+                  <span className="text-lg md:text-xl font-bold text-black">
+                    6
+                  </span>
                 </div>
-                <div className="pt-3">
+                <div className="pt-1 md:pt-3">
                   <h4 className="text-xl md:text-2xl mb-5">設置工事</h4>
                   <p className="">
                     {mainData.keyWords}の設置工事を実施します。
@@ -145,10 +157,12 @@ export default function FlowPage() {
               </div>
 
               <div className="relative z-10 flex gap-6 md:gap-8 mb-12">
-                <div className="flex-shrink-0 flex items-center justify-center w-12 h-12 rounded-full bg-yellow-300 border-4 border-white">
-                  <span className="text-xl font-bold text-black">7</span>
+                <div className="flex-shrink-0 flex items-center justify-center w-10 md:w-12 h-10 md:h-12 rounded-full bg-yellow-300 border-4 border-white">
+                  <span className="text-lg md:text-xl font-bold text-black">
+                    7
+                  </span>
                 </div>
-                <div className="pt-3">
+                <div className="pt-1 md:pt-3">
                   <h4 className="text-xl md:text-2xl mb-5">
                     操作説明・運用サポート
                   </h4>

@@ -4,7 +4,7 @@ import { mainData } from "../data/main";
 export function Cta() {
   return (
     <section className="container max-w-6xl md:py-20">
-      <div className="bg-white/20 px-5 xs:px-10 lg:px-20 py-16 md:py-20">
+      <div className="bg-white/20 px-5 xs:px-10 lg:px-20 py-12 md:py-20">
         <h2>
           Contact
           <span>お問い合わせ・お申し込み</span>

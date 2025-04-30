@@ -4,10 +4,10 @@ import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 import { Button } from "../../components/Button";
 import { Cta } from "../../components/Cta";
-import { BlogList } from "../../components/blog/BlogList";
-import { blogData } from "../../data/blog";
+import { ArchiveList } from "../../components/ArchiveList";
+import { archiveData } from "../../data/archives";
 
-export default function BlogPage() {
+export default function ArchivesPage() {
   return (
     <div className="flex min-h-screen flex-col relative">
       <div className="fixed inset-0 -z-10">
@@ -26,17 +26,17 @@ export default function BlogPage() {
       <main className="flex-1">
         <section className="container max-w-6xl py-28 md:py-40">
           <h2>
-            LED BLOG
-            <span>LED ブログ</span>
+            Archives
+            <span>導入実績</span>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {blogData.map((post) => (
-              <BlogList key={post.id} post={post} />
+            {archiveData.map((post) => (
+              <ArchiveList key={post.id} post={post} />
             ))}
           </div>
 
-          <div className="mt-12 md:mt-20 text-center">
+          <div className="mt-12 text-center">
             <Link href="/">
               <Button variant="default">TOPへ戻る</Button>
             </Link>

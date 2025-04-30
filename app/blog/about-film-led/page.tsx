@@ -35,7 +35,7 @@ export default async function AboutPage() {
             <section className="mb-10 md:mb-20">
               <h3 className="text-2xl text-start font-bold flex items-center gap-6 mb-5 md:mb-10">
                 <span className="w-1 h-10 bg-yellow-400"></span>
-                店舗の集客力を劇的に変える ── 高輝度 {mainData.keyWords}
+                店舗の集客力を劇的に変える ─ 高輝度 {mainData.keyWords}
               </h3>
 
               <div className="w-4/5 mx-auto mb-10">
@@ -462,7 +462,7 @@ export default async function AboutPage() {
                   </div>
                 ))}
               </div>
-              <div className="bg-gray-300 inline-block px-10 py-4 mt-10">
+              {/* <div className="bg-gray-300 inline-block px-10 py-4 mt-10">
                 <p>
                   関連記事 :
                   <span className="ml-2">
@@ -474,7 +474,7 @@ export default async function AboutPage() {
                     </a>
                   </span>
                 </p>
-              </div>
+              </div> */}
               <div className="flex justify-center">
                 <div className="inline-block mt-10">
                   <Button>使用例と活用シーンについて詳しく見る</Button>

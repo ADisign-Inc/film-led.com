@@ -4,8 +4,9 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const menuItems = [
-  { href: "/blog/aboutFilmLed", label: "透明LEDフィルムとは？" },
+  { href: "/blog/about-film-led", label: "透明LEDフィルムとは？" },
   { href: "/cases", label: "活用事例" },
+  { href: "/archives", label: "導入実績" },
   { href: "/products", label: "製品情報" },
   { href: "/products", label: "コンテンツ制作について" },
   { href: "/flow", label: "導入までの流れ" },
@@ -41,7 +42,7 @@ export function Navigation() {
           variant="outline"
           size="icon"
           onClick={() => setIsOpen(!isOpen)}
-          className="bg-transparent text-white hover:bg-white/10 hover:text-white"
+          className="bg-transparent text-white hover:bg-white/10 hover:text-white border-transparent hover:border-yellow-300"
         >
           {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           <span className="sr-only">メニュー</span>
@@ -49,7 +50,7 @@ export function Navigation() {
 
         {/* SP メニュー */}
         {isOpen && (
-          <div className="fixed inset-0 top-20 bg-black/80 z-50">
+          <div className="fixed inset-0 top-20 bg-black/90 z-50">
             <nav className="container mx-auto px-5 py-8">
               <div className="flex flex-col gap-6">
                 {menuItems.map((item, index) => (

@@ -4,7 +4,7 @@ import { mainData } from "../data/main";
 
 export function Footer() {
   return (
-    <footer className="bg-transparent text-gray-300 border-t border-gray-300 py-12 mt-20">
+    <footer className="bg-transparent text-gray-400 border-t border-gray-400 py-12 mt-20">
       <div className="container">
         <div className="grid gap-8 md:grid-cols-4">
           <div>
@@ -17,10 +17,15 @@ export function Footer() {
                 layout="intrinsic"
               />
             </div>
-            <p className="text-sm text-gray-300">
-              革新的なデジタルサイネージで空間を変える。ビジネスの集客力を最大化する最先端ディスプレイ
-              {mainData.keyWords}をご提供します。
-            </p>
+            <ul className="space-y-2 text-sm">
+              <li>{mainData.companyAddress.postalCode}</li>
+              <li>
+                {mainData.companyAddress.prefecture}
+                {mainData.companyAddress.city}
+                {mainData.companyAddress.street}
+              </li>
+              <li>TEL: {mainData.contact.tel}</li>
+            </ul>
           </div>
 
           <div>
@@ -95,8 +100,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-300 mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center">
-          <p className="text-xs text-gray-300">
+        <div className="border-t border-gray-400/50 mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center">
+          <p className="text-xs text-gray-400">
             © {new Date().getFullYear()} {mainData.companyNameEn} All Rights
             Reserved.
           </p>

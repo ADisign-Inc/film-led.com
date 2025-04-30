@@ -26,7 +26,7 @@ export type Blog = {
 export const blogData: Blog[] = [
   {
     id: "1",
-    url: "/aboutFilmLed",
+    url: "/about-film-led",
     title: "LEDビジョンとは？",
     description: "用途に合わせた最適なLEDビジョンの選び方をご紹介します。",
     image: "/images/blog/0001.jpg",
@@ -36,34 +36,12 @@ export const blogData: Blog[] = [
   },
   {
     id: "2",
-    url: "/aboutFilmLed",
-    title: "LEDビジョンの選び方ガイド",
+    url: "/difference-transparent-led",
+    title: "透過型LEDビジョンの製品ごと違いとは？",
     description: "用途に合わせた最適なLEDビジョンの選び方をご紹介します。",
-    image: "/images/blog/0002.jpg",
+    image: "/images/blog/0003.jpg",
     date: "2024-03-20",
     category: "ガイド",
     slug: "how-to-choose-led-vision",
-  },
-  {
-    id: "3",
-    url: "/aboutFilmLed",
-    title: "シースルーLEDビジョンの活用事例",
-    description:
-      "実際の導入事例から、シースルーLEDビジョンの効果を解説します。",
-    image: "/images/blog/0002.jpg",
-    date: "2024-03-15",
-    category: "活用事例",
-    slug: "use-case-of-sear-led-vision",
-  },
-  {
-    id: "4",
-    url: "/aboutFilmLed",
-    title: "透明フィルム型LEDビジョンの技術解説と最新トレンド",
-    description:
-      "透明フィルム型LEDビジョンの技術的な仕組みと最新の研究動向を詳しく解説。",
-    image: "/images/blog/0003.jpg",
-    date: "2024-03-20",
-    category: "技術解説",
-    slug: "technical-explanation-and-latest-trends-of-transparent-film-led-vision",
   },
 ];

@@ -49,6 +49,7 @@ export default async function LandingPage() {
                 loop
                 muted
                 playsInline
+                preload="auto"
                 className="w-full h-full object-cover"
               >
                 <source src="/videos/01.mp4" type="video/mp4" />
@@ -190,6 +191,7 @@ export default async function LandingPage() {
                             loop
                             muted
                             playsInline
+                            preload="auto"
                             className={`w-full h-full object-cover ${
                               benefit.videoType === "sideways"
                                 ? "brightness-[0.3]"
@@ -535,7 +537,7 @@ export default async function LandingPage() {
                     "linear-gradient(to right, #000000 0%, #000000 2%, #14532d 40%, #facc15 100%)",
                 }}
               ></div>
-              <span className="z-10 text-xl md:text-2xl tracking-wider px-2">
+              <span className="z-10 text-xl md:text-2xl font-bold tracking-wider px-2">
                 ご注文から最短20日で導入完了！
               </span>
             </div>
