@@ -3,15 +3,16 @@ import "../styles/globals.css";
 import "../styles/output.css";
 import type { Metadata } from "next";
 import { ThemeProvider } from "../components/theme-provider";
+import { mainData } from "../data/main";
 import Script from "next/script";
+import { GA_MEASUREMENT_ID } from "../lib/gtag";
 
 export const metadata: Metadata = {
   title: {
-    default: "FILM LED - LEDビジュアルウォールの専門会社",
+    default: `FILM LED - ${mainData.keyWords}の専門会社`,
     template: "%s | FILM LED",
   },
-  description:
-    "FILM LEDは、LEDビジュアルウォールの専門会社です。高輝度で高品質なLEDディスプレイを提供しています。",
+  description: `FILM LEDは、${mainData.keyWords}の専門会社です。高輝度で高品質なLEDディスプレイを提供しています。`,
   icons: {
     icon: [
       { url: "/favicon.ico" },
@@ -54,7 +55,7 @@ export default function RootLayout({
         />
         <link rel="manifest" href="/site.webmanifest" />
         <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
@@ -62,9 +63,7 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}', {
-              page_path: window.location.pathname,
-            });
+            gtag('config', '${GA_MEASUREMENT_ID}');
           `}
         </Script>
       </head>
