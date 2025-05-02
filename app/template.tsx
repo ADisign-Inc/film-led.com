@@ -1,18 +1,26 @@
 'use client'
 
 import { useEffect } from 'react'
-import { usePathname, useSearchParams } from 'next/navigation'
+import { usePathname } from 'next/navigation'
 import { pageview } from '../lib/gtag'
 
-export default function Template({ children }: { children: React.ReactNode }) {
+function Analytics() {
   const pathname = usePathname()
-  const searchParams = useSearchParams()
 
   useEffect(() => {
     if (pathname) {
       pageview(pathname)
     }
-  }, [pathname, searchParams])
+  }, [pathname])
 
-  return <>{children}</>
+  return null
+}
+
+export default function Template({ children }: { children: React.ReactNode }) {
+  return (
+    <>
+      <Analytics />
+      {children}
+    </>
+  )
 } 
