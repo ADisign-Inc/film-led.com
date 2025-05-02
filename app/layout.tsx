@@ -54,6 +54,7 @@ export default function RootLayout({
           type="image/png"
         />
         <link rel="manifest" href="/site.webmanifest" />
+        <meta name="google-site-verification" content="HW8wae-WJ-9HvYA-j9rqu9y4W_6XSyTlrvnZeZaC6CI" />
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"

@@ -305,12 +305,12 @@ export default async function LandingPage() {
                         消費電力
                         <br />
                         <span>Power Consumption</span>
-                        <div className="flex gap-1 mt-2">
+                        <div className="flex gap-1 mt-2 [&_p]:text-white [&_p]:text-sm">
                           <div className="w-1/2">
-                            <p className="text-white">最大</p>
+                            <p>最大</p>
                           </div>
                           <div className="w-1/2">
-                            <p className="text-white">平均</p>
+                            <p>平均</p>
                           </div>
                         </div>
                       </th>
@@ -381,10 +381,10 @@ export default async function LandingPage() {
                   <div className="relative flex flex-col justify-end h-full py-12 md:pt-0 lg:py-0">
                     <div className="flex items-baseline mb-8 md:mb-14">
                       <h3 className="text-yellow-300 text-4xl md:text-5xl font-bold leading-none">
-                        販売
+                      Sales
                       </h3>
                       <p className="text-yellow-300/80 text-xl md:text-2xl font-bold leading-none ml-3">
-                        Sales
+                        販売
                       </p>
                     </div>
                     <p className="mb-10 md:mb-14">
@@ -419,10 +419,10 @@ export default async function LandingPage() {
                   <div className="relative flex flex-col justify-end h-full py-12 md:pt-0 lg:py-0">
                     <div className="flex items-baseline mb-8 md:mb-14">
                       <h3 className="text-yellow-300 text-2xl md:text-4xl font-bold leading-none">
-                        映像コンテンツ制作
+                      Create
                       </h3>
                       <p className="text-yellow-300/80 text-lg md:text-xl font-bold leading-none ml-3">
-                        Create
+                        映像コンテンツ制作
                       </p>
                     </div>
                     <p className="mb-10 md:mb-14">

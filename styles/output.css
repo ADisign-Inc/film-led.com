@@ -2607,9 +2607,19 @@ p {
   line-height: 1.5rem;
 }
 
+.\[\&_p\]\:text-sm p {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
 .\[\&_p\]\:text-black p {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity, 1));
+}
+
+.\[\&_p\]\:text-white p {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 @media (min-width: 768px) {
