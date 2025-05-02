@@ -4,7 +4,7 @@ import { mainData } from "../data/main";
 
 export function Footer() {
   return (
-    <footer className="bg-transparent text-gray-400 border-t border-gray-400 py-12 mt-20">
+    <footer className="text-gray-300 border-t border-gray-400 py-12 md:py-14 mt-20">
       <div className="container">
         <div className="grid gap-8 md:grid-cols-4">
           <div>
@@ -27,6 +27,8 @@ export function Footer() {
               <li>TEL: {mainData.contact.tel}</li>
             </ul>
           </div>
+
+          <div></div>
 
           <div>
             <p className="text-lg font-semibold mb-4 text-white">サービス</p>
@@ -84,20 +86,6 @@ export function Footer() {
             </ul>
           </div>
 
-          <div>
-            <p className="text-lg font-semibold mb-4 text-white">
-              お問い合わせ
-            </p>
-            <ul className="space-y-2 text-sm">
-              <li>{mainData.companyAddress.postalCode}</li>
-              <li>
-                {mainData.companyAddress.prefecture}
-                {mainData.companyAddress.city}
-                {mainData.companyAddress.street}
-              </li>
-              <li>TEL: {mainData.contact.tel}</li>
-            </ul>
-          </div>
         </div>
 
         <div className="border-t border-gray-400/50 mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center">

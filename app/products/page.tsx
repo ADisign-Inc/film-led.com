@@ -143,6 +143,9 @@ export default async function ProductsPage() {
             <p className="text-center mb-10 md:mb-16">
               Youtubeに掲載されている{mainData.keyWords}
               ・デジタルサイネージの事例をご紹介します。
+<br/>
+              ※当サイトでは、より分かりやすい情報提供のため、YouTube動画を引用・埋め込み形式で掲載しています。著作権は各権利者に帰属します。
+
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -338,7 +341,7 @@ export default async function ProductsPage() {
               </div>
             </div>
 
-            <div className="">
+            {/* <div className=""> これ綺麗 動画編集して欲しい
               <div className="relative pb-[56.25%]">
                 <iframe
                   src="https://www.youtube.com/embed/aB1SdfCJpLg?si=o1tEKDG7lwYLUwAN&autoplay=1&mute=1&loop=1&playlist=aB1SdfCJpLg&controls=0"
@@ -348,7 +351,7 @@ export default async function ProductsPage() {
                   allowFullScreen
                 ></iframe>
               </div>
-            </div>
+            </div> */}
 
             <div className="max-w-3xl mx-auto">
               <ul className="">

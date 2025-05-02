@@ -275,79 +275,16 @@ export default async function LandingPage() {
               <span>製品情報</span>
             </h2>
 
-            <div className="overflow-x-auto rounded-lg shadow-lg relative mb-20">
-              <div className="min-w-[1200px]">
-                <table className="w-full table-auto border-separate border-spacing-y-2">
-                  <thead>
-                    <tr className="text-left font-bold text-yellow-300 [&_th]:text-xl [&_th]:px-4 [&_th]:md:px-6 [&_th]:py-2 [&_span]:text-sm">
-                      <th>
-                        型名
-                        <br />
-                        <span>Model</span>
-                      </th>
-                      <th>
-                        販売価格
-                        <br />
-                        <span>Sales Price</span>
-                      </th>
-                      <th>
-                        ピッチ
-                        <br />
-                        <span>Pitch</span>
-                      </th>
-                      <th>
-                        最大サイズ
-                        <br />
-                        <span>Max Size</span>
-                      </th>
-
-                      <th>
-                        消費電力
-                        <br />
-                        <span>Power Consumption</span>
-                        <div className="flex gap-1 mt-2 [&_p]:text-white [&_p]:text-sm">
-                          <div className="w-1/2">
-                            <p>最大</p>
-                          </div>
-                          <div className="w-1/2">
-                            <p>平均</p>
-                          </div>
-                        </div>
-                      </th>
-                      <th className="px-4 py-2">
-                        輝度
-                        <br />
-                        <span>Brightness</span>
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody className="[&_td]:px-4 [&_td]:md:px-6 [&_td]:py-2">
-                    {productData.map((product: Product, idx: number) => (
-                      <tr
-                        key={product.model}
-                        className={idx % 2 === 0 ? "bg-white/15" : "bg-white/5"}
-                      >
-                        <td className="text-base md:text-lg font-bold">
-                          {product.model}
-                        </td>
-                        <td>{product.price}</td>
-                        <td>{product.pitch} mm</td>
-                        <td>{product.maxSize} Mm</td>
-                        <td className="flex gap-1">
-                          <div className="w-1/2">
-                            {product.powerConsumption.max} W/㎡
-                          </div>
-                          <div className="w-1/2">
-                            {product.powerConsumption.average} W/㎡
-                          </div>
-                        </td>
-                        <td>{product.brightness} cd/㎡</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
+       <div>
+       <Image
+                    src="/images/icons/step02.svg"
+                    alt=""
+                    width={90}
+                    height={90}
+                    className="object-contain w-20 md:w-24 h-20 md:h-24"
+                    priority
+                  />
+       </div>
 
             <Link href="/products">
               <Button>
@@ -465,7 +402,7 @@ export default async function LandingPage() {
                     priority
                   />
                 </div>
-                <div className="border-[0.5px] border-yellow-300 p-6 md:px-8 py-12 shadow-[0_0_6px_rgba(255,255,255,0.8)]">
+                <div className="border-[0.5px] border-yellow-300 p-6 md:px-8 py-12">
                   <h3 className="text-start text-yellow-300 mb-8">
                     お問い合わせ
                   </h3>
@@ -489,7 +426,7 @@ export default async function LandingPage() {
                     priority
                   />
                 </div>
-                <div className="border-[0.5px] border-yellow-300 p-6 md:px-8 py-12 shadow-[0_0_6px_rgba(255,255,255,0.8)]">
+                <div className="border-[0.5px] border-yellow-300 p-6 md:px-8 py-12">
                   <h3 className="text-start text-yellow-300 mb-8">ご発注</h3>
                   <p>
                     お見積もりやご提案内容にご納得いただけましたら、ご発注手続きを進めさせていただきます。
@@ -511,7 +448,7 @@ export default async function LandingPage() {
                     priority
                   />
                 </div>
-                <div className="border-[0.5px] border-yellow-300 p-6 md:px-8 py-12 shadow-[0_0_6px_rgba(255,255,255,0.8)]">
+                <div className="border-[0.5px] border-yellow-300 p-6 md:px-8 py-12">
                   <h3 className="text-start text-yellow-300 mb-8">
                     導入・施工
                   </h3>

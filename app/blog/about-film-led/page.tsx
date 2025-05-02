@@ -31,7 +31,7 @@ export default async function AboutPage() {
             <span>{mainData.keyWords}とは？</span>
           </h2>
 
-          <article className="bg-white/85 [&_p]:text-black [&_h3]:text-black px-5 md:px-16 py-16 md:py-20">
+          <article className="">
             <section className="mb-10 md:mb-20">
               <h3 className="text-2xl text-start font-bold flex items-center gap-6 mb-5 md:mb-10">
                 <span className="w-1 h-10 bg-yellow-400"></span>
@@ -521,28 +521,9 @@ export default async function AboutPage() {
               <div className="">
                 <div className="mb-5 md:mb-10">
                   <div className="flex items-center gap-2 mb-3 md:mb-5">
-                    <div className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-yellow-100/80">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="text-yellow-700"
-                      >
-                        <path d="M2 9V5c0-1.1.9-2 2-2h4"></path>
-                        <path d="M2 13v4c0 1.1.9 2 2 2h4"></path>
-                        <path d="M22 9V5c0-1.1-.9-2-2-2h-4"></path>
-                        <path d="M22 13v4c0 1.1-.9 2-2 2h-4"></path>
-                        <rect x="9" y="1" width="6" height="22" rx="2"></rect>
-                      </svg>
-                    </div>
+                   
                     <p className="text-lg md:text-xl font-semibold">
-                      空間デザインを損なわず、訴求力を向上
+                      ー 空間デザインを損なわず、訴求力を向上
                     </p>
                   </div>
                   <p className="ml-5">
@@ -559,24 +540,9 @@ export default async function AboutPage() {
 
                 <div className="mb-5 md:mb-10">
                   <div className="flex items-center gap-2 mb-3 md:mb-5">
-                    <div className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-yellow-100/80">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="text-yellow-700"
-                      >
-                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                      </svg>
-                    </div>
+                   
                     <p className="text-lg md:text-xl font-semibold">
-                      目を引く演出で集客力UP
+                      ー 目を引く演出で集客力UP
                     </p>
                   </div>
                   <p className="ml-5">
@@ -595,25 +561,9 @@ export default async function AboutPage() {
 
                 <div className="mb-5 md:mb-10">
                   <div className="flex items-center gap-2 mb-3 md:mb-5">
-                    <div className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-yellow-100/80">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="text-yellow-700"
-                      >
-                        <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
-                        <path d="m9 12 2 2 4-4"></path>
-                      </svg>
-                    </div>
+                    
                     <p className="text-lg md:text-xl font-semibold">
-                      設置自由度が高く、施工も簡単
+                      ー 設置自由度が高く、施工も簡単
                     </p>
                   </div>
                   <p className="ml-5">
@@ -632,25 +582,9 @@ export default async function AboutPage() {
 
                 <div className="mb-5 md:mb-10">
                   <div className="flex items-center gap-2 mb-3 md:mb-5">
-                    <div className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-yellow-100/80">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="text-yellow-700"
-                      >
-                        <path d="M12 2v20"></path>
-                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                      </svg>
-                    </div>
+                    
                     <p className="text-lg md:text-xl font-semibold">
-                      レンタルプランで手軽に導入可能
+                      ー レンタルプランで手軽に導入可能
                     </p>
                   </div>
                   <p className="ml-5">
@@ -677,7 +611,7 @@ export default async function AboutPage() {
                 選ばれる理由・他商材との比較
               </h3>
 
-              <div className="px-5 mb-5 md:mb-8">
+              <div className="px-5 mb-5 md:mb-10">
                 <p className="mb-5 md:mb-10">
                   {mainData.keyWords}
                   は、従来の液晶ディスプレイやプロジェクション型ディスプレイと比較して、いくつかの点で優れています。
@@ -695,22 +629,22 @@ export default async function AboutPage() {
               <div className="mx-5">
                 <table className="w-full">
                   <thead>
-                    <tr className="bg-white/90">
-                      <th className="border border-gray-400 p-4 text-left"></th>
-                      <th className="border border-gray-400 p-4 text-center bg-yellow-200">
+                    <tr className="">
+                      <th className="border border-gray-400 border-r-0 p-4 text-left"></th>
+                      <th className="border border-yellow-300 p-4 text-center text-yellow-300">
                         {mainData.keyWords}
                       </th>
-                      <th className="border border-gray-400 p-4 text-center bg-gray-200">
+                      <th className="border border-gray-400 p-4 text-center">
                         従来のLEDビジョン
                       </th>
                     </tr>
                   </thead>
-                  <tbody className="bg-white/90">
+                  <tbody className="">
                     <tr>
-                      <td className="bg-gray-100 border border-gray-400 p-4 font-medium">
+                      <td className="border border-gray-400 border-r-0 p-4 font-medium">
                         設置スペース
                       </td>
-                      <td className="border border-gray-400 p-4 text-center bg-yellow-50">
+                      <td className="border border-yellow-300 p-4 text-center">
                         <Check className="h-6 w-6 text-green-600 mx-auto" />
                         <span className="block mt-1">
                           既存のガラス面に設置可能
@@ -722,10 +656,10 @@ export default async function AboutPage() {
                       </td>
                     </tr>
                     <tr>
-                      <td className="bg-gray-100 border border-gray-400 p-4 font-medium">
+                      <td className="border border-gray-400 border-r-0 p-4 font-medium">
                         視界の確保
                       </td>
-                      <td className="border border-gray-400 p-4 text-center bg-yellow-50">
+                      <td className="border border-yellow-300 p-4 text-center">
                         <Check className="h-6 w-6 text-green-600 mx-auto" />
                         <span className="block mt-1">透明で視界を遮らない</span>
                       </td>
@@ -735,10 +669,10 @@ export default async function AboutPage() {
                       </td>
                     </tr>
                     <tr>
-                      <td className="bg-gray-100 border border-gray-400 p-4 font-medium">
+                      <td className="border border-gray-400 border-r-0 p-4 font-medium">
                         設置工事
                       </td>
-                      <td className="border border-gray-400 p-4 text-center bg-yellow-50">
+                      <td className="border border-yellow-300 p-4 text-center">
                         <Check className="h-6 w-6 text-green-600 mx-auto" />
                         <span className="block mt-1">簡易な施工で設置可能</span>
                       </td>
@@ -748,10 +682,10 @@ export default async function AboutPage() {
                       </td>
                     </tr>
                     <tr>
-                      <td className="bg-gray-100 border border-gray-400 p-4 font-medium">
+                      <td className="border border-gray-400 border-r-0 p-4 font-medium">
                         コスト
                       </td>
-                      <td className="border border-gray-400 p-4 text-center bg-yellow-50">
+                      <td className="border border-yellow-300 p-4 text-center">
                         <Check className="h-6 w-6 text-green-600 mx-auto" />
                         <span className="block mt-1">
                           レンタルプランあり、低コスト

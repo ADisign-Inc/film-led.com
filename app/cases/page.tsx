@@ -31,8 +31,8 @@ export default function CasesPage() {
             <span>活用事例</span>
           </h2>
 
-          <section className="bg-white/85 text-black px-5 md:px-16 py-16 md:py-20 mb-10 md:mb-20">
-            <div className="mb-10">
+          <section className="mb-10 md:mb-20">
+            <div className="mb-10 md:mb-20">
               {caseData.map((cases_) => (
                 <div className="mb-10 md:mb-16 last:mb-0">
                   <div className="mb-5 md:mb-8">
@@ -40,7 +40,7 @@ export default function CasesPage() {
                       <span className="text-yellow-400 mr-2">●</span>
                       <span className="relative inline-block font-bold">
                         {cases_.title}
-                        <span className="absolute bottom-0 left-0 w-full h-4 bg-yellow-400 -z-10"></span>
+                        <span className="absolute bottom-0 left-0 w-full h-4 bg-yellow-400/20 -z-10"></span>
                       </span>
                     </h4>
                     <p
@@ -73,7 +73,10 @@ export default function CasesPage() {
                 </div>
               ))}
             </div>
-            <div className="bg-gray-300 inline-block px-10 py-4 mt-10">
+
+            <div className="flex justify-center">
+
+            <div className="bg-white/10 inline-block px-10 py-4">
               <p>
                 関連記事 :
                 <span className="ml-2">
@@ -85,6 +88,7 @@ export default function CasesPage() {
                   </a>
                 </span>
               </p>
+            </div>
             </div>
           </section>
 
