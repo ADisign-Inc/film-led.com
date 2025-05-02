@@ -35,12 +35,20 @@ export default function CasesPage() {
             <div className="mb-10">
               {caseData.map((cases_) => (
                 <div className="mb-10 md:mb-16 last:mb-0">
-                  <div className="mb-5">
-                    <h4 className="mb-5">
+                  <div className="mb-5 md:mb-8">
+                    <h4 className="mb-5 md:mb-8">
                       <span className="text-yellow-400 mr-2">●</span>
-                      {cases_.title}
+                      <span className="relative inline-block font-bold">
+                        {cases_.title}
+                        <span className="absolute bottom-0 left-0 w-full h-4 bg-yellow-400 -z-10"></span>
+                      </span>
                     </h4>
-                    <p className="px-10">{cases_.description}</p>
+                    <p
+                      className="px-10"
+                      dangerouslySetInnerHTML={{
+                        __html: cases_.description.replace(/\n/g, "<br />"),
+                      }}
+                    ></p>
                   </div>
                   <div className="flex justify-center gap-5 px-10 mb-3">
                     <div className="flex justify-center gap-5 mb-3">
@@ -70,10 +78,10 @@ export default function CasesPage() {
                 関連記事 :
                 <span className="ml-2">
                   <a
-                    href=""
+                    href="/blog/about-film-led"
                     className="border-b border-black hover:border-gray-500 transition-colors"
                   >
-                    {mainData.keyWords}の主な特徴と技術的な仕組み
+                    {mainData.keyWords}とは？主な特徴と技術的な仕組み
                   </a>
                 </span>
               </p>

@@ -71,9 +71,6 @@ export default async function LandingPage() {
                     <span>最安値</span>でご用意。
                   </h1>
 
-                  {/* <p className="text-2xl md:text-3xl font-bold text-yellow-300 mb-10">
-                    {mainData.keyWords}【販売】
-                  </p> */}
                   <p className="text-xl md:text-2xl font-semibold !leading-loose !tracking-widest">
                     ガラス面を広告空間に。
                     <br />
@@ -81,12 +78,18 @@ export default async function LandingPage() {
                   </p>
                 </div>
 
-                <Link href={mainData.contact.url}>
-                  <Button>
-                    無料相談・お申し込みはこちら
-                    <ArrowRight className="h-4 w-4" />
-                  </Button>
-                </Link>
+                <div className="flex justify-start">
+                  <a
+                    href={mainData.contact.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Button>
+                      無料相談・お申し込みはこちら
+                      <ArrowRight className="h-4 w-4" />
+                    </Button>
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -141,14 +144,12 @@ export default async function LandingPage() {
               </div>
             </div>
 
-            <div className="flex justify-center">
-              <Link href="/blog/aboutFilmLed">
-                <Button>
-                  {mainData.keyWords} について詳しく知る
-                  <ArrowRight className="h-4 w-4" />
-                </Button>
-              </Link>
-            </div>
+            <Link href="/blog/aboutFilmLed">
+              <Button>
+                {mainData.keyWords} について詳しく知る
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </Link>
           </section>
 
           {/* Benefits */}
@@ -157,23 +158,19 @@ export default async function LandingPage() {
               Benefits<span>導入のメリット</span>
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8 text-black mb-16 md:mb-24">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 mb-16 md:mb-24">
               {benefitData.map((benefit) => (
                 <div
                   key={benefit.id}
-                  className="relative mx-auto bg-white/90 py-4 md:py-6 px-4 md:px-8"
+                  className="relative mx-auto"
                 >
                   <p
-                    className="relative inline-block box-border w-[calc(100%+24px)] ml-[-2.3rem] md:ml-[-3.2rem] px-5 py-2.5 text-lg sm:text-lg md:text-xl text-white font-bold text-center mb-5
-                             before:absolute before:top-full before:left-0 before:content-[''] before:border-b-[15px] before:border-b-transparent before:border-r-[20px] before:border-r-gray-700"
-                    style={{
-                      backgroundImage:
-                        "linear-gradient(to right, #000000 0%, #000000 2%, #14532d 40%, #facc15 100%)",
-                    }}
+                    className="relative inline-block box-border w-[calc(100%+24px)] ml-[-2.3rem] md:ml-[-1.4rem] px-5 py-2.5 md:py-3 text-lg sm:text-lg md:text-xl text-white bg-black/80 font-bold text-center mb-5
+                             before:absolute before:top-full before:left-0 before:content-[''] before:border-b-[15px] before:border-b-transparent before:border-r-[20px] before:border-r-gray-700/50"
                   >
                     {benefit.title}
                   </p>
-                  <div className="flex gap-10 mb-5">
+                  <div className="flex gap-10 mb-5 md:mb-8">
                     {benefit.mediaType === "image" ? (
                       <Image
                         src={benefit.mediaUrl}
@@ -217,32 +214,30 @@ export default async function LandingPage() {
                       </div>
                     )}
                   </div>
-                  <p className="text-black">{benefit.description}</p>
+                  <p className="">{benefit.description}</p>
                 </div>
               ))}
             </div>
 
-            <div className="flex justify-center">
-              <Link href="/services">
-                <Button>
-                  {mainData.keyWords} について詳しく知る
-                  <ArrowRight className="h-4 w-4" />
-                </Button>
-              </Link>
-            </div>
+            <Link href="/services">
+              <Button>
+                {mainData.keyWords} について詳しく知る
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </Link>
           </section>
 
           {/* Case Studies */}
-          <section className="container max-w-6xl bg-white/15 px-5 md:px-10 py-14 md:py-20 mb-10">
+          <section className="container max-w-6xl py-14 md:py-20 mb-10">
             <h2>
               Case Studies
               <span>活用事例</span>
             </h2>
 
-            <div className="grid gap-8 grid-cols-1 xs:grid-cols-2 md:grid-cols-3 mb-16 md:mb-24">
+            <div className="grid gap-6 grid-cols-1 xs:grid-cols-2 md:grid-cols-3 mb-16 md:mb-24">
               {caseData.slice(0, 3).map((case_) => (
                 <div key={case_.id} className="">
-                  <div className=" flex items-center justify-center mb-3 md:mb-5">
+                  <div className="flex items-center justify-center mb-3 md:mb-5">
                     <Image
                       src={case_.image[0]}
                       alt={case_.title}
@@ -255,19 +250,22 @@ export default async function LandingPage() {
                   <h3 className="text-xl md:text-xl text-yellow-300 mb-3">
                     {case_.title}
                   </h3>
-                  <p className="px-3">{case_.description}</p>
+                  <p
+                    className="px-3"
+                    dangerouslySetInnerHTML={{
+                      __html: case_.description.replace(/\n/g, "<br />"),
+                    }}
+                  ></p>
                 </div>
               ))}
             </div>
 
-            <div className="flex justify-center">
-              <Link href="/cases">
-                <Button variant="default">
-                  活用事例について詳しく見る
-                  <ArrowRight className="h-4 w-4" />
-                </Button>
-              </Link>
-            </div>
+            <Link href="/cases">
+              <Button variant="default">
+                活用事例について詳しく見る
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </Link>
           </section>
 
           {/* Product Lineup */}
@@ -351,14 +349,12 @@ export default async function LandingPage() {
               </div>
             </div>
 
-            <div className="flex justify-center">
-              <Link href="/products">
-                <Button>
-                  製品情報を詳しく見る
-                  <ArrowRight className="h-4 w-4" />
-                </Button>
-              </Link>
-            </div>
+            <Link href="/products">
+              <Button>
+                製品情報を詳しく見る
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </Link>
           </section>
 
           {/* Service */}
@@ -396,14 +392,13 @@ export default async function LandingPage() {
                       <br />
                       シースルービジョンや高解像度屋内LEDビジョン、一体型LEDビジョンなど、様々なニーズに応える最先端の製品と、最適な映像ソリューションをご提案しています。
                     </p>
-                    <div>
-                      <Link href="/services">
-                        <Button variant="default">
-                          販売について詳しく見る
-                          <ArrowRight className="h-4 w-4" />
-                        </Button>
-                      </Link>
-                    </div>
+
+                    <Link href="/services">
+                      <Button variant="default">
+                        販売について詳しく見る
+                        <ArrowRight className="h-4 w-4" />
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -435,14 +430,13 @@ export default async function LandingPage() {
                       <br />
                       簡単なヒアリングでお見積りのみも可能ですので、お気軽にお問い合わせください。
                     </p>
-                    <div>
-                      <Link href="/services">
-                        <Button variant="default">
-                          コンテンツ制作について詳しく見る
-                          <ArrowRight className="h-4 w-4" />
-                        </Button>
-                      </Link>
-                    </div>
+
+                    <Link href="/services">
+                      <Button variant="default">
+                        コンテンツ制作について詳しく見る
+                        <ArrowRight className="h-4 w-4" />
+                      </Button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -456,7 +450,7 @@ export default async function LandingPage() {
               <span>導入の流れ</span>
             </h2>
 
-            <div className="grid gap-10 md:gap-8 grid-cols-1 md:grid-cols-3 pt-14 mb-10">
+            <div className="grid gap-10 md:gap-8 grid-cols-1 md:grid-cols-3 pt-14 mb-10 md:mb-14">
               <div className="relative">
                 <p className="absolute -top-[1.4rem] md:-top-7 left-0 text-yellow-300 text-3xl md:text-4xl font-bold">
                   Step 1
@@ -471,7 +465,7 @@ export default async function LandingPage() {
                     priority
                   />
                 </div>
-                <div className="border-[0.5px] border-yellow-300 p-6 md:px-8 py-12 shadow-[0_0_15px_rgba(255,255,255,0.6)]">
+                <div className="border-[0.5px] border-yellow-300 p-6 md:px-8 py-12 shadow-[0_0_6px_rgba(255,255,255,0.8)]">
                   <h3 className="text-start text-yellow-300 mb-8">
                     お問い合わせ
                   </h3>
@@ -495,7 +489,7 @@ export default async function LandingPage() {
                     priority
                   />
                 </div>
-                <div className="border-[0.5px] border-yellow-300 p-6 md:px-8 py-12 shadow-[0_0_15px_rgba(255,255,255,0.6)]">
+                <div className="border-[0.5px] border-yellow-300 p-6 md:px-8 py-12 shadow-[0_0_6px_rgba(255,255,255,0.8)]">
                   <h3 className="text-start text-yellow-300 mb-8">ご発注</h3>
                   <p>
                     お見積もりやご提案内容にご納得いただけましたら、ご発注手続きを進めさせていただきます。
@@ -517,7 +511,7 @@ export default async function LandingPage() {
                     priority
                   />
                 </div>
-                <div className="border-[0.5px] border-yellow-300 p-6 md:px-8 py-12 shadow-[0_0_15px_rgba(255,255,255,0.6)]">
+                <div className="border-[0.5px] border-yellow-300 p-6 md:px-8 py-12 shadow-[0_0_6px_rgba(255,255,255,0.8)]">
                   <h3 className="text-start text-yellow-300 mb-8">
                     導入・施工
                   </h3>
@@ -546,20 +540,18 @@ export default async function LandingPage() {
               ※導入完了後も安心してお使いいただけるよう、製品には2年間の保証をお付けしています。
             </p>
 
-            <div className="flex justify-center">
-              <Link href="/blog">
-                <Button variant="default">
-                  導入の流れを詳しく見る
-                  <ArrowRight className="h-4 w-4" />
-                </Button>
-              </Link>
-            </div>
+            <Link href="/blog">
+              <Button variant="default">
+                導入の流れを詳しく見る
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </Link>
           </section>
 
           {/* Faq */}
           <section className="container max-w-6xl py-10 md:py-20 mb-10">
             <h2>
-              Faq
+              FAQ
               <span>よくあるご質問</span>
             </h2>
 
@@ -568,7 +560,7 @@ export default async function LandingPage() {
                 {faqData.slice(0, 3).map((item) => (
                   <AccordionItem key={item.id} value={item.id}>
                     <AccordionTrigger>{item.question}</AccordionTrigger>
-                    <AccordionContent className="text-yellow-300">
+                    <AccordionContent className="text-yellow-300 text-base md:text-lg">
                       {item.answer.split("\n").map((line, index) => (
                         <span key={index}>
                           {line}
@@ -581,21 +573,19 @@ export default async function LandingPage() {
               </Accordion>
             </div>
 
-            <div className="flex justify-center">
-              <Link href="/blog">
-                <Button variant="default">
-                  よくある質問を詳しく見る
-                  <ArrowRight className="h-4 w-4" />
-                </Button>
-              </Link>
-            </div>
+            <Link href="/blog">
+              <Button variant="default">
+                よくある質問を詳しく見る
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </Link>
           </section>
 
           {/* LED BLOG */}
           <section className="container max-w-6xl mb-10">
             <h2>
-              LED BLOG
-              <span>LED ブログ</span>
+              Blog
+              <span>ブログ</span>
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10 md:mb-20">
@@ -606,14 +596,12 @@ export default async function LandingPage() {
               ))}
             </div>
 
-            <div className="flex justify-center">
-              <Link href="/blog">
-                <Button variant="default">
-                  LED ブログ一覧へ
-                  <ArrowRight className="h-4 w-4" />
-                </Button>
-              </Link>
-            </div>
+            <Link href="/blog">
+              <Button variant="default">
+                ブログ一覧へ
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </Link>
           </section>
 
           {/* CTA */}

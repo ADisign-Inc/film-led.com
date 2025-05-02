@@ -3,6 +3,7 @@ import "../styles/globals.css";
 import "../styles/output.css";
 import type { Metadata } from "next";
 import { ThemeProvider } from "../components/theme-provider";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: {
@@ -52,6 +53,18 @@ export default function RootLayout({
           type="image/png"
         />
         <link rel="manifest" href="/site.webmanifest" />
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
+          `}
+        </Script>
       </head>
       <body
         className="min-h-screen bg-black text-white antialiased"

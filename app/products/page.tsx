@@ -5,6 +5,7 @@ import { Footer } from "../../components/Footer";
 import { Cta } from "../../components/Cta";
 import { mainData } from "../../data/main";
 import { productData } from "../../data/products";
+import { Installation } from "../../data/installation";
 
 export const metadata: Metadata = {
   title: "製品情報 | FILM LED",
@@ -83,6 +84,7 @@ export default async function ProductsPage() {
                   LED
                   RGB発光素子を透明PETフィルムに直接搭載する技術で、LEDが小さく薄くなって小さなピッチでも高い透明度を維持することができます。
                   <br />
+                  <br />
                   ※最小ピッチ：3.75mm
                 </p>
               </div>
@@ -138,8 +140,9 @@ export default async function ProductsPage() {
               Example
               <span>活用事例</span>
             </h2>
-            <p className="text-center mb-10">
-              Youtubeに掲載されているLEDビジョン・デジタルサイネージの事例をご紹介します。
+            <p className="text-center mb-10 md:mb-16">
+              Youtubeに掲載されている{mainData.keyWords}
+              ・デジタルサイネージの事例をご紹介します。
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -228,12 +231,12 @@ export default async function ProductsPage() {
               <span>製品仕様</span>
             </h2>
 
-            <p className="text-end mb-3">※横にスクロールできます</p>
-            <div className="overflow-x-auto shadow-lg relative border border-white/50 bg-black/80">
+            <p className="text-end mb-3">※ 横にスクロールできます</p>
+            <div className="overflow-x-auto shadow-lg relative border border-white/30 bg-black/80">
               <div className="min-w-[1200px]">
                 <table className="w-full table-auto border-separate border-spacing-y-2">
                   <thead>
-                    <tr className="text-left font-bold text-yellow-300 [&_th]:text-xl [&_th]:px-4 [&_th]:md:px-6 [&_th]:py-2 [&_span]:text-sm">
+                    <tr className="text-left font-bold text-yellow-300 [&_th]:text-base [&_th]:md:text-xl [&_th]:font-bold [&_th]:px-4 [&_th]:md:px-6 [&_th]:py-2 [&_span]:text-sm">
                       <th>
                         型名
                         <br />
@@ -345,6 +348,26 @@ export default async function ProductsPage() {
                   allowFullScreen
                 ></iframe>
               </div>
+            </div>
+
+            <div className="max-w-3xl mx-auto">
+              <ul className="">
+                {Installation.map((installation) => (
+                  <li>
+                    <div
+                     key={installation.number}
+                    className="p-4 md:p-8 border border-gray-600"> 
+                    <h4 className="text-yellow-300 mb-3 md:mb-4">
+                      {installation.number}. {installation.title}
+                    </h4>
+                    <p className="indent-6">
+                      {installation.description}
+                    </p>
+                    </div>
+                    <div className="w-[0.5px] h-10 md:h-16 bg-gray-600 mx-auto"/>
+                  </li>
+                ))}
+              </ul>
             </div>
           </section>
         </section>

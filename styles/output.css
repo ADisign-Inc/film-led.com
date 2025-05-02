@@ -599,11 +599,9 @@ video {
   --ring: 212.7 26.8% 83.9%;
 }
 
-* {
-  border-color: hsl(var(--border));
-  font-family: 游明朝, YuMincho, Hiragino Mincho ProN W3, ヒラギノ明朝 ProN W3, Hiragino Mincho ProN, HG明朝E, ＭＳ Ｐ明朝, ＭＳ 明朝, serif;
-  font-weight: 500;
-}
+/* * {
+    @apply font-mincho font-medium border-border;
+  } */
 
 body {
   background-color: hsl(var(--background));
@@ -706,8 +704,8 @@ body {
   left: 50%;
 }
 
-.left-5 {
-  left: 1.25rem;
+.left-4 {
+  left: 1rem;
 }
 
 .right-0 {
@@ -732,10 +730,6 @@ body {
 
 .top-5 {
   top: 1.25rem;
-}
-
-.right-4 {
-  right: 1rem;
 }
 
 .-z-10 {
@@ -916,10 +910,6 @@ body {
   aspect-ratio: 4/3;
 }
 
-.aspect-video {
-  aspect-ratio: 16 / 9;
-}
-
 .h-10 {
   height: 2.5rem;
 }
@@ -1040,6 +1030,10 @@ body {
   width: 2rem;
 }
 
+.w-\[0\.5px\] {
+  width: 0.5px;
+}
+
 .w-\[calc\(100\%\+24px\)\] {
   width: calc(100% + 24px);
 }
@@ -1140,10 +1134,6 @@ body {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.cursor-pointer {
-  cursor: pointer;
-}
-
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -1162,6 +1152,10 @@ body {
 
 .items-stretch {
   align-items: stretch;
+}
+
+.justify-start {
+  justify-content: flex-start;
 }
 
 .justify-end {
@@ -1282,8 +1276,8 @@ body {
   border-width: 1px;
 }
 
-.border-4 {
-  border-width: 4px;
+.border-2 {
+  border-width: 2px;
 }
 
 .border-\[0\.5px\] {
@@ -1296,10 +1290,6 @@ body {
 
 .border-t {
   border-top-width: 1px;
-}
-
-.border-none {
-  border-style: none;
 }
 
 .border-black {
@@ -1321,6 +1311,15 @@ body {
   border-color: rgb(156 163 175 / 0.5);
 }
 
+.border-gray-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(75 85 99 / var(--tw-border-opacity, 1));
+}
+
+.border-transparent {
+  border-color: transparent;
+}
+
 .border-white {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
@@ -1330,17 +1329,13 @@ body {
   border-color: rgb(255 255 255 / 0.2);
 }
 
-.border-white\/50 {
-  border-color: rgb(255 255 255 / 0.5);
+.border-white\/30 {
+  border-color: rgb(255 255 255 / 0.3);
 }
 
 .border-yellow-300 {
   --tw-border-opacity: 1;
   border-color: rgb(253 224 71 / var(--tw-border-opacity, 1));
-}
-
-.border-transparent {
-  border-color: transparent;
 }
 
 .bg-black {
@@ -1360,6 +1355,10 @@ body {
   background-color: rgb(0 0 0 / 0.8);
 }
 
+.bg-black\/90 {
+  background-color: rgb(0 0 0 / 0.9);
+}
+
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
@@ -1373,6 +1372,11 @@ body {
 .bg-gray-300 {
   --tw-bg-opacity: 1;
   background-color: rgb(209 213 219 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gray-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(75 85 99 / var(--tw-bg-opacity, 1));
 }
 
 .bg-muted {
@@ -1447,10 +1451,6 @@ body {
 .bg-yellow-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(113 63 18 / var(--tw-bg-opacity, 1));
-}
-
-.bg-black\/90 {
-  background-color: rgb(0 0 0 / 0.9);
 }
 
 .object-contain {
@@ -1612,6 +1612,10 @@ body {
 
 .text-end {
   text-align: end;
+}
+
+.indent-6 {
+  text-indent: 1.5rem;
 }
 
 .\!text-xs {
@@ -1792,9 +1796,9 @@ body {
   opacity: 0;
 }
 
-.shadow-\[0_0_15px_rgba\(255\2c 255\2c 255\2c 0\.6\)\] {
-  --tw-shadow: 0 0 15px rgba(255,255,255,0.6);
-  --tw-shadow-colored: 0 0 15px var(--tw-shadow-color);
+.shadow-\[0_0_6px_rgba\(255\2c 255\2c 255\2c 0\.8\)\] {
+  --tw-shadow: 0 0 6px rgba(255,255,255,0.8);
+  --tw-shadow-colored: 0 0 6px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
@@ -1916,9 +1920,14 @@ body {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
+h1 {
+  font-family: 游明朝, YuMincho, Hiragino Mincho ProN W3, ヒラギノ明朝 ProN W3, Hiragino Mincho ProN, HG明朝E, ＭＳ Ｐ明朝, ＭＳ 明朝, serif;
+}
+
 h2 {
   margin-bottom: 3rem;
   text-align: center;
+  font-family: 游明朝, YuMincho, Hiragino Mincho ProN W3, ヒラギノ明朝 ProN W3, Hiragino Mincho ProN, HG明朝E, ＭＳ Ｐ明朝, ＭＳ 明朝, serif;
   font-size: 2.25rem;
   line-height: 2.5rem;
   font-weight: 700;
@@ -1941,14 +1950,14 @@ h2::after {
 @media (min-width: 768px) {
   h2 {
     margin-bottom: 5rem;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     font-size: 3rem;
     line-height: 1;
   }
 
   h2::after {
     content: var(--tw-content);
-    width: 4rem;
+    width: 3.5rem;
   }
 }
 
@@ -1978,9 +1987,10 @@ h2 {
 
 h3 {
   text-align: center;
+  font-family: 游明朝, YuMincho, Hiragino Mincho ProN W3, ヒラギノ明朝 ProN W3, Hiragino Mincho ProN, HG明朝E, ＭＳ Ｐ明朝, ＭＳ 明朝, serif;
   font-size: 1.25rem;
   line-height: 1.75rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.05em !important;
 }
 
@@ -1994,7 +2004,7 @@ h3 {
 h4 {
   font-size: 1.125rem;
   line-height: 1.75rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.05em !important;
 }
 
@@ -2048,10 +2058,9 @@ p {
   border-bottom-color: transparent;
 }
 
-.before\:border-r-gray-700::before {
+.before\:border-r-gray-700\/50::before {
   content: var(--tw-content);
-  --tw-border-opacity: 1;
-  border-right-color: rgb(55 65 81 / var(--tw-border-opacity, 1));
+  border-right-color: rgb(55 65 81 / 0.5);
 }
 
 .before\:content-\[\'\'\]::before {
@@ -2297,8 +2306,8 @@ p {
     top: -1.75rem;
   }
 
-  .md\:left-6 {
-    left: 1.5rem;
+  .md\:left-5 {
+    left: 1.25rem;
   }
 
   .md\:right-8 {
@@ -2358,8 +2367,8 @@ p {
     margin-bottom: 2rem;
   }
 
-  .md\:ml-\[-3\.2rem\] {
-    margin-left: -3.2rem;
+  .md\:ml-\[-1\.4rem\] {
+    margin-left: -1.4rem;
   }
 
   .md\:mt-20 {
@@ -2374,8 +2383,8 @@ p {
     display: none;
   }
 
-  .md\:h-12 {
-    height: 3rem;
+  .md\:h-10 {
+    height: 2.5rem;
   }
 
   .md\:h-16 {
@@ -2390,8 +2399,8 @@ p {
     width: 50%;
   }
 
-  .md\:w-12 {
-    width: 3rem;
+  .md\:w-10 {
+    width: 2.5rem;
   }
 
   .md\:w-16 {
@@ -2448,9 +2457,8 @@ p {
     padding: 1.25rem;
   }
 
-  .md\:px-10 {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+  .md\:p-8 {
+    padding: 2rem;
   }
 
   .md\:px-16 {
@@ -2473,6 +2481,11 @@ p {
     padding-bottom: 5rem;
   }
 
+  .md\:py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
   .md\:py-36 {
     padding-top: 9rem;
     padding-bottom: 9rem;
@@ -2486,11 +2499,6 @@ p {
   .md\:py-5 {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
-  }
-
-  .md\:py-6 {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
   }
 
   .md\:pt-0 {
@@ -2652,14 +2660,28 @@ p {
   padding-bottom: 0.5rem;
 }
 
+.\[\&_th\]\:text-base th {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .\[\&_th\]\:text-xl th {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.\[\&_th\]\:font-bold th {
+  font-weight: 700;
 }
 
 @media (min-width: 768px) {
   .\[\&_th\]\:md\:px-6 th {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+
+  .\[\&_th\]\:md\:text-xl th {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }

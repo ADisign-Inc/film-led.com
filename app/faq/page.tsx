@@ -38,7 +38,7 @@ export default function FAQPage() {
               {faqData.map((item) => (
                 <AccordionItem key={item.id} value={item.id}>
                   <AccordionTrigger>{item.question}</AccordionTrigger>
-                  <AccordionContent className="text-yellow-300">
+                  <AccordionContent className="text-yellow-300 text-base md:text-lg">
                     {item.answer.split("\n").map((line, index) => (
                       <span key={index}>
                         {line}

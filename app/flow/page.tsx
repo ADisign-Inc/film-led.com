@@ -25,15 +25,15 @@ export default function FlowPage() {
         <section className="container max-w-6xl py-28 md:py-40">
           <h2>
             Flow
-            <span>導入までの流れ</span>
+            <span>導入の流れ</span>
           </h2>
 
           <div className="max-w-3xl mx-auto">
             <div className="relative">
-              <div className="absolute left-5 md:left-6 top-0 bottom-0 w-0.5 bg-white/80" />
+              <div className="absolute left-4 md:left-5 top-0 bottom-0 w-0.5 bg-white/80" />
 
-              <div className="relative z-10 flex gap-3 md:gap-8 mb-12">
-                <div className="flex-shrink-0 flex items-center justify-center w-10 md:w-12 h-10 md:h-12 rounded-full bg-yellow-300 border-4 border-white">
+              <div className="relative z-10 flex gap-3 md:gap-8 mb-12 md:mb-20">
+                <div className="flex-shrink-0 flex items-center justify-center w-8 md:w-10 h-8 md:h-10 rounded-full bg-yellow-300 border-2 border-white">
                   <span className="text-lg md:text-xl font-bold text-black">
                     1
                   </span>
@@ -57,8 +57,8 @@ export default function FlowPage() {
                 </div>
               </div>
 
-              <div className="relative z-10 flex gap-6 md:gap-8 mb-12">
-                <div className="flex-shrink-0 flex items-center justify-center w-10 md:w-12 h-10 md:h-12 rounded-full bg-yellow-300 border-4 border-white">
+              <div className="relative z-10 flex gap-3 md:gap-8 mb-12 md:mb-20">
+                <div className="flex-shrink-0 flex items-center justify-center w-8 md:w-10 h-8 md:h-10 rounded-full bg-yellow-300 border-2 border-white">
                   <span className="text-lg md:text-xl font-bold text-black">
                     2
                   </span>
@@ -77,8 +77,8 @@ export default function FlowPage() {
                 </div>
               </div>
 
-              <div className="relative z-10 flex gap-6 md:gap-8 mb-12">
-                <div className="flex-shrink-0 flex items-center justify-center w-10 md:w-12 h-10 md:h-12 rounded-full bg-yellow-300 border-4 border-white">
+              <div className="relative z-10 flex gap-3 md:gap-8 mb-12 md:mb-20">
+                <div className="flex-shrink-0 flex items-center justify-center w-8 md:w-10 h-8 md:h-10 rounded-full bg-yellow-300 border-2 border-white">
                   <span className="text-lg md:text-xl font-bold text-black">
                     3
                   </span>
@@ -97,8 +97,8 @@ export default function FlowPage() {
                 </div>
               </div>
 
-              <div className="relative z-10 flex gap-6 md:gap-8 mb-12">
-                <div className="flex-shrink-0 flex items-center justify-center w-10 md:w-12 h-10 md:h-12 rounded-full bg-yellow-300 border-4 border-white">
+              <div className="relative z-10 flex gap-3 md:gap-8 mb-12 md:mb-20">
+                <div className="flex-shrink-0 flex items-center justify-center w-8 md:w-10 h-8 md:h-10 rounded-full bg-yellow-300 border-2 border-white">
                   <span className="text-lg md:text-xl font-bold text-black">
                     4
                   </span>
@@ -115,8 +115,8 @@ export default function FlowPage() {
                 </div>
               </div>
 
-              <div className="relative z-10 flex gap-6 md:gap-8 mb-12">
-                <div className="flex-shrink-0 flex items-center justify-center w-10 md:w-12 h-10 md:h-12 rounded-full bg-yellow-300 border-4 border-white">
+              <div className="relative z-10 flex gap-3 md:gap-8 mb-12 md:mb-20">
+                <div className="flex-shrink-0 flex items-center justify-center w-8 md:w-10 h-8 md:h-10 rounded-full bg-yellow-300 border-2 border-white">
                   <span className="text-lg md:text-xl font-bold text-black">
                     5
                   </span>
@@ -136,8 +136,8 @@ export default function FlowPage() {
                 </div>
               </div>
 
-              <div className="relative z-10 flex gap-6 md:gap-8 mb-12">
-                <div className="flex-shrink-0 flex items-center justify-center w-10 md:w-12 h-10 md:h-12 rounded-full bg-yellow-300 border-4 border-white">
+              <div className="relative z-10 flex gap-3 md:gap-8 mb-12 md:mb-20">
+                <div className="flex-shrink-0 flex items-center justify-center w-8 md:w-10 h-8 md:h-10 rounded-full bg-yellow-300 border-2 border-white">
                   <span className="text-lg md:text-xl font-bold text-black">
                     6
                   </span>
@@ -156,8 +156,8 @@ export default function FlowPage() {
                 </div>
               </div>
 
-              <div className="relative z-10 flex gap-6 md:gap-8 mb-12">
-                <div className="flex-shrink-0 flex items-center justify-center w-10 md:w-12 h-10 md:h-12 rounded-full bg-yellow-300 border-4 border-white">
+              <div className="relative z-10 flex gap-3 md:gap-8 mb-12 md:mb-20">
+                <div className="flex-shrink-0 flex items-center justify-center w-8 md:w-10 h-8 md:h-10 rounded-full bg-yellow-300 border-2 border-white">
                   <span className="text-lg md:text-xl font-bold text-black">
                     7
                   </span>

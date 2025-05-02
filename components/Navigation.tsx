@@ -2,17 +2,18 @@ import Link from "next/link";
 import { Button } from "./Button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { mainData } from "../data/main";
 
 const menuItems = [
   { href: "/blog/about-film-led", label: "透明LEDフィルムとは？" },
   { href: "/cases", label: "活用事例" },
   { href: "/archives", label: "導入実績" },
   { href: "/products", label: "製品情報" },
-  { href: "/products", label: "コンテンツ制作について" },
-  { href: "/flow", label: "導入までの流れ" },
+  { href: "/products", label: "コンテンツ制作" },
+  { href: "/flow", label: "導入の流れ" },
   { href: "/faq", label: "FAQ" },
-  { href: "/blog", label: "LED ブログ" },
-  { href: "{mainData.contact.urll}", label: "お問い合わせ" },
+  { href: "/blog", label: "ブログ" },
+  { href: mainData.contact.url, label: "お問い合わせ" },
 ];
 
 export function Navigation() {
