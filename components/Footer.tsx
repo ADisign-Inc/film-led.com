@@ -14,7 +14,8 @@ export function Footer() {
                 alt="Logo"
                 width={160}
                 height={100}
-                layout="intrinsic"
+                className="w-40 !h-auto"
+                priority
               />
             </div>
             <ul className="space-y-2 text-sm">
@@ -85,7 +86,6 @@ export function Footer() {
               </li>
             </ul>
           </div>
-
         </div>
 
         <div className="border-t border-gray-400/50 mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center">

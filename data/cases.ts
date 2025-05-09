@@ -33,7 +33,7 @@ export const caseData: Case[] = [
   },
   {
     id: "case-4",
-    title: "展示会の演出",
+    title: "展示会での空間演出",
     description:
       "展示会やイベントでは、透明フィルム型LEDビジョンを活用して来場者の注意を引くことができます。\nブースのガラス面に映像を映し出すことで、視覚的にインパクトを与え、ブランドイメージの強化や注目を集めることが可能です。",
     image: ["/images/cases/04-0.jpg", "/images/cases/04-1.jpg"],

@@ -47,19 +47,10 @@
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
   }
-}
 
-@layer base {
-  /* * {
-    @apply font-mincho font-medium border-border;
-  } */
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground text-white;
   }
-}
-
-body {
-  @apply text-white;
 }
 
 h1 {
@@ -67,14 +58,14 @@ h1 {
 }
 
 h2 {
-  @apply font-mincho text-4xl md:text-5xl font-bold text-center !tracking-wider mb-12 md:mb-20 after:content-[''] after:block after:w-12 after:md:w-14 after:h-[1.5px] after:bg-gray-400 after:mx-auto after:mt-5 md:mt-10;
+  @apply font-mincho text-4xl md:text-5xl font-bold text-center !tracking-wider mb-16 md:mb-20 after:content-[''] after:block after:w-8 after:md:w-10 after:h-[1.5px] after:bg-gray-400 after:mx-auto after:mt-5 after:md:mt-10;
   span {
     @apply text-sm md:text-lg block mt-5 md:mt-8;
   }
 }
 
 h3 {
-  @apply font-mincho text-xl md:text-2xl font-bold text-center !tracking-wider;
+  @apply font-mincho text-xl md:text-2xl lg:text-3xl font-bold text-center !tracking-wider;
 }
 
 h4 {
@@ -83,4 +74,30 @@ h4 {
 
 p {
   @apply text-sm md:text-base !leading-6 md:!leading-7 !tracking-wide;
+}
+
+.blog {
+  h3 {
+    @apply text-start font-bold flex items-center gap-4 md:gap-6 mb-10 md:mb-14;
+    span {
+      @apply w-1 h-8 md:h-10 bg-yellow-400/90;
+    }
+  }
+
+  p {
+    @apply !leading-loose;
+  }
+
+  th,
+  td {
+    @apply text-sm md:text-base;
+  }
+
+  .index {
+    li {
+      span {
+        @apply border-b border-gray-400 hover:border-yellow-300 hover:text-yellow-300 transition-all duration-500;
+      }
+    }
+  }
 }

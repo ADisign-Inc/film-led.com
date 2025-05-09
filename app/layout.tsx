@@ -9,10 +9,10 @@ import { GA_MEASUREMENT_ID } from "../lib/gtag";
 
 export const metadata: Metadata = {
   title: {
-    default: `FILM LED - ${mainData.keyWords}の専門会社`,
-    template: "%s | FILM LED",
+    default: `ADisignage - ${mainData.keyWords}ビジョンの専門会社`,
+    template: "%s | ADisignage",
   },
-  description: `FILM LEDは、${mainData.keyWords}の専門会社です。高輝度で高品質なLEDディスプレイを提供しています。`,
+  description: `ADisignageは、${mainData.keyWords}の専門会社です。高輝度で高品質な${mainData.keyWords}ディスプレイを提供しています。`,
   icons: {
     icon: [
       { url: "/favicon.ico" },
@@ -54,7 +54,10 @@ export default function RootLayout({
           type="image/png"
         />
         <link rel="manifest" href="/site.webmanifest" />
-        <meta name="google-site-verification" content="HW8wae-WJ-9HvYA-j9rqu9y4W_6XSyTlrvnZeZaC6CI" />
+        <meta
+          name="google-site-verification"
+          content="HW8wae-WJ-9HvYA-j9rqu9y4W_6XSyTlrvnZeZaC6CI"
+        />
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
           strategy="afterInteractive"

@@ -36,14 +36,17 @@ export default async function ProductsPage() {
             <span>製品情報</span>
           </h2>
 
-          <section className="mb-10 md:mb-24">
-            <h3 className="text-2xl md:text-4xl !leading-loose mb-5 md:mb-20">
-              圧倒的インパクトで周囲と差をつける！
+          <section className="mb-28 md:mb-40">
+            <h3 className="text-2xl md:text-3xl lg:text-4xl md:!leading-loose mb-8 md:mb-10">
+              圧倒的なインパクトで
+              <br className="xs:hidden" />
+              周囲と差をつける。
               <br />
-              <span className="text-yellow-300 font-bold text-4xl md:text-5xl">
-                {mainData.keyWords}
-              </span>
             </h3>
+
+            <p className="text-3xl md:text-4xl lg:text-5xl text-yellow-300 text-center font-bold font-mincho mb-12 md:mb-20">
+              {mainData.keyWords}
+            </p>
 
             <div className="relative w-full pb-[56.25%] bg-transparent overflow-hidden mb-10 md:mb-20">
               <div className="absolute inset-0">
@@ -54,7 +57,7 @@ export default async function ProductsPage() {
                   playsInline
                   className="w-full h-full object-cover brightness-[0.3]"
                 >
-                  <source src="/videos/02.mp4" type="video/mp4" />
+                  <source src="/videos/film02.mp4" type="video/mp4" />
                 </video>
               </div>
               <div className="absolute inset-0 flex items-center justify-center">
@@ -65,21 +68,21 @@ export default async function ProductsPage() {
                   playsInline
                   className="h-[150%] w-auto"
                 >
-                  <source src="/videos/02.mp4" type="video/mp4" />
+                  <source src="/videos/film02.mp4" type="video/mp4" />
                 </video>
               </div>
             </div>
           </section>
 
-          <section className="mb-10 md:mb-24">
+          <section className="mb-28 md:mb-40">
             <h2>
               Features
               <span>製品の特徴</span>
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 [&_h3]:text-yellow-300 md:gap-10 mb-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 [&_h3]:text-yellow-300 [&_h3]:mb-3 [&_h3]:md:mb-5 gap-10 md:gap-12">
               <div>
-                <h3 className="mb-4">COB (Chip on board)</h3>
+                <h3>COB (Chip on board)</h3>
                 <p>
                   LED
                   RGB発光素子を透明PETフィルムに直接搭載する技術で、LEDが小さく薄くなって小さなピッチでも高い透明度を維持することができます。
@@ -89,7 +92,7 @@ export default async function ProductsPage() {
                 </p>
               </div>
               <div>
-                <h3 className="mb-4">高い透明性と可視性</h3>
+                <h3>高い透明性と可視性</h3>
                 <p>
                   50~92%の透明度で、コンテンツを送出している時も光の透過ができます。{" "}
                   <br />
@@ -99,7 +102,7 @@ export default async function ProductsPage() {
                 </p>
               </div>
               <div>
-                <h3 className="mb-4">優れた熱放出と安定性</h3>
+                <h3>優れた熱放出と安定性</h3>
                 <p>
                   COBパッケージは、従来のIC内蔵型LEDより発熱が少なく、LEDフィルムの表面温度が周辺温度と約2°C程度高いため、室内での使用に適しています。{" "}
                   <br />
@@ -107,7 +110,7 @@ export default async function ProductsPage() {
                 </p>
               </div>
               <div>
-                <h3 className="mb-4">柔軟性</h3>
+                <h3>柔軟性</h3>
                 <p>
                   透明Filmの上に直接LED素子を搭載し、光学透明粘着剤など柔軟な材料を使用し、曲面設置に非常に容易です。{" "}
                   <br />
@@ -115,7 +118,7 @@ export default async function ProductsPage() {
                 </p>
               </div>
               <div>
-                <h3 className="mb-4">簡単なインストールと管理</h3>
+                <h3>簡単なインストールと管理</h3>
                 <p>
                   フィルムの表面に粘着層があり、別途の器具なしで取り付けたいところへ直接簡単に取り付けることができます。{" "}
                   <br />
@@ -123,7 +126,7 @@ export default async function ProductsPage() {
                 </p>
               </div>
               <div>
-                <h3 className="mb-4">多様な活用シーンへの対応力</h3>
+                <h3>多様な活用シーンへの対応力</h3>
                 <p>
                   ショーウィンドウや商業施設、イベント会場、企業受付、展示ブースなど、さまざまな用途に柔軟に対応可能です。
                   <br />
@@ -135,17 +138,18 @@ export default async function ProductsPage() {
             </div>
           </section>
 
-          <section className="mb-10 md:mb-24">
+          <section className="mb-28 md:mb-40">
             <h2 className="text-center">
               Example
               <span>活用事例</span>
             </h2>
-            <p className="text-center mb-10 md:mb-16">
+
+            <p className="text-center mb-12 md:mb-20">
               Youtubeに掲載されている{mainData.keyWords}
               ・デジタルサイネージの事例をご紹介します。
-<br/>
+              <br />
+              <br />
               ※当サイトでは、より分かりやすい情報提供のため、YouTube動画を引用・埋め込み形式で掲載しています。著作権は各権利者に帰属します。
-
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -228,18 +232,19 @@ export default async function ProductsPage() {
             </div>
           </section>
 
-          <section className="mb-10 md:mb-24">
+          <section className="mb-28 md:mb-40">
             <h2>
               Specifications
               <span>製品仕様</span>
             </h2>
 
-            <p className="text-end mb-3">※ 横にスクロールできます</p>
-            <div className="overflow-x-auto shadow-lg relative border border-white/30 bg-black/80">
+            <p className="text-end mb-3">※ 表は横にスクロールできます</p>
+
+            <div className="overflow-x-auto shadow-lg relative border border-white/20 bg-black/80">
               <div className="min-w-[1200px]">
                 <table className="w-full table-auto border-separate border-spacing-y-2">
                   <thead>
-                    <tr className="text-left font-bold text-yellow-300 [&_th]:text-base [&_th]:md:text-xl [&_th]:font-bold [&_th]:px-4 [&_th]:md:px-6 [&_th]:py-2 [&_span]:text-sm">
+                    <tr className="text-left font-bold text-yellow-300 [&_th]:text-sm [&_th]:md:text-base [&_th]:lg:text-xl [&_th]:font-bold [&_th]:px-4 [&_th]:md:px-6 [&_th]:md:py-2 [&_span]:text-xs [&_span]:md:text-sm">
                       <th>
                         型名
                         <br />
@@ -274,25 +279,26 @@ export default async function ProductsPage() {
                           </div>
                         </div>
                       </th>
-                      <th className="px-4 py-2">
+                      <th>
                         輝度
                         <br />
                         <span>Brightness</span>
                       </th>
                     </tr>
                   </thead>
+
                   <tbody className="[&_td]:px-4 [&_td]:md:px-6 [&_td]:py-2">
                     {productData.map((product, idx) => (
                       <tr
                         key={product.model}
-                        className={idx % 2 === 0 ? "bg-white/15" : "bg-white/5"}
+                        className={idx % 2 === 0 ? "bg-white/10" : "bg-white/5"}
                       >
                         <td className="text-base md:text-lg font-bold">
                           {product.model}
                         </td>
                         <td>{product.price}</td>
                         <td>{product.pitch} mm</td>
-                        <td>{product.maxSize} Mm</td>
+                        <td>{product.maxSize} mm</td>
                         <td className="flex gap-1">
                           <div className="w-1/2">
                             {product.powerConsumption.max} W/㎡
@@ -310,7 +316,7 @@ export default async function ProductsPage() {
             </div>
           </section>
 
-          <section className="mb-10 md:mb-24">
+          <section className="mb-28 md:mb-40">
             <h2>
               Installation
               <span>設置方法</span>
@@ -354,20 +360,19 @@ export default async function ProductsPage() {
             </div> */}
 
             <div className="max-w-3xl mx-auto">
-              <ul className="">
+              <ul>
                 {Installation.map((installation) => (
                   <li>
                     <div
-                     key={installation.number}
-                    className="p-4 md:p-8 border border-gray-600"> 
-                    <h4 className="text-yellow-300 mb-3 md:mb-4">
-                      {installation.number}. {installation.title}
-                    </h4>
-                    <p className="indent-6">
-                      {installation.description}
-                    </p>
+                      key={installation.number}
+                      className="p-4 md:p-8 border border-gray-600"
+                    >
+                      <h4 className="text-yellow-300 mb-3 md:mb-4">
+                        {installation.number}. {installation.title}
+                      </h4>
+                      <p className="indent-6">{installation.description}</p>
                     </div>
-                    <div className="w-[0.5px] h-10 md:h-16 bg-gray-600 mx-auto"/>
+                    <div className="w-[0.5px] h-10 md:h-16 bg-gray-600 mx-auto" />
                   </li>
                 ))}
               </ul>

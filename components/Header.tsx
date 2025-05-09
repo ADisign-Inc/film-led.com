@@ -26,8 +26,8 @@ export function Header() {
           }`}
         />
       </div>
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+      <div className="md:container px-3 md:px-10">
+        <div className="flex items-center justify-between h-14 md:h-20">
           <div className="flex items-center">
             <Link href="/">
               <Image
@@ -35,7 +35,8 @@ export function Header() {
                 alt="Logo"
                 width={200}
                 height={100}
-                className="w-40 h-auto"
+                className="w-32 md:w-40 !h-auto"
+                priority
               />
             </Link>
           </div>

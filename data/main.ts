@@ -11,6 +11,7 @@ export const mainData = {
     tel: "092-433-3302",
     fax: "092-510-1095",
     url: "https://adisignage.com/contact_form.html",
+    hours: "平日10時〜18時",
   },
   keyWords: "透明フィルム型LED",
   subKeywords: "透明LEDフィルム レンタル 販売 設置 施工 メンテナンス",

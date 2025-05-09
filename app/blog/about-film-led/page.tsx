@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
 import { X, Check } from "lucide-react";
 import { ArrowRight } from "lucide-react";
 import { Header } from "../../../components/Header";
@@ -8,7 +11,7 @@ import { Cta } from "../../../components/Cta";
 import { mainData } from "../../../data/main";
 import { caseData } from "../../../data/cases";
 
-export default async function AboutPage() {
+export default function AboutPage() {
   return (
     <div className="flex min-h-screen flex-col relative">
       <div className="fixed inset-0 -z-10">
@@ -24,42 +27,208 @@ export default async function AboutPage() {
       </div>
       <Header />
 
-      <main className="flex-1">
-        <div className="container max-w-5xl py-10 md:py-40">
+      <main className="flex-1 [scroll-behavior:smooth]">
+        <div className="container max-w-5xl py-20 md:py-32">
           <h2>
             About
             <span>{mainData.keyWords}とは？</span>
           </h2>
 
-          <article className="">
-            <section className="mb-10 md:mb-20">
-              <h3 className="text-2xl text-start font-bold flex items-center gap-6 mb-5 md:mb-10">
-                <span className="w-1 h-10 bg-yellow-400"></span>
-                店舗の集客力を劇的に変える ─ 高輝度 {mainData.keyWords}
+          <article className="blog mb-10 md:mb-20">
+            <section className="mb-20 md:mb-28">
+              <p className="mb-10 md:mb-16">
+                近年、ショッピングモールやビルのガラス面などで、外からでも中からでも視界を遮らない映像演出を見かけたことはありませんか？
+                <br />
+                それは「{mainData.keyWords}
+                」と呼ばれる、ガラスに貼る新世代のディスプレイかもしれません。
+                <br />
+                この記事では、
+                <br />
+                ・「{mainData.keyWords}ってそもそも何？」
+                <br />
+                ・「どんな仕組みで映像が映るの？」
+                <br />
+                ・「普通のLEDビジョンと何が違うの？」
+                <br />
+                という疑問をお持ちの方に向けて、仕組み・特徴・導入メリット・活用事例までわかりやすく解説します。
+                <br />
+                ぜひ、自社で{mainData.keyWords}
+                を設置する際のご参考になれば幸いです。
+              </p>
+
+              <div className="md:px-10">
+                <div className="relative w-full pb-[56.25%]">
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="absolute inset-0 w-full h-full object-cover"
+                  >
+                    <source src="/videos/film09.mp4" type="video/mp4" />
+                  </video>
+                </div>
+              </div>
+            </section>
+
+            <section className="index w-2/3 mx-auto bg-white/10 backdrop-blur-sm p-10 md:p-20 mb-20 md:mb-28">
+              <p className="text-lg md:text-xl lg:text-2xl text-center font-semibold mb-6 md:mb-10">
+                目 次
+              </p>
+              <ul className="list-decimal ml-5 space-y-6">
+                <li>
+                  <Link href="#section01">
+                    <span>
+                      集客力を劇的に変える ─ 高輝度 {mainData.keyWords}
+                    </span>
+                  </Link>
+                </li>
+
+                <li>
+                  <Link href="#section02">
+                    <span>透明フィルム型LEDとは？</span>
+                  </Link>
+                  {/* <ul className="list-decimal ml-5 space-y-2 pt-3">
+                    <li>
+                      <span>技術の仕組み（原理や構造）</span>
+                    </li>
+                    <li>
+                      <span>通常のLEDディスプレイとの違い</span>
+                    </li>
+                    <li>
+                      <span>「透明」であることによる独自の価値</span>
+                    </li>
+                  </ul> */}
+                </li>
+
+                <li>
+                  <Link href="#section03">
+                    <span>{mainData.keyWords}の技術的な仕組み</span>
+                  </Link>
+                  {/* <ul className="list-decimal ml-5 space-y-2 pt-3">
+                    <li>
+                      <span>透明なのに高輝度表示！最先端テクノロジー</span>
+                    </li>
+                    <li>
+                      <span>
+                        空間を活かす！ガラス面に設置できる斬新なディスプレイ
+                      </span>
+                    </li>
+                  </ul> */}
+                </li>
+
+                <li>
+                  <Link href="#section04">
+                    <span>透明フィルム型LEDの主な特徴</span>
+                  </Link>
+                  {/* <ul className="list-decimal ml-5 space-y-2 pt-3">
+                    <li>
+                      <span>透明性</span>
+                    </li>
+                    <li>
+                      <span>高輝度・高解像度表示</span>
+                    </li>
+                    <li>
+                      <span>薄型・軽量</span>
+                    </li>
+                    <li>
+                      <span>優れた熱放出と安定</span>
+                    </li>
+                  </ul> */}
+                </li>
+
+                <li>
+                  <Link href="#section05">
+                    <span>現状の課題</span>
+                  </Link>
+                  {/* <ul className="list-disc ml-5 space-y-2 pt-3">
+                    <li>
+                      <span>伝えたい情報が埋もれていませんか？</span>
+                    </li>
+                    <li>
+                      <span>従来のLEDビジョンの限界とは？</span>
+                    </li>
+                    <li>
+                      <span>透明フィルム型LEDならすべて解決！</span>
+                    </li>
+                  </ul> */}
+                </li>
+
+                <li>
+                  <Link href="#section06">
+                    <span>使用例と活用シーン</span>
+                  </Link>
+                </li>
+
+                <li>
+                  <Link href="#section07">
+                    <span>透明フィルム型LEDの仕様</span>
+                  </Link>
+                </li>
+
+                <li>
+                  <Link href="#section08">
+                    <span>導入するメリット</span>
+                  </Link>
+                  {/* <ul className="list-disc ml-5 space-y-2 pt-3">
+                    <li>
+                      <span>空間デザインを損なわず、訴求力を向上</span>
+                    </li>
+                    <li>
+                      <span>目を引く演出で集客力UP</span>
+                    </li>
+                    <li>
+                      <span>設置自由度が高く、施工も簡単</span>
+                    </li>
+                    <li>
+                      <span>簡単な設置で手軽に導入可能</span>
+                    </li>
+                  </ul> */}
+                </li>
+
+                <li>
+                  <Link href="#section09">
+                    <span>選ばれる理由・他商材との比較</span>
+                  </Link>
+                </li>
+
+                <li>
+                  <Link href="#section010">
+                    <span>まとめ</span>
+                  </Link>
+                </li>
+              </ul>
+            </section>
+
+            {/* 集客力を劇的に変える ─ 高輝度 {mainData.keyWords} */}
+            <section id="section01" className="mb-20 md:mb-28">
+              <h3>
+                <span className="w-1 h-14 sm:h-10 bg-yellow-400"></span>
+                集客力を劇的に変える
+                <br className="sm:hidden" />─ 高輝度 {mainData.keyWords}
               </h3>
 
-              <div className="w-4/5 mx-auto mb-10">
-                <div className="relative w-full pb-[56.25%] overflow-hidden">
-                  <div className="absolute inset-0">
-                    <video
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                      className="w-full h-full object-cover"
-                    >
-                      <source src="/videos/01.mp4" type="video/mp4" />
-                    </video>
-                  </div>
+              <div className="flex justify-center mx-auto my-10 md:my-16">
+                <div className="relative w-full pb-[56.25%]">
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="absolute inset-0 w-full h-full object-cover"
+                  >
+                    <source src="/videos/film01.mp4" type="video/mp4" />
+                  </video>
                 </div>
               </div>
 
               <div>
-                <p className="text-xl md:text-2xl font-semibold mb-5">
-                  「通りすがりの一瞬を、確実に掴む。」
+                <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-yellow-300 font-mincho text-nowrap mb-8 md:mb-12">
+                  ｢通りすがりの一瞬を、確実に掴む。｣
                 </p>
                 <p>
-                  そんな広告運用を目指すなら、透明LEDフィルムがベストな選択です。
+                  そんな広告運用を目指すなら、{mainData.keyWords}
+                  がベストな選択です。
                   <br />
                   明るい場所でも見やすく、4K解像度の鮮やかな映像で、訴求力は段違い。
                   <br />
@@ -68,86 +237,148 @@ export default async function AboutPage() {
               </div>
             </section>
 
-            {/* 透明フィルムLEDビジョンとは？ */}
-            <section className="mb-10 md:mb-24">
-              <h3 className="text-2xl text-start font-bold flex items-center gap-6 mb-5 md:mb-10">
-                <span className="w-1 h-10 bg-yellow-400"></span>
+            {/* 透明フィルム型LEDとは？ */}
+            <section id="section02" className="mb-20 md:mb-28">
+              <h3>
+                <span></span>
                 {mainData.keyWords}とは？
               </h3>
 
-              <div className="mb-5 md:mb-10">
-                <p className="text-lg md:text-xl font-semibold mb-4 md:mb-6">
-                  1. 技術の仕組み（{mainData.keyWords}の原理や構造）
+              <div className="mb-10 md:mb-16">
+                <p className="text-lg md:text-xl lg:text-2xl font-semibold mb-6 md:mb-8">
+                  1. 技術の仕組み（原理や構造）
                 </p>
-                <p className="ml-5">
-                  {mainData.keyWords}
-                  は、非常に薄い透明フィルムに微細なLEDチップを配置したディスプレイ技術です。
-                  <br />
-                  このフィルムは、ガラスやアクリルなどの透明素材に貼り付けて使用され、ディスプレイとしての機能を発揮しながらも視界を遮ることがありません。
-                  <br />
-                  フィルム自体は高透過率を持ち、映像や情報を表示するためにLEDチップが高輝度で発光します。
-                  <br />
-                  LEDチップ間の間隔は非常に細かく設計されており、光の透過性を最大限に確保しつつ、鮮やかな映像を表示します。
-                  <br />
-                  この技術は、LEDの微細な構造を活用することで、従来の大型ディスプレイでは実現できなかった「透明性」を持たせながらも高解像度の映像を投影できるという特長を持っています。
-                </p>
+
+                <div className="flex flex-col md:flex-row gap-8 ml-3 md:ml-5">
+                  <div className="order-2 md:order-1 md:w-4/5">
+                    <p>
+                      {mainData.keyWords}
+                      は、非常に薄い透明フィルムに微細なLEDチップを配置したディスプレイ技術です。
+                      <br />
+                      このフィルムは、ガラスやアクリルなどの透明素材に貼り付けて使用され、ディスプレイとしての機能を発揮しながらも視界を遮ることがありません。
+                      <br />
+                      フィルム自体は高透過率を持ち、映像や情報を表示するためにLEDチップが高輝度で発光します。
+                      <br />
+                      LEDチップ間の間隔は非常に細かく設計されており、光の透過性を最大限に確保しつつ、鮮やかな映像を表示します。
+                      <br />
+                      <br />
+                      この技術は、LEDの微細な構造を活用することで、従来の大型ディスプレイでは実現できなかった「透明性」を持たせながらも高解像度の映像を投影できるという特長を持っています。
+                    </p>
+                  </div>
+                  <div className="order-1 md:order-2 md:w-1/5">
+                    <div className="relative">
+                      <Image
+                        src="/images/products06.png"
+                        alt=""
+                        width={500}
+                        height={500}
+                        className="object-contain"
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="mb-5 md:mb-10">
-                <p className="text-lg md:text-xl font-semibold mb-4 md:mb-6">
+
+              <div className="mb-10 md:mb-16">
+                <p className="text-lg md:text-xl lg:text-2xl font-semibold mb-6 md:mb-8">
                   2. 通常のLEDディスプレイとの違い
                 </p>
-                <p className="ml-5">
-                  通常のLEDディスプレイと{mainData.keyWords}
-                  の最大の違いは、ディスプレイの設置方法と視覚的な影響です。
-                  <br />
-                  通常のLEDディスプレイは、完全に光を発するパネルが前面に配置されるため、設置するには十分なスペースと深さが必要です。
-                  <br />
-                  このため、従来のディスプレイは設置場所や空間に制約が多いというデメリットがあります。
-                  一方、{mainData.keyWords}
-                  は非常に薄く、透明な素材に設置できるため、物理的なスペースをほとんど占有せず、さらに視覚的にも設置場所が目立たず、インテリアや景観に影響を与えません。
-                  <br />
-                  従来のLEDディスプレイが背面にLEDパネルが搭載されているのに対し、
-                  {mainData.keyWords}
-                  は前面やガラス面に張り付けて使えるため、視覚的にも「透明感」が感じられます。
-                </p>
+
+                <div className="flex flex-col md:flex-row gap-8 ml-3 md:ml-5">
+                  <div className="order-2 md:order-1 md:w-3/5">
+                    <p>
+                      {mainData.keyWords}
+                      通常のLEDディスプレイと{mainData.keyWords}
+                      の最大の違いは、ディスプレイの設置方法と視覚的な影響です。
+                      <br />
+                      通常のLEDディスプレイは、完全に光を発するパネルが前面に配置されるため、設置するには十分なスペースと深さが必要です。
+                      <br />
+                      このため、従来のディスプレイは設置場所や空間に制約が多いというデメリットがあります。
+                      一方、{mainData.keyWords}
+                      は非常に薄く、透明な素材に設置できるため、物理的なスペースをほとんど占有せず、さらに視覚的にも設置場所が目立たず、インテリアや景観に影響を与えません。
+                      <br />
+                      従来のLEDディスプレイが背面にLEDパネルが搭載されているのに対し、
+                      {mainData.keyWords}
+                      は前面やガラス面に張り付けて使えるため、視覚的にも「透明感」が感じられます。
+                    </p>
+                  </div>
+                  <div className="order-1 md:order-2 md:w-2/5">
+                    <div className="relative pb-[56.25%]">
+                      <Image
+                        src="/images/products07.png"
+                        alt=""
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="mb-5 md:mb-10">
-                <p className="text-lg md:text-xl font-semibold mb-4 md:mb-6">
-                  3. 「透明」であることによる独自の価値・メリット
+
+              <div className="mb-10 md:mb-16">
+                <p className="text-lg md:text-xl lg:text-2xl font-semibold mb-6 md:mb-8">
+                  3. 「透明」であることによる独自の価値
                 </p>
-                <p className="ml-5">
-                  {mainData.keyWords}の最大の特徴は、その透明性です。
-                  <br />
-                  ガラスや窓、アクリル板などの透過する素材に貼り付けることができるため、ディスプレイとして機能しながらも空間を占有せず、景観を損なうことなく使用できます。
-                  <br />
-                  この透明性は、商業施設やオフィス、店舗のガラス面に設置することで、内部の視覚的な開放感を保ちつつ、外部からは美しい映像や広告を発信できるというメリットがあります。
-                  <br />
-                  さらに、昼間はガラスを通して外の景色をそのまま見ることができ、夜間や暗い場所ではその透明フィルムが輝き、鮮やかな映像を表示するというダイナミックなギャップも魅力です。
-                  <br />
-                  また、透明LEDフィルムはインタラクティブな機能や動画コンテンツと連動させることも可能で、より高度なエンターテインメントやマーケティング手法を展開することができます。
-                  <br />
-                  この透明性がもたらす効果的なブランディングや情報発信は、他のディスプレイ技術にはない独自の価値を提供します。
-                </p>
+
+                <div className="flex flex-col md:flex-row gap-8 ml-3 md:ml-5">
+                  <div className="order-2 md:order-1 md:w-3/5">
+                    <p>
+                      {mainData.keyWords}の最大の特徴は、その透明性です。
+                      <br />
+                      ガラスや窓、アクリル板などの透過する素材に貼り付けることができるため、ディスプレイとして機能しながらも空間を占有せず、景観を損なうことなく使用できます。
+                      <br />
+                      この透明性は、商業施設やオフィス、店舗のガラス面に設置することで、内部の視覚的な開放感を保ちつつ、外部からは美しい映像や広告を発信できるというメリットがあります。
+                      <br />
+                      さらに、昼間はガラスを通して外の景色をそのまま見ることができ、夜間や暗い場所ではその透明フィルムが輝き、鮮やかな映像を表示するというダイナミックなギャップも魅力です。
+                      <br />
+                      また、{mainData.keyWords}
+                      はインタラクティブな機能や動画コンテンツと連動させることも可能で、より高度なエンターテインメントやマーケティング手法を展開することができます。
+                      <br />
+                      この透明性がもたらす効果的なブランディングや情報発信は、他のディスプレイ技術にはない独自の価値を提供します。
+                    </p>
+                  </div>
+                  <div className="order-1 md:order-2 md:w-2/5">
+                    <div className="relative pb-[56.25%]">
+                      <Image
+                        src="/images/about/01.jpg"
+                        alt=""
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <div>
-                <div className="flex justify-center mb-5 md:mb-12">
-                  <Image
-                    src="/images/about/01.jpg"
-                    alt=""
-                    width={700}
-                    height={300}
-                    className="object-cover"
-                  />
+                <div className="flex justify-center gap-10 mb-10 md:mb-16">
+                  <div>
+                    <Image
+                      src="/images/about/01.jpg"
+                      alt=""
+                      width={700}
+                      height={300}
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <Image
+                      src="/images/about/01.jpg"
+                      alt=""
+                      width={700}
+                      height={300}
+                      className="object-cover"
+                    />
+                  </div>
                 </div>
-                <p className="mb-3 md:mb-10">
+                <p className="mb-5 md:mb-10">
                   {mainData.keyWords}
                   は、ガラスやアクリルなどの透明な素材に直接取り付けることで、視界を遮らずに映像や情報を表示できる革新的なディスプレイ技術です。
                   <br />
                   従来のLEDディスプレイや液晶ディスプレイ（LCD）とは異なり、透過性を維持しながらも高輝度・高解像度の映像を表示できるため、商業施設、オフィスビル、ショールーム、交通機関、イベント会場など、さまざまな場所で活用されています。
                 </p>
 
-                <p className="mb-3 md:mb-10">
+                <p className="mb-5 md:mb-10">
                   このディスプレイは、透明なフィルム上に微細なLEDチップを均等に配置し、電子制御によって映像を形成する仕組みを採用しています。
                   <br />
                   LEDチップ間の隙間が最適化されており、視認性を確保しながらも透明度を損なわないのが大きな特徴です。
@@ -155,16 +386,18 @@ export default async function AboutPage() {
                   通常のLEDディスプレイと異なり、設置場所のデザインや空間の開放感を維持しつつ、情報発信が可能なため、広告や案内表示、装飾用途として非常に高い評価を受けています。
                 </p>
 
-                <div className="flex justify-center w-5/6 mx-auto my-5 md:my-10">
-                  <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="w-full h-full object-cover"
-                  >
-                    <source src="/videos/01.mp4" type="video/mp4" />
-                  </video>
+                <div className="flex justify-center mx-auto my-10 md:my-16">
+                  <div className="relative w-full pb-[56.25%]">
+                    <video
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="absolute inset-0 w-full h-full object-cover"
+                    >
+                      <source src="/videos/film03.mp4" type="video/mp4" />
+                    </video>
+                  </div>
                 </div>
 
                 <p className="mb-5 md:mb-10">
@@ -205,20 +438,21 @@ export default async function AboutPage() {
                 <p>
                   COB (Chip on board) LED RGB発光素子を透明PETフィルムに直接
                   搭載する技術で、LEDが小さく薄くなって小さなピッチでも高い透明度を維持することができます。
+                  <br />
                   ※最小ピッチ：3.75mm
                 </p>
               </div>
             </section>
 
             {/* 透明フィルムLEDビジョンの技術的な仕組み */}
-            <section className="mb-10 md:mb-24">
-              <h3 className="text-2xl text-start font-bold flex items-center gap-6 mb-5 md:mb-10">
-                <span className="w-1 h-10 bg-yellow-400"></span>
+            <section id="section03" className="mb-20 md:mb-28">
+              <h3>
+                <span></span>
                 {mainData.keyWords}の技術的な仕組み
               </h3>
 
-              <div className="mb-5 md:mb-8">
-                <p className=" md:text-xl font-semibold mb-4 md:mb-8">
+              <div className="mb-10 md:mb-16">
+                <p className="text-lg md:text-xl lg:text-2xl font-semibold mb-4 md:mb-8">
                   ・透明なのに高輝度表示！最先端テクノロジー
                 </p>
                 <div className="space-y-4 ml-5">
@@ -239,8 +473,8 @@ export default async function AboutPage() {
                 </div>
               </div>
 
-              <div className="">
-                <p className=" md:text-xl font-semibold mb-4 md:mb-8">
+              <div className="mb-10 md:mb-16">
+                <p className="text-lg md:text-xl lg:text-2xl font-semibold mb-4 md:mb-8">
                   ・空間を活かす！ガラス面に設置できる斬新なディスプレイ
                 </p>
                 <div className="space-y-4 ml-5">
@@ -264,13 +498,13 @@ export default async function AboutPage() {
             </section>
 
             {/* 透明フィルムLEDビジョンの主な特徴 */}
-            <section className="mb-10 md:mb-24">
-              <h3 className="text-2xl text-start font-bold flex items-center gap-6 mb-5 md:mb-10">
-                <span className="w-1 h-10 bg-yellow-400"></span>
+            <section id="section04" className="mb-20 md:mb-28">
+              <h3>
+                <span></span>
                 {mainData.keyWords}の主な特徴
               </h3>
 
-              <div className="flex justify-center gap-5 mb-5 md:mb-10">
+              <div className="flex justify-center gap-5 mb-10 md:mb-16">
                 <div className="flex justify-center">
                   <Image
                     src="/images/blog/0003.jpg"
@@ -292,8 +526,8 @@ export default async function AboutPage() {
               </div>
 
               <div>
-                <div className="mb-8 md:mb-10">
-                  <p className="text-lg md:text-2xl font-semibold mb-5 md:mb-6">
+                <div className="mb-10 md:mb-16">
+                  <p className="text-lg md:text-xl lg:text-2xl font-semibold mb-5 md:mb-6">
                     1、透明性
                   </p>
                   <p className="ml-5">
@@ -304,8 +538,9 @@ export default async function AboutPage() {
                     このため、ガラス面や窓に設置しても、視界が確保され、空間全体の美観を損ねることがありません。
                   </p>
                 </div>
-                <div className="mb-8 md:mb-10">
-                  <p className="text-lg md:text-2xl font-semibold mb-5 md:mb-6">
+
+                <div className="mb-10 md:mb-16">
+                  <p className="text-lg md:text-xl lg:text-2xl font-semibold mb-5 md:mb-6">
                     2、高輝度・高解像度表示
                   </p>
                   <p className="ml-5">
@@ -316,8 +551,9 @@ export default async function AboutPage() {
                     このため、広告や情報表示に適しており、夜間・昼間を問わず効果的に使用できます。
                   </p>
                 </div>
-                <div className="mb-8 md:mb-10">
-                  <p className="text-lg md:text-2xl font-semibold mb-5 md:mb-6">
+
+                <div className="mb-10 md:mb-16">
+                  <p className="text-lg md:text-xl lg:text-2xl font-semibold mb-5 md:mb-6">
                     3、薄型・軽量
                   </p>
                   <p className="ml-5">
@@ -327,8 +563,9 @@ export default async function AboutPage() {
                     さらに、軽量性を活かして、移動や設置変更が簡単に行えます。
                   </p>
                 </div>
-                <div className="mb-8 md:mb-10">
-                  <p className="text-lg md:text-2xl font-semibold mb-5 md:mb-6">
+
+                <div className="mb-10 md:mb-16">
+                  <p className="text-lg md:text-xl lg:text-2xl font-semibold mb-5 md:mb-6">
                     4、優れた熱放出と安定
                   </p>
                   <p className="ml-5">
@@ -341,18 +578,18 @@ export default async function AboutPage() {
             </section>
 
             {/* 現状の課題 */}
-            <section className="mb-10 md:mb-24">
-              <h3 className="text-2xl text-start font-bold flex items-center gap-6 mb-5 md:mb-10">
-                <span className="w-1 h-10 bg-yellow-400"></span>
+            <section id="section05" className="mb-20 md:mb-28">
+              <h3>
+                <span></span>
                 現状の課題
               </h3>
 
-              <div className="mb-5 md:mb-14">
-                <div className="mb-5 md:mb-8">
-                  <p className="text-lg md:text-xl font-semibold mb-3">
+              <div className="mb-10 md:mb-16">
+                <div className="mb-10 md:mb-16">
+                  <p className="text-base md:text-lg lg:text-xl font-semibold mb-5 md:mb-8">
                     ・伝えたい情報が埋もれていませんか？
                   </p>
-                  <ul className="ml-5 space-y-3">
+                  <ul className="ml-3 md:ml-5 space-y-3 md:space-y-4">
                     <li className="flex gap-2">
                       <X className="h-6 w-6 !text-red-600 flex-shrink-0 mt-1" />
                       <p>
@@ -374,11 +611,11 @@ export default async function AboutPage() {
                   </ul>
                 </div>
 
-                <div className="mb-5 md:mb-8">
-                  <p className="text-lg md:text-xl font-semibold mb-3">
+                <div className="mb-10 md:mb-16">
+                  <p className="text-base md:text-lg lg:text-xl font-semibold mb-5 md:mb-8">
                     ・従来のLEDビジョンの限界とは？
                   </p>
-                  <ul className="ml-5 space-y-3">
+                  <ul className="ml-3 md:ml-5 space-y-3 md:space-y-4">
                     <li className="flex gap-2">
                       <X className="h-6 w-6 !text-red-600 flex-shrink-0 mt-1" />
                       <p>
@@ -398,11 +635,11 @@ export default async function AboutPage() {
                   </ul>
                 </div>
 
-                <div className="mb-5 md:mb-8">
-                  <p className="text-lg md:text-xl font-semibold mb-3">
-                    ・{mainData.keyWords}なら解決！
+                <div className="mb-10 md:mb-16">
+                  <p className="text-lg md:text-xl font-semibold mb-5 md:mb-8">
+                    ・{mainData.keyWords}ならすべて解決！
                   </p>
-                  <ul className="ml-5 space-y-3">
+                  <ul className="ml-3 md:ml-5 space-y-3 md:space-y-4">
                     <li className="flex gap-2">
                       <Check className="h-6 w-6 text-green-600 flex-shrink-0 mt-1" />
                       <p>
@@ -437,16 +674,16 @@ export default async function AboutPage() {
             </section>
 
             {/* 使用例と活用シーン */}
-            <section className="mb-10 md:mb-24">
-              <h3 className="text-2xl text-start font-bold flex items-center gap-6 mb-5 md:mb-10">
-                <span className="w-1 h-10 bg-yellow-400"></span>
+            <section id="section06" className="mb-20 md:mb-28">
+              <h3>
+                <span></span>
                 使用例と活用シーン
               </h3>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-x-8 md:gap-y-10">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-14 md:gap-10 mb-10 md:mb-16">
                 {caseData.slice(0, 4).map((cases_) => (
                   <div>
-                    <div className="flex justify-center mb-3 md:mb-5">
+                    <div className="flex justify-center">
                       <Image
                         src={cases_.image[0]}
                         alt={cases_.title}
@@ -455,7 +692,7 @@ export default async function AboutPage() {
                         className="object-cover"
                       />
                     </div>
-                    <p className="text-xl font-semibold mb-3 md:mb-5">
+                    <p className="text-base md:text-lg lg:text-xl font-semibold text-yellow-300 my-5 md:my-8">
                       {cases_.title}
                     </p>
                     <p>{cases_.description}</p>
@@ -477,28 +714,22 @@ export default async function AboutPage() {
               </div> */}
               <div className="flex justify-center">
                 <div className="inline-block mt-10">
-                  <Button>使用例と活用シーンについて詳しく見る</Button>
+                  <Button>
+                    使用例と活用シーンをもっと見る
+                    <ArrowRight className="h-4 w-4" />
+                  </Button>
                 </div>
               </div>
             </section>
 
             {/* 透明フィルムLEDビジョンの仕様 */}
-            <section className="mb-10 md:mb-24">
-              <h3 className="text-2xl text-start font-bold flex items-center gap-6 mb-5 md:mb-10">
-                <span className="w-1 h-10 bg-yellow-400"></span>
+            <section id="section07" className="mb-20 md:mb-28">
+              <h3>
+                <span></span>
                 {mainData.keyWords}の仕様
               </h3>
 
               <div>
-                <div className="flex justify-center mb-3">
-                  <Image
-                    src="/images/about/specification01.jpg"
-                    alt=""
-                    width={700}
-                    height={300}
-                    className="object-cover"
-                  />
-                </div>
                 <div className="flex justify-center mb-3">
                   <Image
                     src="/images/about/01.jpg"
@@ -508,25 +739,124 @@ export default async function AboutPage() {
                     className="object-cover"
                   />
                 </div>
+
+                <div className="mb-10 md:mb-16">
+                  <p className="text-lg md:text-xl lg:text-2xl font-semibold mb-5 md:mb-6">
+                    1、透過率（透明度）｜ 視界を邪魔せずに空間演出に最適
+                  </p>
+                  <p>
+                    透明フィルム型LEDの最大の特徴はその「透明度」。
+                    <br />
+                    製品によって異なりますが、おおよそ50〜92%の透過率を実現しています。
+                    <br />
+                    映像を映し出していないときはほぼガラスそのもの。
+                    <br />
+                    ディスプレイの存在感を感じさせないため、ショーウィンドウや展示空間でも自然な雰囲気を維持できます。
+                  </p>
+                </div>
+
+                <div className="mb-10 md:mb-16">
+                  <p className="text-lg md:text-xl lg:text-2xl font-semibold mb-5 md:mb-6">
+                    2、画素ピッチ（Pixel Pitch）｜
+                    映像の美しさを左右するキーポイント
+                  </p>
+                  <p>
+                    画素ピッチとは、LED同士の間隔のこと。数字が小さいほど、より高精細な映像を表示できます。
+                    <br />
+                    ・屋内用：**3.75mm〜**程度
+                    <br />
+                    ・屋外用：6〜10mm程度
+                    <br />
+                    設置環境と表示内容に応じて適切なピッチを選ぶことで、文字の可読性やグラフィックの鮮明度が大きく変わります。
+                  </p>
+                </div>
+
+                <div className="mb-10 md:mb-16">
+                  <p className="text-lg md:text-xl lg:text-2xl font-semibold mb-5 md:mb-6">
+                    3、明るさ（輝度）｜ 昼間の屋外でもしっかり見える
+                  </p>
+                  <p>
+                    透明ディスプレイでも明るさは非常に重要な要素です。
+                    <br />
+                    一般的に、透明LEDディスプレイの輝度は1000〜5000cd/m²が目安。
+                    <br />
+                    屋内でも十分な視認性があり、日差しの強い屋外でも見やすい高輝度モデルも存在します。
+                    <br />
+                    使用環境に応じて、輝度の自動調整機能が付いた製品も人気です。
+                  </p>
+                </div>
+
+                <div className="mb-10 md:mb-16">
+                  <p className="text-lg md:text-xl lg:text-2xl font-semibold mb-5 md:mb-6">
+                    4、厚さ・重さ ｜ 建物に負担をかけない設計
+                  </p>
+                  <p>
+                    透明フィルム型LEDは非常に薄く、厚さはわずか1〜3mm、重さも1〜3kg/m²程度と超軽量。
+                    <br />
+                    従来のLEDビジョンと比べて大幅にスリムなため、ビルのガラス面や商業施設の窓面にも安全に設置可能です。
+                  </p>
+                </div>
+
+                <div className="mb-10 md:mb-16">
+                  <p className="text-lg md:text-xl lg:text-2xl font-semibold mb-5 md:mb-6">
+                    5、表示色と映像再現 ｜ フルカラーでインパクトある演出を
+                  </p>
+                  <p>
+                    RGB（赤・緑・青）のLED素子によって、フルカラーで映像や写真、文字の表示が可能です。
+                    <br />
+                    鮮やかでインパクトある映像表現ができるため、広告・イベント・演出など幅広い用途に対応します。
+                  </p>
+                </div>
+
+                <div className="mb-10 md:mb-16">
+                  <p className="text-lg md:text-xl lg:text-2xl font-semibold mb-5 md:mb-6">
+                    6. 制御方法 ｜ Wi-FiやUSBなど多様な入力方式に対応
+                  </p>
+                  <p>
+                    透明LEDディスプレイの多くは、以下のような柔軟な制御方式に対応しています。
+                    <br />
+                    ・Wi-Fi／LAN接続
+                    <br />
+                    ・USBメモリ
+                    <br />
+                    ・クラウドやPCソフト連携
+                    <br />
+                    また、動画（MP4,AVIなど）や静止画（JPG,PNG）など、一般的なフォーマットに対応。
+                    <br />
+                    コンテンツの更新やスケジューリングも簡単に行えるのが魅力です。
+                  </p>
+                </div>
+
+                <div className="mb-10 md:mb-16">
+                  <p className="text-lg md:text-xl lg:text-2xl font-semibold mb-5 md:mb-6">
+                    7、 設置方式 ｜ ガラスに直接貼れる
+                  </p>
+                  <p>
+                    最大の利点は、ガラスに直接貼り付けられる設置の手軽さ。
+                    <br />
+                    ディスプレイ裏面に粘着層があり、工具を使わずに施工可能。
+                    <br />
+                    また、曲面ガラスにも対応する柔軟素材のモデルもあるため、設計の自由度が高く、建築意匠を壊しません。
+                  </p>
+                </div>
               </div>
             </section>
 
             {/* 導入するメリット */}
-            <section className="mb-10 md:mb-24">
-              <h3 className="text-2xl text-start font-bold flex items-center gap-6 mb-5 md:mb-10">
-                <span className="w-1 h-10 bg-yellow-400"></span>
+            <section id="section08" className="mb-20 md:mb-28">
+              <h3>
+                <span></span>
                 導入するメリット
               </h3>
 
-              <div className="">
-                <div className="mb-5 md:mb-10">
-                  <div className="flex items-center gap-2 mb-3 md:mb-5">
-                   
-                    <p className="text-lg md:text-xl font-semibold">
-                      ー 空間デザインを損なわず、訴求力を向上
+              <div>
+                <div className="mb-10 md:mb-16">
+                  <div className="flex items-center gap-2 mb-5 md:mb-8">
+                    <p className="text-base md:text-lg lg:text-xl font-semibold">
+                      ・空間デザインを損なわず、訴求力を向上
                     </p>
                   </div>
-                  <p className="ml-5">
+                  <p className="ml-4 md:ml-5">
                     {mainData.keyWords}
                     は、ガラスやアクリルなどの透明な面に直接設置できるため、空間の開放感を維持しながら情報発信が可能です。
                     <br />
@@ -538,14 +868,13 @@ export default async function AboutPage() {
                   </p>
                 </div>
 
-                <div className="mb-5 md:mb-10">
-                  <div className="flex items-center gap-2 mb-3 md:mb-5">
-                   
-                    <p className="text-lg md:text-xl font-semibold">
-                      ー 目を引く演出で集客力UP
+                <div className="mb-10 md:mb-16">
+                  <div className="flex items-center gap-2 mb-5 md:mb-8">
+                    <p className="text-base md:text-lg lg:text-xl font-semibold">
+                      ・目を引く演出で集客力UP
                     </p>
                   </div>
-                  <p className="ml-5">
+                  <p className="ml-4 md:ml-5">
                     {mainData.keyWords}
                     は、従来の固定看板やポスターと異なり、映像やアニメーションを活用したダイナミックな表現が可能です。
                     <br />
@@ -559,14 +888,13 @@ export default async function AboutPage() {
                   </p>
                 </div>
 
-                <div className="mb-5 md:mb-10">
-                  <div className="flex items-center gap-2 mb-3 md:mb-5">
-                    
-                    <p className="text-lg md:text-xl font-semibold">
-                      ー 設置自由度が高く、施工も簡単
+                <div className="mb-10 md:mb-16">
+                  <div className="flex items-center gap-2 mb-5 md:mb-8">
+                    <p className="text-base md:text-lg lg:text-xl font-semibold">
+                      ・設置自由度が高く、施工も簡単
                     </p>
                   </div>
-                  <p className="ml-5">
+                  <p className="ml-4 md:ml-5">
                     従来の大型LEDビジョンやLCDディスプレイは、設置に大掛かりな工事が必要な場合が多く、設置場所が限られていました。
                     <br />
                     しかし、{mainData.keyWords}
@@ -580,14 +908,13 @@ export default async function AboutPage() {
                   </p>
                 </div>
 
-                <div className="mb-5 md:mb-10">
-                  <div className="flex items-center gap-2 mb-3 md:mb-5">
-                    
-                    <p className="text-lg md:text-xl font-semibold">
-                      ー レンタルプランで手軽に導入可能
+                <div className="mb-10 md:mb-16">
+                  <div className="flex items-center gap-2 mb-5 md:mb-8">
+                    <p className="text-base md:text-lg lg:text-xl font-semibold">
+                      ・簡単な設置で手軽に導入可能
                     </p>
                   </div>
-                  <p className="ml-5">
+                  <p className="ml-4 md:ml-5">
                     {mainData.keyWords}
                     は、購入だけでなくレンタルプランも提供されているため、短期間のイベントやキャンペーンにも手軽に導入できます。
                     <br />
@@ -605,13 +932,13 @@ export default async function AboutPage() {
             </section>
 
             {/* 選ばれる理由・他商材との比較 */}
-            <section className="mb-10 md:mb-24">
-              <h3 className="text-2xl text-start font-bold flex items-center gap-6 mb-5 md:mb-10">
-                <span className="w-1 h-10 bg-yellow-400"></span>
+            <section id="section09" className="mb-20 md:mb-28">
+              <h3>
+                <span></span>
                 選ばれる理由・他商材との比較
               </h3>
 
-              <div className="px-5 mb-5 md:mb-10">
+              <div className="mb-10 md:mb-16">
                 <p className="mb-5 md:mb-10">
                   {mainData.keyWords}
                   は、従来の液晶ディスプレイやプロジェクション型ディスプレイと比較して、いくつかの点で優れています。
@@ -626,10 +953,10 @@ export default async function AboutPage() {
                 </p>
               </div>
 
-              <div className="mx-5">
+              <div className="mb-10 md:mb-16">
                 <table className="w-full">
                   <thead>
-                    <tr className="">
+                    <tr>
                       <th className="border border-gray-400 border-r-0 p-4 text-left"></th>
                       <th className="border border-yellow-300 p-4 text-center text-yellow-300">
                         {mainData.keyWords}
@@ -639,10 +966,11 @@ export default async function AboutPage() {
                       </th>
                     </tr>
                   </thead>
-                  <tbody className="">
+
+                  <tbody>
                     <tr>
-                      <td className="border border-gray-400 border-r-0 p-4 font-medium">
-                        設置スペース
+                      <td className="border border-gray-400 border-r-0 p-4 font-semibold">
+                        設置場所
                       </td>
                       <td className="border border-yellow-300 p-4 text-center">
                         <Check className="h-6 w-6 text-green-600 mx-auto" />
@@ -655,8 +983,9 @@ export default async function AboutPage() {
                         <span className="block mt-1">専用スペースが必要</span>
                       </td>
                     </tr>
+
                     <tr>
-                      <td className="border border-gray-400 border-r-0 p-4 font-medium">
+                      <td className="border border-gray-400 border-r-0 p-4 font-semibold">
                         視界の確保
                       </td>
                       <td className="border border-yellow-300 p-4 text-center">
@@ -668,21 +997,25 @@ export default async function AboutPage() {
                         <span className="block mt-1">不透明で視界を遮る</span>
                       </td>
                     </tr>
+
                     <tr>
-                      <td className="border border-gray-400 border-r-0 p-4 font-medium">
+                      <td className="border border-gray-400 border-r-0 p-4 font-semibold">
                         設置工事
                       </td>
                       <td className="border border-yellow-300 p-4 text-center">
                         <Check className="h-6 w-6 text-green-600 mx-auto" />
-                        <span className="block mt-1">簡易な施工で設置可能</span>
+                        <span className="block mt-1">簡易な施工で早い</span>
                       </td>
                       <td className="border border-gray-400 p-4 text-center">
                         <X className="h-6 w-6 text-red-500 mx-auto" />
-                        <span className="block mt-1">大掛かりな工事が必要</span>
+                        <span className="block mt-1">
+                          大掛かりな工事が必要で遅い
+                        </span>
                       </td>
                     </tr>
+
                     <tr>
-                      <td className="border border-gray-400 border-r-0 p-4 font-medium">
+                      <td className="border border-gray-400 border-r-0 p-4 font-semibold">
                         コスト
                       </td>
                       <td className="border border-yellow-300 p-4 text-center">
@@ -702,14 +1035,14 @@ export default async function AboutPage() {
             </section>
 
             {/* まとめ */}
-            <section>
-              <h3 className="text-2xl text-start font-bold flex items-center gap-6 mb-5 md:mb-10">
-                <span className="w-1 h-10 bg-yellow-400"></span>
+            <section id="section010">
+              <h3>
+                <span></span>
                 まとめ
               </h3>
 
-              <div>
-                <div className="md:flex gap-5">
+              <>
+                <div className="flex flex-col md:flex-row gap-5 mb-10 md:mb-16">
                   <div>
                     <p className="mb-5 md:mb-8">
                       {mainData.keyWords}
@@ -726,7 +1059,8 @@ export default async function AboutPage() {
                       設置方法や活用事例、レンタルプランなど、詳しく知りたい方はぜひお気軽にお問い合わせください。専門スタッフが最適な導入プランをご提案いたします。
                     </p>
                   </div>
-                  <div className="flex justify-center mb-3">
+
+                  <div className="flex justify-center">
                     <Image
                       src="/images/about/08.jpg"
                       alt=""
@@ -740,12 +1074,12 @@ export default async function AboutPage() {
                 <div className="flex justify-center">
                   <div className="mt-10">
                     <Button>
-                      無料相談・お申し込みはこちら
+                      無料相談・お申し込み
                       <ArrowRight className="h-4 w-4" />
                     </Button>
                   </div>
                 </div>
-              </div>
+              </>
             </section>
           </article>
         </div>

@@ -4,14 +4,14 @@ import { mainData } from "../data/main";
 export function Cta() {
   return (
     <section className="container max-w-6xl md:py-20">
-      <div className="bg-white/20 px-5 xs:px-10 lg:px-20 py-12 md:py-20">
+      <div className="bg-white/20 px-5 xs:px-10 lg:px-20 xl:px-32 pt-12 md:pt-20 pb-12 md:pb-20">
         <h2>
           Contact
           <span>お問い合わせ・お申し込み</span>
         </h2>
-        <p className="text-center mb-8 md:mb-16">
-          革新的な{mainData.keyWords}
-          で、あなたのビジネスの集客力を最大化しませんか？
+        <p className="text-center mb-10 md:mb-16">
+          店舗やイベントの集客に、{mainData.keyWords}
+          という選択肢。
           <br />
           まずは無料相談からお気軽にお問い合わせください。
         </p>
@@ -19,17 +19,17 @@ export function Cta() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-3">
           <div className="group">
             <a
-              className="flex flex-col bg-white border border-gray-200 rounded-xl hover:bg-transparent transition-all group-hover:shadow-[0_0_15px_rgba(255,255,255,0.6)]"
+              className="flex flex-col bg-white border border-gray-200 rounded hover:bg-transparent transition-all group-hover:shadow-[0_0_5px_rgba(255,255,255,0.8)]"
               href={mainData.contact.url}
               target="_blank"
             >
               <div className="p-4 md:p-5">
                 <div className="flex justify-between gap-x-3">
                   <div className="grow">
-                    <div className="flex justify-center items-center gap-x-5">
+                    <div className="flex justify-center items-center gap-x-3 md:gap-x-5">
                       <div className="relative w-12 h-12 md:w-16 md:h-16">
                         <Image
-                          src="/images/icons/mail_dark.svg"
+                          src="/images/icons/mail-dark.svg"
                           alt="メールでお問合せ"
                           width={60}
                           height={60}
@@ -50,9 +50,9 @@ export function Cta() {
                           メールでお問合せ
                         </p>
                         <p className="text-xl md:text-2xl font-semibold group-hover:text-yellow-400 transition-all">
-                          お問合せフォームへ
+                          お問合せフォーム
                         </p>
-                        <p className="group-hover:text-white">
+                        <p className="group-hover:text-white text-xs md:text-sm !leading-normal">
                           内容確認後、迅速にご返信いたします
                         </p>
                       </div>
@@ -65,16 +65,16 @@ export function Cta() {
 
           <div className="group">
             <a
-              className="flex flex-col bg-white border border-gray-200 rounded-xl hover:bg-transparent transition-all group-hover:shadow-[0_0_15px_rgba(255,255,255,0.6)]"
-              href="tel:092-433-3302"
+              className="flex flex-col bg-white border border-gray-200 rounded hover:bg-transparent transition-all group-hover:shadow-[0_0_5px_rgba(255,255,255,0.8)]"
+              href={`tel:${mainData.contact.tel}`}
             >
               <div className="p-4 md:p-5">
                 <div className="flex justify-between items-center gap-x-3">
                   <div className="grow">
-                    <div className="flex justify-center items-center gap-x-5">
+                    <div className="flex justify-center items-center gap-x-3 md:gap-x-5">
                       <div className="relative w-12 h-12 md:w-16 md:h-16">
                         <Image
-                          src="/images/icons/phone_dark.svg"
+                          src="/images/icons/phone-dark.svg"
                           alt="お電話でのお問い合わせ"
                           width={60}
                           height={60}
@@ -95,10 +95,10 @@ export function Cta() {
                           お電話でお問い合わせ
                         </p>
                         <p className="text-xl md:text-2xl font-semibold group-hover:text-yellow-400 transition-all">
-                          092-433-3302
+                          {mainData.contact.tel}
                         </p>
-                        <p className="group-hover:text-white">
-                          受付時間：平日10時〜18時
+                        <p className="group-hover:text-white text-xs md:text-sm !leading-normal">
+                          受付時間：{mainData.contact.hours}
                         </p>
                       </div>
                     </div>

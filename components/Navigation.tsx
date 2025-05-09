@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Button } from "./Button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { mainData } from "../data/main";
@@ -22,7 +21,7 @@ export function Navigation() {
   return (
     <>
       {/* PC */}
-      <nav className="hidden md:flex items-center gap-6">
+      <nav className="hidden lg:flex items-center gap-4">
         {menuItems.map((item, index) => (
           <Link
             key={`${item.href}-${index}`}
@@ -38,20 +37,18 @@ export function Navigation() {
       </nav>
 
       {/* SP */}
-      <div className="md:hidden">
-        <Button
-          variant="outline"
-          size="icon"
+      <div className="lg:hidden">
+        <div
           onClick={() => setIsOpen(!isOpen)}
-          className="bg-transparent text-white hover:bg-white/10 hover:text-white border-transparent hover:border-yellow-300"
+          className="cursor-pointer p-2 bg-transparent text-white hover:bg-white/10 hover:text-white border border-transparent hover:border-yellow-300 z-50"
         >
-          {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          {isOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
           <span className="sr-only">メニュー</span>
-        </Button>
+        </div>
 
         {/* SP メニュー */}
         {isOpen && (
-          <div className="fixed inset-0 top-20 bg-black/90 z-50">
+          <div className="fixed inset-0 top-16 bg-black/90 z-40">
             <nav className="container mx-auto px-5 py-8">
               <div className="flex flex-col gap-6">
                 {menuItems.map((item, index) => (

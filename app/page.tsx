@@ -20,6 +20,7 @@ import { benefitData } from "../data/benefits";
 import { caseData } from "../data/cases";
 import { blogData } from "../data/blog";
 import { faqData } from "../data/faq";
+import { HeroSection } from "../components/HeroSection";
 
 export const dynamic = "force-dynamic";
 
@@ -38,74 +39,14 @@ export default async function LandingPage() {
             sizes="100vw"
           />
         </div>
+
         <Header />
 
         <main className="flex-1">
-          {/* Fv */}
-          <section className="py-20 relative mb-20">
-            <div className="absolute inset-0 -z-10">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload="auto"
-                className="w-full h-full object-cover"
-              >
-                <source src="/videos/01.mp4" type="video/mp4" />
-              </video>
-              <div className="absolute inset-0 bg-black/50" />
-            </div>
-            <div className="container relative z-10 mb-20">
-              <div className="max-w-6xl mx-auto">
-                <div className="mt-20 mb-10">
-                  <h1 className="text-4xl sm:text-5xl md:text-5xl !leading-loose tracking-widest font-bold [&_span]:text-yellow-300 [&_span]:font-bold mb-10">
-                    最先端技術で<span>視界を遮らず、</span>
-                    <br />
-                    <span>広告</span>・<span>店舗集客</span>に革新を。
-                    <br />
-                    屋外・大型対応の
-                    <span>{mainData.keyWords}</span>
-                    、
-                    <br />
-                    <span>最安値</span>でご用意。
-                  </h1>
-
-                  <p className="text-xl md:text-2xl font-semibold !leading-loose !tracking-widest">
-                    ガラス面を広告空間に。
-                    <br />
-                    シンプルな空間に、ダイナミックな演出で圧倒的な集客効果を実現します。
-                  </p>
-                </div>
-
-                <div className="flex justify-start">
-                  <a
-                    href={mainData.contact.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Button>
-                      無料相談・お申し込みはこちら
-                      <ArrowRight className="h-4 w-4" />
-                    </Button>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* <LogoSlider
-              logos={[
-                { src: "/images/logo-light.svg", alt: "Logo 1" },
-                { src: "/images/logo-light.svg", alt: "Logo 2" },
-                { src: "/images/logo-light.svg", alt: "Logo 3" },
-                { src: "/images/logo-light.svg", alt: "Logo 4" },
-                { src: "/images/logo-light.svg", alt: "Logo 5" },
-              ]}
-            /> */}
-          </section>
+          <HeroSection />
 
           {/* What's this ? */}
-          <section className="container max-w-6xl py-10 md:py-20 mb-10">
+          <section className="container max-w-6xl mb-28 md:mb-40">
             <h2>
               What's this ?<span>{mainData.keyWords}とは？</span>
             </h2>
@@ -122,10 +63,8 @@ export default async function LandingPage() {
                 />
               </div>
               <div className="w-full md:w-1/2">
-                <p className="text-3xl md:text-4xl font-bold !leading-normal mb-5 md:mb-10">
-                  革新的な
-                  <br className="xs:hidden" />
-                  ディスプレイ技術
+                <p className="text-2xl md:text-3xl font-mincho font-bold text-yellow-300 !leading-normal mb-5 md:mb-10">
+                  革新的なディスプレイ技術
                 </p>
                 <div className="[&_p]:text-base md:[&_p]:text-lg">
                   <p className="mb-5 md:mb-10">
@@ -144,33 +83,27 @@ export default async function LandingPage() {
               </div>
             </div>
 
-            <Link href="/blog/aboutFilmLed">
+            <Link href="/blog/about-film-led">
               <Button>
-                {mainData.keyWords} について詳しく知る
+                {mainData.keyWords} を詳しく知る
                 <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
           </section>
 
           {/* Benefits */}
-          <section className="container max-w-6xl py-10 md:py-20 mb-10">
+          <section className="container max-w-6xl mb-28 md:mb-40">
             <h2>
               Benefits<span>導入のメリット</span>
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 mb-16 md:mb-24">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16 md:mb-24">
               {benefitData.map((benefit) => (
-                <div
-                  key={benefit.id}
-                  className="relative mx-auto"
-                >
-                  <p
-                    className="relative inline-block box-border w-[calc(100%+24px)] ml-[-2.3rem] md:ml-[-1.4rem] px-5 py-2.5 md:py-3 text-lg sm:text-lg md:text-xl text-white bg-black/80 font-bold text-center mb-5
-                             before:absolute before:top-full before:left-0 before:content-[''] before:border-b-[15px] before:border-b-transparent before:border-r-[20px] before:border-r-gray-700/50"
-                  >
-                    {benefit.title}
+                <div key={benefit.id} className="relative mx-auto">
+                  <p className="text-lg sm:text-lg md:text-2xl text-white font-bold text-center">
+                    <span className="text-yellow-300">{benefit.title}</span>
                   </p>
-                  <div className="flex gap-10 mb-5 md:mb-8">
+                  <div className="flex gap-10 my-5 md:my-8">
                     {benefit.mediaType === "image" ? (
                       <Image
                         src={benefit.mediaUrl}
@@ -214,27 +147,32 @@ export default async function LandingPage() {
                       </div>
                     )}
                   </div>
-                  <p className="">{benefit.description}</p>
+                  <p
+                    className="px-2"
+                    dangerouslySetInnerHTML={{
+                      __html: benefit.description.replace(/\n/g, "<br />"),
+                    }}
+                  ></p>
                 </div>
               ))}
             </div>
 
             <Link href="/services">
               <Button>
-                {mainData.keyWords} について詳しく知る
+                {mainData.keyWords} を詳しく知る
                 <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
           </section>
 
           {/* Case Studies */}
-          <section className="container max-w-6xl py-14 md:py-20 mb-10">
+          <section className="container max-w-6xl mb-28 md:mb-40">
             <h2>
               Case Studies
               <span>活用事例</span>
             </h2>
 
-            <div className="grid gap-6 grid-cols-1 xs:grid-cols-2 md:grid-cols-3 mb-16 md:mb-24">
+            <div className="grid gap-10 xs:gap-5 grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 mb-16 md:mb-24">
               {caseData.slice(0, 3).map((case_) => (
                 <div key={case_.id} className="">
                   <div className="flex items-center justify-center mb-3 md:mb-5">
@@ -251,7 +189,7 @@ export default async function LandingPage() {
                     {case_.title}
                   </h3>
                   <p
-                    className="px-3"
+                    className="px-2"
                     dangerouslySetInnerHTML={{
                       __html: case_.description.replace(/\n/g, "<br />"),
                     }}
@@ -268,23 +206,23 @@ export default async function LandingPage() {
             </Link>
           </section>
 
-          {/* Product Lineup */}
-          <section className="container max-w-6xl py-10 md:py-20 mb-10">
+          {/* Product */}
+          <section className="container max-w-6xl mb-28 md:mb-40">
             <h2>
               Product
               <span>製品情報</span>
             </h2>
 
-       <div>
-       <Image
-                    src="/images/icons/step02.svg"
-                    alt=""
-                    width={90}
-                    height={90}
-                    className="object-contain w-20 md:w-24 h-20 md:h-24"
-                    priority
-                  />
-       </div>
+            <div>
+              <Image
+                src="/images/icons/step02.svg"
+                alt=""
+                width={90}
+                height={90}
+                className="object-contain w-20 md:w-24 h-20 md:h-24"
+                priority
+              />
+            </div>
 
             <Link href="/products">
               <Button>
@@ -295,14 +233,14 @@ export default async function LandingPage() {
           </section>
 
           {/* Service */}
-          <section className="py-10 md:py-20 mb-10">
+          <section className="container max-w-6xl mb-28 md:mb-40">
             <h2>
               Service
               <span>サービス内容</span>
             </h2>
 
             <div className="mb-10 md:mb-24">
-              <div className="relative flex flex-col lg:flex-row items-stretch mb-10 md:mb-20">
+              <div className="relative flex flex-col lg:flex-row items-stretch md:mb-20">
                 <div className="w-full lg:w-1/2">
                   <Image
                     src="/images/about/01.jpg"
@@ -313,26 +251,26 @@ export default async function LandingPage() {
                   />
                 </div>
 
-                <div className="w-full lg:w-1/2 relative -z-10 px-8 md:pt-20">
-                  <div className="absolute top-0 left-0 right-0 bottom-0 lg:w-[112%] bg-white/15 -z-10 translate-x-4 -translate-y-4 lg:-translate-x-20 md:translate-y-10 lg:translate-y-20"></div>
-                  <div className="relative flex flex-col justify-end h-full py-12 md:pt-0 lg:py-0">
-                    <div className="flex items-baseline mb-8 md:mb-14">
+                <div className="w-full lg:w-1/2 relative -z-10 px-8 md:px-10 md:pt-20">
+                  <div className="absolute top-0 left-0 right-0 bottom-0 lg:w-[112%] bg-white/15 -z-10 md:-translate-x-10 -translate-y-8 lg:translate-y-10"></div>
+                  <div className="relative flex flex-col justify-end h-full py-8 md:py-12 md:pt-0 lg:py-0 mb-10">
+                    <div className="flex items-baseline mb-5 md:mb-14">
                       <h3 className="text-yellow-300 text-4xl md:text-5xl font-bold leading-none">
-                      Sales
+                        Sales
                       </h3>
-                      <p className="text-yellow-300/80 text-xl md:text-2xl font-bold leading-none ml-3">
+                      <p className="text-yellow-300/80 text-xs md:text-base font-semibold leading-none ml-3">
                         販売
                       </p>
                     </div>
-                    <p className="mb-10 md:mb-14">
+                    <p className="mb-8 md:mb-14">
                       屋内・屋外用のLEDビジョンを幅広く取り扱っています。
                       <br />
                       シースルービジョンや高解像度屋内LEDビジョン、一体型LEDビジョンなど、様々なニーズに応える最先端の製品と、最適な映像ソリューションをご提案しています。
                     </p>
 
-                    <Link href="/services">
+                    <Link href="/products">
                       <Button variant="default">
-                        販売について詳しく見る
+                        販売について
                         <ArrowRight className="h-4 w-4" />
                       </Button>
                     </Link>
@@ -351,18 +289,18 @@ export default async function LandingPage() {
                   />
                 </div>
 
-                <div className="w-full lg:w-1/2 relative -z-10 px-8 md:pt-20">
-                  <div className="absolute top-0 left-0 right-0 bottom-0 lg:w-[112%] bg-white/15 -z-10 translate-x-4 -translate-y-4 lg:-translate-x-20 md:translate-y-10 lg:translate-y-20"></div>
-                  <div className="relative flex flex-col justify-end h-full py-12 md:pt-0 lg:py-0">
-                    <div className="flex items-baseline mb-8 md:mb-14">
-                      <h3 className="text-yellow-300 text-2xl md:text-4xl font-bold leading-none">
-                      Create
+                <div className="w-full lg:w-1/2 relative -z-10 px-8 md:px-10 md:pt-20">
+                  <div className="absolute top-0 left-0 right-0 bottom-0 lg:w-[112%] bg-white/15 -z-10 md:-translate-x-10 -translate-y-8 lg:translate-y-10"></div>
+                  <div className="relative flex flex-col justify-end h-full py-8 md:py-12 md:pt-0 lg:py-0 mb-10">
+                    <div className="flex items-baseline mb-5 md:mb-14">
+                      <h3 className="text-yellow-300 text-4xl md:text-5xl font-bold leading-none">
+                        Create
                       </h3>
-                      <p className="text-yellow-300/80 text-lg md:text-xl font-bold leading-none ml-3">
+                      <p className="text-yellow-300/80 text-xs md:text-base font-semibold leading-none ml-3">
                         映像コンテンツ制作
                       </p>
                     </div>
-                    <p className="mb-10 md:mb-14">
+                    <p className="mb-8 md:mb-14">
                       お客様のご予算に合わせた最適な映像コンテンツをご提案し、プロフェッショナルな映像をご提供いたします。
                       <br />
                       簡単なヒアリングでお見積りのみも可能ですので、お気軽にお問い合わせください。
@@ -370,7 +308,7 @@ export default async function LandingPage() {
 
                     <Link href="/services">
                       <Button variant="default">
-                        コンテンツ制作について詳しく見る
+                        コンテンツ制作について
                         <ArrowRight className="h-4 w-4" />
                       </Button>
                     </Link>
@@ -381,13 +319,13 @@ export default async function LandingPage() {
           </section>
 
           {/* Flow */}
-          <section className="container max-w-6xl py-10 md:py-20 mb-10">
+          <section className="container max-w-6xl mb-28 md:mb-40">
             <h2>
               Flow
               <span>導入の流れ</span>
             </h2>
 
-            <div className="grid gap-10 md:gap-8 grid-cols-1 md:grid-cols-3 pt-14 mb-10 md:mb-14">
+            <div className="grid gap-10 md:gap-8 grid-cols-1 md:grid-cols-3 md:pt-10 mb-10 md:mb-14">
               <div className="relative">
                 <p className="absolute -top-[1.4rem] md:-top-7 left-0 text-yellow-300 text-3xl md:text-4xl font-bold">
                   Step 1
@@ -459,7 +397,7 @@ export default async function LandingPage() {
               </div>
             </div>
 
-            <div className="relative w-full max-w-5xl h-16 mx-auto text-white text-center flex items-center justify-center font-bold mb-3">
+            <div className="relative w-full max-w-5xl h-12 md:h-14 mx-auto text-white text-center flex items-center justify-center font-bold mb-6 md:mb-10">
               <div
                 className="absolute inset-0 0"
                 style={{
@@ -468,13 +406,14 @@ export default async function LandingPage() {
                     "linear-gradient(to right, #000000 0%, #000000 2%, #14532d 40%, #facc15 100%)",
                 }}
               ></div>
-              <span className="z-10 text-xl md:text-2xl font-bold tracking-wider px-2">
+              <span className="z-10 text-lg sm:text-xl md:text-2xl font-bold tracking-wider px-2">
                 ご注文から最短20日で導入完了！
               </span>
             </div>
 
-            <p className="text-center mb-16 md:mb-32">
-              ※導入完了後も安心してお使いいただけるよう、製品には2年間の保証をお付けしています。
+            <p className="text-xs md:text-sm text-center mb-16 md:mb-32">
+              ※
+              導入完了後も安心してお使いいただけるよう、製品には2年間の保証をお付けしています。
             </p>
 
             <Link href="/blog">
@@ -486,7 +425,7 @@ export default async function LandingPage() {
           </section>
 
           {/* Faq */}
-          <section className="container max-w-6xl py-10 md:py-20 mb-10">
+          <section className="container max-w-6xl mb-28 md:mb-40">
             <h2>
               FAQ
               <span>よくあるご質問</span>
@@ -519,13 +458,13 @@ export default async function LandingPage() {
           </section>
 
           {/* LED BLOG */}
-          <section className="container max-w-6xl mb-10">
+          <section className="container max-w-6xl mb-28 md:mb-40">
             <h2>
               Blog
               <span>ブログ</span>
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10 md:mb-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-20 md:mb-28">
               {blogData.slice(0, 3).map((post) => (
                 <div key={post.id}>
                   <BlogList post={post} />
