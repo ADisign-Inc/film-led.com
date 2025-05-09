@@ -1,26 +1,30 @@
+import { ArrowRight } from "lucide-react";
+
 import Image from "next/image";
 import Link from "next/link";
+import { Metadata } from "next";
+
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
+import { BackgroundImages } from "../../components/BackgroundImage";
 import { Button } from "../../components/Button";
 import { Cta } from "../../components/Cta";
 import { BlogList } from "../../components/blog/BlogList";
+
+import { mainData } from "../../data/main";
 import { blogData } from "../../data/blog";
+
+export const metadata: Metadata = {
+  title: `ブログ | ${mainData.siteName} `,
+  description:
+    "FILM LEDの製品情報ページです。LEDビジュアルウォールの特徴や仕様をご紹介します。",
+};
 
 export default function BlogPage() {
   return (
     <div className="flex min-h-screen flex-col relative">
-      <div className="fixed inset-0 -z-10">
-        <div className="relative w-full h-full">
-          <Image
-            src="/images/bg01.jpg"
-            alt=""
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
-      </div>
+      <BackgroundImages />
+
       <Header />
 
       <main className="flex-1">
@@ -36,9 +40,12 @@ export default function BlogPage() {
             ))}
           </div>
 
-          <div className="mt-12 md:mt-20 text-center">
+          <div className="mt-20 md:mt-28 text-center">
             <Link href="/">
-              <Button variant="default">TOPへ戻る</Button>
+              <Button variant="default">
+                TOPへ戻る
+                <ArrowRight className="h-4 w-4" />
+              </Button>
             </Link>
           </div>
         </section>

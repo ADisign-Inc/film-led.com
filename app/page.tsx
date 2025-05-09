@@ -1,26 +1,29 @@
+import { ArrowRight } from "lucide-react";
+
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
+import { BackgroundImages } from "../components/BackgroundImage";
+import { ProductsFeatures } from "../components/products/ProductsFeatures";
 import { BlogList } from "../components/blog/BlogList";
-import { productData, Product } from "../data/products";
 import { Button } from "../components/Button";
 import { Cta } from "../components/Cta";
 import { ImageSlider } from "../components/ImageSlider";
-import { LogoSlider } from "../components/LogoSlider";
+import { HeroSection } from "../components/HeroSection";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "../components/Accordion";
+
 import { mainData } from "../data/main";
 import { benefitData } from "../data/benefits";
 import { caseData } from "../data/cases";
 import { blogData } from "../data/blog";
 import { faqData } from "../data/faq";
-import { HeroSection } from "../components/HeroSection";
 
 export const dynamic = "force-dynamic";
 
@@ -28,17 +31,7 @@ export default async function LandingPage() {
   return (
     <>
       <div className="flex min-h-screen flex-col relative">
-        <div className="fixed inset-0 -z-10">
-          <Image
-            src="/images/bg01.jpg"
-            alt=""
-            fill
-            className="object-cover"
-            priority
-            quality={75}
-            sizes="100vw"
-          />
-        </div>
+        <BackgroundImages />
 
         <Header />
 
@@ -100,9 +93,10 @@ export default async function LandingPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16 md:mb-24">
               {benefitData.map((benefit) => (
                 <div key={benefit.id} className="relative mx-auto">
-                  <p className="text-lg sm:text-lg md:text-2xl text-white font-bold text-center">
+                  <h4 className="text-lg sm:text-lg md:text-2xl text-white text-center">
                     <span className="text-yellow-300">{benefit.title}</span>
-                  </p>
+                  </h4>
+
                   <div className="flex gap-10 my-5 md:my-8">
                     {benefit.mediaType === "image" ? (
                       <Image
@@ -206,30 +200,23 @@ export default async function LandingPage() {
             </Link>
           </section>
 
-          {/* Product */}
+          {/* Products */}
           <section className="container max-w-6xl mb-28 md:mb-40">
             <h2>
-              Product
+              Products
               <span>製品情報</span>
             </h2>
 
-            <div>
-              <Image
-                src="/images/icons/step02.svg"
-                alt=""
-                width={90}
-                height={90}
-                className="object-contain w-20 md:w-24 h-20 md:h-24"
-                priority
-              />
-            </div>
+            <ProductsFeatures />
 
-            <Link href="/products">
-              <Button>
-                製品情報を詳しく見る
-                <ArrowRight className="h-4 w-4" />
-              </Button>
-            </Link>
+            <div className="mt-20 md:mt-28">
+              <Link href="/products">
+                <Button>
+                  製品情報を詳しく見る
+                  <ArrowRight className="h-4 w-4" />
+                </Button>
+              </Link>
+            </div>
           </section>
 
           {/* Service */}
@@ -255,10 +242,10 @@ export default async function LandingPage() {
                   <div className="absolute top-0 left-0 right-0 bottom-0 lg:w-[112%] bg-white/15 -z-10 md:-translate-x-10 -translate-y-8 lg:translate-y-10"></div>
                   <div className="relative flex flex-col justify-end h-full py-8 md:py-12 md:pt-0 lg:py-0 mb-10">
                     <div className="flex items-baseline mb-5 md:mb-14">
-                      <h3 className="text-yellow-300 text-4xl md:text-5xl font-bold leading-none">
+                      <h3 className="text-yellow-300 text-4xl md:text-5xl leading-none">
                         Sales
                       </h3>
-                      <p className="text-yellow-300/80 text-xs md:text-base font-semibold leading-none ml-3">
+                      <p className="text-yellow-300/80 text-xs md:text-base font-bold leading-none font-mincho ml-3">
                         販売
                       </p>
                     </div>
@@ -267,13 +254,6 @@ export default async function LandingPage() {
                       <br />
                       シースルービジョンや高解像度屋内LEDビジョン、一体型LEDビジョンなど、様々なニーズに応える最先端の製品と、最適な映像ソリューションをご提案しています。
                     </p>
-
-                    <Link href="/products">
-                      <Button variant="default">
-                        販売について
-                        <ArrowRight className="h-4 w-4" />
-                      </Button>
-                    </Link>
                   </div>
                 </div>
               </div>
@@ -293,20 +273,21 @@ export default async function LandingPage() {
                   <div className="absolute top-0 left-0 right-0 bottom-0 lg:w-[112%] bg-white/15 -z-10 md:-translate-x-10 -translate-y-8 lg:translate-y-10"></div>
                   <div className="relative flex flex-col justify-end h-full py-8 md:py-12 md:pt-0 lg:py-0 mb-10">
                     <div className="flex items-baseline mb-5 md:mb-14">
-                      <h3 className="text-yellow-300 text-4xl md:text-5xl font-bold leading-none">
+                      <h3 className="text-yellow-300 text-4xl md:text-5xl leading-none">
                         Create
                       </h3>
-                      <p className="text-yellow-300/80 text-xs md:text-base font-semibold leading-none ml-3">
+                      <p className="text-yellow-300/80 text-xs md:text-base font-bold leading-none font-mincho ml-3">
                         映像コンテンツ制作
                       </p>
                     </div>
+
                     <p className="mb-8 md:mb-14">
                       お客様のご予算に合わせた最適な映像コンテンツをご提案し、プロフェッショナルな映像をご提供いたします。
                       <br />
                       簡単なヒアリングでお見積りのみも可能ですので、お気軽にお問い合わせください。
                     </p>
 
-                    <Link href="/services">
+                    <Link href="/products">
                       <Button variant="default">
                         コンテンツ制作について
                         <ArrowRight className="h-4 w-4" />
@@ -406,8 +387,8 @@ export default async function LandingPage() {
                     "linear-gradient(to right, #000000 0%, #000000 2%, #14532d 40%, #facc15 100%)",
                 }}
               ></div>
-              <span className="z-10 text-lg sm:text-xl md:text-2xl font-bold tracking-wider px-2">
-                ご注文から最短20日で導入完了！
+              <span className="z-10 text-lg sm:text-xl md:text-2xl font-mincho font-bold tracking-wider px-2">
+                ご発注から最短20日で導入完了
               </span>
             </div>
 
@@ -416,7 +397,7 @@ export default async function LandingPage() {
               導入完了後も安心してお使いいただけるよう、製品には2年間の保証をお付けしています。
             </p>
 
-            <Link href="/blog">
+            <Link href="/flow">
               <Button variant="default">
                 導入の流れを詳しく見る
                 <ArrowRight className="h-4 w-4" />
@@ -449,7 +430,7 @@ export default async function LandingPage() {
               </Accordion>
             </div>
 
-            <Link href="/blog">
+            <Link href="/faq">
               <Button variant="default">
                 よくある質問を詳しく見る
                 <ArrowRight className="h-4 w-4" />

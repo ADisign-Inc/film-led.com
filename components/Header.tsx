@@ -26,7 +26,7 @@ export function Header() {
           }`}
         />
       </div>
-      <div className="md:container px-3 md:px-10">
+      <div className="xl:container px-3 md:px-5">
         <div className="flex items-center justify-between h-14 md:h-20">
           <div className="flex items-center">
             <Link href="/">

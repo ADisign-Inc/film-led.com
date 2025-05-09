@@ -31,7 +31,8 @@ export function BlogList({ post }: { post: Blog }) {
           <h3 className="text-xl group-hover:text-yellow-400 transition-all text-start font-semibold mb-3 md:mb-5">
             {post.title}
           </h3>
-          <p className="text-gray-300 group-hover:text-white/80 transition-all !leading-5 mb-3 flex-grow">
+
+          <p className="text-sm text-gray-300 group-hover:text-white transition-all !leading-5 mb-3 flex-grow">
             {post.description}
           </p>
         </div>

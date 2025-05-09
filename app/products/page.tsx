@@ -1,14 +1,18 @@
 import Image from "next/image";
 import { Metadata } from "next";
+
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
+import { BackgroundImages } from "../../components/BackgroundImage";
 import { Cta } from "../../components/Cta";
+import { ProductsFeatures } from "../../components/products/ProductsFeatures";
+
 import { mainData } from "../../data/main";
-import { productData } from "../../data/products";
+import { productSpecData } from "../../data/products-spec";
 import { Installation } from "../../data/installation";
 
 export const metadata: Metadata = {
-  title: "製品情報 | FILM LED",
+  title: `製品情報 | ${mainData.siteName} `,
   description:
     "FILM LEDの製品情報ページです。LEDビジュアルウォールの特徴や仕様をご紹介します。",
 };
@@ -16,17 +20,8 @@ export const metadata: Metadata = {
 export default async function ProductsPage() {
   return (
     <div className="flex min-h-screen flex-col relative">
-      <div className="fixed inset-0 -z-10">
-        <div className="relative w-full h-full">
-          <Image
-            src="/images/bg01.jpg"
-            alt=""
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
-      </div>
+      <BackgroundImages />
+
       <Header />
 
       <main className="flex-1">
@@ -80,62 +75,7 @@ export default async function ProductsPage() {
               <span>製品の特徴</span>
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 [&_h3]:text-yellow-300 [&_h3]:mb-3 [&_h3]:md:mb-5 gap-10 md:gap-12">
-              <div>
-                <h3>COB (Chip on board)</h3>
-                <p>
-                  LED
-                  RGB発光素子を透明PETフィルムに直接搭載する技術で、LEDが小さく薄くなって小さなピッチでも高い透明度を維持することができます。
-                  <br />
-                  <br />
-                  ※最小ピッチ：3.75mm
-                </p>
-              </div>
-              <div>
-                <h3>高い透明性と可視性</h3>
-                <p>
-                  50~92%の透明度で、コンテンツを送出している時も光の透過ができます。{" "}
-                  <br />
-                  ディスプレーを点灯してない状態では、設置面の反対側がそのまま見える高い透明度を持ちます。{" "}
-                  <br />
-                  また、コンテンツ映像と同時に内部の環境または製品を見せることができ、ショッピングモールや展示場などで有用に使うことができます。
-                </p>
-              </div>
-              <div>
-                <h3>優れた熱放出と安定性</h3>
-                <p>
-                  COBパッケージは、従来のIC内蔵型LEDより発熱が少なく、LEDフィルムの表面温度が周辺温度と約2°C程度高いため、室内での使用に適しています。{" "}
-                  <br />
-                  また、損傷しやすい敏感な部品の外部露出を最小化し、過酷な環境でも高い安定性を持ちます。
-                </p>
-              </div>
-              <div>
-                <h3>柔軟性</h3>
-                <p>
-                  透明Filmの上に直接LED素子を搭載し、光学透明粘着剤など柔軟な材料を使用し、曲面設置に非常に容易です。{" "}
-                  <br />
-                  ※輸送中は平面状態を維持してください。衝撃によってPCBが損傷する恐れがあります。
-                </p>
-              </div>
-              <div>
-                <h3>簡単なインストールと管理</h3>
-                <p>
-                  フィルムの表面に粘着層があり、別途の器具なしで取り付けたいところへ直接簡単に取り付けることができます。{" "}
-                  <br />
-                  脱着が容易で、メンテナンス管理も便利です。また、設置環境に合わせて粘着強度を調節して製作することが可能です。
-                </p>
-              </div>
-              <div>
-                <h3>多様な活用シーンへの対応力</h3>
-                <p>
-                  ショーウィンドウや商業施設、イベント会場、企業受付、展示ブースなど、さまざまな用途に柔軟に対応可能です。
-                  <br />
-                  デザイン性と情報発信力を両立し、インテリアと調和しながらも高い広告効果を発揮します。
-                  <br />
-                  屋内外問わず幅広く活用されており、次世代型ディスプレイとして注目を集めています。
-                </p>
-              </div>
-            </div>
+            <ProductsFeatures />
           </section>
 
           <section className="mb-28 md:mb-40">
@@ -288,7 +228,7 @@ export default async function ProductsPage() {
                   </thead>
 
                   <tbody className="[&_td]:px-4 [&_td]:md:px-6 [&_td]:py-2">
-                    {productData.map((product, idx) => (
+                    {productSpecData.map((product, idx) => (
                       <tr
                         key={product.model}
                         className={idx % 2 === 0 ? "bg-white/10" : "bg-white/5"}

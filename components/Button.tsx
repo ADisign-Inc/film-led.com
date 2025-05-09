@@ -30,7 +30,7 @@ const Button = ({
         >
           <button
             onClick={onClick}
-            className={`relative group overflow-hidden px-10 md:px-12 py-2.5 text-sm md:text-base font-semibold rounded-lg border border-white/20 uppercase tracking-wider transition-all duration-500 hover:bg-white/5 hover:border-yellow-300 whitespace-nowrap flex items-center gap-2 ${
+            className={`relative font-mincho group overflow-hidden px-8 py-2.5 text-sm md:text-base font-bold rounded-lg border border-white/20 uppercase tracking-wider transition-all duration-500 hover:bg-white/5 hover:border-yellow-300 whitespace-nowrap flex items-center gap-2 ${
               className || ""
             }`}
             onMouseEnter={() => setIsHovered(true)}

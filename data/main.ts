@@ -1,4 +1,5 @@
 export const mainData = {
+  siteName: "ADisignage",
   companyName: "株式会社アディザイン",
   companyNameEn: "Adisign Co., Ltd.",
   companyAddress: {

@@ -1,27 +1,25 @@
 import Image from "next/image";
-import { X, Check } from "lucide-react";
-import { ArrowRight } from "lucide-react";
+import { Metadata } from "next";
+
 import { Header } from "../../../components/Header";
 import { Footer } from "../../../components/Footer";
+import { BackgroundImages } from "../../../components/BackgroundImage";
 import { Button } from "../../../components/Button";
 import { Cta } from "../../../components/Cta";
+
 import { mainData } from "../../../data/main";
-import { caseData } from "../../../data/cases";
+
+export const metadata: Metadata = {
+  title: ` | ブログ | ${mainData.siteName} `,
+  description:
+    "FILM LEDの製品情報ページです。LEDビジュアルウォールの特徴や仕様をご紹介します。",
+};
 
 export default async function AboutPage() {
   return (
     <div className="flex min-h-screen flex-col relative">
-      <div className="fixed inset-0 -z-10">
-        <div className="relative w-full h-full">
-          <Image
-            src="/images/bg01.jpg"
-            alt=""
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
-      </div>
+      <BackgroundImages />
+
       <Header />
 
       <main className="flex-1">

@@ -1,16 +1,19 @@
 import type React from "react";
+import Script from "next/script";
+import type { Metadata } from "next";
+
 import "../styles/globals.css";
 import "../styles/output.css";
-import type { Metadata } from "next";
-import { ThemeProvider } from "../components/theme-provider";
-import { mainData } from "../data/main";
-import Script from "next/script";
+
+import { ThemeProvider } from "../components/ThemeProvider";
+
 import { GA_MEASUREMENT_ID } from "../lib/gtag";
+import { mainData } from "../data/main";
 
 export const metadata: Metadata = {
   title: {
-    default: `ADisignage - ${mainData.keyWords}ビジョンの専門会社`,
-    template: "%s | ADisignage",
+    default: `${mainData.siteName} - ${mainData.keyWords}ビジョンの専門会社`,
+    template: "%s | ${mainData.siteName}",
   },
   description: `ADisignageは、${mainData.keyWords}の専門会社です。高輝度で高品質な${mainData.keyWords}ディスプレイを提供しています。`,
   icons: {

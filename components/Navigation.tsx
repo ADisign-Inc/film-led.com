@@ -4,13 +4,13 @@ import { useState } from "react";
 import { mainData } from "../data/main";
 
 const menuItems = [
-  { href: "/blog/about-film-led", label: "透明LEDフィルムとは？" },
+  { href: "/blog/about-film-led", label: `${mainData.keyWords}とは？` },
   { href: "/cases", label: "活用事例" },
   { href: "/archives", label: "導入実績" },
   { href: "/products", label: "製品情報" },
   { href: "/products", label: "コンテンツ制作" },
   { href: "/flow", label: "導入の流れ" },
-  { href: "/faq", label: "FAQ" },
+  // { href: "/faq", label: "FAQ" },
   { href: "/blog", label: "ブログ" },
   { href: mainData.contact.url, label: "お問い合わせ" },
 ];
@@ -21,13 +21,13 @@ export function Navigation() {
   return (
     <>
       {/* PC */}
-      <nav className="hidden lg:flex items-center gap-4">
+      <nav className="hidden lg:flex lg:items-center lg:gap-3 xl:gap-6">
         {menuItems.map((item, index) => (
           <Link
             key={`${item.href}-${index}`}
             href={item.href}
             className="text-base font-semibold text-white hover:text-yellow-300 transition-colors"
-            {...(item.href === "{mainData.contact.urll}"
+            {...(item.href === mainData.contact.url
               ? { target: "_blank" }
               : {})}
           >
@@ -46,7 +46,6 @@ export function Navigation() {
           <span className="sr-only">メニュー</span>
         </div>
 
-        {/* SP メニュー */}
         {isOpen && (
           <div className="fixed inset-0 top-16 bg-black/90 z-40">
             <nav className="container mx-auto px-5 py-8">
@@ -57,7 +56,7 @@ export function Navigation() {
                     href={item.href}
                     className="text-lg font-medium text-white hover:text-yellow-200 transition-colors"
                     onClick={() => setIsOpen(false)}
-                    {...(item.href === "{mainData.contact.urll}"
+                    {...(item.href === mainData.contact.url
                       ? { target: "_blank" }
                       : {})}
                   >

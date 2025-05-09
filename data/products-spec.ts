@@ -1,4 +1,4 @@
-export interface Product {
+export interface ProductSpec {
   model: string;
   price: string;
   pitch: string;
@@ -10,7 +10,7 @@ export interface Product {
   brightness: string;
 }
 
-export const productData: Product[] = [
+export const productSpecData: ProductSpec[] = [
   {
     model: "FL-1000",
     price: "¥ 1,000,000",

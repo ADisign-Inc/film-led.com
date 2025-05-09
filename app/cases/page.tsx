@@ -1,27 +1,29 @@
+import { ArrowRight } from "lucide-react";
+
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { Metadata } from "next";
+
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
+import { BackgroundImages } from "../../components/BackgroundImage";
 import { Cta } from "../../components/Cta";
 import { Button } from "../../components/Button";
+
 import { mainData } from "../../data/main";
 import { caseData } from "../../data/cases";
+
+export const metadata: Metadata = {
+  title: `活用事例 | ${mainData.siteName} `,
+  description:
+    "FILM LEDの製品情報ページです。LEDビジュアルウォールの特徴や仕様をご紹介します。",
+};
 
 export default function CasesPage() {
   return (
     <div className="flex min-h-screen flex-col relative">
-      <div className="fixed inset-0 -z-10">
-        <div className="relative w-full h-full">
-          <Image
-            src="/images/bg01.jpg"
-            alt=""
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
-      </div>
+      <BackgroundImages />
+
       <Header />
 
       <main className="flex-1">
@@ -75,20 +77,19 @@ export default function CasesPage() {
             </div>
 
             <div className="flex justify-center">
-
-            <div className="bg-white/10 inline-block px-10 py-4">
-              <p>
-                関連記事 :
-                <span className="ml-2">
-                  <a
-                    href="/blog/about-film-led"
-                    className="border-b border-black hover:border-gray-500 transition-colors"
-                  >
-                    {mainData.keyWords}とは？主な特徴と技術的な仕組み
-                  </a>
-                </span>
-              </p>
-            </div>
+              <div className="bg-white/10 inline-block px-10 py-4">
+                <p>
+                  関連記事 :
+                  <span className="ml-2">
+                    <a
+                      href="/blog/about-film-led"
+                      className="border-b border-black hover:border-gray-500 transition-colors"
+                    >
+                      {mainData.keyWords}とは？主な特徴と技術的な仕組み
+                    </a>
+                  </span>
+                </p>
+              </div>
             </div>
           </section>
 
