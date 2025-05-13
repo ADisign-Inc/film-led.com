@@ -9,7 +9,7 @@ import { Footer } from "../../components/Footer";
 import { BackgroundImages } from "../../components/BackgroundImage";
 import { Button } from "../../components/Button";
 import { Cta } from "../../components/Cta";
-import { ArchiveList } from "../../components/ArchiveList";
+import { ArchiveList } from "../../components/archives/ArchiveList";
 
 import { mainData } from "../../data/main";
 import { archiveData } from "../../data/archives";

@@ -1,15 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Archive } from "../data/archives";
+import { Archive } from "../../data/archives";
 
 export function ArchiveList({ post }: { post: Archive }) {
   return (
-    <Link href={`/archives/${post.url}`} className="group">
+    <Link href={`/archives/${post.id}`} className="group">
       <article className="bg-white/5 group-hover:bg-black/5 transition-all shadow-lg group-hover:shadow-[0_0_5px_rgba(255,255,255,0.6)] flex flex-col h-full">
         <div className="relative aspect-[16/9] group-hover:after:absolute group-hover:after:inset-0 group-hover:after:bg-black/30 group-hover:after:transition-all">
           <Image
-            src={post.image}
-            alt={post.title}
+            src={post.mediaData.image[0]}
+            alt={post.clientName}
             fill
             className="object-cover"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -21,20 +21,21 @@ export function ArchiveList({ post }: { post: Archive }) {
             <div className="text-gray-300 group-hover:text-white/80 transition-all text-sm">
               <time dateTime={post.date}>{post.date}</time>
             </div>
-            <p className="!text-xs">
-              {post.category.map((cat, index) => (
-                <span
-                  key={index}
-                  className="bg-yellow-400/80 text-black font-medium !text-xs px-1.5 pb-0.5 pt-1 rounded mr-1"
-                >
-                  {cat}
-                </span>
-              ))}
-            </p>
           </div>
 
+          {/* <p className="!text-xs">
+            {post.category.map((cat, index) => (
+              <span
+                key={index}
+                className="bg-yellow-400/80 text-black font-medium !text-xs px-1.5 pb-0.5 pt-1 rounded mr-1"
+              >
+                {cat}
+              </span>
+            ))}
+          </p> */}
+
           <h3 className="text-xl group-hover:text-yellow-400 transition-all text-start font-semibold mb-3 md:mb-5">
-            {post.title}
+            {post.clientName}
           </h3>
 
           <p className="text-sm text-gray-300 group-hover:text-white transition-all !leading-5 mb-3 flex-grow">

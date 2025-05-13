@@ -2,6 +2,9 @@ import type React from "react";
 import Script from "next/script";
 import type { Metadata } from "next";
 
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import "../styles/globals.css";
 import "../styles/output.css";
 

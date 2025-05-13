@@ -77,6 +77,9 @@ p {
   @apply text-sm md:text-base !leading-6 md:!leading-7 !tracking-wide;
 }
 
+strong {
+  @apply text-[1.1em] px-1;
+}
 .blog {
   h3 {
     @apply text-start font-bold flex items-center gap-4 md:gap-6 mb-10 md:mb-14;

@@ -21,6 +21,7 @@ export function BlogList({ post }: { post: Blog }) {
             <div className="text-gray-300 group-hover:text-white/80 transition-all text-sm">
               <time dateTime={post.date}>{post.date}</time>
             </div>
+
             <p>
               <span className="bg-yellow-400/80 text-black font-medium !text-xs px-1.5 pb-0.5 pt-1 rounded">
                 {post.category}
