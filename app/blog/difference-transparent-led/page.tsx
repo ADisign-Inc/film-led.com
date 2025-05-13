@@ -10,7 +10,7 @@ import { Cta } from "../../../components/Cta";
 import { mainData } from "../../../data/main";
 
 export const metadata: Metadata = {
-  title: ` | ブログ | ${mainData.siteName} `,
+  title: ` | ブログ`,
   description:
     "FILM LEDの製品情報ページです。LEDビジュアルウォールの特徴や仕様をご紹介します。",
 };

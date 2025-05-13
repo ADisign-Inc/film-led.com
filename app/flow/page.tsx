@@ -12,7 +12,7 @@ import { mainData } from "../../data/main";
 import { flowData } from "../../data/flow";
 
 export const metadata: Metadata = {
-  title: `導入の流れ | ${mainData.siteName} `,
+  title: `導入の流れ`,
   description: "導入の流れページです。",
 };
 

@@ -9,7 +9,7 @@ export function Cta() {
           Contact
           <span>お問い合わせ・お申し込み</span>
         </h2>
-        <p className="text-center mb-10 md:mb-16">
+        <p className="text-center mb-10 md:mb-16 !-mt-5">
           店舗やイベントの集客に、{mainData.keyWords}
           という選択肢。
           <br />

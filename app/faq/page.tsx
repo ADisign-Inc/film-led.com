@@ -18,7 +18,7 @@ import { mainData } from "../../data/main";
 import { faqData } from "../../data/faq";
 
 export const metadata: Metadata = {
-  title: `よくあるご質問 | ${mainData.siteName} `,
+  title: `よくあるご質問 `,
   description: "よくあるご質問ページです。",
 };
 

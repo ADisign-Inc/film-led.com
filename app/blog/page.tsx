@@ -15,7 +15,7 @@ import { mainData } from "../../data/main";
 import { blogData } from "../../data/blog";
 
 export const metadata: Metadata = {
-  title: `ブログ | ${mainData.siteName} `,
+  title: `ブログ `,
   description:
     "FILM LEDの製品情報ページです。LEDビジュアルウォールの特徴や仕様をご紹介します。",
 };
@@ -30,8 +30,8 @@ export default function BlogPage() {
       <main className="flex-1">
         <section className="container max-w-6xl py-28 md:py-40">
           <h2>
-            LED BLOG
-            <span>LED ブログ</span>
+            BLOG
+            <span>ブログ</span>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">

@@ -13,7 +13,7 @@ import { Cta } from "../../components/Cta";
 import { mainData } from "../../data/main";
 
 export const metadata: Metadata = {
-  title: `会社概要 | ${mainData.siteName} `,
+  title: `会社概要`,
   description: "会社概要ページです。",
 };
 

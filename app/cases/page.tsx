@@ -14,7 +14,7 @@ import { mainData } from "../../data/main";
 import { caseData } from "../../data/cases";
 
 export const metadata: Metadata = {
-  title: `活用事例 | ${mainData.siteName} `,
+  title: `活用事例 `,
   description:
     "FILM LEDの製品情報ページです。LEDビジュアルウォールの特徴や仕様をご紹介します。",
 };
@@ -33,27 +33,42 @@ export default function CasesPage() {
             <span>活用事例</span>
           </h2>
 
-          <section className="mb-10 md:mb-20">
+          <section className="mb-20 md:mb-28">
             <div className="mb-10 md:mb-20">
               {caseData.map((cases_) => (
-                <div className="mb-10 md:mb-16 last:mb-0">
-                  <div className="mb-5 md:mb-8">
-                    <h4 className="mb-5 md:mb-8">
-                      <span className="text-yellow-400 mr-2">●</span>
-                      <span className="relative inline-block font-bold">
-                        {cases_.title}
-                        <span className="absolute bottom-0 left-0 w-full h-4 bg-yellow-400/20 -z-10"></span>
-                      </span>
-                    </h4>
-                    <p
-                      className="px-10"
-                      dangerouslySetInnerHTML={{
-                        __html: cases_.description.replace(/\n/g, "<br />"),
-                      }}
-                    ></p>
-                  </div>
-                  <div className="flex justify-center gap-5 px-10 mb-3">
-                    <div className="flex justify-center gap-5 mb-3">
+                <div className="mb-12 sm:mb-20 md:mb-28 last:mb-0">
+                  <h4 className="mb-8 md:mb-12">
+                    <span className="text-yellow-400 mr-1">●</span>
+                    <span className="relative inline-block font-bold">
+                      {cases_.title}
+                      <span className="absolute bottom-0 left-0 w-full h-4 bg-yellow-400/20 -z-10"></span>
+                    </span>
+                  </h4>
+
+                  <p
+                    className="md:pl-6 mb-8 md:mb-12"
+                    dangerouslySetInnerHTML={{
+                      __html: cases_.description,
+                    }}
+                  ></p>
+
+                  {cases_.link && (
+                    <div className="my-8 md:my-12">
+                      <Link
+                        href={cases_.link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Button>
+                          {cases_.link.text}
+                          <ArrowRight className="h-4 w-4" />
+                        </Button>
+                      </Link>
+                    </div>
+                  )}
+
+                  <div className="flex justify-center gap-2 md:gap-5 md:pl-6 mb-3">
+                    <div>
                       <Image
                         src={cases_.image[0]}
                         alt={cases_.title}
@@ -62,7 +77,7 @@ export default function CasesPage() {
                         className="object-cover"
                       />
                     </div>
-                    <div className="flex justify-center gap-5 mb-3">
+                    <div>
                       <Image
                         src={cases_.image[1]}
                         alt={cases_.title}
@@ -95,7 +110,7 @@ export default function CasesPage() {
 
           <Link href={mainData.contact.url}>
             <Button>
-              無料相談・お申し込みはこちら
+              無料相談・お申し込み
               <ArrowRight className="h-4 w-4" />
             </Button>
           </Link>
