@@ -12,7 +12,7 @@ import { productSpecData } from "../../data/products-spec";
 import { Installation } from "../../data/installation";
 
 export const metadata: Metadata = {
-  title: `製品情報 | ${mainData.siteName} `,
+  title: `製品情報`,
   description:
     "FILM LEDの製品情報ページです。LEDビジュアルウォールの特徴や仕様をご紹介します。",
 };
@@ -70,6 +70,66 @@ export default async function ProductsPage() {
           </section>
 
           <section className="mb-28 md:mb-40">
+            <div>
+              <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-yellow-300 !leading-relaxed font-mincho mb-8 md:mb-12">
+                視界を遮らない。
+                <br />
+                空間と調和しながら、強烈な印象を残す 次世代型ディスプレイ。
+              </p>
+
+              <p>
+                {mainData.keyWords}
+                ディスプレイは、ガラス面に直接設置できる超薄型のLEDビジョンです。
+                <br />
+                従来の大型サイネージと異なり、高い透明性（最大92%）を維持しながらも、映像表現はフルカラーで鮮やか。
+                <br />
+                内装や外観デザインを損なわず、昼夜を問わず印象的な映像演出が可能です。
+                <br />
+                LED素子は透明PETフィルム上に直接実装されており、軽量かつ柔軟性に優れた構造を実現。
+                <br />
+                曲面ガラスや狭いスペースにも柔軟に対応できます。
+                <br />
+                <br />
+                また、COB（Chip On
+                Board）技術により、小さなピッチでも高い透明度と安定性を両立しています。
+                <br />
+                粘着フィルムで直接貼り付けられるため、設置は非常にシンプル。
+                <br />
+                電源とコンテンツ送信機器を接続すれば、すぐに映像配信が可能です。
+                <br />
+                コンテンツの変更もPCやスマートフォンから簡単に行えます。
+                <br />
+                <br />
+                屋外・屋内問わず、店舗のウィンドウ、ショッピングモール、展示会、イベント空間など、あらゆるシーンでインパクトある広告展開を実現。
+                <br />
+                透明だからこそ可能になる、“空間の中に溶け込む広告”という新しい体験を提供します。
+                <br />
+              </p>
+            </div>
+
+            <div className="flex justify-center">
+              <div className="flex justify-center">
+                <Image
+                  src="/images/products01.png"
+                  alt={`${mainData.keyWords}`}
+                  width={500}
+                  height={300}
+                  className="object-cover"
+                />
+              </div>
+              <div className="flex justify-center">
+                <Image
+                  src="/images/products05.png"
+                  alt={`${mainData.keyWords}`}
+                  width={500}
+                  height={300}
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </section>
+
+          <section className="mb-28 md:mb-40">
             <h2>
               Features
               <span>製品の特徴</span>
@@ -89,7 +149,9 @@ export default async function ProductsPage() {
               ・デジタルサイネージの事例をご紹介します。
               <br />
               <br />
-              ※当サイトでは、より分かりやすい情報提供のため、YouTube動画を引用・埋め込み形式で掲載しています。著作権は各権利者に帰属します。
+              <span className="text-[0.9em]">
+                ※当サイトでは、より分かりやすい情報提供のため、YouTube動画を引用・埋め込み形式で掲載しています。著作権は各権利者に帰属します。
+              </span>
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

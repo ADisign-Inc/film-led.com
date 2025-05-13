@@ -15,8 +15,8 @@ import { mainData } from "../data/main";
 
 export const metadata: Metadata = {
   title: {
-    default: `${mainData.siteName} - ${mainData.keyWords}ビジョンの専門会社`,
-    template: "%s | ${mainData.siteName}",
+    default: `${mainData.keyWords}ビジョンの専門会社 | ${mainData.siteName}`,
+    template: `%s | ${mainData.siteName}`,
   },
   description: `ADisignageは、${mainData.keyWords}の専門会社です。高輝度で高品質な${mainData.keyWords}ディスプレイを提供しています。`,
   icons: {
@@ -77,6 +77,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
+
       <body
         className="min-h-screen bg-black text-white antialiased"
         suppressHydrationWarning

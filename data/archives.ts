@@ -19,9 +19,14 @@ export const archiveData: Archive[] = [
   {
     id: "00001",
     clientName: "岩田屋本館 ジミーチュウ 様",
-    description: `福岡市天神にある岩田屋本館 ジミーチュウ 様にて、${mainData.keyWords}を導入しました。`,
+    description: `福岡市天神にある岩田屋本館にて、${mainData.keyWords}を導入しました。`,
     mediaData: {
-      image: ["/images/archives/00001/01.jpg"],
+      image: [
+        "/images/archives/00001/01.jpg",
+        "/images/archives/00001/02.jpg",
+        "/images/archives/00001/03.jpg",
+        "/images/archives/00001/04.jpg",
+      ],
       video: [
         "/images/archives/00001/video01.mp4",
         "/images/archives/00001/video02.mp4",

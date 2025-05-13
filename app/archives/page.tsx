@@ -11,11 +11,10 @@ import { Button } from "../../components/Button";
 import { Cta } from "../../components/Cta";
 import { ArchiveList } from "../../components/archives/ArchiveList";
 
-import { mainData } from "../../data/main";
 import { archiveData } from "../../data/archives";
 
 export const metadata: Metadata = {
-  title: `導入実績 | ${mainData.siteName} `,
+  title: `導入実績`,
   description:
     "FILM LEDの製品情報ページです。LEDビジュアルウォールの特徴や仕様をご紹介します。",
 };

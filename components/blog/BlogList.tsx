@@ -23,7 +23,7 @@ export function BlogList({ post }: { post: Blog }) {
             </div>
 
             <p>
-              <span className="bg-yellow-400/80 text-black font-medium !text-xs px-1.5 pb-0.5 pt-1 rounded">
+              <span className="bg-gray-300/25 text-yellow-300 font-bold !text-xs px-1.5 pb-0.5 pt-1 rounded">
                 {post.category}
               </span>
             </p>

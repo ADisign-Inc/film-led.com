@@ -185,7 +185,9 @@ export default async function LandingPage() {
                   <p
                     className="px-2"
                     dangerouslySetInnerHTML={{
-                      __html: case_.description.replace(/\n/g, "<br />"),
+                      __html: case_.description
+                        .replace(/\n/g, "<br />")
+                        .replace(/<strong>/g, "<strong>"),
                     }}
                   ></p>
                 </div>

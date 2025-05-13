@@ -8,6 +8,7 @@ import { Metadata } from "next";
 import { Header } from "../../../components/Header";
 import { Footer } from "../../../components/Footer";
 import { BackgroundImages } from "../../../components/BackgroundImage";
+import { Breadcrumb } from "../../../components/Breadcrumb";
 import { Button } from "../../../components/Button";
 import { Cta } from "../../../components/Cta";
 
@@ -15,7 +16,7 @@ import { mainData } from "../../../data/main";
 import { caseData } from "../../../data/cases";
 
 export const metadata: Metadata = {
-  title: `${mainData.keyWords}とは？ | ブログ | ${mainData.siteName} `,
+  title: `${mainData.keyWords}とは？ | ブログ `,
   description:
     "FILM LEDの製品情報ページです。LEDビジュアルウォールの特徴や仕様をご紹介します。",
 };
@@ -27,15 +28,23 @@ export default function AboutPage() {
 
       <Header />
 
+      <Breadcrumb
+        items={[
+          { label: "TOP", href: "/" },
+          { label: "ブログ", href: "/blog" },
+          { label: `${mainData.keyWords}とは？` },
+        ]}
+      />
+
       <main className="flex-1 [scroll-behavior:smooth]">
-        <div className="container max-w-5xl py-20 md:py-32">
+        <div className="container max-w-5xl py-16 md:py-20">
           <h2>
             About
             <span>{mainData.keyWords}とは？</span>
           </h2>
 
           <article className="blog mb-10 md:mb-20">
-            <section className="mb-20 md:mb-28">
+            <section className="mb-20 md:mb-36">
               <p className="mb-10 md:mb-16">
                 近年、ショッピングモールやビルのガラス面などで、外からでも中からでも視界を遮らない映像演出を見かけたことはありませんか？
                 <br />
@@ -141,7 +150,7 @@ export default function AboutPage() {
             </section>
 
             {/* 集客力を劇的に変える ─ 高輝度 {mainData.keyWords} */}
-            <section id="section01" className="mb-20 md:mb-28">
+            <section id="section01" className="mb-20 md:mb-36">
               <h3>
                 <span className="w-1 h-14 sm:h-10 bg-yellow-400"></span>
                 集客力を劇的に変える
@@ -164,13 +173,13 @@ export default function AboutPage() {
 
               <div>
                 <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-yellow-300 font-mincho text-nowrap mb-8 md:mb-12">
-                  ｢通りすがりの一瞬を、確実に掴む。｣
+                  通りすがりの一瞬を、確実に掴む。
                 </p>
                 <p>
                   そんな広告運用を目指すなら、{mainData.keyWords}
                   がベストな選択です。
                   <br />
-                  明るい場所でも見やすく、4K解像度の鮮やかな映像で、訴求力は段違い。
+                  明るい場所でも、見やすく鮮やかな映像で訴求力は段違い。
                   <br />
                   映像・音声・文字情報を組み合わせた多彩な演出が可能な本機は、集客・情報発信に革新をもたらします。
                 </p>
@@ -178,7 +187,7 @@ export default function AboutPage() {
             </section>
 
             {/* 透明フィルム型LEDとは？ */}
-            <section id="section02" className="mb-20 md:mb-28">
+            <section id="section02" className="mb-20 md:mb-36">
               <h3>
                 <span></span>
                 {mainData.keyWords}とは？
@@ -196,6 +205,7 @@ export default function AboutPage() {
                       非常に薄い透明フィルムに微細なLEDチップを均一に配置した
                       <strong>次世代ディスプレイ技術</strong>です。
                       <br />
+                      <br />
                       このフィルムは、ガラスやアクリルなどの透明素材に
                       <strong>直接貼り付けて使用</strong>
                       し、ディスプレイとして機能しながらも視界を遮ることがありません。
@@ -209,7 +219,10 @@ export default function AboutPage() {
                       に表示性能を両立している点が特長です。
                       <br />
                       <br />
-                      この技術は、微細なLED構造を活かすことで、従来の大型ディスプレイでは実現が難しかった「透明性」と、高解像度表示」の両立を可能にしています。
+                      この技術は、微細なLED構造を活かすことで、従来の大型ディスプレイでは実現が難しかった
+                      <strong>「透明性」</strong>
+                      と、<strong>「高解像度表示」</strong>
+                      の両立を可能にしています。
                     </p>
                   </div>
                   <div className="order-1 md:order-2 md:w-1/5">
@@ -234,11 +247,11 @@ export default function AboutPage() {
                 <div className="flex flex-col md:flex-row gap-8 ml-3 md:ml-5">
                   <div className="order-2 md:order-1 md:w-3/5">
                     <p>
-                      {mainData.keyWords}
                       通常のLEDディスプレイと{mainData.keyWords}
-                      の最大の違いは、設置方法と空間への影響にあります。
+                      ディスプレイの最大の違いは、設置方法と空間への影響にあります。
                       <br />
-                      一般的なLEDディスプレイは、密集したLED素子を搭載したパネルを前面に設置するため、映像表示時は
+                      <br />
+                      一般的なLEDディスプレイは、密集したLED素子を搭載したパネルをキャビネットの前面に設置するため、映像表示時は
                       <strong>
                         全面が光で覆われ、背後が完全に遮られる構造
                       </strong>
@@ -246,14 +259,16 @@ export default function AboutPage() {
                       <br />
                       そのため、設置には十分な奥行きや構造補強が必要となり、空間設計や導線に制約が生まれることが少なくありません。
                       <br />
+                      <br />
                       一方、{mainData.keyWords}
-                      は、
+                      は、フィルムに直接 LED素子が搭載されているため、
                       <strong>
-                        極薄フィルムをガラスやアクリルなどの透明面に直接貼り付けるだけで設置可能
+                        極薄フィルムをガラスやアクリルなどの透明面に直接貼り付けるだけ
                       </strong>
-                      です。
+                      で設置可能です。
                       <br />
                       物理的なスペースをほとんど必要とせず、設置面の透過性を活かしたまま情報発信ができるため、空間デザインや景観を損なうことなく活用できます。
+                      <br />
                       <br />
                       また、通常のLEDディスプレイは設置面を完全にふさいでしまいますが、
                       {mainData.keyWords}は
@@ -269,6 +284,7 @@ export default function AboutPage() {
                       点も、大きな魅力です。
                     </p>
                   </div>
+
                   <div className="order-1 md:order-2 md:w-2/5">
                     <div className="relative pb-[56.25%]">
                       <Image
@@ -293,15 +309,18 @@ export default function AboutPage() {
                       {mainData.keyWords}の最大の特徴は、その
                       <strong>高い透明性</strong>です。
                       <br />
+                      <br />
                       ガラスや窓、アクリル板など透過素材に直接貼り付けられるため、ディスプレイとして機能しつつ空間を占有せず、景観を損なわずに使用できます。
                       <br />
-                      この特性により、商業施設やオフィス、店舗のガラス面に設置しても、内部の開放感を保ちながら、外部には美しい映像や広告を効果的に発信することが可能です。
+                      この特性は、商業施設やオフィス、店舗のガラス面に設置しても内部の開放感を保ちながら、外部には美しい映像や広告を効果的に発信することが可能です。
+                      <br />
                       <br />
                       さらに、昼間はガラス越しに外の景色をそのまま楽しめ、夜間や暗所では透明フィルムが鮮やかに輝き、映像を際立たせるダイナミックな演出も魅力の一つです。
                       <br />
                       また、インタラクティブ機能や動画コンテンツと連動させることで、より高度なエンターテインメントやマーケティング展開も可能です。
                       <br />
-                      この <strong>高い透明性を活かした</strong>
+                      <br />
+                      この<strong>高い透明性</strong>を活かした
                       効果的なブランディングや情報発信は、他のディスプレイ技術にはない独自の価値を提供します。
                     </p>
                   </div>
@@ -373,20 +392,22 @@ export default function AboutPage() {
 
                 <p className="mb-5 md:mb-10">
                   {mainData.keyWords}
-                  は、薄型・軽量で、設置の自由度が高い点も大きな利点です。
+                  は、<strong>薄型</strong>・<strong>軽量</strong>
+                  で、設置の自由度が高い点も大きな利点です。
                   <br />
                   一般的なディスプレイは壁面やスタンドへの固定が必要ですが、この技術を用いることで、窓ガラスやガラス製パーテーションなと、従来設置が難しかった場所への導入が可能になります。
                   <br />
-                  これにより、空間を有効に活用し、建築デザインやインテリアの美観を損なうことなく情報発信が行えます。
+                  空間を有効に活用し、建築デザインやインテリアの美観を損なうことなく情報発信が行えます。
                 </p>
 
                 <p className="mb-5 md:mb-10">
                   さらに、{mainData.keyWords}
-                  は、明るい環境でも高い視認性を確保できる点も大きな特長です。
+                  は、<strong>明るい環境でも高い視認性を確保</strong>
+                  できる点も大きな特長です。
                   <br />
                   従来のプロジェクターを用いた透明スクリーンと異なり、LEDの自己発光技術により、直射日光下でも鮮明な映像表示を実現します。
                   <br />
-                  このため、屋外のショーウインドウや駅、空港など、公共空間での使用にも適しており、昼夜を問わずクリアな視認性を提供します。
+                  屋外のショーウインドウや駅、空港など、公共空間での使用にも適しており、昼夜を問わずクリアな視認性を提供します。
                 </p>
 
                 <p className="mb-5 md:mb-10">
@@ -406,8 +427,8 @@ export default function AboutPage() {
               </div>
               <div>
                 <p>
-                  なお、 <strong>COB （Chip on Board）技術</strong>
-                  を採用し、RGB発光素子を透明PETフィルムに直接搭載することで、LED素子を小型・薄型化。
+                  また、<strong>COB （Chip on Board）技術</strong>
+                  を採用し、RGB発光素子を透明PETフィルムに直接搭載することで、LED素子を小型・薄型化しています。
                   <br />
                   これにより、 <strong>最小ピッチ3.75mm</strong>
                   という微細な間隔でも高い透明度を維持し、より美しく自然な映像表現を実現しています。
@@ -416,7 +437,7 @@ export default function AboutPage() {
             </section>
 
             {/* 透明フィルムLEDビジョンの技術的な仕組み */}
-            <section id="section03" className="mb-20 md:mb-28">
+            <section id="section03" className="mb-20 md:mb-36">
               <h3>
                 <span></span>
                 {mainData.keyWords}の技術的な仕組み
@@ -433,13 +454,15 @@ export default function AboutPage() {
                     <br />
                     これにより、ガラス面をそのまま利用しながら、視界を遮ることなく鮮やかな映像を映し出します。
                     <br />
-                    最新技術により、ディスプレーを点灯してない状態では、設置面の反対側がそのまま見える高い透明度を保ち、直射日光の中でも視認性を維持できます。
+                    最新技術により、ディスプレイを点灯してない状態では、設置面の反対側がそのまま見える高い透明度を保ち、直射日光の中でも高い視認性を維持できます。
                   </p>
                   <p>
                     {mainData.keyWords}
                     は、従来のディスプレイ技術に比べ、スペースを節約しつつ効果的な広告表示を実現します。
                     <br />
-                    屋外でも屋内でも使用でき、昼夜を問わず安定した表示が可能です。これにより、コンテンツ映像と同時に内部の環境または製品を見せることができ、公共施設や商業施設など、幅広い業界で活用されるようになっています。
+                    屋外でも屋内でも使用でき、昼夜を問わず安定した表示が可能です。
+                    <br />
+                    これにより、コンテンツ映像と同時に内部の環境または製品を見せることができ、公共施設や商業施設など、幅広い業界で活用されるようになっています。
                   </p>
                 </div>
               </div>
@@ -451,14 +474,18 @@ export default function AboutPage() {
                 <div className="space-y-4 ml-5">
                   <p>
                     {mainData.keyWords}
-                    の最大の特徴は、ガラス面に直接設置できることです。これにより、建物の外観や内装を損なうことなく、広告や情報を表示することができます。
+                    の最大の特徴は、<strong>ガラス面に直接設置</strong>
+                    できることです。 <br />
+                    これにより、建物の外観や内装を損なうことなく、広告や情報を表示することができます。
                     <br />
                     店舗のウィンドウやビルのガラスパネルに取り付けることで、スペースを有効活用しつつ、視覚的な効果を最大化できます。
                   </p>
                   <p>
                     また、ガラス面に設置するため、ディスプレイが目立ちすぎず、周囲の空間に調和します。
                     <br />
-                    これにより、店舗や企業のブランドイメージを洗練された形で演出できます。例えば、高級ブランド店では、店舗の外観を美しく保ちながら、動的な広告を表示することが可能になります。
+                    これにより、店舗や企業のブランドイメージを洗練された形で演出できます。
+                    <br />
+                    例えば、高級ブランド店では、店舗の外観を美しく保ちながら、動的な広告を表示することが可能になります。
                   </p>
                   <p>
                     空間デザインと情報発信を両立させる{mainData.keyWords}
@@ -469,7 +496,7 @@ export default function AboutPage() {
             </section>
 
             {/* 透明フィルムLEDビジョンの主な特徴 */}
-            <section id="section04" className="mb-20 md:mb-28">
+            <section id="section04" className="mb-20 md:mb-36">
               <h3>
                 <span></span>
                 {mainData.keyWords}の主な特徴
@@ -502,7 +529,8 @@ export default function AboutPage() {
                     1、透明性
                   </p>
                   <p className="ml-5">
-                    {mainData.keyWords}の最大の特徴は、「透明性」にあります。
+                    {mainData.keyWords}の最大の特徴は、
+                    <strong>「透明性」</strong>にあります。
                     <br />
                     透明なフィルムにLEDチップが組み込まれているため、映像を表示していない部分はそのまま透明で、視界を遮りません。
                     <br />
@@ -515,7 +543,9 @@ export default function AboutPage() {
                     2、高輝度・高解像度表示
                   </p>
                   <p className="ml-5">
-                    最新のLED技術を活用しており、非常に高輝度・高解像度で映像を表示できます。
+                    最先端のLED技術を活用しており、非常に<strong>高輝度</strong>
+                    ・<strong>高解像度</strong>
+                    で映像を表示できます。
                     <br />
                     直射日光下でも高い視認性を誇り、屋外の過酷な環境でも明るく鮮明な映像を提供できます。
                     <br />
@@ -549,7 +579,7 @@ export default function AboutPage() {
             </section>
 
             {/* 現状の課題 */}
-            <section id="section05" className="mb-20 md:mb-28">
+            <section id="section05" className="mb-20 md:mb-36">
               <h3>
                 <span></span>
                 現状の課題
@@ -645,7 +675,7 @@ export default function AboutPage() {
             </section>
 
             {/* 使用例と活用シーン */}
-            <section id="section06" className="mb-20 md:mb-28">
+            <section id="section06" className="mb-20 md:mb-36">
               <h3>
                 <span></span>
                 使用例と活用シーン
@@ -666,7 +696,11 @@ export default function AboutPage() {
                     <p className="text-base md:text-lg lg:text-xl font-semibold text-yellow-300 my-5 md:my-8">
                       {cases_.title}
                     </p>
-                    <p>{cases_.description}</p>
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: cases_.description,
+                      }}
+                    />
                   </div>
                 ))}
               </div>
@@ -694,7 +728,7 @@ export default function AboutPage() {
             </section>
 
             {/* 透明フィルムLEDビジョンの仕様 */}
-            <section id="section07" className="mb-20 md:mb-28">
+            <section id="section07" className="mb-20 md:mb-36">
               <h3>
                 <span></span>
                 {mainData.keyWords}の仕様
@@ -734,7 +768,7 @@ export default function AboutPage() {
                   <p>
                     画素ピッチとは、LED同士の間隔のこと。数字が小さいほど、より高精細な映像を表示できます。
                     <br />
-                    ・屋内用：**3.75mm〜**程度
+                    ・屋内用：3.75mm〜程度
                     <br />
                     ・屋外用：6〜10mm程度
                     <br />
@@ -814,7 +848,7 @@ export default function AboutPage() {
             </section>
 
             {/* 導入するメリット */}
-            <section id="section08" className="mb-20 md:mb-28">
+            <section id="section08" className="mb-20 md:mb-36">
               <h3>
                 <span></span>
                 導入するメリット
@@ -902,7 +936,7 @@ export default function AboutPage() {
             </section>
 
             {/* 選ばれる理由・他商材との比較 */}
-            <section id="section09" className="mb-20 md:mb-28">
+            <section id="section09" className="mb-20 md:mb-36">
               <h3>
                 <span></span>
                 選ばれる理由・他商材との比較
@@ -990,9 +1024,7 @@ export default function AboutPage() {
                       </td>
                       <td className="border border-yellow-300 p-4 text-center">
                         <Check className="h-6 w-6 text-green-600 mx-auto" />
-                        <span className="block mt-1">
-                          レンタルプランあり、低コスト
-                        </span>
+                        <span className="block mt-1">比較的 低コスト</span>
                       </td>
                       <td className="border border-gray-400 p-4 text-center">
                         <X className="h-6 w-6 text-red-500 mx-auto" />
@@ -1026,7 +1058,9 @@ export default function AboutPage() {
                       貴社のビジネスにも{mainData.keyWords}
                       を導入して、視覚的なインパクトを最大限に活かしませんか？
                       <br />
-                      設置方法や活用事例、レンタルプランなど、詳しく知りたい方はぜひお気軽にお問い合わせください。専門スタッフが最適な導入プランをご提案いたします。
+                      設置方法や活用事例など、詳しく知りたい方はぜひお気軽にお問い合わせください。
+                      <br />
+                      専門スタッフが最適な導入プランをご提案いたします。
                     </p>
                   </div>
 
