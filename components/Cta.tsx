@@ -13,6 +13,8 @@ export function Cta() {
           店舗やイベントの集客に、{mainData.keyWords}
           という選択肢。
           <br />
+          動画制作だけでも、ディスプレイ導入とのセットでもご対応可能です。
+          <br />
           まずは無料相談からお気軽にお問い合わせください。
         </p>
 
@@ -27,7 +29,7 @@ export function Cta() {
                 <div className="flex justify-between gap-x-3">
                   <div className="grow">
                     <div className="flex justify-center items-center gap-x-3 md:gap-x-5">
-                      <div className="relative w-12 h-12 md:w-16 md:h-16">
+                      <div className="relative w-12 h-12 md:w-14 md:h-14">
                         <Image
                           src="/images/icons/mail-dark.svg"
                           alt="メールでお問合せ"
@@ -72,7 +74,7 @@ export function Cta() {
                 <div className="flex justify-between items-center gap-x-3">
                   <div className="grow">
                     <div className="flex justify-center items-center gap-x-3 md:gap-x-5">
-                      <div className="relative w-12 h-12 md:w-16 md:h-16">
+                      <div className="relative w-12 h-12 md:w-14 md:h-14">
                         <Image
                           src="/images/icons/phone-dark.svg"
                           alt="お電話でのお問い合わせ"
