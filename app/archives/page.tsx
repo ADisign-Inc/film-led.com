@@ -33,20 +33,18 @@ export default function ArchivesPage() {
             <span>導入実績</span>
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-20 md:mb-40">
             {archiveData.map((post) => (
               <ArchiveList key={post.id} post={post} />
             ))}
           </div>
 
-          <div className="mt-20 md:mt-28 text-center">
-            <Link href="/">
-              <Button variant="default">
-                TOPへ
-                <ArrowRight className="h-4 w-4" />
-              </Button>
-            </Link>
-          </div>
+          <Link href="/">
+            <Button variant="default">
+              TOPへ
+              <ArrowRight className="h-4 w-4" />
+            </Button>
+          </Link>
         </section>
 
         {/* CTA */}

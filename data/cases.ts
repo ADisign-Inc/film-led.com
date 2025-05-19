@@ -55,8 +55,14 @@ export const caseData: Case[] = [
   {
     id: "06",
     title: "飲食店・小売店",
-    description: `1階店舗ではスタンドサイネージ、2階以上にある店舗ではキューブ型サイネージのご利用がおすすめです。`,
-    image: ["/images/cases/06-0.jpg", "/images/cases/06-1.jpg"],
+    description: `1階にある店舗には、歩行者の目線に合わせて情報を訴求できる<strong>スタンド型サイネージ</strong>がおすすめです。<br />
+                  店頭でメニューやキャンペーン情報を表示し、<strong>通行客の目を引く効果的な販促ツール</strong>として活用できます。<br />
+                  また、2階以上にある店舗には、遠くからでも視認しやすい<strong>キューブ型サイネージ</strong>がおすすめです。<br />
+                  <strong>立体的な映像表示によって存在感を高め、階上店舗への誘導効果を向上</strong>させることが可能です。`,
+    image: [
+      "https://adisignage.com/image/p3-img01.png",
+      "https://adisignage.com/image/p3-img02.png",
+    ],
     category: "イベント",
     link: {
       url: "https://adisignage.com/product_3.html",

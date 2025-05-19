@@ -9,8 +9,8 @@ interface BreadcrumbProps {
 
 export const Breadcrumb = ({ items }: BreadcrumbProps) => {
   return (
-    <nav className="container max-w-7xl pt-20 md:pt-28">
-      <ul className="flex items-center gap-2 [&_li]:text-sm [&_li]:text-gray-300">
+    <nav className="container max-w-7xl pt-16 md:pt-28">
+      <ul className="flex items-center gap-2 text-xs [&_li]:md:text-sm [&_li]:text-gray-300">
         {items.map((item, index) => (
           <li key={index}>
             {item.href ? (

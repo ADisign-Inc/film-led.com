@@ -22,10 +22,15 @@ export function BlogList({ post }: { post: Blog }) {
               <time dateTime={post.date}>{post.date}</time>
             </div>
 
-            <p>
-              <span className="bg-gray-300/25 text-yellow-300 font-bold !text-xs px-1.5 pb-0.5 pt-1 rounded">
-                {post.category}
-              </span>
+            <p className="!text-xs">
+              {post.category.map((cat, index) => (
+                <span
+                  key={index}
+                  className="bg-gray-300/25 text-yellow-300 font-bold !text-xs px-1.5 py-1 rounded mr-1.5"
+                >
+                  {cat}
+                </span>
+              ))}
             </p>
           </div>
 

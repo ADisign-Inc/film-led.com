@@ -1,38 +1,37 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Archive } from "../../data/archives";
+import { Blog } from "../../data/blog";
 
-export function ArchiveHeader({ post }: { post: Archive }) {
+export function BlogHeader({ post }: { post: Blog }) {
   return (
     <>
-      <Link href={`/archives/${post.id}`} className="group">
+      <Link href={`/blog/${post.url}`} className="group">
         <article className="bg-white/10 group-hover:bg-black/5 transition-all shadow-lg group-hover:shadow-[0_0_5px_rgba(255,255,255,0.6)] p-3">
           <div className="flex items-center">
             <div
               className={`w-40 h-full relative aspect-square group-hover:after:absolute group-hover:after:inset-0 group-hover:after:bg-black/30 group-hover:after:transition-all`}
             >
               <Image
-                src={post.mediaData.image[0]}
-                alt={post.clientName}
+                src={post.image}
+                alt={post.title}
                 fill
                 className="object-cover"
               />
             </div>
 
             <div className="w-11/12 p-3 flex flex-col flex-grow">
-              <div className="flex items-center text-gray-300 group-hover:text-white/80 transition-all text-xs mb-[1px]">
+              <div className="text-gray-300 group-hover:text-white/80 transition-all text-xs mb-[1px]">
                 <time dateTime={post.date}>{post.date}</time>
-                <p className="text-xs ml-2">{post.place}</p>
               </div>
 
-              {/* <p className="mb-2">
+              <p className="mb-2">
                 <span className="bg-yellow-400/80 text-black font-medium !text-[10px] px-1.5 pb-0.5 pt-1 rounded">
                   {post.category}
                 </span>
-              </p> */}
+              </p>
 
               <h3 className="text-base group-hover:text-yellow-400 transition-all text-start font-semibold">
-                {post.clientName}
+                {post.title}
               </h3>
             </div>
           </div>

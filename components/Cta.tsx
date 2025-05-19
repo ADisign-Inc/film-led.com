@@ -3,15 +3,18 @@ import Image from "next/image";
 import { mainData } from "../data/main";
 export function Cta() {
   return (
-    <section className="container max-w-6xl md:py-20">
-      <div className="bg-white/20 px-5 xs:px-10 lg:px-20 xl:px-32 pt-12 md:pt-20 pb-12 md:pb-20">
+    <section className="container max-w-6xl py-20 md:py-40">
+      <div className="bg-white/15 px-5 xs:px-10 lg:px-20 xl:px-32 pt-14 md:pt-20 pb-14 md:pb-20">
         <h2>
           Contact
           <span>お問い合わせ・お申し込み</span>
         </h2>
+
         <p className="text-center mb-10 md:mb-16 !-mt-5">
           店舗やイベントの集客に、{mainData.keyWords}
           という選択肢。
+          <br />
+          動画制作だけでも、ディスプレイ導入とのセットでもご対応可能です。
           <br />
           まずは無料相談からお気軽にお問い合わせください。
         </p>
@@ -27,7 +30,7 @@ export function Cta() {
                 <div className="flex justify-between gap-x-3">
                   <div className="grow">
                     <div className="flex justify-center items-center gap-x-3 md:gap-x-5">
-                      <div className="relative w-12 h-12 md:w-16 md:h-16">
+                      <div className="relative w-12 h-12 md:w-14 md:h-14">
                         <Image
                           src="/images/icons/mail-dark.svg"
                           alt="メールでお問合せ"
@@ -49,10 +52,10 @@ export function Cta() {
                         <p className="group-hover:text-white">
                           メールでお問合せ
                         </p>
-                        <p className="text-xl md:text-2xl font-semibold group-hover:text-yellow-400 transition-all">
+                        <p className="text-lg xs:text-xl md:text-2xl font-semibold group-hover:text-yellow-400 transition-all">
                           お問合せフォーム
                         </p>
-                        <p className="group-hover:text-white text-xs md:text-sm !leading-normal">
+                        <p className="group-hover:text-white !text-xs md:text-sm !leading-normal">
                           内容確認後、迅速にご返信いたします
                         </p>
                       </div>
@@ -72,7 +75,7 @@ export function Cta() {
                 <div className="flex justify-between items-center gap-x-3">
                   <div className="grow">
                     <div className="flex justify-center items-center gap-x-3 md:gap-x-5">
-                      <div className="relative w-12 h-12 md:w-16 md:h-16">
+                      <div className="relative w-12 h-12 md:w-14 md:h-14">
                         <Image
                           src="/images/icons/phone-dark.svg"
                           alt="お電話でのお問い合わせ"
@@ -94,7 +97,7 @@ export function Cta() {
                         <p className="group-hover:text-white">
                           お電話でお問い合わせ
                         </p>
-                        <p className="text-xl md:text-2xl font-semibold group-hover:text-yellow-400 transition-all">
+                        <p className="text-lg xs:text-xl md:text-2xl font-semibold group-hover:text-yellow-400 transition-all">
                           {mainData.contact.tel}
                         </p>
                         <p className="group-hover:text-white text-xs md:text-sm !leading-normal">

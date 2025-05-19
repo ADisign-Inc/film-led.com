@@ -39,9 +39,9 @@ export default function CasesPage() {
                 <div className="mb-12 sm:mb-20 md:mb-28 last:mb-0">
                   <h4 className="mb-8 md:mb-12">
                     <span className="text-yellow-400 mr-1">●</span>
-                    <span className="relative inline-block font-bold">
+                    <span className="relative inline-block font-bold px-1">
                       {cases_.title}
-                      <span className="absolute bottom-0 left-0 w-full h-4 bg-yellow-400/20 -z-10"></span>
+                      <span className="absolute bottom-0 left-0 w-full h-4 bg-yellow-400/15 -z-10"></span>
                     </span>
                   </h4>
 

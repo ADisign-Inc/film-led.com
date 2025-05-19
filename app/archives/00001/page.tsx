@@ -11,7 +11,7 @@ import { Footer } from "../../../components/Footer";
 import { BackgroundImages } from "../../../components/BackgroundImage";
 import { Button } from "../../../components/Button";
 import { Cta } from "../../../components/Cta";
-import { ArchiveHeader } from "../../../components/archives/ArchiveHeader";
+import { ArchiveList } from "../../../components/archives/ArchiveList";
 import { Breadcrumb } from "../../../components/Breadcrumb";
 
 import { mainData } from "../../../data/main";
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     "FILM LEDの製品情報ページです。LEDビジュアルウォールの特徴や仕様をご紹介します。",
 };
 
-const MySwiper = dynamic(
+const ArchiveSwiper = dynamic(
   () => import("../../../components/archives/ArchiveSwiper"),
   { ssr: false }
 );
@@ -45,7 +45,7 @@ export default function AboutPage() {
 
       <main className="flex-1 [scroll-behavior:smooth]">
         <div className="container max-w-5xl py-10 md:py-20">
-          <article className="blog mb-10 md:mb-20">
+          <article className="blog mb-20 md:mb-40">
             <section className="mb-20 md:mb-28">
               <h3 className="text-yellow-300">{archiveData[0].clientName}</h3>
 
@@ -111,26 +111,27 @@ export default function AboutPage() {
               </div>
 
               <div className="mb-12 md:mb-20">
-                <MySwiper />
+                <ArchiveSwiper />
               </div>
 
               <p className="mb-10 md:mb-16">{archiveData[0].description}</p>
             </section>
           </article>
+        </div>
 
-          {/* <div className="w-full md:w-1/4">
-              {archiveData.map((post) => (
-                <ArchiveHeader key={post.id} post={post} />
-              ))}
-            </div> */}
-          <div className="mt-20 md:mt-28 text-center">
-            <Link href="/archives">
-              <Button variant="default">
-                導入実績一覧へ
-                <ArrowRight className="h-4 w-4" />
-              </Button>
-            </Link>
-          </div>
+        {/* <div className="container max-w-6xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-20 md:mb-40">
+          {archiveData.map((post) => (
+            <ArchiveList key={post.id} post={post} />
+          ))}
+        </div> */}
+
+        <div className="mt-20 md:mt-28 text-center">
+          <Link href="/archives">
+            <Button variant="default">
+              導入実績一覧へ
+              <ArrowRight className="h-4 w-4" />
+            </Button>
+          </Link>
         </div>
 
         {/* CTA */}
