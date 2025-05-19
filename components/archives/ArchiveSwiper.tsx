@@ -14,8 +14,8 @@ import type { Swiper as SwiperType } from "swiper";
 import { archiveData } from "../../data/archives";
 
 const mediaList = [
-  ...archiveData[0].mediaData.image.map((src) => ({ type: "image", src })),
   ...archiveData[0].mediaData.video.map((src) => ({ type: "video", src })),
+  ...archiveData[0].mediaData.image.map((src) => ({ type: "image", src })),
 ].flat();
 
 export default function App() {

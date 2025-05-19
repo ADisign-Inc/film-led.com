@@ -448,11 +448,14 @@ export default async function LandingPage() {
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-20 md:mb-28">
-              {blogData.slice(0, 3).map((post) => (
-                <div key={post.id}>
-                  <BlogList post={post} />
-                </div>
-              ))}
+              {blogData
+                .filter((post) => post.isVisible)
+                .slice(0, 3)
+                .map((post) => (
+                  <div key={post.id}>
+                    <BlogList post={post} />
+                  </div>
+                ))}
             </div>
 
             <Link href="/blog">

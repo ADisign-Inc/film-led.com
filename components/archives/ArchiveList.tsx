@@ -17,22 +17,16 @@ export function ArchiveList({ post }: { post: Archive }) {
         </div>
 
         <div className="p-4 md:px-6 md:py-8 flex flex-col flex-grow">
-          <div className="flex items-center gap-3 mb-3 md:mb-4">
-            <div className="text-gray-300 group-hover:text-white/80 transition-all text-sm">
-              <time dateTime={post.date}>{post.date}</time>
-            </div>
-          </div>
-
-          {/* <p className="!text-xs">
+          <p className="!text-xs mb-3 md:mb-5 -mt-5">
             {post.category.map((cat, index) => (
               <span
                 key={index}
-                className="bg-yellow-400/80 text-black font-medium !text-xs px-1.5 pb-0.5 pt-1 rounded mr-1"
+                className="bg-gray-300/25 text-yellow-300 font-bold !text-xs px-1.5 py-1 rounded mr-1.5"
               >
                 {cat}
               </span>
             ))}
-          </p> */}
+          </p>
 
           <h3 className="text-xl group-hover:text-yellow-400 transition-all text-start font-semibold mb-3 md:mb-5">
             {post.clientName}
@@ -41,6 +35,12 @@ export function ArchiveList({ post }: { post: Archive }) {
           <p className="text-sm text-gray-300 group-hover:text-white transition-all !leading-5 mb-3 flex-grow">
             {post.description}
           </p>
+
+          <div className="flex items-end">
+            <div className="text-gray-400 group-hover:text-white/80 transition-all text-xs md:text-sm text-end w-full">
+              <time dateTime={post.date}>{post.date}</time>
+            </div>
+          </div>
         </div>
       </article>
     </Link>
