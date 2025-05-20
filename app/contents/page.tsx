@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -7,6 +9,7 @@ import { Footer } from "../../components/Footer";
 import { BackgroundImages } from "../../components/BackgroundImage";
 import { Button } from "../../components/Button";
 import { Cta } from "../../components/Cta";
+import { VideoList } from "../../components/contents/videoList";
 
 import { mainData } from "../../data/main";
 
@@ -92,37 +95,11 @@ const ContentsPage = () => {
               透明LED専用 映像制作 実績紹介
             </h2>
             <div>
-              <p>
+              <p className="mb-10 md:mb-20">
                 私たちが実際に制作した動画を掲載しています。カテゴリ別×費用対別で検索可能ですので、問い合わせや制作の参考にぜひお使いください。
               </p>
 
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <iframe
-                    width="560"
-                    height="315"
-                    src="https://www.youtube.com/embed/z5DpMLd4U88?si=KWKlerJK-1HGb-Ai&autoplay=1&loop=1&playlist=z5DpMLd4U88"
-                    title="YouTube video player"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-
-                <div>
-                  <iframe
-                    width="560"
-                    height="315"
-                    src="https://www.youtube.com/embed/wo8MzyJ9QMU?si=wFyNnsUsXUNPIMmn&autoplay=1&loop=1&playlist=wo8MzyJ9QMU"
-                    title="YouTube video player"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-              </div>
+              <VideoList />
             </div>
           </section>
 
