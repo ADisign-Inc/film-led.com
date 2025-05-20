@@ -20,7 +20,7 @@ const ContentsPage = () => {
       <main className="flex-1">
         <section className="container max-w-6xl mx-auto py-28 md:py-40">
           <div className="text-center mb-20">
-            <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-20">
+            <h1 className="text-3xl md:text-5xl text-yellow-300 mb-4 md:mb-20">
               映像が空間を変える。
             </h1>
 
@@ -82,7 +82,8 @@ const ContentsPage = () => {
               ))}
             </div>
             <p>
-              モーショングラフィックスとは、動きのない文章や画像、イラストなどの素材に動き（モーション）を与える技術をいいます
+              ※
+              モーショングラフィックスとは、動きのない文章や画像、イラストなどの素材に動き（モーション）を与える技術をいいます。
             </p>
           </section>
 
@@ -90,14 +91,46 @@ const ContentsPage = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">
               透明LED専用 映像制作 実績紹介
             </h2>
-            <div className="max-w-3xl mx-auto text-center"></div>
+            <div>
+              <p>
+                私たちが実際に制作した動画を掲載しています。カテゴリ別×費用対別で検索可能ですので、問い合わせや制作の参考にぜひお使いください。
+              </p>
+
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/z5DpMLd4U88?si=KWKlerJK-1HGb-Ai&autoplay=1&loop=1&playlist=z5DpMLd4U88"
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+
+                <div>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/wo8MzyJ9QMU?si=wFyNnsUsXUNPIMmn&autoplay=1&loop=1&playlist=wo8MzyJ9QMU"
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
           </section>
 
           <section className="py-16 px-6">
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">
               こんなお悩みありませんか？
             </h2>
-            <div className="max-w-3xl mx-auto text-center">
+            <div>
               <p>
                 「映像は自分たちで作っていたけど、いまいち効果が出ない」
                 「見栄えがする映像が作れない」
@@ -113,7 +146,7 @@ const ContentsPage = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">
               LED映像に特化した、ワンストップ制作体制
             </h2>
-            <div className="max-w-3xl mx-auto text-center">
+            <div>
               <p>
                 LED専門スタッフによる演出設計 撮影・編集・アニメーション対応
                 LEDディスプレイへの最適化納品 映像＋ハード＋設置まで一貫対応可
@@ -125,7 +158,7 @@ const ContentsPage = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">
               料金プラン＆納品までの流れ
             </h2>
-            <div className="max-w-3xl mx-auto text-center">
+            <div>
               <p>
                 ▷ 表示例（目安価格でもOK）
                 ベーシックプラン：15秒静止映像／￥50,000〜

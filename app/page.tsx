@@ -419,7 +419,7 @@ export default async function LandingPage() {
                 {faqData.slice(0, 3).map((item) => (
                   <AccordionItem key={item.id} value={item.id}>
                     <AccordionTrigger>{item.question}</AccordionTrigger>
-                    <AccordionContent className="text-yellow-300 text-base md:text-lg">
+                    <AccordionContent className="text-base md:text-lg">
                       {item.answer.split("\n").map((line, index) => (
                         <span key={index}>
                           {line}

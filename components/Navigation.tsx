@@ -8,7 +8,7 @@ const menuItems = [
   { href: "/cases", label: "活用事例" },
   { href: "/archives", label: "導入実績" },
   { href: "/products", label: "製品情報" },
-  { href: "/products", label: "コンテンツ制作" },
+  { href: "/contents", label: "コンテンツ制作" },
   { href: "/flow", label: "導入の流れ" },
   // { href: "/faq", label: "FAQ" },
   { href: "/blog", label: "ブログ" },

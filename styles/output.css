@@ -1763,8 +1763,8 @@ body {
   font-size: 0.9em;
 }
 
-.text-\[1\.5em\] {
-  font-size: 1.5em;
+.text-\[1\.2em\] {
+  font-size: 1.2em;
 }
 
 .text-\[10px\] {
@@ -1794,14 +1794,6 @@ body {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-\[1\.3em\] {
-  font-size: 1.3em;
-}
-
-.text-\[1\.2em\] {
-  font-size: 1.2em;
 }
 
 .font-bold {
@@ -1846,14 +1838,6 @@ body {
 
 .leading-none {
   line-height: 1;
-}
-
-.leading-normal {
-  line-height: 1.5;
-}
-
-.\!leading-snug {
-  line-height: 1.375 !important;
 }
 
 .\!tracking-widest {
@@ -3163,6 +3147,10 @@ p {
     line-height: 1;
   }
 
+  .md\:text-\[1\.5em\] {
+    font-size: 1.5em;
+  }
+
   .md\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
@@ -3181,10 +3169,6 @@ p {
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .md\:text-\[1\.5em\] {
-    font-size: 1.5em;
   }
 
   .md\:\!leading-loose {

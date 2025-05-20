@@ -18,7 +18,7 @@ export function BlogList({ post }: { post: Blog }) {
 
         <div className="p-4 md:px-6 md:py-8 flex flex-col flex-grow">
           <div className="flex items-center gap-3 mb-3 md:mb-4">
-            <div className="text-gray-300 group-hover:text-white/80 transition-all text-sm">
+            <div className="text-gray-400 group-hover:text-white/80 transition-all text-sm">
               <time dateTime={post.date}>{post.date}</time>
             </div>
 
@@ -38,8 +38,10 @@ export function BlogList({ post }: { post: Blog }) {
             {post.title}
           </h3>
 
-          <p className="text-sm text-gray-300 group-hover:text-white transition-all !leading-5 mb-3 flex-grow">
-            {post.description}
+          <p className="text-sm text-gray-400 group-hover:text-white transition-all !leading-5 mb-3 flex-grow">
+            {post.description.length > 62
+              ? `${post.description.slice(0, 62)}...`
+              : post.description}
           </p>
         </div>
       </article>

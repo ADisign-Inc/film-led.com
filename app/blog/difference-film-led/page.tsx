@@ -16,8 +16,7 @@ import { blogData } from "../../../data/blog";
 
 export const metadata: Metadata = {
   title: `${blogData[1].title} | ブログ`,
-  description:
-    "FILM LEDの製品情報ページです。LEDビジュアルウォールの特徴や仕様をご紹介します。",
+  description: blogData[1].description,
 };
 
 type ComparisonData = {

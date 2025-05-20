@@ -1,8 +1,8 @@
-"use client";
-
 import { X, Check } from "lucide-react";
 import { ArrowRight } from "lucide-react";
+
 import React, { useEffect, useRef } from "react";
+import { Metadata } from "next";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -18,49 +18,12 @@ import { mainData } from "../../../data/main";
 import { blogData } from "../../../data/blog";
 import { caseData } from "../../../data/cases";
 
+export const metadata: Metadata = {
+  title: `${blogData[0].title} | ブログ`,
+  description: blogData[0].description,
+};
+
 export default function AboutPage() {
-  const headerRef = useRef<HTMLElement | null>(null);
-
-  useEffect(() => {
-    const handleAnchorClick = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      const anchor = target.closest("a");
-
-      if (anchor && anchor.hash) {
-        e.preventDefault();
-        const targetId = anchor.hash.substring(1);
-        const targetElement = document.getElementById(targetId);
-
-        if (targetElement) {
-          const headerHeight = headerRef.current?.offsetHeight || 0;
-          const elementPosition = targetElement.getBoundingClientRect().top;
-          const offsetPosition =
-            elementPosition + window.scrollY - headerHeight - 100;
-
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: "smooth",
-          });
-
-          // URLのハッシュを更新
-          history.pushState(null, "", anchor.hash);
-        }
-      }
-    };
-
-    // ヘッダーの高さを取得
-    const header = document.querySelector("header");
-    headerRef.current = header;
-
-    // イベントリスナーを追加
-    document.addEventListener("click", handleAnchorClick);
-
-    // クリーンアップ関数
-    return () => {
-      document.removeEventListener("click", handleAnchorClick);
-    };
-  }, []); // 依存配列を空にして、マウント時にのみ実行
-
   return (
     <div className="flex min-h-screen flex-col relative">
       <BackgroundImages />

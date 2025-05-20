@@ -61,12 +61,14 @@ export function ImageSlider({
       <button
         onClick={prevSlide}
         className="absolute left-0 top-1/2 -translate-y-1/2 bg-black/50 px-1 py-2 text-white hover:bg-black/70 z-10"
+        aria-label="前のスライドを表示"
       >
         <ChevronLeft className="h-5 w-5" />
       </button>
       <button
         onClick={nextSlide}
         className="absolute right-0 top-1/2 -translate-y-1/2 bg-black/50 px-1 py-2 text-white hover:bg-black/70 z-10"
+        aria-label="次のスライドを表示"
       >
         <ChevronRight className="h-5 w-5" />
       </button>
@@ -78,6 +80,7 @@ export function ImageSlider({
             className={`h-2 w-2 rounded-full transition-colors duration-300 ${
               idx === currentIndex ? "bg-white" : "bg-white/50"
             }`}
+            aria-label={`スライド${idx + 1}を表示`}
           />
         ))}
       </div>
