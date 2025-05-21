@@ -7,7 +7,7 @@ const FooterItems = [
   { href: "/cases", label: "活用事例" },
   { href: "/archives", label: "導入実績" },
   { href: "/products", label: "製品情報" },
-  { href: "/products", label: "コンテンツ制作" },
+  { href: "/contents", label: "コンテンツ制作" },
   { href: "/flow", label: "導入の流れ" },
   { href: "/blog", label: "ブログ" },
 ];
@@ -30,15 +30,12 @@ export function Footer() {
       <div className="container">
         <div className="grid md:gap-8 md:grid-cols-4">
           <div className="mb-8 md:mb-0">
-            <div className="mb-5">
+            <div className="w-40 mb-5">
               <Link href="/">
-                <Image
+                <img
                   src="/images/logo-dark.svg"
                   alt="Logo"
-                  width={160}
-                  height={100}
-                  className="w-32 md:w-40 !h-auto"
-                  priority
+                  className="w-full h-auto"
                 />
               </Link>
             </div>
@@ -61,7 +58,7 @@ export function Footer() {
             {/* <p className="text-lg font-semibold mb-4 text-white">サービス</p> */}
             <ul className="space-y-2 text-sm">
               {FooterItems.map((item) => (
-                <li>
+                <li key={item.href}>
                   <Link href={item.href} className="hover:text-white">
                     {item.label}
                   </Link>
@@ -74,7 +71,7 @@ export function Footer() {
             {/* <p className="text-lg font-semibold mb-4 text-white">会社情報</p> */}
             <ul className="space-y-2 text-sm">
               {FooterItems02.map((item) => (
-                <li>
+                <li key={`${item.href}-${item.label}`}>
                   <Link href={item.href} className="hover:text-white">
                     {item.label}
                   </Link>
@@ -92,6 +89,7 @@ export function Footer() {
           <div className="flex gap-4 mt-3 sm:mt-0">
             {FooterItems03.map((item) => (
               <Link
+                key={item.label}
                 href={item.href}
                 className="text-[10px] sm:text-xs hover:text-white"
               >

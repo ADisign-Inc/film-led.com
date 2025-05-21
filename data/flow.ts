@@ -56,3 +56,38 @@ export const flowData: Flow[] = [
       "設置後、操作方法について、専門スタッフから詳しい説明を行います。\n映像コンテンツの更新方法やシステム管理、日常的なメンテナンスについても丁寧にレクチャーいたします。\n導入後の運用サポート体制も万全で、万が一のトラブルにも迅速に対応し、長期的に安心して運用できるようサポートします。",
   },
 ];
+
+export interface FlowStep {
+  id: number;
+  step: string;
+  title: string;
+  description: string;
+  icon: string;
+}
+
+export const flowStep = [
+  {
+    id: 1,
+    step: "Step 1",
+    title: "お問い合わせ",
+    description:
+      "24時間無料でお受付しています。ご要望をヒアリングし、お客様に最適な製品をご提案いたします。",
+    icon: "/images/icons/step01.svg",
+  },
+  {
+    id: 2,
+    step: "Step 2",
+    title: "ご発注",
+    description:
+      "お見積もりやご提案内容にご納得いただけましたら、ご発注手続きを進めさせていただきます。",
+    icon: "/images/icons/step02.svg",
+  },
+  {
+    id: 3,
+    step: "Step 3",
+    title: "導入・施工",
+    description:
+      "弊社の専門スタッフが現地で施工を行います。安全・確実な導入を第一に、丁寧にご対応いたします。",
+    icon: "/images/icons/step03.svg",
+  },
+] as const;

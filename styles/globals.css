@@ -151,3 +151,22 @@ p {
   height: 100%;
   object-fit: cover;
 }
+
+/* .ytp-youtube-button,
+.ytp-gradient-top,
+.ytp-chrome-top,
+.ytp-title-channel-logo,
+.ytp-title,
+.ytp-title-text,
+.ytp-title-channel,
+.ytp-chrome-top-buttons,
+.ytp-playlist-menu-button,
+.ytp-button,
+.ytp-button,
+.ytp-overflow-button,
+.ytp-overflow-button-visible,
+.ytp-watermark,
+.yt-uix-sessionlink,
+.ytp-watermark-small {
+  @apply !hidden;
+} */

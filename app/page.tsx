@@ -10,7 +10,6 @@ import { ProductsFeatures } from "../components/products/ProductsFeatures";
 import { BlogList } from "../components/blog/BlogList";
 import { Button } from "../components/Button";
 import { Cta } from "../components/Cta";
-import { ImageSlider } from "../components/ImageSlider";
 import { HeroSection } from "../components/HeroSection";
 import {
   Accordion,
@@ -22,6 +21,7 @@ import {
 import { mainData } from "../data/main";
 import { benefitData } from "../data/benefits";
 import { caseData } from "../data/cases";
+import { flowStep } from "../data/flow";
 import { blogData } from "../data/blog";
 import { faqData } from "../data/faq";
 
@@ -44,33 +44,43 @@ export default async function LandingPage() {
               What's this ?<span>{mainData.keyWords}とは？</span>
             </h2>
 
-            <div className="flex flex-col md:flex-row gap-10 mb-16 md:mb-24">
-              <div className="w-full md:w-1/2">
-                <ImageSlider
-                  images={[
-                    "/images/about/01.jpg",
-                    "/images/about/02.jpg",
-                    "/images/about/07.jpg",
-                    "/images/about/08.jpg",
-                  ]}
-                />
+            <div className="flex flex-col lg:flex-row gap-8 lg:gap-5 mb-16 md:mb-24">
+              <div className="w-full lg:w-1/2">
+                <div className="relative w-full pb-[56.25%] lg:pb-[75%] overflow-hidden">
+                  <div className="absolute inset-0">
+                    <video
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      preload="auto"
+                      className="w-full h-full object-cover"
+                    >
+                      <source src="/videos/film01.mp4" type="video/mp4" />
+                    </video>
+                  </div>
+                </div>
               </div>
-              <div className="w-full md:w-1/2">
+              <div className="w-full lg:w-1/2">
                 <p className="text-2xl md:text-3xl font-mincho font-bold text-yellow-300 !leading-normal mb-5 md:mb-10">
                   革新的なディスプレイ技術
                 </p>
                 <div className="[&_p]:text-base md:[&_p]:text-lg">
-                  <p className="mb-5 md:mb-10">
+                  <p className="mb-5 md:mb-6">
                     {mainData.keyWords}
-                    は、ガラスやアクリルなどの透明素材に貼り付けて使用する最先端のディスプレイ技術です。
+                    は、<strong>ガラスやアクリルなどの透明素材</strong>に
+                    <strong>貼り付けて使用</strong>
+                    する最先端のディスプレイ技術です。
                   </p>
-                  <p className="mb-5 md:mb-10">
+                  <p className="mb-5 md:mb-6">
                     これにより、空間デザインを損なうことなく、鮮やかな映像を表示でき、視界を遮ることなく、広告やインフォメーションを発信できます。
                   </p>
+                  <p className="mb-5 md:mb-6">
+                    この技術は、空間を開放的に保ちながらも、
+                    <strong>強力な訴求力</strong>を持つ映像を提供します。
+                  </p>
                   <p>
-                    この技術は、空間を開放的に保ちながらも、強力な訴求力を持つ映像を提供します。
-                    <br />
-                    昼と夜で異なる印象を与えることができるのも魅力です。
+                    また、昼と夜で異なる印象を与えることができるのも魅力のひとつです。
                   </p>
                 </div>
               </div>
@@ -309,75 +319,29 @@ export default async function LandingPage() {
             </h2>
 
             <div className="grid gap-10 md:gap-8 grid-cols-1 md:grid-cols-3 md:pt-10 mb-10 md:mb-14">
-              <div className="relative">
-                <p className="absolute -top-[1.4rem] md:-top-7 left-0 text-yellow-300 text-3xl md:text-4xl font-bold">
-                  Step 1
-                </p>
-                <div className="absolute top-5 right-5 md:right-8">
-                  <Image
-                    src="/images/icons/step01.svg"
-                    alt=""
-                    width={90}
-                    height={90}
-                    className="object-contain w-20 md:w-24 h-20 md:h-24"
-                    priority
-                  />
-                </div>
-                <div className="border-[0.5px] border-yellow-300 p-6 md:px-8 py-12">
-                  <h3 className="text-start text-yellow-300 mb-8">
-                    お問い合わせ
-                  </h3>
-                  <p>
-                    24時間無料でお受付しています。ご要望をヒアリングし、お客様に最適な製品をご提案いたします。
+              {flowStep.map((step) => (
+                <div key={step.id} className="relative">
+                  <p className="absolute -top-[1.4rem] md:-top-7 left-0 text-yellow-300 text-3xl md:text-4xl font-bold">
+                    {step.step}
                   </p>
+                  <div className="absolute top-5 right-5 md:right-8">
+                    <Image
+                      src={step.icon}
+                      alt=""
+                      width={90}
+                      height={90}
+                      className="object-contain w-20 md:w-24 h-20 md:h-24"
+                      priority
+                    />
+                  </div>
+                  <div className="border-[0.5px] border-yellow-300 p-6 md:px-8 py-12">
+                    <h3 className="text-start text-yellow-300 mb-8">
+                      {step.title}
+                    </h3>
+                    <p>{step.description}</p>
+                  </div>
                 </div>
-              </div>
-
-              <div className="relative">
-                <p className="absolute -top-[1.4rem] md:-top-7 left-0 text-yellow-300 text-3xl md:text-4xl font-bold">
-                  Step 2
-                </p>
-                <div className="absolute top-5 right-5 md:right-8">
-                  <Image
-                    src="/images/icons/step02.svg"
-                    alt=""
-                    width={90}
-                    height={90}
-                    className="object-contain w-20 md:w-24 h-20 md:h-24"
-                    priority
-                  />
-                </div>
-                <div className="border-[0.5px] border-yellow-300 p-6 md:px-8 py-12">
-                  <h3 className="text-start text-yellow-300 mb-8">ご発注</h3>
-                  <p>
-                    お見積もりやご提案内容にご納得いただけましたら、ご発注手続きを進めさせていただきます。
-                  </p>
-                </div>
-              </div>
-
-              <div className="relative">
-                <p className="absolute -top-[1.4rem] md:-top-7 left-0 text-yellow-300 text-3xl md:text-4xl font-bold">
-                  Step 3
-                </p>
-                <div className="absolute top-5 right-5 md:right-8">
-                  <Image
-                    src="/images/icons/step03.svg"
-                    alt=""
-                    width={90}
-                    height={90}
-                    className="object-contain w-20 md:w-24 h-20 md:h-24"
-                    priority
-                  />
-                </div>
-                <div className="border-[0.5px] border-yellow-300 p-6 md:px-8 py-12">
-                  <h3 className="text-start text-yellow-300 mb-8">
-                    導入・施工
-                  </h3>
-                  <p>
-                    弊社の専門スタッフが現地で施工を行います。安全・確実な導入を第一に、丁寧にご対応いたします。
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
 
             <div className="relative w-full max-w-5xl h-12 md:h-14 mx-auto text-white text-center flex items-center justify-center font-bold mb-6 md:mb-10">
@@ -394,7 +358,7 @@ export default async function LandingPage() {
               </span>
             </div>
 
-            <p className="text-xs md:text-sm text-center mb-16 md:mb-32">
+            <p className="text-[0.9em] text-center mb-16 md:mb-32">
               ※
               導入完了後も安心してお使いいただけるよう、製品には2年間の保証をお付けしています。
             </p>
@@ -466,7 +430,6 @@ export default async function LandingPage() {
             </Link>
           </section>
 
-          {/* CTA */}
           <Cta />
         </main>
 

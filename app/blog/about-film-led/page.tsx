@@ -54,7 +54,7 @@ export default function AboutPage() {
               {blogData[0].category.map((cat: string, index: number) => (
                 <span
                   key={index}
-                  className="bg-gray-300/25 text-yellow-300 font-bold !text-xs px-1.5 py-1 rounded mr-1.5"
+                  className="bg-gray-300/20 text-yellow-300 font-bold !text-xs px-1.5 py-1 rounded mr-1.5"
                 >
                   {cat}
                 </span>

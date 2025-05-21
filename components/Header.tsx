@@ -26,20 +26,19 @@ export function Header() {
           }`}
         />
       </div>
+
       <div className="xl:container px-3 md:px-5">
         <div className="flex items-center justify-between h-14 md:h-20">
-          <div className="flex items-center">
+          <div className="flex items-center w-40">
             <Link href="/">
-              <Image
+              <img
                 src="/images/logo-dark.svg"
                 alt="Logo"
-                width={200}
-                height={100}
-                className="w-32 md:w-40 !h-auto"
-                priority
+                className="w-full h-auto"
               />
             </Link>
           </div>
+
           <Navigation />
         </div>
       </div>
