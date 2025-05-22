@@ -1203,6 +1203,14 @@ body {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -1665,6 +1673,11 @@ body {
   padding-bottom: 2rem;
 }
 
+.py-48 {
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+}
+
 .pb-0\.5 {
   padding-bottom: 0.125rem;
 }
@@ -1808,6 +1821,14 @@ body {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-\[1\.5em\] {
+  font-size: 1.5em;
+}
+
+.text-\[1\.6em\] {
+  font-size: 1.6em;
 }
 
 .font-bold {
@@ -3340,6 +3361,83 @@ p {
   .\32xl\:pb-\[45\.25\%\] {
     padding-bottom: 45.25%;
   }
+}
+
+.\[\&\>p\]\:h-20>p {
+  height: 5rem;
+}
+
+.\[\&\>p\]\:h-60>p {
+  height: 15rem;
+}
+
+.\[\&\>p\]\:h-64>p {
+  height: 16rem;
+}
+
+.\[\&\>p\]\:rounded-full>p {
+  border-radius: 9999px;
+}
+
+.\[\&\>p\]\:rounded-lg>p {
+  border-radius: 0.5rem;
+}
+
+.\[\&\>p\]\:border-2>p {
+  border-width: 2px;
+}
+
+.\[\&\>p\]\:border>p {
+  border-width: 1px;
+}
+
+.\[\&\>p\]\:border-l-2>p {
+  border-left-width: 2px;
+}
+
+.\[\&\>p\]\:border-yellow-300>p {
+  --tw-border-opacity: 1;
+  border-color: rgb(253 224 71 / var(--tw-border-opacity, 1));
+}
+
+.\[\&\>p\]\:bg-white\/10>p {
+  background-color: rgb(255 255 255 / 0.1);
+}
+
+.\[\&\>p\]\:bg-white\/5>p {
+  background-color: rgb(255 255 255 / 0.05);
+}
+
+.\[\&\>p\]\:p-4>p {
+  padding: 1rem;
+}
+
+.\[\&\>p\]\:p-8>p {
+  padding: 2rem;
+}
+
+.\[\&\>p\]\:pl-4>p {
+  padding-left: 1rem;
+}
+
+.\[\&\>p\]\:text-center>p {
+  text-align: center;
+}
+
+.\[\&\>p\]\:text-\[1\.4em\]>p {
+  font-size: 1.4em;
+}
+
+.\[\&\>p\]\:text-\[1\.3em\]>p {
+  font-size: 1.3em;
+}
+
+.\[\&\>p\]\:text-\[1\.2em\]>p {
+  font-size: 1.2em;
+}
+
+.\[\&\>p\]\:font-bold>p {
+  font-weight: 700;
 }
 
 .\[\&\[data-state\=open\]\>svg\]\:rotate-180[data-state=open]>svg {

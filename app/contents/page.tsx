@@ -21,9 +21,9 @@ const ContentsPage = () => {
       <Header />
 
       <main className="flex-1">
-        <section className="pt-10 md:pt-20 mb-20 md:mb-28">
+        <section className=" mb-20 md:mb-20">
           <div className="relative text-center">
-            <div className="py-40">
+            <div className="py-48">
               <h1 className="text-3xl md:text-5xl text-yellow-300 mb-10 md:mb-20">
                 映像が空間を変える。
               </h1>
@@ -143,21 +143,17 @@ const ContentsPage = () => {
               こんなお悩みはありませんか？
             </h2>
 
-            <div>
-              <p>
-                「映像は自分たちで作っていたけど、いまいち効果が出ない」
-                <br />
-                「見栄えがする映像が作れない」
-                <br />
-                「LEDに最適化された仕様が分からない」
-                <br />
-                「広告代理店に任せているがコストが高すぎる」
-                <br />
-                「制作会社とLED業者のやり取りが面倒」 <br />→<br />
-                すべて、弊社がまるごと解決します。
-                <br />
-              </p>
+            <div className="grid grid-cols-3 gap-4 mb-10 md:mb-20 [&>p]:text-[1.2em] [&>p]:font-bold [&>p]:border [&>p]:border-yellow-300 [&>p]:bg-white/5 [&>p]:p-8 [&>p]:rounded-lg [&>p]:text-center">
+              <p>「映像は自分たちで作っていたけど、いまいち効果が出ない」</p>
+              <p>「見栄えがする映像が作れない」</p>
+              <p>「LEDに最適化された仕様が分からない」</p>
+              <p>「広告代理店に任せているがコストが高すぎる」</p>
+              <p>「制作会社とLED業者のやり取りが面倒」</p>
+              <p>「制作会社とLED業者のやり取りが面倒」 </p>
             </div>
+            <p className="text-[1.6em] text-center font-mincho text-yellow-300">
+              すべて、弊社がまるごと解決します。
+            </p>
           </section>
 
           <section className="mb-20 md:mb-40">

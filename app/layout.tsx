@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     default: `${mainData.keyWords}ビジョンの専門会社 | ${mainData.siteName}`,
     template: `%s | ${mainData.siteName}`,
   },
-  description: `ADisignageは、${mainData.keyWords}の専門会社です。高輝度で高品質な${mainData.keyWords}ディスプレイを提供しています。`,
+  description: `${mainData.siteName}は、${mainData.keyWords}の専門会社です。高輝度で高品質な${mainData.keyWords}ビジョンを業界最安値でご提供しています。`,
   icons: {
     icon: [
       { url: "/favicon.ico" },
