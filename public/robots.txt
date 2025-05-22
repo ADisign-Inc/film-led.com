@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://film-led.com
+
+# Sitemaps
+Sitemap: https://film-led.com/sitemap.xml
