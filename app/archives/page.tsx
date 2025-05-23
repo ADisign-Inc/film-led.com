@@ -34,7 +34,7 @@ export default function ArchivesPage() {
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-20 md:mb-40">
-            {archiveData.map((post) => (
+            {archiveData.filter(post => post.isVisible !== false).map((post) => (
               <ArchiveList key={post.id} post={post} />
             ))}
           </div>

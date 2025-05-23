@@ -13,6 +13,7 @@ export type Archive = {
   productName: string;
   category: string[];
   slug: string;
+  isVisible: boolean;
 };
 
 export const archiveData: Archive[] = [
@@ -43,6 +44,7 @@ export const archiveData: Archive[] = [
       "百貨店",
     ],
     slug: "00001",
+    isVisible: true,
   },
   {
     id: "00002",
@@ -71,6 +73,7 @@ export const archiveData: Archive[] = [
       "百貨店",
     ],
     slug: "00002",
+    isVisible: false,
   },
   {
     id: "00003",
@@ -99,5 +102,6 @@ export const archiveData: Archive[] = [
       "百貨店",
     ],
     slug: "00003",
+    isVisible: false,
   },
 ];
