@@ -23,15 +23,17 @@ const ContentsPage = () => {
       <main className="flex-1">
         <section className=" mb-20 md:mb-20">
           <div className="relative text-center">
-            <div className="py-48">
+            <div className="py-28 md:py-48 px-5">
               <h1 className="text-3xl md:text-5xl text-yellow-300 mb-10 md:mb-20">
                 映像が空間を変える。
               </h1>
 
-              <p className="text-lg md:text-2xl font-mincho !leading-loose mb-8 md:mb-20">
-                透明LEDに最適化されたコンテンツ動画を、企画から制作まで一括対応。
+              <p className="text-lg md:text-2xl font-mincho !leading-loose mb-10 md:mb-20 [&>span]:text-yellow-300">
+                透明LEDに最適化されたコンテンツ動画を、企画から制作まで
+                <span>一括対応</span>。
                 <br />
-                LEDとコンテンツ映像、セットで集客効果を最大化します。
+                LEDとコンテンツ映像、セットで<span>集客効果</span>
+                を最大化します。
               </p>
 
               <Link href={mainData.contact.url}>
@@ -105,7 +107,7 @@ const ContentsPage = () => {
           <section className="mb-20 md:mb-40">
             <h2 className="text-2xl md:text-3xl">制作可能な動画の種類</h2>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto text-center mb-20">
+            <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-10 max-w-5xl mx-auto text-center mb-20">
               {[
                 "商品・製品紹介動画",
                 "イベント・キャンペーン映像",
@@ -115,7 +117,9 @@ const ContentsPage = () => {
                 "ショールーム/展示会映像",
               ].map((item) => (
                 <div key={item} className="">
-                  <p className="text-[1.4em] font-bold">{item}</p>
+                  <p className="text-[1.2em] md:text-[1.4em] font-bold font-mincho text-yellow-300">
+                    {item}
+                  </p>
                 </div>
               ))}
             </div>
@@ -145,26 +149,102 @@ const ContentsPage = () => {
 
             <div className="grid grid-cols-3 gap-4 mb-10 md:mb-20 [&>p]:text-[1.2em] [&>p]:font-bold [&>p]:border [&>p]:border-yellow-300 [&>p]:bg-white/5 [&>p]:p-8 [&>p]:rounded-lg [&>p]:text-center">
               <p>「映像は自分たちで作っていたけど、いまいち効果が出ない」</p>
-              <p>「見栄えがする映像が作れない」</p>
-              <p>「LEDに最適化された仕様が分からない」</p>
+              <p>「自分たちだけでは見栄えがする映像が作れない」</p>
+              <p>「LEDに最適化された映像仕様が分からない」</p>
               <p>「広告代理店に任せているがコストが高すぎる」</p>
-              <p>「制作会社とLED業者のやり取りが面倒」</p>
-              <p>「制作会社とLED業者のやり取りが面倒」 </p>
+              <p>「制作会社とLED業者の双方とのやり取りに手間がかかる」</p>
+              <p>「外注先の映像制作会社を探すのが大変」 </p>
             </div>
-            <p className="text-[1.6em] text-center font-mincho text-yellow-300">
+            <p className="text-[1.6em] text-center font-bold font-mincho text-yellow-300">
               すべて、弊社がまるごと解決します。
             </p>
           </section>
 
           <section className="mb-20 md:mb-40">
             <h2 className="text-2xl md:text-3xl">
-              LED映像に特化した、ワンストップ制作体制
+              LEDディスプレイに特化した、ワンストップ制作体制
             </h2>
-            <div>
-              <p>
-                LED専門スタッフによる演出設計 撮影・編集・アニメーション対応
-                LEDディスプレイへの最適化納品 映像＋ハード＋設置まで一貫対応可
-              </p>
+
+            <p className="text-center mb-5 md:mb-12">
+              弊社にお任せいただければ、専門スタッフによる
+              映像＋ハード＋設置まで一貫対応可能です。
+            </p>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 text-center">
+              <div className="bg-white/5 px-3 md:px-5 py-5 md:py-">
+                <p className="text-lg md:text-xl font-bold text-yellow-300 font-mincho mb-3">
+                  演出設計
+                </p>
+                <div className="flex justify-center">
+                  <img
+                    src="/images/icons/direction.svg"
+                    alt=""
+                    width={90}
+                    height={90}
+                    className="object-contain w-20 md:w-24 h-20 md:h-24"
+                  />
+                </div>
+              </div>
+
+              <div className="bg-white/5 px-3 md:px-5 py-5 md:py-8">
+                <p className="text-lg md:text-xl font-bold text-yellow-300 font-mincho mb-3">
+                  撮影・編集
+                </p>
+                <div className="flex justify-center">
+                  <img
+                    src="/images/icons/photo.svg"
+                    alt=""
+                    width={90}
+                    height={90}
+                    className="object-contain w-20 md:w-24 h-20 md:h-24"
+                  />
+                </div>
+              </div>
+
+              <div className="bg-white/5 px-3 md:px-5 py-5 md:py-8">
+                <p className="text-lg md:text-xl font-bold text-yellow-300 font-mincho mb-3">
+                  アニメーション
+                </p>
+                <div className="flex justify-center">
+                  <img
+                    src="/images/icons/animation.svg"
+                    alt=""
+                    width={90}
+                    height={90}
+                    className="object-contain w-20 md:w-24 h-20 md:h-24"
+                  />
+                </div>
+              </div>
+
+              <div className="bg-white/5 px-3 md:px-5 py-5 md:py-8">
+                <p className="text-lg md:text-xl font-bold text-yellow-300 font-mincho mb-3">
+                  LEDへの最適化
+                </p>
+                <div className="flex justify-center">
+                  <img
+                    src="/images/icons/optimization.svg"
+                    alt=""
+                    width={90}
+                    height={90}
+                    className="object-contain w-20 md:w-24 h-20 md:h-24"
+                  />
+                </div>
+              </div>
+
+              <div className="bg-white/5 px-3 md:px-5 py-5 md:py-8">
+                <p className="text-lg md:text-xl font-bold text-yellow-300 font-mincho mb-3">
+                  設置・施工
+                </p>
+                <div className="flex justify-center">
+                  <img
+                    src="/images/icons/step03.svg"
+                    alt=""
+                    width={90}
+                    height={90}
+                    className="object-contain w-20 md:w-24 h-20 md:h-24"
+                  />
+                </div>
+              </div>
             </div>
           </section>
 
@@ -182,23 +262,66 @@ const ContentsPage = () => {
             </div>
           </section> */}
 
-          <section className="mb-20 md:mb-40">
-            <h2 className="text-2xl md:text-3xl">制作の流れ</h2>
-            <div className="max-w-4xl mx-auto space-y-6">
+          <section className="mb-10 md:mb-20">
+            <h2 className="text-2xl md:text-3xl">制作〜納品までの流れ</h2>
+
+            <ol className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-10">
               {[
-                "1. ヒアリング・お打ち合わせ",
-                "2. ご提案",
-                "3. 正式発注）",
-                "4. 制作開始",
-                "5. 映像チェック",
-                "6. 納品",
-                "7. LEDで配信",
+                {
+                  title: "お問い合わせ",
+                  description:
+                    "まずはお気軽にご相談ください。内容やご要望をお伺いします。",
+                },
+                {
+                  title: "ヒアリング・お打ち合わせ",
+                  description:
+                    "目的やターゲット、予算感などを詳細にお聞きします。",
+                },
+                {
+                  title: "ご提案",
+                  description:
+                    "ヒアリングをもとに、最適なプランをご提案いたします。",
+                },
+                {
+                  title: "正式発注",
+                  description:
+                    "内容にご納得いただけましたら、ご契約・発注となります。",
+                },
+                {
+                  title: "制作開始",
+                  description:
+                    "スケジュールに沿って映像やデザインの制作を開始します。",
+                },
+                {
+                  title: "映像チェック",
+                  description:
+                    "仮仕上げの映像をご確認いただき、修正があれば対応します。",
+                },
+                {
+                  title: "納品",
+                  description: "最終確認後、完成データを納品いたします。",
+                },
+                {
+                  title: "LEDで配信",
+                  description:
+                    "納品したコンテンツをLEDビジョンで配信・運用します。",
+                },
               ].map((step, i) => (
-                <div key={i} className="border-l-4 border-yellow-300 pl-4">
-                  <p className="font-semibold">{step}</p>
-                </div>
+                <li key={i} className="relative flex-1">
+                  <div className="flex flex-col items-center md:items-start text-center md:text-left">
+                    <div className="text-sm md:text-base flex items-center justify-center mb-2">
+                      {i + 1}
+                    </div>
+
+                    <h5 className="text-lg md:text-2xl text-yellow-300 font-mincho font-semibold mb-3">
+                      {step.title}
+                    </h5>
+
+                    <p>{step.description}</p>
+                  </div>
+                </li>
               ))}
-            </div>
+            </ol>
           </section>
         </div>
         <Cta />

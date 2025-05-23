@@ -10,13 +10,15 @@ type FlowProps = {
 export function Flow({ flow }: FlowProps) {
   return (
     <div className="relative z-10 flex gap-3 md:gap-8 mb-12 md:mb-20">
-      <div className="flex-shrink-0 flex items-center justify-center w-8 md:w-10 h-8 md:h-10 rounded-full bg-yellow-300">
+      <div className="flex-shrink-0 flex items-center justify-center w-8 md:w-10 h-8 md:h-10 rounded-full bg-white">
         <span className="text-lg md:text-xl font-bold text-black font-mincho">
           {flow.number}
         </span>
       </div>
       <div className="pt-1 md:pt-3">
-        <h4 className="text-xl md:text-2xl mb-5">{flow.title}</h4>
+        <h4 className="text-xl md:text-2xl text-yellow-300 mb-5">
+          {flow.title}
+        </h4>
         <p className="mb-8">
           {flow.description.split("\n").map((text, index) => (
             <span key={index}>

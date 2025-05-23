@@ -325,13 +325,12 @@ export default async function LandingPage() {
                     {step.step}
                   </p>
                   <div className="absolute top-5 right-5 md:right-8">
-                    <Image
+                    <img
                       src={step.icon}
                       alt=""
                       width={90}
                       height={90}
                       className="object-contain w-20 md:w-24 h-20 md:h-24"
-                      priority
                     />
                   </div>
                   <div className="border-[0.5px] border-yellow-300 p-6 md:px-8 py-12">

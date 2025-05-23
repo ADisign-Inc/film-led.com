@@ -22,6 +22,7 @@ export default function FlowPage() {
       <BackgroundImages />
 
       <Header />
+
       <main className="flex-1">
         <section className="container max-w-6xl py-28 md:py-40">
           <h2>
@@ -39,13 +40,12 @@ export default function FlowPage() {
           </div>
         </section>
 
-        <div className="mt-20 md:mt-40 text-center">
+        <div className="mt-5 md:mt-10 text-center">
           <Link href="/">
             <Button variant="default">TOPへ戻る</Button>
           </Link>
         </div>
 
-        {/* CTA */}
         <Cta />
       </main>
 

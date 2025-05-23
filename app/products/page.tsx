@@ -362,19 +362,21 @@ export default async function ProductsPage() {
             </div> */}
 
             <div className="max-w-3xl mx-auto">
-              <ul>
+              <ul className="grid grid-cols-1 gap-4">
                 {Installation.map((installation) => (
                   <li>
-                    <div
-                      key={installation.number}
-                      className="p-4 md:p-8 border border-gray-600"
-                    >
-                      <h4 className="text-yellow-300 mb-3 md:mb-4">
-                        {installation.number}. {installation.title}
+                    <div key={installation.number} className="p-4 md:p-8 ">
+                      <h4 className="mb-3 md:mb-4">
+                        {installation.number}.
+                        <span className="text-yellow-300 pl-3">
+                          {installation.title}
+                        </span>
                       </h4>
+
                       <p className="indent-6">{installation.description}</p>
                     </div>
-                    <div className="w-[0.5px] h-10 md:h-16 bg-gray-600 mx-auto" />
+
+                    {/* <div className="w-[0.5px] h-10 md:h-16 bg-gray-600 mx-auto" /> */}
                   </li>
                 ))}
               </ul>
