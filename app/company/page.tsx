@@ -76,6 +76,7 @@ export default function CompanyPage() {
 
         <Cta />
       </main>
+      
       <Footer />
     </div>
   );

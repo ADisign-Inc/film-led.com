@@ -1,5 +1,3 @@
-import { ArrowRight } from "lucide-react";
-
 import Image from "next/image";
 import Link from "next/link";
 
@@ -89,7 +87,6 @@ export default async function LandingPage() {
             <Link href="/blog/about-film-led">
               <Button>
                 {mainData.keyWords} を詳しく知る
-                <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
           </section>
@@ -164,7 +161,6 @@ export default async function LandingPage() {
             <Link href="/services">
               <Button>
                 {mainData.keyWords} を詳しく知る
-                <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
           </section>
@@ -205,9 +201,8 @@ export default async function LandingPage() {
             </div>
 
             <Link href="/cases">
-              <Button variant="default">
+              <Button>
                 活用事例について詳しく見る
-                <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
           </section>
@@ -225,7 +220,6 @@ export default async function LandingPage() {
               <Link href="/products">
                 <Button>
                   製品情報を詳しく見る
-                  <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>
             </div>
@@ -300,9 +294,8 @@ export default async function LandingPage() {
                     </p>
 
                     <Link href="/products">
-                      <Button variant="default">
+                      <Button>
                         コンテンツ制作について
-                        <ArrowRight className="h-4 w-4" />
                       </Button>
                     </Link>
                   </div>
@@ -363,9 +356,8 @@ export default async function LandingPage() {
             </p>
 
             <Link href="/flow">
-              <Button variant="default">
+              <Button>
                 導入の流れを詳しく見る
-                <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
           </section>
@@ -396,9 +388,8 @@ export default async function LandingPage() {
             </div>
 
             <Link href="/faq">
-              <Button variant="default">
+              <Button>
                 よくある質問を詳しく見る
-                <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
           </section>
@@ -422,9 +413,8 @@ export default async function LandingPage() {
             </div>
 
             <Link href="/blog">
-              <Button variant="default">
+              <Button>
                 ブログ一覧へ
-                <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
           </section>

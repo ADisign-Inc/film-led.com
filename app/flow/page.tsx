@@ -8,7 +8,6 @@ import { Flow } from "../../components/Flow";
 import { Cta } from "../../components/Cta";
 import { Button } from "../../components/Button";
 
-import { mainData } from "../../data/main";
 import { flowData } from "../../data/flow";
 
 export const metadata: Metadata = {

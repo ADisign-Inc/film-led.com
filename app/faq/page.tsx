@@ -63,7 +63,7 @@ export default function FAQPage() {
           </div>
         </div>
 
-        {/* CTA */}
+        
         <Cta />
       </main>
       <Footer />

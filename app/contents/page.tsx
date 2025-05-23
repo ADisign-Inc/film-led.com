@@ -324,6 +324,13 @@ const ContentsPage = () => {
             </ol>
           </section>
         </div>
+
+        <div className="mt-5 md:mt-10 text-center">
+        <Link href="/">
+            <Button>TOPへ戻る</Button>
+          </Link>
+        </div>
+
         <Cta />
       </main>
 

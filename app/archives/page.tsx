@@ -1,6 +1,3 @@
-import { ArrowRight } from "lucide-react";
-
-import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
 
@@ -40,14 +37,12 @@ export default function ArchivesPage() {
           </div>
 
           <Link href="/">
-            <Button variant="default">
-              TOPへ
-              <ArrowRight className="h-4 w-4" />
+            <Button>
+              TOPへ戻る
             </Button>
           </Link>
         </section>
 
-        {/* CTA */}
         <Cta />
       </main>
 

@@ -1056,7 +1056,6 @@ export default function AboutPage() {
           <Link href="/blog">
             <Button>
               ブログ一覧へ
-              <ArrowRight className="h-4 w-4" />
             </Button>
           </Link>
         </div>

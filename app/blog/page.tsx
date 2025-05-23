@@ -1,6 +1,3 @@
-import { ArrowRight } from "lucide-react";
-
-import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
 
@@ -43,16 +40,13 @@ export default function BlogPage() {
           </div>
 
           <div className="mt-20 md:mt-28 text-center">
-            <Link href="/">
-              <Button variant="default">
-                TOPへ戻る
-                <ArrowRight className="h-4 w-4" />
-              </Button>
-            </Link>
+          <Link href="/">
+            <Button>TOPへ戻る</Button>
+          </Link>
           </div>
         </section>
 
-        {/* CTA */}
+        
         <Cta />
       </main>
 

@@ -1,9 +1,11 @@
 import Image from "next/image";
 import { Metadata } from "next";
+import Link from "next/link";
 
 import { Header } from "../../components/Header";
 import { Footer } from "../../components/Footer";
 import { BackgroundImages } from "../../components/BackgroundImage";
+import { Button } from "../../components/Button";
 import { Cta } from "../../components/Cta";
 import { ProductsFeatures } from "../../components/products/ProductsFeatures";
 
@@ -383,6 +385,13 @@ export default async function ProductsPage() {
             </div>
           </section>
         </section>
+
+<div>
+
+        <Link href="/">
+            <Button>TOPへ戻る</Button>
+          </Link>
+</div>
 
         <Cta />
       </main>

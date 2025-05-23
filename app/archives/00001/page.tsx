@@ -1,5 +1,3 @@
-import { X, Check } from "lucide-react";
-import { ArrowRight } from "lucide-react";
 import dynamic from "next/dynamic";
 
 import Image from "next/image";
@@ -11,7 +9,6 @@ import { Footer } from "../../../components/Footer";
 import { BackgroundImages } from "../../../components/BackgroundImage";
 import { Button } from "../../../components/Button";
 import { Cta } from "../../../components/Cta";
-import { ArchiveList } from "../../../components/archives/ArchiveList";
 import { Breadcrumb } from "../../../components/Breadcrumb";
 
 import { mainData } from "../../../data/main";
@@ -20,7 +17,7 @@ import { archiveData } from "../../../data/archives";
 export const metadata: Metadata = {
   title: `${archiveData[0].clientName} | 導入実績 `,
   description:
-    "FILM LEDの製品情報ページです。LEDビジュアルウォールの特徴や仕様をご紹介します。",
+    `${mainData.keyWords}の導入実績ページです。製品の特徴や仕様、導入のメリットをご紹介します。`,
 };
 
 const ArchiveSwiper = dynamic(
@@ -129,12 +126,11 @@ export default function AboutPage() {
           <Link href="/archives">
             <Button variant="default">
               導入実績一覧へ
-              <ArrowRight className="h-4 w-4" />
             </Button>
           </Link>
         </div>
 
-        {/* CTA */}
+        
         <Cta />
       </main>
       <Footer />
