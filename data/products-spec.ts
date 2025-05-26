@@ -11,17 +11,17 @@ export interface ProductSpec {
 }
 
 export const productSpecData: ProductSpec[] = [
-  {
-    model: "FL-1000",
-    price: "¥ 1,000,000",
-    pitch: "3.75",
-    maxSize: "2000 × 1000",
-    powerConsumption: {
-      max: "500",
-      average: "300",
-    },
-    brightness: "5000",
-  },
+  // {
+  //   model: "FL-1000",
+  //   price: "¥ 1,000,000",
+  //   pitch: "3.75",
+  //   maxSize: "2000 × 1000",
+  //   powerConsumption: {
+  //     max: "500",
+  //     average: "300",
+  //   },
+  //   brightness: "5000",
+  // },
   {
     model: "Film-P0375",
     pitch: "3.75 × 3.75",
