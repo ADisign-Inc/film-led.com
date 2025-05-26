@@ -246,7 +246,7 @@ export default async function AboutPage() {
                     <br />
                     ・ICがLEDパッケージ内にあり、やや厚く、重い（約3.5kg/㎡）
                     <br />
-                    ・透過率は中程度（140°前後）
+                    ・視野角は中程度（140°前後）
                     熱の発生により寿命が短くなりがち
                   </p>
                 </div>
@@ -515,7 +515,7 @@ export default async function AboutPage() {
                 <p>
                   短期イベント用なのか、常設で長期運用するのかにより、選定すべき製品の仕様や設置方法が変わります。
                   <br />
-                  必要に応じてレンタルやリースプランの検討も可能です。
+                  当社ではご相談も無料でお受け付けしております。詳しくはお問い合わせください。
                 </p>
               </div>
 
@@ -602,9 +602,7 @@ export default async function AboutPage() {
 
         <div className="mb-10">
           <Link href="/blog">
-            <Button>
-              ブログ一覧へ
-            </Button>
+            <Button>ブログ一覧へ</Button>
           </Link>
         </div>
       </main>
