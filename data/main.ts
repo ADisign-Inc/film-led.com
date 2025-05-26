@@ -9,6 +9,7 @@ export const mainData = {
     street: "東光2-2-13",
   },
   representative: "佐藤 豪",
+  department: "デジタルサイネージ事業部",
   businesses: [
     "ウェブコンサルティング",
     "ウェブサイト制作",

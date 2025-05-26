@@ -19,7 +19,7 @@ const FooterItems02 = [
 ];
 
 const FooterItems03 = [
-  { href: "#", label: "プライバシーポリシー" },
+  { href: "/privacy-policy", label: "プライバシーポリシー" },
   { href: "#", label: "利用規約" },
   { href: "#", label: "特定商取引法に基づく表記" },
 ];
