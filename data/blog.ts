@@ -37,14 +37,15 @@ export const blogData: Blog[] = [
   },
   {
     id: "0003",
-    url: "/",
-    title: "",
-    description: "",
-    image: "/images/blog/",
-    date: "2025-05-20",
+    url: "/film-led-advertisement",
+    title: `LEDなのに“透ける”ってどういうこと？最先端${mainData.keyWords}で差がつく広告の魅せ方`,
+    description:
+      "店舗・イベント・展示会に最適！空間を邪魔せず視線を奪う、次世代ディスプレイの正体とは？",
+    image: "/images/blog/film-led-advertisement/fv.jpg",
+    date: "2025-05-28",
     category: ["ガイド", "LEDビジョン"],
     slug: "0003",
-    isVisible: false,
+    isVisible: true,
   },
   {
     id: "0004",

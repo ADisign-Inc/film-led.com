@@ -1207,6 +1207,10 @@ body {
   list-style-type: decimal;
 }
 
+.list-disc {
+  list-style-type: disc;
+}
+
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -1722,6 +1726,10 @@ body {
   padding-top: 0.75rem;
 }
 
+.pl-5 {
+  padding-left: 1.25rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -1813,6 +1821,14 @@ body {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-\[1\.3em\] {
+  font-size: 1.3em;
+}
+
+.text-\[1\.4em\] {
+  font-size: 1.4em;
 }
 
 .font-bold {
@@ -3096,6 +3112,12 @@ p {
     margin-bottom: calc(1rem * var(--tw-space-y-reverse));
   }
 
+  .md\:space-y-8 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+  }
+
   .md\:p-20 {
     padding: 5rem;
   }
@@ -3106,6 +3128,10 @@ p {
 
   .md\:p-8 {
     padding: 2rem;
+  }
+
+  .md\:p-16 {
+    padding: 4rem;
   }
 
   .md\:px-10 {
@@ -3450,6 +3476,14 @@ p {
   }
 }
 
+.\[\&_li\]\:ml-5 li {
+  margin-left: 1.25rem;
+}
+
+.\[\&_li\]\:pl-5 li {
+  padding-left: 1.25rem;
+}
+
 .\[\&_li\]\:text-gray-300 li {
   --tw-text-opacity: 1;
   color: rgb(209 213 219 / var(--tw-text-opacity, 1));
@@ -3493,6 +3527,10 @@ p {
   line-height: 1rem;
 }
 
+.\[\&_span\]\:text-\[1\.3em\] span {
+  font-size: 1.3em;
+}
+
 .\[\&_span\]\:font-bold span {
   font-weight: 700;
 }
@@ -3531,6 +3569,11 @@ p {
   border-color: rgb(209 213 219 / 0.5);
 }
 
+.\[\&_td\]\:px-3 td {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 .\[\&_td\]\:px-4 td {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -3544,15 +3587,6 @@ p {
 .\[\&_td\]\:py-3 td {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-}
-
-.\[\&_td\]\:px-3 td {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-}
-
-.\[\&_td\]\:text-\[0\.9em\] td {
-  font-size: 0.9em;
 }
 
 .\[\&_td\]\:text-\[0\.8em\] td {
@@ -3583,6 +3617,11 @@ p {
   border-color: rgb(209 213 219 / 0.5);
 }
 
+.\[\&_th\]\:px-3 th {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 .\[\&_th\]\:px-4 th {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -3593,22 +3632,13 @@ p {
   padding-bottom: 0.75rem;
 }
 
-.\[\&_th\]\:px-3 th {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-}
-
-.\[\&_th\]\:text-\[0\.9em\] th {
-  font-size: 0.9em;
+.\[\&_th\]\:text-\[0\.8em\] th {
+  font-size: 0.8em;
 }
 
 .\[\&_th\]\:text-sm th {
   font-size: 0.875rem;
   line-height: 1.25rem;
-}
-
-.\[\&_th\]\:text-\[0\.8em\] th {
-  font-size: 0.8em;
 }
 
 .\[\&_th\]\:font-bold th {
@@ -3625,23 +3655,23 @@ p {
     padding-right: 1.5rem;
   }
 
-  .\[\&_th\]\:md\:py-2 th {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-
   .\[\&_th\]\:md\:px-8 th {
     padding-left: 2rem;
     padding-right: 2rem;
   }
 
-  .\[\&_th\]\:md\:text-base th {
-    font-size: 1rem;
-    line-height: 1.5rem;
+  .\[\&_th\]\:md\:py-2 th {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 
   .\[\&_th\]\:md\:text-\[0\.9em\] th {
     font-size: 0.9em;
+  }
+
+  .\[\&_th\]\:md\:text-base th {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 

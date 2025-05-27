@@ -136,7 +136,7 @@ export default async function AboutPage() {
             </div>
           </section>
 
-          <section className="index md:w-2/3 mx-auto bg-white/10 backdrop-blur-sm p-10 md:p-20">
+          <section className="index md:w-2/3 mx-auto bg-white/10 backdrop-blur-sm p-10 md:p-16">
             <p className="text-lg md:text-xl lg:text-2xl text-center font-semibold mb-6 md:mb-10">
               目 次
             </p>
