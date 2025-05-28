@@ -34,7 +34,7 @@ export function BlogList({ post }: { post: Blog }) {
             </p>
           </div>
 
-          <h3 className="text-xl group-hover:text-yellow-400 transition-all text-start font-semibold mb-3 md:mb-5">
+          <h3 className="text-base md:text-lg group-hover:text-yellow-400 transition-all text-start font-semibold mb-3 md:mb-5">
             {post.title}
           </h3>
 

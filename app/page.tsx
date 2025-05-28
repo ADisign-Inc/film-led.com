@@ -85,9 +85,7 @@ export default async function LandingPage() {
             </div>
 
             <Link href="/blog/about-film-led">
-              <Button>
-                {mainData.keyWords} を詳しく知る
-              </Button>
+              <Button>{mainData.keyWords} を詳しく知る</Button>
             </Link>
           </section>
 
@@ -159,9 +157,7 @@ export default async function LandingPage() {
             </div>
 
             <Link href="/services">
-              <Button>
-                {mainData.keyWords} を詳しく知る
-              </Button>
+              <Button>{mainData.keyWords} を詳しく知る</Button>
             </Link>
           </section>
 
@@ -201,9 +197,7 @@ export default async function LandingPage() {
             </div>
 
             <Link href="/cases">
-              <Button>
-                活用事例について詳しく見る
-              </Button>
+              <Button>活用事例を詳しく見る</Button>
             </Link>
           </section>
 
@@ -218,9 +212,7 @@ export default async function LandingPage() {
 
             <div className="mt-20 md:mt-28">
               <Link href="/products">
-                <Button>
-                  製品情報を詳しく見る
-                </Button>
+                <Button>製品情報を詳しく見る</Button>
               </Link>
             </div>
           </section>
@@ -245,7 +237,7 @@ export default async function LandingPage() {
                 </div>
 
                 <div className="w-full lg:w-1/2 relative -z-10 px-8 md:px-10 md:pt-20">
-                  <div className="absolute top-0 left-0 right-0 bottom-0 lg:w-[112%] bg-white/15 -z-10 md:-translate-x-10 -translate-y-8 lg:translate-y-10"></div>
+                  <div className="absolute top-0 left-0 right-0 bottom-0 lg:w-[112%] bg-white/10 -z-10 md:-translate-x-10 -translate-y-8 lg:translate-y-10"></div>
                   <div className="relative flex flex-col justify-end h-full py-8 md:py-12 md:pt-0 lg:py-0 mb-10">
                     <div className="flex items-baseline mb-5 md:mb-14">
                       <h3 className="text-yellow-300 text-4xl md:text-5xl leading-none">
@@ -276,7 +268,7 @@ export default async function LandingPage() {
                 </div>
 
                 <div className="w-full lg:w-1/2 relative -z-10 px-8 md:px-10 md:pt-20">
-                  <div className="absolute top-0 left-0 right-0 bottom-0 lg:w-[112%] bg-white/15 -z-10 md:-translate-x-10 -translate-y-8 lg:translate-y-10"></div>
+                  <div className="absolute top-0 left-0 right-0 bottom-0 lg:w-[112%] bg-white/10 -z-10 md:-translate-x-10 -translate-y-8 lg:translate-y-10"></div>
                   <div className="relative flex flex-col justify-end h-full py-8 md:py-12 md:pt-0 lg:py-0 mb-10">
                     <div className="flex items-baseline mb-5 md:mb-14">
                       <h3 className="text-yellow-300 text-4xl md:text-5xl leading-none">
@@ -294,9 +286,7 @@ export default async function LandingPage() {
                     </p>
 
                     <Link href="/products">
-                      <Button>
-                        コンテンツ制作について
-                      </Button>
+                      <Button>コンテンツ制作について</Button>
                     </Link>
                   </div>
                 </div>
@@ -356,9 +346,7 @@ export default async function LandingPage() {
             </p>
 
             <Link href="/flow">
-              <Button>
-                導入の流れを詳しく見る
-              </Button>
+              <Button>導入の流れを詳しく見る</Button>
             </Link>
           </section>
 
@@ -388,13 +376,11 @@ export default async function LandingPage() {
             </div>
 
             <Link href="/faq">
-              <Button>
-                よくある質問を詳しく見る
-              </Button>
+              <Button>よくある質問一覧へ</Button>
             </Link>
           </section>
 
-          {/* LED BLOG */}
+          {/* BLOG */}
           <section className="container max-w-6xl mb-28 md:mb-40">
             <h2>
               Blog
@@ -413,9 +399,7 @@ export default async function LandingPage() {
             </div>
 
             <Link href="/blog">
-              <Button>
-                ブログ一覧へ
-              </Button>
+              <Button>ブログ一覧へ</Button>
             </Link>
           </section>
 

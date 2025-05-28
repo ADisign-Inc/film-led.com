@@ -13,6 +13,7 @@ import { Cta } from "../../../components/Cta";
 
 import { mainData } from "../../../data/main";
 import { blogData } from "../../../data/blog";
+import { caseData } from "../../../data/cases";
 
 export const metadata: Metadata = {
   title: `${blogData[1].title} | ブログ`,
@@ -471,6 +472,40 @@ export default async function AboutPage() {
               <span></span>
               活用事例のご紹介
             </h2>
+
+            <div className="grid gap-10 xs:gap-5 grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 mb-16 md:mb-24">
+              {caseData.slice(0, 3).map((case_) => (
+                <div key={case_.id} className="">
+                  <div className="flex items-center justify-center mb-3 md:mb-5">
+                    <Image
+                      src={case_.image[0]}
+                      alt={case_.title}
+                      width={400}
+                      height={400}
+                      className="object-cover"
+                      priority
+                    />
+                  </div>
+                  <h3 className="text-xl md:text-xl text-yellow-300 mb-3">
+                    {case_.title}
+                  </h3>
+                  <p
+                    className="px-2"
+                    dangerouslySetInnerHTML={{
+                      __html: case_.description
+                        .replace(/\n/g, "<br />")
+                        .replace(/<strong>/g, "<strong>"),
+                    }}
+                  ></p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-20 md:mt-28">
+              <Link href="/cases">
+                <Button>活用事例を詳しく見る</Button>
+              </Link>
+            </div>
           </section>
 
           <section id="section05">
@@ -600,7 +635,7 @@ export default async function AboutPage() {
 
         <Cta />
 
-        <div className="mb-10">
+        <div className="mb-10 md:mb-20">
           <Link href="/blog">
             <Button>ブログ一覧へ</Button>
           </Link>

@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Metadata } from "next";
+import React from "react";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -70,9 +71,7 @@ export default async function AboutPage() {
   return (
     <div className="flex min-h-screen flex-col relative">
       <BackgroundImages />
-
       <Header />
-
       <Breadcrumb
         items={[
           { label: "TOP", href: "/" },
@@ -80,12 +79,18 @@ export default async function AboutPage() {
           { label: `${blogData[2].title}` },
         ]}
       />
-
       <main className="flex-1 [scroll-behavior:smooth]">
         <article className="blog container max-w-5xl pt-10 md:pt-20">
-          <h1>{blogData[2].title}</h1>
+          <h1>
+            {blogData[2].title.split("\n").map((line, i) => (
+              <React.Fragment key={i}>
+                {line}
+                {i < blogData[2].title.split("\n").length - 1 && <br />}
+              </React.Fragment>
+            ))}
+          </h1>
 
-          <div className="flex justify-between items-center mb-10 md:mb-16">
+          <div className="flex justify-between items-center mb-5 md:mb-10">
             <p className="!text-xs mb-3 md:mb-5 -mt-5">
               {blogData[2].category.map((cat: string, index: number) => (
                 <span
@@ -99,6 +104,18 @@ export default async function AboutPage() {
 
             <div className="text-gray-400 group-hover:text-white/80 transition-all text-xs md:text-sm">
               <time dateTime={blogData[2].date}>{blogData[2].date}</time>
+            </div>
+          </div>
+
+          <div className="flex justify-center mx-auto mb-10 md:mb-16">
+            <div className="relative">
+              <Image
+                src={`${blogData[2].image}`}
+                alt=""
+                width={1000}
+                height={1000}
+                className="object-contain"
+              />
             </div>
           </div>
 
@@ -120,18 +137,6 @@ export default async function AboutPage() {
                 <br />
                 空間演出と視認性を両立させた、最先端の集客方法をわかりやすく解説します。
               </p>
-            </div>
-
-            <div className="flex justify-center mx-auto my-10 md:my-16">
-              <div className="relative">
-                <Image
-                  src={`${blogData[2].image}`}
-                  alt=""
-                  width={1000}
-                  height={1000}
-                  className="object-contain"
-                />
-              </div>
             </div>
           </Section>
 
@@ -163,7 +168,8 @@ export default async function AboutPage() {
                   <span>高透過率</span>（70〜90％）：後ろがしっかり見える
                 </li>
                 <li>
-                  <span>軽量・薄型</span>：1平方メートルあたり2〜4kgと非常に軽量
+                  <span>軽量・薄型</span>
+                  ：1平方メートルあたり2〜4kgと非常に軽量
                 </li>
                 <li>
                   <span>柔軟性</span>：窓や曲面にも貼れる柔軟構造
@@ -205,7 +211,7 @@ export default async function AboutPage() {
                 </p>
               </SubSection>
 
-              <SubSection title="2. SNS時代の“映え”">
+              <SubSection title="2. SNS時代の「映え」">
                 <p>デジタルと空間を融合させる演出が拡散されやすい</p>
               </SubSection>
 
@@ -230,21 +236,21 @@ export default async function AboutPage() {
 
             <SubSection title="1. 透けるショーウィンドウ × 動くモデル">
               <p>
-                実店舗のガラス窓に透明LEDを貼り付け、映像内に“仮想モデル”を登場させて商品を着用・紹介。
+                実店舗のガラス窓に透明LEDを貼り付け、映像内に"仮想モデル"を登場させて商品を着用・紹介。
                 <br />
-                現実の展示商品と連動し、通行人に「体験」を与える仕掛けに。
+                現実の展示商品と連動し、通行人に"体験"を与える仕掛けに。
               </p>
             </SubSection>
 
             <SubSection title="2. 昼と夜でコンテンツを自動切替">
               <p>
-                時間帯によって表示内容を切り替えることで、昼は「情報」、夜は「演出」に特化。
+                時間帯によって表示内容を切り替えることで、昼は"情報"、夜は"演出"に特化。
                 <br />
                 営業時間外も視覚的インパクトを継続し、無人でもブランディングが可能。
               </p>
             </SubSection>
 
-            <SubSection title="3. 展示会ブースで“透明な壁”を使った没入体験">
+            <SubSection title={`3. 展示会ブースで"透明な壁"を使った没入体験`}>
               <p>
                 囲い壁に透明LEDを使用し、内部からは外が見える一方、外側からは動画演出で引き込み。
                 <br />
@@ -379,7 +385,7 @@ export default async function AboutPage() {
             </div>
 
             <p>
-              透明フィルム型LEDビジョンの導入を検討する際は、「どこに、どれくらいの期間、どのような映像を表示するか」を事前に明確にしておくことが重要です。
+              透明フィルム型LEDビジョンの導入を検討する際は、"どこに、どれくらいの期間、どのような映像を表示するか"を事前に明確にしておくことが重要です。
               <br />
               当社では、
               <strong>
@@ -417,10 +423,10 @@ export default async function AboutPage() {
           <Section id="section07" title={sectionTitles[7]}>
             <p className="mb-10 md:mb-16">
               透明フィルム型LEDは、空間と広告を融合させ、
-              <strong>“体験型広告”へと進化させるツール</strong>です。
+              <strong>"体験型広告"へと進化させるツール</strong>です。
               <br />
-              単なる「表示装置」ではなく、
-              <strong>「人の心を動かすメディア」</strong>
+              単なる"表示装置"ではなく、
+              <strong>"人の心を動かすメディア"</strong>
               として差別化に貢献します。
               <br />
               ✅ 他社に差をつける広告演出をしたい方
@@ -438,13 +444,12 @@ export default async function AboutPage() {
 
         <Cta />
 
-        <div className="mb-10">
+        <div className="mb-10 md:mb-20">
           <Link href="/blog">
             <Button>ブログ一覧へ</Button>
           </Link>
         </div>
       </main>
-
       <Footer />
     </div>
   );

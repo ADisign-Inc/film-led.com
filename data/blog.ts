@@ -15,10 +15,10 @@ export type Blog = {
 export const blogData: Blog[] = [
   {
     id: "0001",
-    url: "/about-film-led",
+    url: "about-film-led",
     title: `【最先端LED】${mainData.keyWords}とは？\n技術的な仕組みや特徴を徹底解説`,
     description: `店舗や施設のガラス面を広告メディアに変える「${mainData.keyWords}」とは？仕組み・特徴・導入メリット・他商品との違いをわかりやすく解説。集客・空間演出に革新をもたらす最先端ディスプレイ技術をご紹介します。`,
-    image: "/images/blog/0001.jpg",
+    image: "/images/blog/about-film-led/fv.jpg",
     date: "2025-04-20",
     category: ["ガイド", "LEDビジョン"],
     slug: "0001",
@@ -26,7 +26,7 @@ export const blogData: Blog[] = [
   },
   {
     id: "0002",
-    url: "/difference-film-led",
+    url: "difference-film-led",
     title: "【徹底比較】3種類の透過型LEDビジョンの違いとおすすめ製品はこれ！",
     description: `ガラス面に映像を映し出す透過型LEDビジョンの種類と違いを徹底比較。${mainData.keyWords}・IC内蔵型・バー型PCBの3タイプを解説し、施工性・透明度・消費電力の観点から最適な選び方をご紹介。省エネ・高視認性の最新サイネージ導入を検討中の方は必見です。`,
     image: "/images/blog/difference-film-led/fv.jpg",
@@ -37,8 +37,8 @@ export const blogData: Blog[] = [
   },
   {
     id: "0003",
-    url: "/film-led-advertisement",
-    title: `LEDなのに“透ける”ってどういうこと？最先端${mainData.keyWords}で差がつく広告の魅せ方`,
+    url: "film-led-advertisement",
+    title: `LEDなのに“透ける”ってどういうこと？\n最先端${mainData.keyWords}で差がつく広告の魅せ方`,
     description:
       "店舗・イベント・展示会に最適！空間を邪魔せず視線を奪う、次世代ディスプレイの正体とは？",
     image: "/images/blog/film-led-advertisement/fv.jpg",
@@ -49,7 +49,7 @@ export const blogData: Blog[] = [
   },
   {
     id: "0004",
-    url: "/",
+    url: "",
     title: "",
     description: "",
     image: "/images/blog/",
