@@ -361,8 +361,10 @@ export default async function LandingPage() {
               <Accordion type="multiple" className="w-full">
                 {faqData.slice(0, 3).map((item) => (
                   <AccordionItem key={item.id} value={item.id}>
-                    <AccordionTrigger>{item.question}</AccordionTrigger>
-                    <AccordionContent className="text-base md:text-lg">
+                    <AccordionTrigger className="text-sm md:text-base">
+                      {item.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-sm md:text-base">
                       {item.answer.split("\n").map((line, index) => (
                         <span key={index}>
                           {line}
@@ -376,7 +378,7 @@ export default async function LandingPage() {
             </div>
 
             <Link href="/faq">
-              <Button>よくある質問一覧へ</Button>
+              <Button>よくあるご質問一覧へ</Button>
             </Link>
           </section>
 

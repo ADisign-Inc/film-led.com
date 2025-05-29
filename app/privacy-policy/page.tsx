@@ -194,7 +194,7 @@ export default function FlowPage() {
           </div>
         </section>
 
-        <Link href="/">
+        <Link href="/" className="mb-20 md:mb-40">
           <Button variant="default">TOPへ戻る</Button>
         </Link>
 

@@ -8,7 +8,7 @@ interface RelatedArticleProps {
 export const RelatedArticle = ({ article }: RelatedArticleProps) => {
   return (
     <div className="flex justify-center mt-10 md:mt-28">
-      <div className="bg-white/10 inline-block px-10 md:px-14 py-4">
+      <div className="bg-white/10 inline-block px-5 xs:px-10 md:px-14 py-4">
         <p>
           関連記事 :
           <span className="hover:text-yellow-300 mx-2">

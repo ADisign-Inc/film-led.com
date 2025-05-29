@@ -12,7 +12,7 @@ export const Breadcrumb = ({ items }: BreadcrumbProps) => {
 
   return (
     <nav className="container max-w-7xl pt-16 md:pt-28 overflow-x-auto">
-      <ul className="flex items-center gap-2 text-xs [&_li]:md:text-sm [&_li]:text-gray-300 whitespace-nowrap min-w-max">
+      <ul className="flex items-center gap-2 text-[0.7em] [&_li]:md:text-xs [&_li]:text-gray-300 whitespace-nowrap min-w-max">
         {items.map((item, index) => (
           <li
             key={index}
