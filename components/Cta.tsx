@@ -5,10 +5,11 @@ import Image from "next/image";
 
 import { mainData } from "../data/main";
 
+// Analytics クリックイベント 計測
 const handleClick = () => {
   const analytics = getAnalytics();
   logEvent(analytics, "button_click", {
-    button_name: "contact_form",
+    button_name: "link_url",
   });
 };
 
