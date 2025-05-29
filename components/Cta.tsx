@@ -1,6 +1,17 @@
-import Link from "next/link";
+"use client";
+
+import { getAnalytics, logEvent } from "firebase/analytics";
 import Image from "next/image";
+
 import { mainData } from "../data/main";
+
+const handleClick = () => {
+  const analytics = getAnalytics();
+  logEvent(analytics, "button_click", {
+    button_name: "contact_form",
+  });
+};
+
 export function Cta() {
   return (
     <section className="container max-w-6xl py-20 md:py-40">
@@ -14,7 +25,7 @@ export function Cta() {
           店舗やイベントの集客に、{mainData.keyWords}
           という選択肢。
           <br />
-          動画制作だけでも、ディスプレイ導入とのセットでもご対応可能です。
+          動画制作だけでも、LEDディスプレイ導入、施工とのセットでもご対応可能です。
           <br />
           まずは無料相談からお気軽にお問い合わせください。
         </p>
@@ -25,6 +36,7 @@ export function Cta() {
               className="flex flex-col bg-white border border-gray-200 rounded hover:bg-transparent transition-all group-hover:shadow-[0_0_5px_rgba(255,255,255,0.8)]"
               href={mainData.contact.url}
               target="_blank"
+              onClick={handleClick}
             >
               <div className="p-4 md:p-5">
                 <div className="flex justify-between gap-x-3">
