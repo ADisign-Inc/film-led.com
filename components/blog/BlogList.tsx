@@ -16,7 +16,7 @@ export function BlogList({ post }: { post: Blog }) {
           />
         </div>
 
-        <div className="p-4 md:px-6 md:py-8 flex flex-col flex-grow">
+        <div className="p-6 md:px-6 md:py-8 flex flex-col flex-grow">
           <div className="flex items-center gap-3 mb-3 md:mb-4">
             <div className="text-gray-400 group-hover:text-white/80 transition-all text-sm">
               <time dateTime={post.date}>{post.date}</time>

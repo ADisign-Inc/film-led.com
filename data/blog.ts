@@ -43,7 +43,7 @@ export const blogData: Blog[] = [
       "店舗・イベント・展示会に最適！空間を邪魔せず視線を奪う、次世代ディスプレイの正体とは？",
     image: "/images/blog/film-led-advertisement/fv.jpg",
     date: "2025-05-28",
-    category: ["ガイド", "LEDビジョン"],
+    category: ["透明LED", "LEDビジョン"],
     slug: "0003",
     isVisible: true,
   },

@@ -38,12 +38,11 @@ export default async function ProductsPage() {
               圧倒的なインパクトで
               <br className="xs:hidden" />
               周囲と差をつける。
-              <br />
             </h3>
 
-            <p className="text-3xl md:text-4xl lg:text-5xl text-yellow-300 text-center font-bold font-mincho mb-12 md:mb-20">
-              {mainData.keyWords}
-            </p>
+            <h3 className="text-3xl md:text-4xl lg:text-5xl text-yellow-300 text-center font-bold font-mincho mb-12 md:mb-20">
+              {mainData.keyWords}ビジョン
+            </h3>
 
             <div className="relative w-full pb-[56.25%] bg-transparent overflow-hidden mb-10 md:mb-20">
               <div className="absolute inset-0">
@@ -73,15 +72,18 @@ export default async function ProductsPage() {
 
           <section className="mb-28 md:mb-40">
             <div>
-              <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-yellow-300 !leading-relaxed font-mincho mb-8 md:mb-12">
-                視界を遮らない。
+              <p className="text-xl md:text-2xl lg:text-3xl font-bold [&_span]:text-yellow-300 !leading-relaxed font-mincho mb-8 md:mb-12">
+                <span>視界を遮らない。</span>
                 <br />
-                空間と調和しながら、強烈な印象を残す 次世代型ディスプレイ。
+                <span>空間と調和</span>
+                しながら、
+                <span>強烈な印象を残す</span>
+                、次世代型LEDビジョン。
               </p>
 
               <p>
                 {mainData.keyWords}
-                ディスプレイは、ガラス面に直接設置できる超薄型のLEDビジョンです。
+                ディスプレイは、ガラス面に直接設置できる超薄型フィルム製のLEDビジョンです。
                 <br />
                 従来の大型サイネージと異なり、高い透明性（最大92%）を維持しながらも、映像表現はフルカラーで鮮やか。
                 <br />
@@ -386,12 +388,11 @@ export default async function ProductsPage() {
           </section>
         </section>
 
-<div>
-
-        <Link href="/">
+        <div>
+          <Link href="/">
             <Button>TOPへ戻る</Button>
           </Link>
-</div>
+        </div>
 
         <Cta />
       </main>

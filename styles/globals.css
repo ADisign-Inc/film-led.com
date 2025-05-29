@@ -59,9 +59,9 @@ h1 {
 }
 
 h2 {
-  @apply font-mincho text-4xl md:text-5xl font-bold text-center !tracking-wider mb-12 sm:mb-16 md:mb-20 after:content-[''] after:block after:w-8 after:md:w-10 after:h-[1px] after:bg-gray-400 after:mx-auto after:mt-4 after:sm:mt-5 after:md:mt-8;
+  @apply font-mincho text-3xl sm:text-4xl md:text-5xl font-bold text-center !tracking-wider mb-10 sm:mb-16 md:mb-20 after:content-[''] after:block after:w-5 after:sm:w-8 after:md:w-10 after:h-[1px] after:bg-gray-400 after:mx-auto after:mt-4 after:sm:mt-5 after:md:mt-8;
   span {
-    @apply text-sm md:text-lg block mt-4 sm:mt-5 md:mt-8;
+    @apply text-xs sm:text-sm md:text-lg block mt-4 sm:mt-5 md:mt-8;
   }
 }
 
@@ -77,15 +77,19 @@ p {
   @apply text-sm md:text-base !leading-6 md:!leading-7 !tracking-wide;
 }
 
+strong {
+  @apply text-[1.1em] px-1;
+}
+
 .blog {
   h1 {
-    @apply font-mincho text-2xl md:text-3xl lg:text-4xl font-bold text-center !leading-relaxed mb-10 md:mb-14;
+    @apply font-mincho text-xl md:text-3xl lg:text-4xl font-bold text-center !leading-relaxed mb-10 md:mb-14;
   }
 
   h2 {
-    @apply text-xl md:text-2xl lg:text-3xl text-start flex items-center border-b border-gray-500 pb-3 md:pb-5 gap-4 md:gap-6 mb-10 md:mb-20 after:hidden;
+    @apply text-lg md:text-2xl lg:text-3xl text-start flex items-center border-b border-gray-500 pb-3 md:pb-5 gap-4 md:gap-6 mb-10 md:mb-20 after:hidden;
     span {
-      @apply w-1 h-8 md:h-10 bg-yellow-400/90 mt-0;
+      @apply w-1 h-6 sm:h-8 md:h-10 bg-yellow-400/90 mt-0;
     }
   }
 
@@ -93,7 +97,7 @@ p {
     @apply text-lg md:text-xl lg:text-2xl text-start mb-6 md:mb-8;
   }
 
-  section:not(:last-child) {
+  section {
     @apply mb-20 md:mb-36;
   }
 
@@ -101,12 +105,9 @@ p {
     @apply !leading-loose;
   }
 
-  strong {
-    @apply text-[1.1em] px-1;
-  }
-
   th,
-  td {
+  td,
+  li {
     @apply text-sm md:text-base;
   }
 
@@ -119,21 +120,10 @@ p {
   }
 }
 
-.swiper-slide {
+/* .swiper-slide {
   background-size: cover;
   background-position: center;
-}
-
-.mySwiper2 {
-  height: 80%;
-  width: 100%;
-}
-
-.mySwiper {
-  height: 20%;
-  box-sizing: border-box;
-  padding: 20px 0;
-}
+} */
 
 .mySwiper .swiper-slide {
   width: 25%;

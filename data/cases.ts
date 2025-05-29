@@ -60,8 +60,8 @@ export const caseData: Case[] = [
                   また、2階以上にある店舗には、遠くからでも視認しやすい<strong>キューブ型サイネージ</strong>がおすすめです。<br />
                   <strong>立体的な映像表示によって存在感を高め、階上店舗への誘導効果を向上</strong>させることが可能です。`,
     image: [
-      "https://adisignage.com/image/p3-img01.png",
-      "https://adisignage.com/image/p3-img02.png",
+      "/images/products/stand-signage01.webp",
+      "/images/products/stand-signage02.webp",
     ],
     category: "イベント",
     link: {

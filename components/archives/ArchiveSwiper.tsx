@@ -34,7 +34,7 @@ export default function App() {
         navigation={true}
         thumbs={{ swiper: thumbsSwiper }}
         modules={[FreeMode, Navigation, Thumbs]}
-        className="mySwiper2"
+        className="mySwiper2 w-full h-[80%]"
       >
         {mediaList.map((item, index) => (
           <SwiperSlide key={index}>
@@ -65,7 +65,7 @@ export default function App() {
         freeMode={true}
         watchSlidesProgress={true}
         modules={[FreeMode, Navigation, Thumbs]}
-        className="mySwiper"
+        className="mySwiper w-full h-[20%] box-border pt-5"
       >
         {mediaList.map((item, index) => (
           <SwiperSlide key={index}>

@@ -25,7 +25,7 @@ export default function BlogPage() {
       <Header />
 
       <main className="flex-1">
-        <section className="container max-w-6xl py-28 md:py-40">
+        <section className="container max-w-6xl py-24 sm:py-28 md:py-40">
           <h2>
             BLOG
             <span>ブログ</span>
@@ -40,13 +40,12 @@ export default function BlogPage() {
           </div>
 
           <div className="mt-20 md:mt-28 text-center">
-          <Link href="/">
-            <Button>TOPへ戻る</Button>
-          </Link>
+            <Link href="/">
+              <Button>TOPへ戻る</Button>
+            </Link>
           </div>
         </section>
 
-        
         <Cta />
       </main>
 

@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Metadata } from "next";
+import React from "react";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -7,9 +8,13 @@ import Link from "next/link";
 import { Header } from "../../../components/Header";
 import { Footer } from "../../../components/Footer";
 import { BackgroundImages } from "../../../components/BackgroundImage";
-import { Breadcrumb } from "../../../components/Breadcrumb";
+import { Breadcrumb } from "../../../components/blog/Breadcrumb";
 import { Button } from "../../../components/Button";
 import { Cta } from "../../../components/Cta";
+import { Section, SubSection } from "@components/blog/Section";
+import { Tag } from "@components/blog/Tag";
+import { Date } from "@components/blog/Date";
+import { TableOfContents } from "@components/blog/TableOfContents";
 
 import { mainData } from "../../../data/main";
 import { blogData } from "../../../data/blog";
@@ -78,6 +83,16 @@ const data: ComparisonData[] = [
 ];
 
 export default async function AboutPage() {
+  const sectionTitles = [
+    `はじめに`,
+    `透過型LEDビジョンとは？`,
+    `3種類の透過型LED製品タイプ`,
+    `${mainData.keyWords}が選ばれる5つの理由`,
+    `活用事例のご紹介`,
+    `導入前に確認すべきポイント`,
+    `まとめ`,
+  ];
+
   return (
     <div className="flex min-h-screen flex-col relative">
       <BackgroundImages />
@@ -94,98 +109,52 @@ export default async function AboutPage() {
 
       <main className="flex-1 [scroll-behavior:smooth]">
         <article className="blog container max-w-5xl pt-10 md:pt-20">
-          <h1>{blogData[1].title}</h1>
+          <h1>
+            {blogData[1].title.split("\n").map((line, i) => (
+              <React.Fragment key={i}>
+                {line}
+                {i < blogData[1].title.split("\n").length - 1 && <br />}
+              </React.Fragment>
+            ))}
+          </h1>
 
-          <div className="flex justify-between items-center mb-10 md:mb-16">
-            <p className="!text-xs mb-3 md:mb-5 -mt-5">
+          <div className="flex justify-between items-center">
+            <p className="mb-3 md:mb-5">
               {blogData[1].category.map((cat: string, index: number) => (
-                <span
-                  key={index}
-                  className="bg-gray-300/20 text-yellow-300 font-bold !text-xs px-1.5 py-1 rounded mr-1.5"
-                >
-                  {cat}
-                </span>
+                <Tag key={index} label={cat} />
               ))}
             </p>
+          </div>
 
-            <div className="text-gray-400 group-hover:text-white/80 transition-all text-xs md:text-sm">
-              <time dateTime={blogData[1].date}>{blogData[1].date}</time>
+          <Date date={blogData[1].date} />
+
+          <div className="mb-10 md:mb-16">
+            <div className="relative w-full pb-[56.25%]">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover"
+              >
+                <source src="/videos/film16.mp4" type="video/mp4" />
+              </video>
             </div>
           </div>
 
-          <section className="mb-20 md:mb-36">
-            <p className="mb-10 md:mb-16">
+          <Section id="introduction" title={sectionTitles[0]}>
+            <p>
               ガラス面に映像を映し出す"透過型LEDビジョン"は、空間デザインと広告の融合を実現する注目の最先端技術です。
               <br />
               しかし実は、この透過型LEDにも複数の種類があり、製品選びによってコスト・演出効果・設置性に大きな差が生まれます。
               <br />
               本記事では、代表的な3種類の透過型LEDビジョンを比較しながら、最も導入に適した選択肢をご紹介します。
             </p>
+          </Section>
 
-            <div>
-              <div className="relative w-full pb-[56.25%]">
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="absolute inset-0 w-full h-full object-cover"
-                >
-                  <source src="/videos/film16.mp4" type="video/mp4" />
-                </video>
-              </div>
-            </div>
-          </section>
+          <TableOfContents items={sectionTitles} />
 
-          <section className="index md:w-2/3 mx-auto bg-white/10 backdrop-blur-sm p-10 md:p-16">
-            <p className="text-lg md:text-xl lg:text-2xl text-center font-semibold mb-6 md:mb-10">
-              目 次
-            </p>
-            <ul className="list-decimal ml-5 space-y-6">
-              <li>
-                <Link href="#section01">
-                  <span>透過型LEDビジョンとは？</span>
-                </Link>
-              </li>
-
-              <li>
-                <Link href="#section02">
-                  <span>3種類の透過型LED製品タイプ</span>
-                </Link>
-              </li>
-
-              <li>
-                <Link href="#section03">
-                  <span>{mainData.keyWords}が選ばれる5つの理由</span>
-                </Link>
-              </li>
-
-              <li>
-                <Link href="#section04">
-                  <span>活用事例のご紹介</span>
-                </Link>
-              </li>
-
-              <li>
-                <Link href="#section05">
-                  <span>導入前に確認すべきポイント</span>
-                </Link>
-              </li>
-
-              <li>
-                <Link href="#section06">
-                  <span>まとめ</span>
-                </Link>
-              </li>
-            </ul>
-          </section>
-
-          <section id="section01">
-            <h2>
-              <span></span>
-              透過型LEDビジョンとは？
-            </h2>
-
+          <Section id="section01" title={sectionTitles[1]}>
             <div>
               <p>
                 透過型LEDビジョンとは、映像表示機能を備えながら、背面の視認性も確保できるLEDディスプレイのことです。
@@ -201,14 +170,9 @@ export default async function AboutPage() {
                 空間を圧迫せず、デザイン性を損なわない"透明性"こそが、透過型LED最大の魅力です。
               </p>
             </div>
-          </section>
+          </Section>
 
-          <section id="section02">
-            <h2>
-              <span></span>
-              3種類の透過型LED製品タイプ
-            </h2>
-
+          <Section id="section02" title={sectionTitles[2]}>
             <div className="flex justify-center mx-auto my-10 md:my-16">
               <div className="relative">
                 <Image
@@ -354,14 +318,9 @@ export default async function AboutPage() {
                 </table>
               </div>
             </div>
-          </section>
+          </Section>
 
-          <section id="section03">
-            <h2>
-              <span></span>
-              {mainData.keyWords}が選ばれる5つの理由
-            </h2>
-
+          <Section id="section03" title={sectionTitles[3]}>
             <div>
               <div className="mb-10 md:mb-16">
                 <h3>1. とにかく軽い！設置もラクラクで施工コストを大幅に削減</h3>
@@ -465,14 +424,9 @@ export default async function AboutPage() {
                 </p>
               </div>
             </div>
-          </section>
+          </Section>
 
-          <section id="section04">
-            <h2>
-              <span></span>
-              活用事例のご紹介
-            </h2>
-
+          <Section id="section04" title={sectionTitles[4]}>
             <div className="grid gap-10 xs:gap-5 grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 mb-16 md:mb-24">
               {caseData.slice(0, 3).map((case_) => (
                 <div key={case_.id} className="">
@@ -506,14 +460,9 @@ export default async function AboutPage() {
                 <Button>活用事例を詳しく見る</Button>
               </Link>
             </div>
-          </section>
+          </Section>
 
-          <section id="section05">
-            <h2>
-              <span></span>
-              導入前に確認すべきポイント
-            </h2>
-
+          <Section id="section05" title={sectionTitles[5]}>
             <div>
               <p className="mb-10 md:mb-16">
                 透明LEDビジョンを効果的に導入するためには、事前にいくつかの確認が必要です。
@@ -596,14 +545,9 @@ export default async function AboutPage() {
                 技術とクリエイティブの両面から、お客様のデジタルサイネージ導入を成功に導きます。
               </p>
             </div>
-          </section>
+          </Section>
 
-          <section id="section06">
-            <h2>
-              <span></span>
-              まとめ
-            </h2>
-
+          <Section id="section06" title={sectionTitles[6]}>
             <p className="text-[1.2em] md:text-[1.5em] font-mincho text-yellow-300 mb-5">
               LEDビジョンを設置するなら、圧倒的に「{mainData.keyWords}
               」がおすすめです。
@@ -630,12 +574,12 @@ export default async function AboutPage() {
               <br />
               単なる販売ではなく、お客様のビジネスゴールを実現するための最適な提案をお約束します。
             </p>
-          </section>
+          </Section>
         </article>
 
         <Cta />
 
-        <div className="mb-10 md:mb-20">
+        <div className="my-10 md:my-20">
           <Link href="/blog">
             <Button>ブログ一覧へ</Button>
           </Link>

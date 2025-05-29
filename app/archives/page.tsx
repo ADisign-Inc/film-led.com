@@ -24,22 +24,22 @@ export default function ArchivesPage() {
       <Header />
 
       <main className="flex-1">
-        <section className="container max-w-6xl py-28 md:py-40">
+        <section className="container max-w-6xl py-24 sm:py-28 md:py-40">
           <h2>
             Archives
             <span>導入実績</span>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mb-20 md:mb-40">
-            {archiveData.filter(post => post.isVisible !== false).map((post) => (
-              <ArchiveList key={post.id} post={post} />
-            ))}
+            {archiveData
+              .filter((post) => post.isVisible !== false)
+              .map((post) => (
+                <ArchiveList key={post.id} post={post} />
+              ))}
           </div>
 
           <Link href="/">
-            <Button>
-              TOPへ戻る
-            </Button>
+            <Button>TOPへ戻る</Button>
           </Link>
         </section>
 

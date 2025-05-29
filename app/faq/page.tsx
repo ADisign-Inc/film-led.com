@@ -32,7 +32,7 @@ export default function FAQPage() {
       <Header />
 
       <main className="flex-1">
-        <div className="container max-w-6xl py-20 md:py-40">
+        <div className="container max-w-6xl py-24 sm:py-28 md:py-40">
           <h2>
             FAQ
             <span>よくあるご質問</span>
@@ -63,7 +63,6 @@ export default function FAQPage() {
           </div>
         </div>
 
-        
         <Cta />
       </main>
       <Footer />

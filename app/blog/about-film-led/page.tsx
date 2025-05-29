@@ -10,9 +10,10 @@ import Link from "next/link";
 import { Header } from "../../../components/Header";
 import { Footer } from "../../../components/Footer";
 import { BackgroundImages } from "../../../components/BackgroundImage";
-import { Breadcrumb } from "../../../components/Breadcrumb";
+import { Breadcrumb } from "../../../components/blog/Breadcrumb";
 import { Button } from "../../../components/Button";
 import { Cta } from "../../../components/Cta";
+import { RelatedArticle } from "../../../components/blog/RelatedPost";
 
 import { mainData } from "../../../data/main";
 import { blogData } from "../../../data/blog";
@@ -70,8 +71,9 @@ export default function AboutPage() {
             <p className="mb-10 md:mb-16">
               近年、ショッピングモールやビルのガラス面などで、外からでも中からでも視界を遮らない映像演出を見かけたことはありませんか？
               <br />
-              それは「{mainData.keyWords}
-              」と呼ばれる、ガラスに貼る新世代のディスプレイかもしれません。
+              それは<strong>「{mainData.keyWords}」</strong>
+              と呼ばれる、ガラスに貼る<strong>新世代のLEDビジョン</strong>
+              かもしれません。
               <br />
               <br />
               この記事では、
@@ -212,7 +214,7 @@ export default function AboutPage() {
               {mainData.keyWords}とは？
             </h2>
 
-            <div className="mb-10 md:mb-16">
+            <div className="mb-10 md:mb-24">
               <h3>1. 技術の仕組み（原理や構造）</h3>
 
               <div className="flex flex-col md:flex-row gap-3 ml-3 md:ml-5">
@@ -256,7 +258,7 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="mb-10 md:mb-16">
+            <div className="mb-10 md:mb-24">
               <h3>2. 通常のLEDディスプレイとの違い</h3>
 
               <div className="flex flex-col md:flex-row gap-8 ml-3 md:ml-5">
@@ -1039,23 +1041,7 @@ export default function AboutPage() {
                 </tbody>
               </table>
 
-              <div className="flex justify-center mt-10 md:mt-28">
-                <div className="bg-white/10 inline-block px-10 md:px-14 py-4">
-                  <p>
-                    関連記事 :
-                    <span className="hover:text-yellow-300 mx-2">
-                      <Link
-                        href={`/blog/${blogData[1].url}`}
-                        className="border-b border-white hover:border-yellow-300 transition-colors pb-0.5"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {blogData[1].title}
-                      </Link>
-                    </span>
-                  </p>
-                </div>
-              </div>
+              <RelatedArticle article={blogData[1]} />
             </div>
           </section>
 
@@ -1101,7 +1087,7 @@ export default function AboutPage() {
 
         <Cta />
 
-        <div className="mb-10 md:mb-20">
+        <div className="my-10 md:my-20">
           <Link href="/blog">
             <Button>ブログ一覧へ</Button>
           </Link>

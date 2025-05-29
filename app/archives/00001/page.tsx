@@ -9,15 +9,14 @@ import { Footer } from "../../../components/Footer";
 import { BackgroundImages } from "../../../components/BackgroundImage";
 import { Button } from "../../../components/Button";
 import { Cta } from "../../../components/Cta";
-import { Breadcrumb } from "../../../components/Breadcrumb";
+import { Breadcrumb } from "../../../components/blog/Breadcrumb";
 
 import { mainData } from "../../../data/main";
 import { archiveData } from "../../../data/archives";
 
 export const metadata: Metadata = {
   title: `${archiveData[0].clientName} | 導入実績 `,
-  description:
-    `${mainData.keyWords}の導入実績ページです。製品の特徴や仕様、導入のメリットをご紹介します。`,
+  description: `${mainData.keyWords}の導入実績ページです。製品の特徴や仕様、導入のメリットをご紹介します。`,
 };
 
 const ArchiveSwiper = dynamic(
@@ -124,13 +123,10 @@ export default function AboutPage() {
 
         <div className="mt-20 md:mt-28 text-center">
           <Link href="/archives">
-            <Button variant="default">
-              導入実績一覧へ
-            </Button>
+            <Button variant="default">導入実績一覧へ</Button>
           </Link>
         </div>
 
-        
         <Cta />
       </main>
       <Footer />

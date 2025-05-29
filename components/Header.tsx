@@ -29,7 +29,7 @@ export function Header() {
 
       <div className="xl:container px-3 md:px-5">
         <div className="flex items-center justify-between h-14 md:h-20">
-          <div className="flex items-center w-40">
+          <div className="flex items-center w-28 sm:w-32 md:w-40">
             <Link href="/">
               <img
                 src="/images/logo-dark.svg"

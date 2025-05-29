@@ -10,7 +10,6 @@ const menuItems = [
   { href: "/products", label: "製品情報" },
   { href: "/contents", label: "コンテンツ制作" },
   { href: "/flow", label: "導入の流れ" },
-  // { href: "/faq", label: "FAQ" },
   { href: "/blog", label: "ブログ" },
   { href: mainData.contact.url, label: "お問い合わせ" },
 ];

@@ -8,48 +8,16 @@ import Link from "next/link";
 import { Header } from "../../../components/Header";
 import { Footer } from "../../../components/Footer";
 import { BackgroundImages } from "../../../components/BackgroundImage";
-import { Breadcrumb } from "../../../components/Breadcrumb";
+import { Breadcrumb } from "../../../components/blog/Breadcrumb";
 import { Button } from "../../../components/Button";
 import { Cta } from "../../../components/Cta";
+import { Section, SubSection } from "@components/blog/Section";
+import { Tag } from "../../../components/blog/Tag";
+import { Date } from "@components/blog/Date";
+import { TableOfContents } from "@components/blog/TableOfContents";
 
 import { mainData } from "../../../data/main";
 import { blogData } from "../../../data/blog";
-
-// セクションコンポーネントの型定義
-type SectionProps = {
-  id: string;
-  title: string;
-  children: React.ReactNode;
-  className?: string;
-};
-
-// セクションコンポーネント
-const Section = ({ id, title, children, className = "" }: SectionProps) => {
-  return (
-    <section id={id} className={`mb-20 md:mb-36 ${className}`}>
-      <h2>
-        <span></span>
-        {title}
-      </h2>
-      <div>{children}</div>
-    </section>
-  );
-};
-
-type SubSectionProps = {
-  title: string;
-  children: React.ReactNode;
-  className?: string;
-};
-
-const SubSection = ({ title, children, className = "" }: SubSectionProps) => {
-  return (
-    <div className={`mb-10 md:mb-16 ${className}`}>
-      <h3>{title}</h3>
-      {children}
-    </div>
-  );
-};
 
 export const metadata: Metadata = {
   title: `${blogData[2].title} | ブログ`,
@@ -71,7 +39,9 @@ export default async function AboutPage() {
   return (
     <div className="flex min-h-screen flex-col relative">
       <BackgroundImages />
+
       <Header />
+
       <Breadcrumb
         items={[
           { label: "TOP", href: "/" },
@@ -79,6 +49,7 @@ export default async function AboutPage() {
           { label: `${blogData[2].title}` },
         ]}
       />
+
       <main className="flex-1 [scroll-behavior:smooth]">
         <article className="blog container max-w-5xl pt-10 md:pt-20">
           <h1>
@@ -90,22 +61,15 @@ export default async function AboutPage() {
             ))}
           </h1>
 
-          <div className="flex justify-between items-center mb-5 md:mb-10">
-            <p className="!text-xs mb-3 md:mb-5 -mt-5">
+          <div className="flex justify-between items-center">
+            <p className="mb-3 md:mb-5">
               {blogData[2].category.map((cat: string, index: number) => (
-                <span
-                  key={index}
-                  className="bg-gray-300/20 text-yellow-300 font-bold !text-xs px-1.5 py-1 rounded mr-1.5"
-                >
-                  {cat}
-                </span>
+                <Tag key={index} label={cat} />
               ))}
             </p>
-
-            <div className="text-gray-400 group-hover:text-white/80 transition-all text-xs md:text-sm">
-              <time dateTime={blogData[2].date}>{blogData[2].date}</time>
-            </div>
           </div>
+
+          <Date date={blogData[2].date} />
 
           <div className="flex justify-center mx-auto mb-10 md:mb-16">
             <div className="relative">
@@ -140,20 +104,7 @@ export default async function AboutPage() {
             </div>
           </Section>
 
-          <section className="index md:w-2/3 mx-auto bg-white/10 backdrop-blur-sm p-10 md:p-16">
-            <p className="text-lg md:text-xl lg:text-2xl text-center font-semibold mb-6 md:mb-10">
-              目 次
-            </p>
-            <ul className="list-decimal ml-5 space-y-6">
-              {sectionTitles.map((title, index) => (
-                <li key={index}>
-                  <Link href={`#section${String(index).padStart(1, "0")}`}>
-                    <span>{title}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </section>
+          <TableOfContents items={sectionTitles} />
 
           <Section id="section01" title={sectionTitles[1]}>
             <p>
@@ -444,7 +395,7 @@ export default async function AboutPage() {
 
         <Cta />
 
-        <div className="mb-10 md:mb-20">
+        <div className="my-10 md:my-20">
           <Link href="/blog">
             <Button>ブログ一覧へ</Button>
           </Link>
