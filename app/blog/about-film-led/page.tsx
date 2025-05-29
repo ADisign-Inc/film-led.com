@@ -247,7 +247,7 @@ export default function AboutPage() {
                 <div className="order-1 md:order-2 md:w-1/6">
                   <div className="relative">
                     <Image
-                      src="/images/products06.png"
+                      src="/images/products/03.webp"
                       alt=""
                       width={500}
                       height={500}
@@ -340,7 +340,7 @@ export default function AboutPage() {
                 <div className="order-1 md:order-2 md:w-2/5">
                   <div className="relative pb-[56.25%]">
                     <Image
-                      src="/images/products05.png"
+                      src="/images/products/02.webp"
                       alt=""
                       fill
                       className="object-cover"

@@ -66,7 +66,7 @@ export const caseData: Case[] = [
     category: "イベント",
     link: {
       url: "https://adisignage.com/product_3.html",
-      text: "LEDスタンドサイネージはこちら",
+      text: "LEDスタンドサイネージ",
     },
   },
   {

@@ -123,7 +123,7 @@ export default async function ProductsPage() {
               </div>
               <div className="flex justify-center">
                 <Image
-                  src="/images/products05.png"
+                  src="/images/products/02.webp.png"
                   alt={`${mainData.keyWords}`}
                   width={500}
                   height={300}
