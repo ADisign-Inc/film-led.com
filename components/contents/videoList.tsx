@@ -21,10 +21,8 @@ export function VideoList() {
     const baseParams =
       "mute=1&loop=1&playlist=" +
       videoId +
-      "&enablejsapi=1&playsinline=1&modestbranding=1&showinfo=0&controls=0&rel=0&iv_load_policy=3&origin=https://film-led.com&widget_referrer=https://film-led.com&preload=auto&loading=0";
-    return `https://www.youtube.com/embed/${videoId}?${baseParams}${
-      isHovered ? "&autoplay=1" : ""
-    }`;
+      "&enablejsapi=1&playsinline=1&modestbranding=1&showinfo=0&controls=0&rel=0&iv_load_policy=3&origin=https://film-led.com&widget_referrer=https://film-led.com&preload=auto&loading=0&autoplay=1";
+    return `https://www.youtube.com/embed/${videoId}?${baseParams}`;
   };
 
   useEffect(() => {

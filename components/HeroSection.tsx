@@ -13,6 +13,7 @@ export function HeroSection() {
             loop
             muted
             playsInline
+            preload="auto"
             className="w-full h-full object-cover brightness-[0.2]"
           >
             <source src="/videos/film02.mp4" type="video/mp4" />
@@ -24,6 +25,7 @@ export function HeroSection() {
             loop
             muted
             playsInline
+            preload="auto"
             className="h-[140%] md:h-[150%] w-auto"
           >
             <source src="/videos/film02.mp4" type="video/mp4" />

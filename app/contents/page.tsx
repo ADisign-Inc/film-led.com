@@ -45,7 +45,7 @@ const ContentsPage = () => {
             </div>
 
             <div
-              className="absolute inset-0 opacity-30 bg-cover bg-center z-[-1]"
+              className="absolute inset-0 opacity-40 bg-cover bg-center z-[-1]"
               style={{ backgroundImage: "url('/images/cases/05-0.jpg')" }}
             />
           </div>
@@ -326,7 +326,7 @@ const ContentsPage = () => {
         </div>
 
         <div className="mt-5 md:mt-10 text-center">
-        <Link href="/">
+          <Link href="/">
             <Button>TOPへ戻る</Button>
           </Link>
         </div>

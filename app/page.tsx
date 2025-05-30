@@ -256,7 +256,7 @@ export default async function LandingPage() {
                 </div>
               </div>
 
-              <div className="relative flex flex-col lg:flex-row items-stretch">
+              <div className="relative flex flex-col lg:flex-row items-stretch mb-40">
                 <div className="w-full lg:w-1/2">
                   <Image
                     src="/images/about/02.jpg"
@@ -284,13 +284,12 @@ export default async function LandingPage() {
                       <br />
                       簡単なヒアリングでお見積りのみも可能ですので、お気軽にお問い合わせください。
                     </p>
-
-                    <Link href="/products">
-                      <Button>コンテンツ制作について</Button>
-                    </Link>
                   </div>
                 </div>
               </div>
+              <Link href="/contents">
+                <Button>コンテンツ制作について</Button>
+              </Link>
             </div>
           </section>
 
