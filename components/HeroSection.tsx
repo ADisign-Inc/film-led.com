@@ -2,13 +2,39 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "./Button";
 import { mainData } from "../data/main";
+import { useEffect, useRef } from "react";
 
 export function HeroSection() {
+  const videoRef1 = useRef<HTMLVideoElement>(null);
+  const videoRef2 = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const playVideos = async () => {
+      if (videoRef1.current) {
+        try {
+          await videoRef1.current.play();
+        } catch (error) {
+          console.log("Video 1 autoplay failed:", error);
+        }
+      }
+      if (videoRef2.current) {
+        try {
+          await videoRef2.current.play();
+        } catch (error) {
+          console.log("Video 2 autoplay failed:", error);
+        }
+      }
+    };
+
+    playVideos();
+  }, []);
+
   return (
     <section className="relative mb-28 md:mb-40">
       <div className="relative w-full pb-[140%] xs:pb-[100%] md:pb-[72.25%] lg:pb-[68.25%] xl:pb-[60.25%] 2xl:pb-[45.25%] bg-transparent overflow-hidden mb-10 md:mb-20">
         <div className="absolute inset-0">
           <video
+            ref={videoRef1}
             autoPlay
             loop
             muted
@@ -21,6 +47,7 @@ export function HeroSection() {
         </div>
         <div className="absolute inset-0 flex items-center justify-center md:justify-end">
           <video
+            ref={videoRef2}
             autoPlay
             loop
             muted
