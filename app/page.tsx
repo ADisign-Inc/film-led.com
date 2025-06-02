@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
@@ -19,13 +22,14 @@ import {
 import { mainData } from "../data/main";
 import { benefitData } from "../data/benefits";
 import { caseData } from "../data/cases";
+import { videoList } from "../data/video";
 import { flowStep } from "../data/flow";
 import { blogData } from "../data/blog";
 import { faqData } from "../data/faq";
 
 export const dynamic = "force-dynamic";
 
-export default async function LandingPage() {
+export default function LandingPage() {
   return (
     <>
       <div className="flex min-h-screen flex-col relative">
@@ -256,15 +260,19 @@ export default async function LandingPage() {
                 </div>
               </div>
 
-              <div className="relative flex flex-col lg:flex-row items-stretch mb-40">
+              <div className="relative flex flex-col lg:flex-row items-stretch mb-20 md:mb-40">
                 <div className="w-full lg:w-1/2">
-                  <Image
-                    src="/images/about/02.jpg"
-                    alt="LED Display"
-                    width={800}
-                    height={600}
-                    className="object-cover w-full h-full"
-                  />
+                  <iframe
+                    width="560"
+                    height="315"
+                    src={`https://www.youtube-nocookie.com/embed/${videoList[0].id}?si=TfzwpYAiFIQj3DvJ&autoplay=1&mute=1&loop=1&playlist=${videoList[0].id}&modestbranding=1&showinfo=0&controls=0&rel=0&iv_load_policy=3&origin=https://film-led.com&widget_referrer=https://film-led.com`}
+                    title={videoList[0].title}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                    style={{ pointerEvents: "none" }}
+                  ></iframe>
                 </div>
 
                 <div className="w-full lg:w-1/2 relative -z-10 px-8 md:px-10 md:pt-20">
@@ -280,6 +288,7 @@ export default async function LandingPage() {
                     </div>
 
                     <p className="mb-8 md:mb-14">
+                      WEB制作現場において培ったバナー・広告動画のノウハウを駆使して、
                       お客様のご予算に合わせた最適な映像コンテンツをご提案し、プロフェッショナルな映像をご提供いたします。
                       <br />
                       簡単なヒアリングでお見積りのみも可能ですので、お気軽にお問い合わせください。
@@ -287,6 +296,7 @@ export default async function LandingPage() {
                   </div>
                 </div>
               </div>
+
               <Link href="/contents">
                 <Button>コンテンツ制作について</Button>
               </Link>

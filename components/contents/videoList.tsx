@@ -132,27 +132,10 @@ export function VideoList() {
                 className="absolute inset-0 w-full h-full"
                 style={{ visibility: "visible" }}
               ></iframe>
-            ) : !video.thumbnail ? (
-              <iframe
-                ref={(el) => {
-                  videoRefs.current[index] = el;
-                }}
-                width="100%"
-                height="100%"
-                src={getVideoSrc(video.id, false)}
-                title={video.title}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-                loading="eager"
-                className="absolute inset-0 w-full h-full"
-                style={{ visibility: "visible" }}
-              ></iframe>
             ) : (
               <div className="relative w-full h-full">
                 <Image
-                  src={video.thumbnail}
+                  src={`/images/YouTubeThumbnail/${video.id}.webp`}
                   alt={video.title}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

@@ -12,40 +12,60 @@ export type Case = {
 
 export const caseData: Case[] = [
   {
-    id: "01",
-    title: "商業施設や店舗",
-    description: `高級ブランド店やショッピングモールでは、<strong>ガラスのウィンドウに透明フィルム型LEDビジョンを設置</strong>することで、商品展示と連動した<strong>インパクトある映像演出</strong>や<strong>広告表示</strong>が可能になります。<br />
+    id: "retail-store",
+    title: "小売店",
+    description: `高級ブランド店やアパレルショップなどでは、<strong>ガラスのウィンドウに透明フィルム型LEDビジョンを設置</strong>することで、商品展示と連動した<strong>インパクトある映像演出</strong>や<strong>広告表示</strong>が可能になります。<br />
                   ディスプレイ映像とリアルな商品が一体化して見える演出により、<strong>視覚的なインパクトを最大化</strong>し、より洗練されたプランドイメージや購買意欲を高める効果が期待できます。`,
-    image: ["/images/cases/01-0.jpg", "/images/cases/01-1.jpg"],
+    image: [
+      "/images/cases/retail-store01.webp",
+      "/images/cases/retail-store02.webp",
+    ],
     category: "小売",
   },
   {
-    id: "02",
+    id: "shopping-mall",
+    title: "ショッピングモール",
+    description: `ショッピングモールにおいて、透明フィルム型LEDは「空間演出」と「情報発信」を両立する革新的なソリューションとして注目されています。<br />
+                  ガラス面に直接貼り付けることで、建物のデザイン性を損なうことなく、ダイナミックな映像表現が可能になります。<br />
+                  たとえば、エントランスの大型ガラス面に設置することで、季節ごとのキャンペーン告知やイベント情報を効果的に発信でき、来館者の注目を集めることができます。<br />
+                  また、外光を遮ることなく透過性を保つため、自然な明るさを維持したまま視認性の高い演出が可能です。<br />
+                  さらに、館内の吹き抜けガラスやエスカレーター周辺の透明壁面などにも応用でき、動線に沿った広告展開やブランディング演出にも対応します。`,
+    image: [
+      "/images/cases/shopping-mall01.webp",
+      "/images/cases/shopping-mall02.webp",
+    ],
+    category: "小売",
+  },
+  {
+    id: "office",
     title: "ビルやオフィス",
     description: `商業ビルやオフィスビルの外壁にもファサードディスプレイとして活用され、空間デザインを損なうことなく、外部に向けて広告や情報を発信することができます。<br />
                   透明フィルム型LEDビジョンは、外観の美しさを保ちながら、ディスプレイ効果を最大化できるため、建築デザインにも調和します。`,
-    image: ["/images/cases/02-0.jpg", "/images/cases/02-1.jpg"],
+    image: ["/images/cases/office01.webp", "/images/cases/office02.webp"],
     category: "小売",
   },
   {
-    id: "03",
+    id: "traffic",
     title: "公共交通機関の案内板",
     description: `透明フィルム型LEDビジョンは、駅や空港、バス停などの公共交通機関の案内板としても利用されます。<br />
                   透明なフィルムによる視認性の確保と、高輝度表示によって、日中でも視認性が高く、利用者にとって有益な情報提供ができます。`,
-    image: ["/images/cases/03-0.jpg", "/images/cases/03-1.jpg"],
+    image: ["/images/cases/traffic01.webp", "/images/cases/traffic02.webp"],
     category: "小売",
   },
   {
-    id: "04",
+    id: "exhibition",
     title: "展示会での空間演出",
     description: `展示会やイベントでは、透明フィルム型LEDビジョンを活用することで、<strong>来場者の視線を自然に集める</strong>効果的な<strong>空間演出</strong>が可能です。<br />
                   ブースのガラス面やパーテーションに映像を映し出すことで、<strong>立体感や奥行きを演出</strong>し、<strong>遠くからでも視覚的に強いインパクト</strong>を与えることができます。<br />
                   結果、<strong>ブランドイメージの訴求力を高め</strong>、ブースへの<strong>集客効果を向上</strong>させるなど、販促・PR活動に大きく貢献します。`,
-    image: ["/images/cases/04-0.jpg", "/images/cases/04-1.jpg"],
+    image: [
+      "/images/cases/exhibition01.webp",
+      "/images/cases/exhibition02.webp",
+    ],
     category: "小売",
   },
   {
-    id: "05",
+    id: "06",
     title: "カーディーラー",
     description:
       "通り沿いの店舗が多いため大型のシースルーサイネージや店内でのイメージ映像に多く利用されています。",
@@ -53,7 +73,7 @@ export const caseData: Case[] = [
     category: "イベント",
   },
   {
-    id: "06",
+    id: "07",
     title: "飲食店・小売店",
     description: `1階にある店舗には、歩行者の目線に合わせて情報を訴求できる<strong>スタンド型サイネージ</strong>がおすすめです。<br />
                   店頭でメニューやキャンペーン情報を表示し、<strong>通行客の目を引く効果的な販促ツール</strong>として活用できます。<br />
@@ -70,7 +90,7 @@ export const caseData: Case[] = [
     },
   },
   {
-    id: "07",
+    id: "08",
     title: "ホテル・サービス業",
     description:
       "多言語表示でのサービスや案内の表示に使われたり、受付付近でのイメージ映像などに多く利用されています。",
@@ -78,7 +98,7 @@ export const caseData: Case[] = [
     category: "イベント",
   },
   {
-    id: "08",
+    id: "09",
     title: "マンション・不動産",
     description:
       "不動産業では、物件情報の掲載に活用されています。\nマンションなどでは住民への掲示板として利用される例もあります。",
@@ -86,7 +106,7 @@ export const caseData: Case[] = [
     category: "イベント",
   },
   {
-    id: "09",
+    id: "10",
     title: "レジャー施設",
     description:
       "大ビジョンでの演出はもちろん、球場・スタジアムなどでは、スポンサーのPRなどとして利用されています。",
@@ -94,7 +114,7 @@ export const caseData: Case[] = [
     category: "イベント",
   },
   {
-    id: "010",
+    id: "11",
     title: "イベント会場・結婚式場",
     description:
       "LEDビジョンは、雰囲気作りや演出に最適です。\n大型ビジョンからイーゼル型のサイネージまで幅広く利用されてます。",

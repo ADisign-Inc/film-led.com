@@ -27,14 +27,16 @@ const FooterItems03 = [
 export function Footer() {
   return (
     <footer className="text-gray-300 border-t border-gray-400 py-5 md:py-14 mt-20 md:mt-40">
-      <div className="container">
+      <div className="container max-w-7xl mx-auto">
         <div className="grid md:gap-8 md:grid-cols-4">
           <div className="mb-8 md:mb-0">
             <div className="w-32 md:w-40 mb-5">
               <Link href="/">
-                <img
+                <Image
                   src="/images/logo-dark.svg"
-                  alt="Logo"
+                  alt={mainData.companyName}
+                  width={160}
+                  height={40}
                   className="w-full h-auto"
                 />
               </Link>

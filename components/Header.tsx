@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Navigation } from "./Navigation";
+import { mainData } from "../data/main";
 import { useEffect, useState } from "react";
 
 export function Header() {
@@ -31,9 +32,11 @@ export function Header() {
         <div className="flex items-center justify-between h-14 md:h-20">
           <div className="flex items-center w-28 sm:w-32 md:w-40">
             <Link href="/">
-              <img
+              <Image
                 src="/images/logo-dark.svg"
-                alt="Logo"
+                alt={mainData.companyName}
+                width={160}
+                height={40}
                 className="w-full h-auto"
               />
             </Link>
