@@ -98,7 +98,7 @@ strong {
   }
 
   section {
-    @apply mb-20 md:mb-36;
+    @apply mb-20 md:mb-32;
   }
 
   p {

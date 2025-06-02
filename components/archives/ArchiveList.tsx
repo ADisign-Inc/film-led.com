@@ -32,9 +32,15 @@ export function ArchiveList({ post }: { post: Archive }) {
             {post.clientName}
           </h3>
 
-          <p className="text-sm text-gray-300 group-hover:text-white transition-all !leading-5 mb-3 flex-grow">
-            {post.description}
-          </p>
+          <p
+            dangerouslySetInnerHTML={{
+              __html:
+                post.description.length > 85
+                  ? `${post.description.slice(0, 85)}...`
+                  : post.description,
+            }}
+            className="text-sm text-gray-300 group-hover:text-white transition-all !leading-5 mb-3 flex-grow"
+          ></p>
 
           <div className="flex items-end">
             <div className="text-gray-400 group-hover:text-white/80 transition-all text-xs md:text-sm text-end w-full">

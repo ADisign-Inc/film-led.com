@@ -41,8 +41,8 @@ export default function AboutPage() {
 
       <main className="flex-1 [scroll-behavior:smooth]">
         <div className="container max-w-5xl py-10 md:py-20">
-          <article className="blog mb-20 md:mb-40">
-            <section className="mb-20 md:mb-28">
+          <article className="blog">
+            <section>
               <h3 className="text-yellow-300">{archiveData[0].clientName}</h3>
 
               <p className="!text-xs mb-5 md:mb-14 -mt-5">
@@ -110,7 +110,12 @@ export default function AboutPage() {
                 <ArchiveSwiper />
               </div>
 
-              <p className="mb-10 md:mb-16">{archiveData[0].description}</p>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: archiveData[0].description,
+                }}
+                className="[&_span]:text-[1.8em] [&_span]:font-bold [&_span]:text-yellow-300"
+              ></p>
             </section>
           </article>
         </div>
@@ -121,13 +126,13 @@ export default function AboutPage() {
           ))}
         </div> */}
 
-        <div className="mt-20 md:mt-28 text-center">
+        <Cta />
+
+        <div className="my-20 md:my-28 text-center">
           <Link href="/archives">
             <Button variant="default">導入実績一覧へ</Button>
           </Link>
         </div>
-
-        <Cta />
       </main>
       <Footer />
     </div>

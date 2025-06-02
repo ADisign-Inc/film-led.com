@@ -786,6 +786,11 @@ body {
   margin-bottom: 2.5rem;
 }
 
+.my-20 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -918,14 +923,6 @@ body {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mt-40 {
-  margin-top: 10rem;
-}
-
-.mb-40 {
-  margin-bottom: 10rem;
 }
 
 .box-border {
@@ -1978,10 +1975,6 @@ body {
   opacity: 0;
 }
 
-.opacity-30 {
-  opacity: 0.3;
-}
-
 .opacity-40 {
   opacity: 0.4;
 }
@@ -2396,7 +2389,7 @@ strong {
   }
   @media (min-width: 768px) {
     section {
-      margin-bottom: 9rem;
+      margin-bottom: 8rem;
     }
   }
   p {
@@ -2928,6 +2921,11 @@ strong {
   .md\:my-20 {
     margin-top: 5rem;
     margin-bottom: 5rem;
+  }
+
+  .md\:my-28 {
+    margin-top: 7rem;
+    margin-bottom: 7rem;
   }
 
   .md\:my-6 {
@@ -3599,6 +3597,10 @@ strong {
 
 .\[\&_span\]\:text-\[1\.3em\] span {
   font-size: 1.3em;
+}
+
+.\[\&_span\]\:text-\[1\.8em\] span {
+  font-size: 1.8em;
 }
 
 .\[\&_span\]\:text-xs span {
