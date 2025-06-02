@@ -2238,7 +2238,7 @@ strong {
 
 .blog {
   h1 {
-    margin-bottom: 2.5rem;
+    margin-bottom: 0.75rem;
   }
   h1 {
     text-align: center;
@@ -2258,19 +2258,19 @@ strong {
   }
   @media (min-width: 768px) {
     h1 {
-      margin-bottom: 3.5rem;
+      margin-bottom: 1.25rem;
     }
   }
   @media (min-width: 768px) {
     h1 {
-      font-size: 1.875rem;
-      line-height: 2.25rem;
+      font-size: 1.5rem;
+      line-height: 2rem;
     }
   }
   @media (min-width: 1024px) {
     h1 {
-      font-size: 2.25rem;
-      line-height: 2.5rem;
+      font-size: 1.875rem;
+      line-height: 2.25rem;
     }
   }
   h2 {
@@ -2440,11 +2440,6 @@ strong {
     }
   }
 }
-
-/* .swiper-slide {
-  background-size: cover;
-  background-position: center;
-} */
 
 .mySwiper .swiper-slide {
   width: 25%;

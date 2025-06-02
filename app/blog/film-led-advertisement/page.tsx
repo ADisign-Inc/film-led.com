@@ -62,7 +62,7 @@ export default async function AboutPage() {
           </h1>
 
           <div className="flex justify-between items-center">
-            <p className="mb-3 md:mb-5">
+            <p>
               {blogData[2].category.map((cat: string, index: number) => (
                 <Tag key={index} label={cat} />
               ))}

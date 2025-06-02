@@ -83,7 +83,7 @@ strong {
 
 .blog {
   h1 {
-    @apply font-mincho text-xl md:text-3xl lg:text-4xl font-bold text-center !leading-relaxed mb-10 md:mb-14;
+    @apply font-mincho text-xl md:text-2xl lg:text-3xl font-bold text-center !leading-relaxed mb-3 md:mb-5;
   }
 
   h2 {
@@ -119,11 +119,6 @@ strong {
     }
   }
 }
-
-/* .swiper-slide {
-  background-size: cover;
-  background-position: center;
-} */
 
 .mySwiper .swiper-slide {
   width: 25%;
