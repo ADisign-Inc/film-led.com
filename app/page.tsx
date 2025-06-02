@@ -262,17 +262,18 @@ export default function LandingPage() {
 
               <div className="relative flex flex-col lg:flex-row items-stretch mb-20 md:mb-40">
                 <div className="w-full lg:w-1/2">
-                  <iframe
-                    width="560"
-                    height="315"
-                    src={`https://www.youtube-nocookie.com/embed/${videoList[0].id}?si=TfzwpYAiFIQj3DvJ&autoplay=1&mute=1&loop=1&playlist=${videoList[0].id}&modestbranding=1&showinfo=0&controls=0&rel=0&iv_load_policy=3&origin=https://film-led.com&widget_referrer=https://film-led.com`}
-                    title={videoList[0].title}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen
-                    style={{ pointerEvents: "none" }}
-                  ></iframe>
+                  <div className="relative w-full pb-[56.25%] overflow-hidden">
+                    <iframe
+                      className="absolute top-0 left-0 w-full h-full"
+                      src={`https://www.youtube-nocookie.com/embed/${videoList[0].id}?si=TfzwpYAiFIQj3DvJ&autoplay=1&mute=1&loop=1&playlist=${videoList[0].id}&modestbranding=1&showinfo=0&controls=0&rel=0&iv_load_policy=3&origin=https://film-led.com&widget_referrer=https://film-led.com`}
+                      title={videoList[0].title}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                      style={{ pointerEvents: "none" }}
+                    ></iframe>
+                  </div>
                 </div>
 
                 <div className="w-full lg:w-1/2 relative -z-10 px-8 md:px-10 md:pt-20">

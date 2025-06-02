@@ -32,7 +32,7 @@ export function HeroSection() {
   }, []);
 
   return (
-    <section className="relative mb-28 md:mb-40">
+    <section className="relative mb-20 md:mb-40">
       <div className="relative w-full pb-[140%] xs:pb-[100%] md:pb-[72.25%] lg:pb-[68.25%] xl:pb-[60.25%] 2xl:pb-[45.25%] bg-transparent overflow-hidden mb-10 md:mb-20">
         <div className="absolute inset-0">
           <video

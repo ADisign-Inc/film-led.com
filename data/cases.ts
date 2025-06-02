@@ -63,15 +63,15 @@ export const caseData: Case[] = [
     category: "小売",
   },
   {
-    id: "06",
+    id: "car-dealer",
     title: "カーディーラー",
     description:
       "通り沿いの店舗が多いため大型のシースルーサイネージや店内でのイメージ映像に多く利用されています。",
-    image: ["/images/cases/05-0.jpg", "/images/cases/05-1.jpg"],
+    image: ["/images/cases/car-dealer01.webp", "/images/cases/car-dealer02.webp"],
     category: "イベント",
   },
   {
-    id: "07",
+    id: "restaurant",
     title: "飲食店・小売店",
     description: `1階にある店舗には、歩行者の目線に合わせて情報を訴求できる<strong>スタンド型サイネージ</strong>がおすすめです。<br />
                   店頭でメニューやキャンペーン情報を表示し、<strong>通行客の目を引く効果的な販促ツール</strong>として活用できます。<br />
@@ -88,35 +88,35 @@ export const caseData: Case[] = [
     },
   },
   {
-    id: "08",
+    id: "service",
     title: "ホテル・サービス業",
     description:
       "多言語表示でのサービスや案内の表示に使われたり、受付付近でのイメージ映像などに多く利用されています。",
-    image: ["/images/cases/07-0.jpg", "/images/cases/07-1.jpg"],
+    image: ["/images/cases/service01.webp", "/images/cases/service02.webp"],
     category: "イベント",
   },
   {
-    id: "09",
+    id: "real-estate",
     title: "マンション・不動産",
     description:
       "不動産業では、物件情報の掲載に活用されています。\nマンションなどでは住民への掲示板として利用される例もあります。",
-    image: ["/images/cases/08-0.jpg", "/images/cases/08-1.jpg"],
+    image: ["/images/cases/real-estate01.webp", "/images/cases/real-estate02.webp"],
     category: "イベント",
   },
   {
-    id: "10",
+    id: "leisure",
     title: "レジャー施設",
     description:
       "大ビジョンでの演出はもちろん、球場・スタジアムなどでは、スポンサーのPRなどとして利用されています。",
-    image: ["/images/cases/09-0.jpg", "/images/cases/09-1.jpg"],
+    image: ["/images/cases/leisure01.webp", "/images/cases/leisure02.webp"],
     category: "イベント",
   },
   {
-    id: "11",
+    id: "events",
     title: "イベント会場・結婚式場",
     description:
       "LEDビジョンは、雰囲気作りや演出に最適です。\n大型ビジョンからイーゼル型のサイネージまで幅広く利用されてます。",
-    image: ["/images/cases/10-0.jpg", "/images/cases/10-1.jpg"],
+    image: ["/images/cases/events01.webp", "/images/cases/events02.webp"],
     category: "イベント",
   },
 ];

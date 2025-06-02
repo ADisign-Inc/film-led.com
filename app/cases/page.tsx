@@ -74,8 +74,8 @@ export default function CasesPage() {
                       <Image
                         src={cases_.image[0]}
                         alt={cases_.title}
-                        width={500}
-                        height={300}
+                        width={1000}
+                        height={618}
                         className="object-cover"
                       />
                     </div>
@@ -83,8 +83,8 @@ export default function CasesPage() {
                       <Image
                         src={cases_.image[1]}
                         alt={cases_.title}
-                        width={500}
-                        height={300}
+                        width={1000}
+                        height={618}
                         className="object-cover"
                       />
                     </div>
