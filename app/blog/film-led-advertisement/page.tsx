@@ -18,6 +18,7 @@ import { TableOfContents } from "@components/blog/TableOfContents";
 
 import { mainData } from "../../../data/main";
 import { blogData } from "../../../data/blog";
+import { caseData } from "../../../data/cases";
 
 export const metadata: Metadata = {
   title: `${blogData[2].title} | ブログ`,
@@ -330,7 +331,6 @@ export default async function AboutPage() {
               <Link href="/blog">
                 <Button>
                   コンテンツ制作について
-                  <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>
             </div>
@@ -350,25 +350,39 @@ export default async function AboutPage() {
           </Section>
 
           <Section id="section06" title={sectionTitles[6]}>
-            <SubSection title="商業施設・ショッピングモール">
-              <p>通行客への視覚訴求</p>
-            </SubSection>
+          <div className="grid gap-10 xs:gap-8 grid-cols-1 xs:grid-cols-2 mb-16 md:mb-24">
+              {caseData.slice(0, 6).map((case_) => (
+                <div key={case_.id} className="">
+                  <div className="flex items-center justify-center mb-3 md:mb-5">
+                    <Image
+                      src={case_.image[0]}
+                      alt={case_.title}
+                      width={400}
+                      height={400}
+                      className="object-cover w-full"
+                      priority
+                    />
+                  </div>
+                  <h3 className="text-xl md:text-xl text-yellow-300 !mb-3">
+                    {case_.title}
+                  </h3>
+                  <p
+                    className="px-2"
+                    dangerouslySetInnerHTML={{
+                      __html: case_.description
+                        // .replace(/\n/g, "<br />")
+                        .replace(/<strong>/g, "<strong>"),
+                    }}
+                  ></p>
+                </div>
+              ))}
+            </div>
 
-            <SubSection title="飲食店・カフェ">
-              <p>メニュー表示や時間帯に応じた演出</p>
-            </SubSection>
-
-            <SubSection title="ファッション・ビューティー系店舗">
-              <p>ブランド世界観の表現</p>
-            </SubSection>
-
-            <SubSection title="不動産・自動車">
-              <p>高額商品の価値訴求をダイナミックに</p>
-            </SubSection>
-
-            <SubSection title="行政・観光地">
-              <p>インバウンド向けの視覚的PR</p>
-            </SubSection>
+            <Link href="/cases">
+                <Button>
+                  活用事例を詳しく見る
+                </Button>
+              </Link>
           </Section>
 
           <Section id="section07" title={sectionTitles[7]}>

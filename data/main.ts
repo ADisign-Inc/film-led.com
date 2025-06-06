@@ -30,6 +30,7 @@ export const mainData = {
   contact: {
     tel: "092-433-3302",
     fax: "092-510-1095",
+    email: "info@adisignage.com",
     url: "https://adisignage.com/contact_form.html",
     hours: "平日10時〜18時",
   },
