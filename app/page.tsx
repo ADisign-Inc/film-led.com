@@ -232,7 +232,7 @@ export default function LandingPage() {
               <div className="relative flex flex-col lg:flex-row items-stretch md:mb-20">
                 <div className="w-full lg:w-1/2">
                   <Image
-                    src="/images/about/01.jpg"
+                    src="/images/blog/about-film-led/01.jpg"
                     alt="LED Display"
                     width={800}
                     height={600}

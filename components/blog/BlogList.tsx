@@ -4,7 +4,7 @@ import { Blog } from "../../data/blog";
 
 export function BlogList({ post }: { post: Blog }) {
   return (
-    <Link href={`/blog/${post.url}`} className="group">
+    <Link href={`/blog/${post.slug}`} className="group">
       <article className="bg-white/5 group-hover:bg-black/5 transition-all shadow-lg group-hover:shadow-[0_0_5px_rgba(255,255,255,0.6)] flex flex-col h-full">
         <div className="relative aspect-[16/9] group-hover:after:absolute group-hover:after:inset-0 group-hover:after:bg-black/30 group-hover:after:transition-all">
           <Image

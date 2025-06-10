@@ -20,7 +20,8 @@ export const archiveData: Archive[] = [
   {
     id: "00001",
     clientName: "岩田屋本館 ジミーチュウ 様",
-    description: `  <span>九州初導入！${mainData.keyWords}ビジョン</span><br/>
+    description: `
+      <span>九州初導入！${mainData.keyWords}ビジョン</span><br/>
       福岡市の中心地・天神に位置する老舗百貨店「岩田屋本館」にて、九州初となる${mainData.keyWords}ビジョンの導入を行いました。<br/>
       <br/>
       今回の設置場所は、岩田屋本館エントランスの大型ガラス面。<br/>
@@ -33,10 +34,10 @@ export const archiveData: Archive[] = [
       九州エリアでも本格的に活用が進むことで、次世代型ディスプレイ広告の導入事例として大きな注目を集めています。`,
     mediaData: {
       image: [
-        "/images/archives/00001/01.jpg",
-        "/images/archives/00001/02.jpg",
-        "/images/archives/00001/03.jpg",
-        "/images/archives/00001/04.jpg",
+        "/images/archives/00001/01.webp",
+        "/images/archives/00001/02.webp",
+        "/images/archives/00001/03.webp",
+        "/images/archives/00001/04.webp",
       ],
       video: [
         "/images/archives/00001/video01.mp4",
@@ -62,10 +63,10 @@ export const archiveData: Archive[] = [
     description: `福岡市天神にある岩田屋本館にて、${mainData.keyWords}を導入しました。`,
     mediaData: {
       image: [
-        "/images/archives/00001/01.jpg",
-        "/images/archives/00001/02.jpg",
-        "/images/archives/00001/03.jpg",
-        "/images/archives/00001/04.jpg",
+        "/images/archives/00001/01.webp",
+        "/images/archives/00001/02.webp",
+        "/images/archives/00001/03.webp",
+        "/images/archives/00001/04.webp",
       ],
       video: [
         "/images/archives/00001/video01.mp4",

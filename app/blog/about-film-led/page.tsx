@@ -68,15 +68,28 @@ export default function AboutPage() {
           </div>
 
           <section>
-            <p className="mb-10 md:mb-16">
+            <p>
               近年、ショッピングモールやビルのガラス面などで、外からでも中からでも視界を遮らない映像演出を見かけたことはありませんか？
               <br />
               それは<strong>「{mainData.keyWords}」</strong>
               と呼ばれる、ガラスに貼る<strong>新世代のLEDビジョン</strong>
               かもしれません。
-              <br />
-              <br />
-              この記事では、
+            </p>
+
+            <div className="relative w-full pb-[56.25%] my-5 md:my-10">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover"
+              >
+                <source src="/videos/film09.mp4" type="video/mp4" />
+              </video>
+            </div>
+
+            <p>
+            この記事では、
               <br />
               ・「{mainData.keyWords}ってそもそも何？」
               <br />
@@ -89,18 +102,6 @@ export default function AboutPage() {
               ぜひ、自社で{mainData.keyWords}
               を設置する際のご参考になれば幸いです。
             </p>
-
-            <div className="relative w-full pb-[56.25%]">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="absolute inset-0 w-full h-full object-cover"
-              >
-                <source src="/videos/film09.mp4" type="video/mp4" />
-              </video>
-            </div>
           </section>
 
           <section className="index md:w-2/3 mx-auto bg-white/10 backdrop-blur-sm p-10 md:p-16">
@@ -303,7 +304,7 @@ export default function AboutPage() {
                 <div className="order-1 md:order-2 md:w-2/5">
                   <div className="relative pb-[56.25%]">
                     <Image
-                      src="/images/products01.png"
+                      src="/images/products/01.webp"
                       alt=""
                       fill
                       className="object-cover"
@@ -354,7 +355,7 @@ export default function AboutPage() {
               <div className="flex justify-center gap-10 mb-10 md:mb-16">
                 <div>
                   <Image
-                    src="/images/about/01.jpg"
+                    src="/images/blog/about-film-led/01.webp"
                     alt=""
                     width={700}
                     height={300}
@@ -363,7 +364,7 @@ export default function AboutPage() {
                 </div>
                 <div>
                   <Image
-                    src="/images/about/02.jpg"
+                    src="/images/blog/about-film-led/02.webp"
                     alt=""
                     width={700}
                     height={300}
@@ -536,7 +537,7 @@ export default function AboutPage() {
               </div>
               <div className="flex justify-center">
                 <Image
-                  src="/images/about/02.jpg"
+                  src="/images/blog/about-film-led/02.webp"
                   alt=""
                   width={500}
                   height={300}
@@ -684,7 +685,7 @@ export default function AboutPage() {
 
             <div className="flex justify-center">
               <Image
-                src="/images/about/07.jpg"
+                src="/images/blog/about-film-led/03.webp"
                 alt=""
                 width={700}
                 height={300}
@@ -744,7 +745,7 @@ export default function AboutPage() {
             <div>
               <div className="flex justify-center mb-10 md:mb-20">
                 <Image
-                  src="/images/about/01.jpg"
+                  src="/images/blog/about-film-led/05.webp"
                   alt=""
                   width={700}
                   height={300}
@@ -1074,7 +1075,7 @@ export default function AboutPage() {
 
               <div className="flex justify-center">
                 <Image
-                  src="/images/about/08.jpg"
+                  src="/images/blog/about-film-led/04.webp"
                   alt=""
                   width={600}
                   height={300}

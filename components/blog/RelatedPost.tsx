@@ -13,7 +13,7 @@ export const RelatedArticle = ({ article }: RelatedArticleProps) => {
           関連記事 :
           <span className="hover:text-yellow-300 mx-2">
             <Link
-              href={`/blog/${article.url}`}
+              href={`/blog/${article.slug}`}
               className="border-b border-white hover:border-yellow-300 transition-colors pb-0.5"
               target="_blank"
               rel="noopener noreferrer"

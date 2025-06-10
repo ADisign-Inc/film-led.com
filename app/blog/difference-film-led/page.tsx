@@ -263,7 +263,7 @@ export default async function AboutPage() {
                           {row.category === "外観" ? (
                             <div>
                               <Image
-                                src="/images/products01.png"
+                                src="/images/products/01.webp"
                                 alt="MEDIA FILMの外観"
                                 width={300}
                                 height={200}

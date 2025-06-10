@@ -4,7 +4,7 @@ type BackgroundImageProps = {
   image?: string;
 };
 
-function BackgroundImage({ image = "/images/bg01.jpg" }: BackgroundImageProps) {
+function BackgroundImage({ image = "/images/bg01.webp" }: BackgroundImageProps) {
   return (
     <Image
       src={image}

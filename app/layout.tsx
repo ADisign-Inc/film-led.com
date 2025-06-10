@@ -1,6 +1,7 @@
 import type React from "react";
 import Script from "next/script";
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -13,24 +14,32 @@ import { ThemeProvider } from "../components/ThemeProvider";
 import { GA_MEASUREMENT_ID } from "../lib/gtag";
 import { mainData } from "../data/main";
 
-export const metadata: Metadata = {
-  title: {
-    default: `${mainData.keyWords}ビジョンの専門会社 | ${mainData.siteName}`,
-    template: `%s | ${mainData.siteName}`,
-  },
-  description: `${mainData.siteName}は、${mainData.keyWords}の専門会社です。高輝度で高品質な${mainData.keyWords}ビジョンを業界最安値でご提供しています。`,
-  icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-    ],
-    apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
-    ],
-  },
-  manifest: "/site.webmanifest",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const headersList = headers();
+  const host = headersList.get("host") || "film-led.com";
+  const pathname = headersList.get("x-pathname") || "";
+  const protocol = process.env.NODE_ENV === "development" ? "http" : "https";
+  const canonicalUrl = `${protocol}://${host}${pathname}`;
+
+  return {
+    title: {
+      default: `${mainData.keyWords}ビジョンの専門会社 | ${mainData.siteName}`,
+      template: `%s | ${mainData.siteName}`,
+    },
+    description: `${mainData.siteName}は、${mainData.keyWords}ビジョンの専門会社です。高輝度で高品質な${mainData.keyWords}ビジョンを業界最安値でご提供しています。`,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    icons: {
+      icon: [
+        { url: "/favicon.ico" },
+        { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+        { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      ],
+    },
+    manifest: "/site.webmanifest",
+  };
+}
 
 export default function RootLayout({
   children,

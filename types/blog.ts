@@ -1,6 +1,6 @@
 export interface BlogData {
   title: string;
-  url: string;
+  slug: string;
   description: string;
   date: string;
   category: string[];

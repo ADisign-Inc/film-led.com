@@ -1,4 +1,3 @@
-import { ArrowRight } from "lucide-react";
 import { Metadata } from "next";
 import React from "react";
 
