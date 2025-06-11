@@ -89,7 +89,7 @@ export default function AboutPage() {
             </div>
 
             <p>
-            この記事では、
+              この記事では、
               <br />
               ・「{mainData.keyWords}ってそもそも何？」
               <br />
@@ -218,51 +218,36 @@ export default function AboutPage() {
             <div className="mb-10 md:mb-24">
               <h3>1. 技術の仕組み（原理や構造）</h3>
 
-              <div className="flex flex-col md:flex-row gap-3 ml-3 md:ml-5">
-                <div className="order-2 md:order-1 md:w-5/6">
-                  <p>
-                    {mainData.keyWords}
-                    非常に薄い透明フィルムに微細なLEDチップを均一に配置した
-                    <strong>次世代ディスプレイ技術</strong>です。
-                    <br />
-                    <br />
-                    このフィルムは、ガラスやアクリルなどの透明素材に
-                    <strong>直接貼り付けて使用</strong>
-                    し、ディスプレイとして機能しながらも視界を遮ることがありません。
-                    <br />
-                    フィルム自体は高い透過率を持ち、映像や情報を表示する際には、配置されたLEDチップが
-                    <strong>高輝度で発光</strong>
-                    して鮮やかな映像を形成します。
-                    <br />
-                    LEDチップ同士の間隔は非常に細かく設計されており、
-                    <strong>光の透過性を損なわず</strong>
-                    に表示性能を両立している点が特長です。
-                    <br />
-                    <br />
-                    この技術は、微細なLED構造を活かすことで、従来の大型ディスプレイでは実現が難しかった
-                    <strong>「透明性」</strong>
-                    と、<strong>「高解像度表示」</strong>
-                    の両立を可能にしています。
-                  </p>
-                </div>
-                <div className="order-1 md:order-2 md:w-1/6">
-                  <div className="relative">
-                    <Image
-                      src="/images/products/03.webp"
-                      alt=""
-                      width={500}
-                      height={500}
-                      className="object-contain"
-                    />
-                  </div>
-                </div>
-              </div>
+              <p>
+                {mainData.keyWords}
+                非常に薄い透明フィルムに微細なLEDチップを均一に配置した
+                <strong>次世代ディスプレイ技術</strong>です。
+                <br />
+                <br />
+                このフィルムは、ガラスやアクリルなどの透明素材に
+                <strong>直接貼り付けて使用</strong>
+                し、ディスプレイとして機能しながらも視界を遮ることがありません。
+                <br />
+                フィルム自体は高い透過率を持ち、映像や情報を表示する際には、配置されたLEDチップが
+                <strong>高輝度で発光</strong>
+                して鮮やかな映像を形成します。
+                <br />
+                LEDチップ同士の間隔は非常に細かく設計されており、
+                <strong>光の透過性を損なわず</strong>
+                に表示性能を両立している点が特長です。
+                <br />
+                <br />
+                この技術は、微細なLED構造を活かすことで、従来の大型ディスプレイでは実現が難しかった
+                <strong>「透明性」</strong>
+                と、<strong>「高解像度表示」</strong>
+                の両立を可能にしています。
+              </p>
             </div>
 
             <div className="mb-10 md:mb-24">
               <h3>2. 通常のLEDディスプレイとの違い</h3>
 
-              <div className="flex flex-col md:flex-row gap-8 ml-3 md:ml-5">
+              <div className="flex flex-col md:flex-row gap-5 ml-3 md:ml-5">
                 <div className="order-2 md:order-1 md:w-3/5">
                   <p>
                     通常のLEDディスプレイと{mainData.keyWords}
@@ -307,7 +292,7 @@ export default function AboutPage() {
                       src="/images/products/01.webp"
                       alt=""
                       fill
-                      className="object-cover"
+                      className="object-cover w-full"
                     />
                   </div>
                 </div>
@@ -344,7 +329,7 @@ export default function AboutPage() {
                       src="/images/products/02.webp"
                       alt=""
                       fill
-                      className="object-cover"
+                      className="object-cover w-full"
                     />
                   </div>
                 </div>
@@ -352,14 +337,14 @@ export default function AboutPage() {
             </div>
 
             <div>
-              <div className="flex justify-center gap-10 mb-10 md:mb-16">
+              <div className="flex justify-center gap-5 mb-10 md:mb-16">
                 <div>
                   <Image
                     src="/images/blog/about-film-led/01.webp"
                     alt=""
                     width={700}
                     height={300}
-                    className="object-cover"
+                    className="object-cover w-full"
                   />
                 </div>
                 <div>
@@ -368,7 +353,7 @@ export default function AboutPage() {
                     alt=""
                     width={700}
                     height={300}
-                    className="object-cover"
+                    className="object-cover w-full"
                   />
                 </div>
               </div>
@@ -383,8 +368,8 @@ export default function AboutPage() {
               <p className="mb-5 md:mb-10">
                 このディスプレイは、透明フィルム上に微細なLEDチップを均等に配置し、電子制によって映像を描き出す仕組みを採用しています。
                 <br />
-                LEDチップ間の隙間を最適化することで、{" "}
-                <strong>視認性を確保</strong>しながら{" "}
+                LEDチップ間の隙間を最適化することで、
+                <strong>視認性を確保</strong>しながら
                 <strong>高い透明度</strong>を両立している点が大きな特徴です。
                 <br />
                 設置場所のデザインや空間の開放感を損なわず、広告・案内・装飾など多目的に情報を発信できるため、次世代の表示ソリューションとして高く評価されています。
@@ -532,16 +517,16 @@ export default function AboutPage() {
                   alt=""
                   width={500}
                   height={300}
-                  className="object-cover"
+                  className="object-cover w-full"
                 />
               </div>
               <div className="flex justify-center">
                 <Image
-                  src="/images/blog/about-film-led/02.webp"
-                  alt=""
+                  src="/images/products/03.webp"
+                  alt={`${mainData.keyWords}`}
                   width={500}
                   height={300}
-                  className="object-cover"
+                  className="object-cover w-full"
                 />
               </div>
             </div>
@@ -593,11 +578,11 @@ export default function AboutPage() {
             </div>
           </section>
 
-          {/* 現状の課題 */}
+          {/* LEDサイネージにおける現状の課題 */}
           <section id="section05">
             <h2>
               <span></span>
-              現状の課題
+              LEDサイネージにおける現状の課題
             </h2>
 
             <div className="mb-10 md:mb-16">
@@ -654,7 +639,7 @@ export default function AboutPage() {
 
               <div className="mb-10 md:mb-16">
                 <h3 className="text-yellow-300">
-                  ・{mainData.keyWords}ならすべて解決！
+                  ・{mainData.keyWords}ビジョンならすべて解決！
                 </h3>
 
                 <ul className="ml-3 md:ml-5 space-y-3 md:space-y-4">

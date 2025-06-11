@@ -51,6 +51,6 @@ export const blogData: Blog[] = [
     image: "/images/blog/",
     date: "2025-05-20",
     category: ["ガイド", "LEDビジョン"],
-    isVisible: false,
+    isVisible: true,
   },
 ];

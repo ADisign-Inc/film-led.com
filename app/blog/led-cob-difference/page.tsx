@@ -29,7 +29,7 @@ export default async function AboutPage() {
     `はじめに`,
     `LEDとは？基礎知識のおさらい`,
     `COB（Chip on Board）とは？`,
-    `LEDとCOBの違いを比較`,
+    `LEDとCOBの違いをわかりやすく比較`,
     `COB LED それぞれのメリット・デメリット`,
     `COBが活躍する具体的な用途`,
     `SMD、Mini LED、Micro LEDとの違いと今後の展望`,
@@ -249,7 +249,10 @@ export default async function AboutPage() {
             </div> */}
 
             <div className="my-5 md:my-8">
-              <SubSection title="高密度実装による高性能・高演出性を両立する次世代LED技術">
+              <SubSection
+                title="高密度実装による高性能・高演出性を両立する次世代LED技術"
+                className="text-yellow-300 [&_p]:text-white"
+              >
                 <p>
                   COB（Chip on Board）とは、
                   <strong>
@@ -262,36 +265,127 @@ export default async function AboutPage() {
                 </p>
               </SubSection>
 
-              <SubSection title="● 光の「面発光化」による自然な視認性と発色表現">
+              <SubSection
+                title="● 均一で自然な面発光"
+                className="text-yellow-300 space-y-5 [&_p]:text-white"
+              >
                 <p>
-                  SMDでは、ひとつの素子が1点から発光する「点光源」であるため、拡散や拡張レンズが必要でした。一方、COBは数十〜数百のLEDチップを密に配置し、1つの「面」から発光する構造。これにより、以下のような特徴があります
+                  COBの最大の特長は、多数のLEDチップが極めて高密度で配置されることで、面全体が均一に発光する点です。
+                  <br />
+                  SMDではチップごとに明暗のムラが生じやすく、近距離での視認性や映像の滑らかさに課題がありましたが、COBではそれが大きく改善されています。
                 </p>
-                <ul className="list-disc ml-5 md:ml-10 space-y-2 md:space-y-4 mb-10 md:mb-16 [&_li]:leading-loose">
-                  <li>光のムラ（ドット感）が極めて少ない</li>
-                  <li>
-                    拡散レンズが不要なため、よりクリアで均一な映像表示が可能
-                  </li>
-                  <li>
-                    輝度の強弱がなだらかで、目に優しく自然光に近い印象を与える
-                  </li>
-                </ul>
+
                 <p>
-                  とくに店舗やイベント会場、ブライダル施設など空間演出が重視されるシーンにおいて、「空間になじむ演出」を求めるニーズに応えられるのがCOBです。
+                  このムラのない均一な発光は、
+                  <strong>高精細な映像表現や繊細なグラフィック表示</strong>
+                  に非常に有効で、特にショールーム・ブティック・百貨店など、“ブランド価値を視覚で魅せる”空間で力を発揮します。
                 </p>
               </SubSection>
 
-              <SubSection title="● 放熱効率の高さ＝LEDの寿命と性能を大きく左右する">
-                <p>デジタルと空間を融合させる演出が拡散されやすい</p>
+              <SubSection
+                title="● 高輝度 × 低消費電力の両立"
+                className="text-yellow-300 space-y-5 [&_p]:text-white"
+              >
+                <p>
+                  COBモジュールは<strong>光束密度が高く</strong>、
+                  <strong>少ない電力でも高輝度</strong>
+                  を得られるため、エネルギー効率に優れた照明・映像ソリューションとしても注目されています。
+                  <br />
+                  特に、大型のディスプレイやガラスファサードに透過型LEDとして展開する際にも、必要最小限の発光体で最大限の輝度を確保可能です。
+                  <br />
+                  これにより、
+                  <strong>省エネとインパクトを両立した広告・演出</strong>
+                  が可能になります。
+                </p>
+              </SubSection>
+
+              <SubSection
+                title="● 優れた放熱性で長寿命・安定稼働"
+                className="text-yellow-300 space-y-5 [&_p]:text-white"
+              >
+                <p>
+                  COBはLEDチップを直接基板に接合する構造であるため、
+                  <strong>
+                    放熱効率が極めて高く、温度上昇による性能劣化を大幅に抑制
+                  </strong>
+                  できます。
+                  <br />
+                  これは、長時間稼働が求められる商業施設や交通機関、イベントスペースなどでの安定運用にとって極めて重要です。
+                </p>
+                <p>
+                  結果として、LED素子そのものの劣化が抑えられ、
+                  <strong>長寿命化・メンテナンス頻度の低減</strong>
+                  が可能になります。
+                  <br />
+                  これも、BtoBユースにおける
+                  <strong>TCO（総保有コスト）の削減</strong>
+                  という観点で大きな利点です。
+                </p>
+              </SubSection>
+
+              <SubSection
+                title="● ピクセルピッチの極小化により、超近距離での使用にも対応"
+                className="text-yellow-300 space-y-5 [&_p]:text-white"
+              >
+                <p>
+                  COBは、LEDチップ同士の隙間を極限まで縮められるため、ピクセルピッチ（画素の間隔）を1.0mm以下まで狭めることが可能です。
+                  <br />
+                  これにより、
+                  <strong>超高精細な表示が必要な近接ディスプレイ用途</strong>
+                  （例：ショーケース、カウンター、室内イベント）にも柔軟に対応可能です。
+                </p>
+                <p>
+                  従来のLEDディスプレイでは解像度の限界から
+                  <strong>“近づいて見ると粗さが目立つ”という課題</strong>
+                  がありましたが、<strong>COBではそれを完全に克服</strong>
+                  しています。
+                </p>
+              </SubSection>
+
+              <SubSection
+                title="● 耐衝撃性・防塵性・防水性も高く、多様な環境に対応"
+                className="text-yellow-300 space-y-5 [&_p]:text-white"
+              >
+                <p>
+                  COBは、チップが露出せず、樹脂やガラスで一体化される設計が可能なため、
+                  <strong>
+                    物理的な耐久性にも優れ、粉塵・湿気などへの耐性も高い
+                  </strong>
+                  という特長があります。
+                </p>
+                <p>
+                  これにより、屋外広告や工場・倉庫、レジャー施設、さらには多湿な温泉施設や海辺のリゾート地などでも使用可能で、
+                  <strong>導入場所を選ばない</strong>柔軟性を実現しています。
+                </p>
+              </SubSection>
+
+              <SubSection
+                title="● 透明フィルム型LEDとの融合で、次世代の透過型サイネージへ"
+                className="text-yellow-300 space-y-5 [&_p]:text-white"
+              >
+                <p>
+                  近年は、COB技術を応用した透明LEDフィルムの開発も進んでおり、COBならではの高密度発光と透過性の両立が実現しつつあります。
+                  <br />
+                  これにより、“光の壁”のように見える未来的な広告体験や、外から見た時の透明感、内から見た時の視界確保という両立が可能になります。
+                </p>
+                <p>
+                  このように、COBは単なる“高性能LED”という枠を超え、
+                  <strong>
+                    空間演出やブランド体験の質そのものを引き上げるコア技術
+                  </strong>
+                  として、今後のBtoBマーケティングにおいて大きな武器になると言えるでしょう。
+                </p>
               </SubSection>
             </div>
           </Section>
 
-          {/* <Section id="section03" title={sectionTitles[3]}>
+          <Section id="section03" title={sectionTitles[3]}>
             <p className="mb-5 md:mb-10">
-              透明フィルム型LEDは単なる表示装置ではありません。
+              LEDとひと口に言っても、実はその実装技術や発光方式には複数の種類があります。
               <br />
-              <span>映像演出×空間演出×顧客体験</span>
-              を融合させることで、他社と圧倒的な差別化が可能です。
+              なかでも現在主流の「SMD（Surface Mount
+              Device）」型と、近年急速に注目を集めている「COB（Chip on
+              Board）」型には、大きな違いがあります。
             </p>
 
             <SubSection title="1. 透けるショーウィンドウ × 動くモデル">
@@ -333,7 +427,7 @@ export default async function AboutPage() {
                 通行人の足を止め、店舗内へ誘導。
               </p>
             </SubSection>
-          </Section> */}
+          </Section>
 
           {/* <Section id="section04" title={sectionTitles[4]}>
             <SubSection title="導入によるメリット">
