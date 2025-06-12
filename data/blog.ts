@@ -48,7 +48,7 @@ export const blogData: Blog[] = [
     slug: "led-cob-difference",
     title: "LEDとCOBの違いとは？選び方とメリット・デメリットを徹底解説",
     description: "",
-    image: "/images/blog/",
+    image: "/images/blog/led-cob-difference/fv.webp",
     date: "2025-05-20",
     category: ["ガイド", "LEDビジョン"],
     isVisible: true,
