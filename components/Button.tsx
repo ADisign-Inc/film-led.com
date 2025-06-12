@@ -25,7 +25,7 @@ const Button = ({
       <div className="inline-block">
         <div
           className={`flex items-center justify-center transition-colors duration-1000 rounded-lg ${
-            isHovered ? "bg-black/60" : "bg-black/80"
+            isHovered ? "bg-black/0" : "bg-black/80"
           }`}
         >
           <button
@@ -37,7 +37,7 @@ const Button = ({
             onMouseLeave={() => setIsHovered(false)}
           >
             {children}
-            <span className="absolute inset-0 w-full h-full bg-white/10 transform rotate-45 -translate-x-full -translate-y-8 transition-all duration-700 group-hover:translate-x-full group-hover:-translate-y-16"></span>
+            <span className="absolute inset-0 w-full h-full bg-white/5 transform rotate-45 -translate-x-full -translate-y-4 transition-all duration-700 group-hover:translate-x-full group-hover:-translate-y-16"></span>
           </button>
         </div>
       </div>
