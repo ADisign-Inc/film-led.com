@@ -176,7 +176,7 @@ export default async function AboutPage() {
             <div className="flex justify-center mx-auto my-10 md:my-16">
               <div className="relative">
                 <Image
-                  src="/images/blog/difference-film-led/01.png"
+                  src="/images/blog/difference-film-led/01.webp"
                   alt=""
                   width={900}
                   height={900}
