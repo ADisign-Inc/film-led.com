@@ -17,7 +17,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "../components/Accordion";
+} from "../components/FaqAccordion";
 
 import { mainData } from "../data/main";
 import { benefitData } from "../data/benefits";
@@ -232,17 +232,17 @@ export default function LandingPage() {
               <div className="relative flex flex-col lg:flex-row items-stretch md:mb-20">
                 <div className="w-full lg:w-1/2">
                   <Image
-                    src="/images/blog/about-film-led/01.jpg"
+                    src="/images/products/02.webp"
                     alt="LED Display"
                     width={800}
                     height={600}
-                    className="object-cover w-full h-full"
+                    className="object-contain w-full h-full"
                   />
                 </div>
 
                 <div className="w-full lg:w-1/2 relative -z-10 px-8 md:px-10 md:pt-20">
-                  <div className="absolute top-0 left-0 right-0 bottom-0 lg:w-[112%] bg-white/10 -z-10 md:-translate-x-10 -translate-y-8 lg:translate-y-10"></div>
-                  <div className="relative flex flex-col justify-end h-full py-8 md:py-12 md:pt-0 lg:py-0 mb-10">
+                  <div className="absolute top-0 left-0 right-0 bottom-0 w-full lg:w-[110%] bg-white/10 -z-10 md:-translate-x-10 -translate-y-8 lg:translate-y-10"></div>
+                  <div className="relative flex flex-col justify-end h-full py-5 md:py-12 md:pt-0 lg:py-0 mb-10">
                     <div className="flex items-baseline mb-5 md:mb-14">
                       <h3 className="text-yellow-300 text-4xl md:text-5xl leading-none">
                         Sales
@@ -277,8 +277,8 @@ export default function LandingPage() {
                 </div>
 
                 <div className="w-full lg:w-1/2 relative -z-10 px-8 md:px-10 md:pt-20">
-                  <div className="absolute top-0 left-0 right-0 bottom-0 lg:w-[112%] bg-white/10 -z-10 md:-translate-x-10 -translate-y-8 lg:translate-y-10"></div>
-                  <div className="relative flex flex-col justify-end h-full py-8 md:py-12 md:pt-0 lg:py-0 mb-10">
+                  <div className="absolute top-0 left-0 right-0 bottom-0 lg:w-[110%] bg-white/10 -z-10 md:-translate-x-10 -translate-y-8 lg:translate-y-10"></div>
+                  <div className="relative flex flex-col justify-end h-full py-5 md:py-12 md:pt-0 lg:py-0 mb-10">
                     <div className="flex items-baseline mb-5 md:mb-14">
                       <h3 className="text-yellow-300 text-4xl md:text-5xl leading-none">
                         Create
@@ -317,7 +317,7 @@ export default function LandingPage() {
                   <p className="absolute -top-[1.4rem] md:-top-7 left-0 text-yellow-300 text-3xl md:text-4xl font-bold">
                     {step.step}
                   </p>
-                  <div className="absolute top-5 right-5 md:right-8">
+                  <div className="absolute top-2 sm:top-5 right-5 md:right-8">
                     <img
                       src={step.icon}
                       alt=""
@@ -326,8 +326,9 @@ export default function LandingPage() {
                       className="object-contain w-20 md:w-24 h-20 md:h-24"
                     />
                   </div>
-                  <div className="border-[0.5px] border-yellow-300 p-6 md:px-8 py-12">
-                    <h3 className="text-start text-yellow-300 mb-8">
+
+                  <div className="border-[0.5px] border-yellow-300 px-6 md:px-8 py-8 md:py-12">
+                    <h3 className="text-start text-yellow-300 mb-5 sm:mb-8">
                       {step.title}
                     </h3>
                     <p>{step.description}</p>
@@ -371,10 +372,8 @@ export default function LandingPage() {
               <Accordion type="multiple" className="w-full">
                 {faqData.slice(0, 3).map((item) => (
                   <AccordionItem key={item.id} value={item.id}>
-                    <AccordionTrigger className="text-sm md:text-base">
-                      {item.question}
-                    </AccordionTrigger>
-                    <AccordionContent className="text-sm md:text-base">
+                    <AccordionTrigger>{item.question}</AccordionTrigger>
+                    <AccordionContent>
                       {item.answer.split("\n").map((line, index) => (
                         <span key={index}>
                           {line}

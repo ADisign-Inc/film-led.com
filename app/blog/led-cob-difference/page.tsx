@@ -103,7 +103,7 @@ export default async function AboutPage() {
             <div className="flex flex-col sm:flex-row justify-center mx-auto mb-10 md:mb-16">
               <p className="md:w-4/5 mb-5 md:mb-16">
                 LED（Light Emitting
-                Diode／発光ダイオード）は、電流を流すと発光する半導体素子の一種で、電気エネルギーを直接光に変換するエレクトロルミネッセンス（EL）現象を応用した照明・表示デバイスです。
+                Diode/発光ダイオード）は、電流を流すと発光する半導体素子の一種で、電気エネルギーを直接光に変換するエレクトロルミネッセンス（EL）現象を応用した照明・表示デバイスです。
                 <br />
                 一般的な白熱灯や蛍光灯とは異なり、フィラメントを加熱したり、ガス放電を利用することなく、物理的・化学的な反応によって光を発するため、効率や耐久性に優れています。
               </p>

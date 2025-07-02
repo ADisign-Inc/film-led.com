@@ -9,6 +9,7 @@ interface ButtonProps {
   variant?: string;
   onClick?: () => void;
   type?: "button" | "submit" | "reset";
+  disabled?: boolean;
 }
 
 const Button = ({
@@ -17,6 +18,7 @@ const Button = ({
   className,
   variant,
   onClick,
+  disabled,
 }: ButtonProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -30,11 +32,12 @@ const Button = ({
         >
           <button
             onClick={onClick}
-            className={`relative font-mincho group overflow-hidden px-8 py-2.5 text-sm md:text-base font-bold rounded-lg border border-white/20 uppercase tracking-wider transition-all duration-500 hover:bg-white/5 hover:border-yellow-300 whitespace-nowrap flex items-center gap-2 ${
+            disabled={disabled}
+            className={`relative group overflow-hidden px-8 py-2.5 text-sm md:text-base rounded-lg border border-white/20 uppercase tracking-wider transition-all duration-500 hover:bg-white/5 hover:border-yellow-300 whitespace-nowrap flex items-center gap-2 ${
               className || ""
-            }`}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
+            } ${disabled ? "opacity-50 cursor-not-allowed" : ""}`}
+            onMouseEnter={() => !disabled && setIsHovered(true)}
+            onMouseLeave={() => !disabled && setIsHovered(false)}
           >
             {children}
             <span className="absolute inset-0 w-full h-full bg-white/5 transform rotate-45 -translate-x-full -translate-y-4 transition-all duration-700 group-hover:translate-x-full group-hover:-translate-y-16"></span>

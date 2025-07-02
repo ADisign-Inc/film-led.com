@@ -165,13 +165,13 @@ export default function FlowPage() {
                 本ポリシーに関するお問い合わせは、下記の窓口までお願いいたします。
               </p>
 
-              <table className="[&_th]:border-b [&_th]:border-gray-300/50 [&_td]:border-b [&_td]:border-gray-300/50 [&_th]:py-3 [&_td]:py-3 [&_th]:px-3 [&_td]:px-3 [&_th]:md:px-8 [&_td]:md:px-8 [&_th]:text-[0.8em] [&_th]:md:text-[0.9em] [&_td]:text-[0.8em] [&_td]:md:text-[0.9em] [&_th]:font-normal">
+              <table className="[&_th]:border-b [&_th]:border-gray-400/50 [&_td]:border-b [&_td]:border-gray-400/50 [&_th]:py-3 [&_td]:py-3 [&_th]:px-3 [&_td]:px-3 [&_th]:md:px-8 [&_td]:md:px-8 [&_th]:text-[0.8em] [&_th]:md:text-[0.9em] [&_td]:text-[0.8em] [&_td]:md:text-[0.9em] [&_th]:font-normal">
                 <tbody>
                   <tr>
                     <th>所在地</th>
                     <td>
                       {mainData.companyAddress.postalCode}{" "}
-                      {`${mainData.companyAddress.prefecture}${mainData.companyAddress.city}${mainData.companyAddress.street}`}
+                      {mainData.companyAddress.location}
                     </td>
                   </tr>
                   <tr>
@@ -184,7 +184,7 @@ export default function FlowPage() {
                   </tr>
                   <tr>
                     <th>連絡先</th>
-                    <td>{mainData.contact.tel}</td>
+                    <td>{mainData.contact.telFukuoka}</td>
                   </tr>
                 </tbody>
               </table>

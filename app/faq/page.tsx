@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
 
@@ -12,9 +11,8 @@ import {
   AccordionItem,
   AccordionTrigger,
   AccordionContent,
-} from "../../components/Accordion";
+} from "../../components/FaqAccordion";
 
-import { mainData } from "../../data/main";
 import { faqData } from "../../data/faq";
 
 export const metadata: Metadata = {
@@ -42,10 +40,8 @@ export default function FAQPage() {
             <Accordion type="multiple" className="w-full">
               {faqData.map((item) => (
                 <AccordionItem key={item.id} value={item.id}>
-                  <AccordionTrigger className="text-sm md:text-base">
-                    {item.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-sm md:text-base">
+                  <AccordionTrigger>{item.question}</AccordionTrigger>
+                  <AccordionContent>
                     {item.answer.split("\n").map((line, index) => (
                       <span key={index}>
                         {line}

@@ -26,7 +26,7 @@ export async function generateMetadata(): Promise<Metadata> {
       default: `${mainData.keyWords}ビジョンの専門会社 | ${mainData.siteName}`,
       template: `%s | ${mainData.siteName}`,
     },
-    description: `${mainData.siteName}は、${mainData.keyWords}ビジョンの専門会社です。高輝度で高品質な${mainData.keyWords}ビジョンを業界最安値でご提供しています。`,
+    description: `${mainData.siteName}は、${mainData.keyWords}ビジョンを専門的に取り扱っており、高輝度で高品質な${mainData.keyWords}ビジョンを業界最安値でご提供しています。`,
     alternates: {
       canonical: canonicalUrl,
     },

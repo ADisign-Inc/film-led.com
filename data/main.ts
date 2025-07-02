@@ -4,9 +4,11 @@ export const mainData = {
   companyNameEn: "Adisign Co., Ltd.",
   companyAddress: {
     postalCode: "〒812-0008",
-    prefecture: "福岡市",
-    city: "博多区",
-    street: "東光2-2-13",
+    location: "福岡県福岡市博多区東光2-2-13",
+  },
+  companyAddressKyoto: {
+    postalCode: "〒604-8426",
+    location: "京都府京都市中京区西ノ京船塚町16-27",
   },
   representative: "佐藤 豪",
   department: "デジタルサイネージ事業部",
@@ -20,7 +22,7 @@ export const mainData = {
   ],
   numberOfEmployees: "20名（正社員・アルバイト含む）",
   affiliateCompanies: [
-    "有限会社AGS　https://ags-web.net",
+    "有限会社AGS https://ags-web.net",
     "イベント企画運営、商業施設・百貨店の展示装飾、内装仕上業、屋外広告物",
     "派遣事業許可番号 派40-300537",
     "内装仕上工事業許可番号 般-30 第112032号",
@@ -28,8 +30,9 @@ export const mainData = {
   ],
   bank: "楽天銀行",
   contact: {
-    tel: "092-433-3302",
-    fax: "092-510-1095",
+    telFukuoka: "092-433-3302",
+    // telKyoto: "000-000-0000",
+    faxFukuoka: "092-510-1095",
     email: "info@adisignage.com",
     url: "https://adisignage.com/contact_form.html",
     hours: "平日10時〜18時",

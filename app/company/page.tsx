@@ -16,10 +16,16 @@ export const metadata: Metadata = {
 
 const data = [
   { label: "会社名", value: mainData.companyName },
-  { label: "所在地", value: mainData.companyAddress },
+  {
+    label: "所在地",
+    value: [
+      "福岡支店\n〒812-0008 福岡県福岡市博多区東光2-2-13",
+      "京都支店\n〒604-8426 京都府京都市中京区西ノ京船塚町16-27",
+    ],
+  },
   { label: "代表取締役", value: mainData.representative },
-  { label: "TEL", value: mainData.contact.tel },
-  { label: "FAX", value: mainData.contact.fax },
+  { label: "TEL", value: mainData.contact.telFukuoka },
+  { label: "FAX", value: mainData.contact.faxFukuoka },
   { label: "事業内容", value: mainData.businesses },
   { label: "従業員数", value: mainData.numberOfEmployees },
   { label: "関連会社", value: mainData.affiliateCompanies },
@@ -45,20 +51,20 @@ export default function CompanyPage() {
               <tbody>
                 {data.map((item, index) => (
                   <tr key={index} className="border-b border-gray-300/50">
-                    <th className="text-left py-4 md:py-8 px-2 w-1/4 xs:w-1/3">
+                    <th className="text-left py-5 md:py-8 px-2 w-1/4 xs:w-1/3">
                       {item.label}
                     </th>
-                    <td className="py-4 md:py-8">
+                    <td className="py-5 md:py-8">
                       {typeof item.value === "string"
                         ? item.value
                         : Array.isArray(item.value)
                         ? item.value.map((line, i) => (
-                            <div key={i} className="">
-                              {line}
+                            <div key={i} className={i === 0 ? "mb-3" : ""}>
+                              {line.split("\n").map((part, j) => (
+                                <div key={j}>{part}</div>
+                              ))}
                             </div>
                           ))
-                        : "postalCode" in item.value
-                        ? `${item.value.postalCode} ${item.value.prefecture}${item.value.city}${item.value.street}`
                         : item.value}
                     </td>
                   </tr>

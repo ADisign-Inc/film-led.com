@@ -20,17 +20,17 @@ const FooterItems02 = [
 
 const FooterItems03 = [
   { href: "/privacy-policy", label: "プライバシーポリシー" },
-  { href: "#", label: "利用規約" },
-  { href: "#", label: "特定商取引法に基づく表記" },
+  // { href: "#", label: "利用規約" },
+  // { href: "#", label: "特定商取引法に基づく表記" },
 ];
 
 export function Footer() {
   return (
-    <footer className="text-gray-300 border-t border-gray-400 py-5 md:py-14 mt-20 md:mt-40">
+    <footer className="text-gray-300 border-t border-gray-400 py-8 md:py-14 mt-20 md:mt-40 [&_li]:text-xs [&_li]:sm:text-sm">
       <div className="container max-w-7xl mx-auto">
-        <div className="grid md:gap-8 md:grid-cols-4">
-          <div className="mb-8 md:mb-0">
-            <div className="w-32 md:w-40 mb-5">
+        <div className="md:flex gap-x-10 md:justify-between">
+          <div className="mb-12 md:mb-0">
+            <div className="w-32 md:w-40 mb-2">
               <Link href="/">
                 <Image
                   src="/images/logo-dark.svg"
@@ -42,44 +42,51 @@ export function Footer() {
               </Link>
             </div>
 
-            <ul className="space-y-2 text-sm">
-              <li>{mainData.companyAddress.postalCode}</li>
-              <li>
-                {mainData.companyAddress.prefecture}
-                {mainData.companyAddress.city}
-                {mainData.companyAddress.street}
-              </li>
-              <li>TEL: {mainData.contact.tel}</li>
-              <li className="text-lg">{mainData.companyName}</li>
-            </ul>
+            <p className="mb-6">{mainData.companyName}</p>
+
+            <div className="flex gap-x-10">
+              <ul>
+                <li className="font-bold mb-1">福岡支店</li>
+                <li>{mainData.companyAddress.postalCode}</li>
+                <li className="mb-1">{mainData.companyAddress.location}</li>
+                <li>TEL: {mainData.contact.telFukuoka}</li>
+              </ul>
+
+              <ul>
+                <li className="font-bold mb-1">京都支店</li>
+                <li>{mainData.companyAddressKyoto.postalCode}</li>
+                <li className="mb-1">
+                  {mainData.companyAddressKyoto.location}
+                </li>
+                {/* <li>TEL: {mainData.contact.telKyoto}</li> */}
+              </ul>
+            </div>
           </div>
 
-          <div></div>
+          <div className="flex gap-x-10 md:gap-x-20">
+            <div>
+              <ul className="space-y-2">
+                {FooterItems.map((item) => (
+                  <li key={item.href}>
+                    <Link href={item.href} className="hover:text-white">
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          <div>
-            {/* <p className="text-lg font-semibold mb-4 text-white">サービス</p> */}
-            <ul className="space-y-2 text-sm">
-              {FooterItems.map((item) => (
-                <li key={item.href}>
-                  <Link href={item.href} className="hover:text-white">
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            {/* <p className="text-lg font-semibold mb-4 text-white">会社情報</p> */}
-            <ul className="space-y-2 text-sm">
-              {FooterItems02.map((item) => (
-                <li key={`${item.href}-${item.label}`}>
-                  <Link href={item.href} className="hover:text-white">
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <div>
+              <ul className="space-y-2">
+                {FooterItems02.map((item) => (
+                  <li key={`${item.href}-${item.label}`}>
+                    <Link href={item.href} className="hover:text-white">
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
 

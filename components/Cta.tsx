@@ -62,7 +62,7 @@ const products = [
 export function Cta() {
   return (
     <>
-      <section className="container max-w-6xl">
+      <section className="container max-w-6xl mt-10 md:mt-40">
         <div className="bg-white/15 px-5 xs:px-10 lg:px-20 xl:px-32 pt-14 md:pt-20 pb-14 md:pb-20 mb-10 md:mb-20">
           <h2>
             Contact
@@ -129,7 +129,7 @@ export function Cta() {
             <div className="group">
               <a
                 className="flex flex-col bg-white border border-gray-200 rounded hover:bg-transparent transition-all group-hover:shadow-[0_0_5px_rgba(255,255,255,0.8)]"
-                href={`tel:${mainData.contact.tel}`}
+                href={`tel:${mainData.contact.telFukuoka}`}
               >
                 <div className="p-4 md:p-5">
                   <div className="flex justify-between items-center gap-x-3">
@@ -158,7 +158,7 @@ export function Cta() {
                             お電話でお問い合わせ
                           </p>
                           <p className="text-lg xs:text-xl md:text-2xl font-semibold group-hover:text-yellow-400 transition-all">
-                            {mainData.contact.tel}
+                            {mainData.contact.telFukuoka}
                           </p>
                           <p className="group-hover:text-white text-xs md:text-sm !leading-normal">
                             受付時間：{mainData.contact.hours}
