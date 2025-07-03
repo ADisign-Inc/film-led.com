@@ -6,6 +6,7 @@ import { useEffect, useRef } from "react";
 
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
+import { FadeInStagger } from "../components/FadeInStagger";
 import { BackgroundImages } from "../components/BackgroundImage";
 import { ProductsFeatures } from "../components/products/ProductsFeatures";
 import { BlogList } from "../components/blog/BlogList";
@@ -41,43 +42,46 @@ export default function LandingPage() {
           <HeroSection />
 
           {/* What's this ? */}
-          <section className="container max-w-6xl mb-28 md:mb-40">
-            <h2>
-              What's this ?<span>{mainData.keyWords}とは？</span>
+          <section className="mb-28 md:mb-40">
+            {/* <FadeInStagger delay={0} staggerDelay={200}> */}
+            <h2 className="container max-w-6xl text-3xl sm:text-4xl md:text-6xl text-start after:opacity-0 mb-5">
+              <span className="text-xs sm:text-sm md:text-base mb-8">
+                {mainData.keyWords}とは？
+              </span>
+              What's this ?
             </h2>
+            {/* </FadeInStagger> */}
 
-            <div className="flex flex-col lg:flex-row gap-8 lg:gap-5 mb-16 md:mb-24">
-              <div className="w-full lg:w-1/2">
-                <div className="relative w-full pb-[56.25%] lg:pb-[75%] overflow-hidden">
-                  <div className="absolute inset-0">
-                    <video
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                      preload="auto"
-                      className="w-full h-full object-cover"
-                    >
-                      <source src="/videos/film01.mp4" type="video/mp4" />
-                    </video>
-                  </div>
-                </div>
+            <div className="flex items-end w-5/6 md:w-3/4 ml-auto mb-10 md:mb-14">
+              <div className="relative w-full pb-[56.25%] md:pb-[50%]">
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="absolute inset-0 w-full h-full object-cover"
+                >
+                  <source src="/videos/film01.mp4" type="video/mp4" />
+                </video>
               </div>
-              <div className="w-full lg:w-1/2">
-                <p className="text-2xl md:text-3xl font-mincho font-bold text-yellow-300 !leading-normal mb-5 md:mb-10">
+            </div>
+
+            <div className="flex items-center md:items-end md:w-3/4 md:ml-auto px-6 md:px-0">
+              <div className="max-w-4xl">
+                <p className="text-2xl md:text-4xl font-mincho font-bold text-yellow-300 !leading-normal mb-5 md:mb-10">
                   革新的なディスプレイ技術
                 </p>
                 <div className="[&_p]:text-base md:[&_p]:text-lg">
-                  <p className="mb-5 md:mb-6">
+                  <p className="mb-3 md:mb-4">
                     {mainData.keyWords}
                     は、<strong>ガラスやアクリルなどの透明素材</strong>に
                     <strong>貼り付けて使用</strong>
                     する最先端のディスプレイ技術です。
                   </p>
-                  <p className="mb-5 md:mb-6">
+                  <p className="mb-3 md:mb-4">
                     これにより、空間デザインを損なうことなく、鮮やかな映像を表示でき、視界を遮ることなく、広告やインフォメーションを発信できます。
                   </p>
-                  <p className="mb-5 md:mb-6">
+                  <p className="mb-3 md:mb-4">
                     この技術は、空間を開放的に保ちながらも、
                     <strong>強力な訴求力</strong>を持つ映像を提供します。
                   </p>
@@ -85,12 +89,14 @@ export default function LandingPage() {
                     また、昼と夜で異なる印象を与えることができるのも魅力のひとつです。
                   </p>
                 </div>
+
+                <div className="flex justify-start mt-10">
+                  <Link href="/blog/about-film-led">
+                    <Button>{mainData.keyWords} を詳しく知る</Button>
+                  </Link>
+                </div>
               </div>
             </div>
-
-            <Link href="/blog/about-film-led">
-              <Button>{mainData.keyWords} を詳しく知る</Button>
-            </Link>
           </section>
 
           {/* Benefits */}
@@ -306,10 +312,12 @@ export default function LandingPage() {
 
           {/* Flow */}
           <section className="container max-w-6xl mb-28 md:mb-40">
-            <h2>
-              Flow
-              <span>導入の流れ</span>
-            </h2>
+            <FadeInStagger delay={0} staggerDelay={200}>
+              <h2>
+                Flow
+                <span>導入の流れ</span>
+              </h2>
+            </FadeInStagger>
 
             <div className="grid gap-10 md:gap-8 grid-cols-1 md:grid-cols-3 md:pt-10 mb-10 md:mb-14">
               {flowStep.map((step) => (

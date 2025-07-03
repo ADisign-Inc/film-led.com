@@ -2,9 +2,10 @@
 
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { useEffect, useRef } from "react";
+import { FadeInStagger } from "./FadeInStagger";
 import { Button } from "./Button";
 import { mainData } from "../data/main";
-import { useEffect, useRef } from "react";
 
 export function HeroSection() {
   const videoRef1 = useRef<HTMLVideoElement>(null);
@@ -67,37 +68,44 @@ export function HeroSection() {
           className="text-xl sm:text-4xl lg:text-5xl !leading-loose xs:tracking-widest text-center md:text-start 
                      [&_span]:text-3xl [&_span]:sm:text-5xl [&_span]:lg:text-6xl [&_span]:text-yellow-300 [&_span]:font-bold"
         >
-          貼るだけ、<span>空間が広告に。</span>
-          <br />
-          次世代
-          <span className="px-2">{mainData.keyWords}</span>で
-          <br />
-          広告・店舗集客に革新を。
+          <FadeInStagger delay={0} staggerDelay={200}>
+            <div>
+              貼るだけ、<span>空間が広告に。</span>
+            </div>
+            <div>
+              次世代<span className="px-2">{mainData.keyWords}</span>で
+            </div>
+            <div>広告・店舗集客に革新を。</div>
+          </FadeInStagger>
         </h1>
 
-        <p className="text-sm sm:text-lg lg:text-xl font-semibold !leading-loose !tracking-widest [&_span]:text-yellow-300 text-center md:text-start my-10 md:my-12 lg:my-14">
-          視界を遮らず、空間と一体化する
-          <br className="sm:hidden" />
-          <span className="text-xl sm:text-3xl lg:text-4xl font-mincho px-1">
-            {mainData.keyWords}
-          </span>
-          。
-          <br />
-          国内最安値で圧倒的な集客を実現。
-        </p>
-
-        <div className="flex justify-center md:justify-start">
-          <Link
-            href={mainData.contact.url}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button>
-              無料相談・お申し込み
-              <ArrowRight className="h-4 w-4" />
-            </Button>
-          </Link>
+        <div className="text-sm sm:text-lg lg:text-xl font-semibold !leading-loose !tracking-widest [&_span]:text-yellow-300 text-center md:text-start my-10 md:my-12 lg:my-14">
+          <FadeInStagger delay={1000} staggerDelay={200}>
+            <div>
+              視界を遮らず、空間と一体化する
+              <span className="text-xl sm:text-2xl lg:text-3xl font-mincho px-1">
+                {mainData.keyWords}
+              </span>
+              。
+            </div>
+            <div>国内最安値で圧倒的な集客を実現。</div>
+          </FadeInStagger>
         </div>
+
+        <FadeInStagger delay={1500}>
+          <div className="flex justify-center md:justify-start">
+            <Link
+              href={mainData.contact.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button>
+                無料相談・お申し込み
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </Link>
+          </div>
+        </FadeInStagger>
       </div>
     </section>
   );

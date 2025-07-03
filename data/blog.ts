@@ -19,7 +19,7 @@ export const blogData: Blog[] = [
     description: `店舗や施設のガラス面を広告メディアに変える「${mainData.keyWords}」とは？仕組み・特徴・導入メリット・他商品との違いをわかりやすく解説。集客・空間演出に革新をもたらす最先端ディスプレイ技術をご紹介します。`,
     image: "/images/blog/about-film-led/fv.webp",
     date: "2025-04-20",
-    category: ["ガイド", "LEDビジョン"],
+    category: ["ガイド", `${mainData.keyWords}`],
     isVisible: true,
   },
   {
@@ -29,7 +29,7 @@ export const blogData: Blog[] = [
     description: `ガラス面に映像を映し出す透過型LEDビジョンの種類と違いを徹底比較。${mainData.keyWords}・IC内蔵型・バー型PCBの3タイプを解説し、施工性・透明度・消費電力の観点から最適な選び方をご紹介。省エネ・高視認性の最新サイネージ導入を検討中の方は必見です。`,
     image: "/images/blog/difference-film-led/fv.webp",
     date: "2025-04-30",
-    category: ["ガイド", "LEDビジョン"],
+    category: ["比較", `${mainData.keyWords}`],
     isVisible: true,
   },
   {
@@ -40,17 +40,18 @@ export const blogData: Blog[] = [
       "店舗・イベント・展示会に最適！空間を邪魔せず視線を奪う、次世代ディスプレイの正体とは？",
     image: "/images/blog/film-led-advertisement/fv.webp",
     date: "2025-05-28",
-    category: ["透明LED", "LEDビジョン"],
+    category: ["透明LED", `${mainData.keyWords}`],
     isVisible: true,
   },
   {
     id: "0004",
     slug: "led-cob-difference",
-    title: "LEDとCOBの違いとは？選び方とメリット・デメリットを徹底解説",
-    description: "",
+    title: "COBとは？SMDとの違いやメリット・デメリットをわかりやすく解説",
+    description:
+      "LED業界で急成長中のCOB技術を徹底解説！店舗・展示会・映像制作など、空間演出を変える理由と導入のポイントをご紹介。高演色・省エネ・高密度で“映える空間”をつくる次世代技術を深掘りします。",
     image: "/images/blog/led-cob-difference/fv.webp",
-    date: "2025-05-20",
-    category: ["ガイド", "LEDビジョン"],
+    date: "2025-07-03",
+    category: ["ガイド", "COB", "LEDビジョン"],
     isVisible: true,
   },
 ];

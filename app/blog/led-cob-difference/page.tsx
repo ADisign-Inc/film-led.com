@@ -15,7 +15,6 @@ import { Tag } from "../../../components/blog/Tag";
 import { Date } from "@components/blog/Date";
 import { TableOfContents } from "@components/blog/TableOfContents";
 
-import { mainData } from "../../../data/main";
 import { blogData } from "../../../data/blog";
 
 export const metadata: Metadata = {
@@ -31,7 +30,7 @@ export default async function AboutPage() {
     `SMDとCOBの違いを比較`,
     `COB LED のメリット・デメリット`,
     `COBが活躍する具体的な用途`,
-    `SMD、Mini LED、Micro LEDとの違いと今後の展望`,
+    `SMD、Mini LED、Micro LEDとの違い`,
     `COB 導入の際に気をつけるポイント`,
     `【まとめ】COB LEDは“映える”空間づくりの新常識`,
   ];
@@ -590,7 +589,7 @@ export default async function AboutPage() {
           </Section>
 
           <Section id="section05" title={sectionTitles[5]}>
-            <p className="mb-5 md:mb-12">
+            <p className="mb-8 md:mb-12">
               COB LEDは、特に
               <strong>「省スペースで高輝度を実現したい現場」</strong>
               において、従来のSMD型LEDを大きく上回るパフォーマンスを発揮します。
@@ -613,13 +612,6 @@ export default async function AboutPage() {
                     が可能です。
                   </p>
                   <div className="w-full md:w-2/5 relative">
-                    {/* <Image
-                      src="/images/blog/led-cob-difference/PN-junction.webp"
-                      alt=""
-                      width={900}
-                      height={900}
-                      className="object-contain w-full"
-                    /> */}
                     <div className="relative w-full pb-[56.25%]">
                       <video
                         autoPlay
@@ -665,28 +657,43 @@ export default async function AboutPage() {
                 </div>
               </SubSection>
               <SubSection title="屋外サイネージ・大型LEDビジョン">
-                <p>
-                  COBのもう一つの得意分野が屋外向けの大型LEDディスプレイです。
-                  <br />
-                  従来のSMD方式では発光点が分離して見えやすく、視認距離によってはちらつきや粒状感が出ることも。
-                  <br />
-                  COBは密集したLEDチップを基板に一体化しているため、画素密度が高く、より滑らかな映像表示が可能になります。
-                  <br />
-                  また、放熱性能にも優れているため、長時間稼働する屋外ディスプレイや電子看板での使用にも適しています。
-                  <br />
-                  特に天候や気温変化が激しい環境下でも安定したパフォーマンスを維持できるため、交通広告や屋外イベントのサイネージにも安心して導入できます。
-                </p>
+                <div className="flex flex-col sm:flex-row justify-center gap-3 mx-auto mb-10 md:mb-16">
+                  <p className="w-full md:w-3/5">
+                    COBのもう一つの得意分野が屋外向けの大型LEDディスプレイです。
+                    <br />
+                    従来のSMD方式では発光点が分離して見えやすく、視認距離によってはちらつきや粒状感が出ることも多いのですが、COBは密集したLEDチップを基板に一体化しているため、
+                    <strong>画素密度が高く、より滑らかな映像表示</strong>
+                    が可能になります。
+                    <br />
+                    また、<strong>放熱性能にも優れている</strong>
+                    ため、長時間稼働する屋外ディスプレイや電子看板での使用にも適しています。
+                  </p>
+                  <div className="w-full md:w-2/5 relative">
+                    <div className="relative w-full pb-[56.25%]">
+                      <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="absolute inset-0 w-full h-full object-cover"
+                      >
+                        <source src="/videos/film10.mp4" type="video/mp4" />
+                      </video>
+                    </div>
+                  </div>
+                </div>
               </SubSection>
               <SubSection title="撮影・スタジオ照明（映像制作・放送業界）">
                 <p>
                   映像や写真撮影において、照明はクオリティを大きく左右する要素です。
                   <br />
-                  COB
-                  LEDは高演色性（CRI90以上）かつ、自然な色再現ができるため、人物の肌色・商品の質感を忠実に描写することが可能です。
+                  COB LEDは高演色性（CRI90以上）かつ、
+                  <strong>自然な色再現ができる</strong>ため、
+                  <strong>人物の肌色・商品の質感を忠実に描写する</strong>
+                  ことが可能です。
                   <br />
-                  また、即時点灯性・フリッカーフリー（ちらつき防止）性能が高く、動画撮影やライブ配信などにも最適。
-                  <br />
-                  SMDに比べてノイズの少ない均一な光を得られるため、映像編集時の色補正の手間も軽減されます。
+                  SMDに比べて<strong>ノイズの少ない均一な光を得られる</strong>
+                  ため、映像編集時の色補正の手間も軽減されます。
                   <br />
                   多くのプロフェッショナル用照明メーカーがCOBベースの製品を採用しており、映像制作現場でも事実上のスタンダードになりつつあります。
                 </p>
@@ -695,11 +702,17 @@ export default async function AboutPage() {
                 <p>
                   COBの面発光特性と高演色性は、医療用ライトや工業系の作業照明にも最適です。
                   <br />
-                  影が出にくく、長時間の作業でも目が疲れにくい自然な光を提供できるため、外科手術、歯科治療、電子基板の検査・修理といった細かい作業においても活躍。
+                  <strong>
+                    影が出にくく、長時間の作業でも目が疲れにくい自然な光
+                  </strong>
+                  を提供できるため、外科手術、歯科治療、電子基板の検査・修理といった細かい作業においても活躍。
                   <br />
-                  また、発熱が少なく器具の表面温度も上がりにくいため、作業環境の安全性にも貢献します。
+                  また、
+                  <strong>発熱が少なく器具の表面温度も上がりにくい</strong>
+                  ため、作業環境の安全性にも貢献します。
                   <br />
-                  長寿命かつメンテナンス頻度が低いことから、医療機器・検査装置にも多数採用実績があります。
+                  <strong>長寿命かつメンテナンス頻度が低い</strong>
+                  ことから、医療機器・検査装置にも多数採用実績があります。
                 </p>
               </SubSection>
             </div>
@@ -708,67 +721,96 @@ export default async function AboutPage() {
               このように、COB
               LEDは高輝度・高演色・高効率・省スペースといった特徴を生かし、あらゆる業界の現場で価値を発揮する次世代照明技術です。
               <br />
-              とくに「見た目の印象が売上に直結する業種」や、「設置スペースに制限があるが、明るさを確保したい現場」では、COBが選ばれるべき選択肢といえるでしょう。
+              とくに<strong>「見た目の印象が売上に直結する業種」</strong>や、
+              <strong>
+                「設置スペースに制限があるが、明るさを確保したい現場」
+              </strong>
+              では、COBが選ばれるべき選択肢といえるでしょう。
             </p>
           </Section>
 
           <Section id="section06" title={sectionTitles[6]}>
-            <p className="mb-5 md:mb-10">
+            <p className="mb-8 md:mb-12">
               LEDディスプレイや照明分野では、COB（Chip on
               Board）以外にもさまざまな実装方式が存在します。
               <br />
-              特にSMD、Mini LED、Micro
-              LEDは、COBと比較されることの多い技術です。
+              特に<strong>SMD、Mini LED、Micro LED</strong>
+              は、COBと比較されることの多い技術です。
               <br />
               本章では、それぞれの方式の技術的な違いと、今後のLED技術の展望について解説します。
             </p>
 
-            <SubSection title="SMD（Surface Mounted Device）">
+            <div className="text-yellow-300 [&_p]:text-white">
+              <SubSection title="SMD（Surface Mounted Device）">
+                <p>
+                  SMDは現在
+                  <strong>最も一般的に使われているLEDの実装方式</strong>
+                  で、個別のLEDチップを基板に半田付けして実装します。
+                  <br />
+                  <strong>コストが安く、大量生産に向いており</strong>
+                  、デジタルサイネージや屋内外の広告表示に広く普及しています。
+                  <br />
+                  ただし、
+                  <strong>チップ間に距離があるため光のムラが出やすく</strong>
+                  、近距離での視認性や精細な表示には不向きとされています。
+                  <br />
+                  また、
+                  <strong>
+                    発光面積が小さいため、高輝度化や省スペース設計には限界がある
+                  </strong>
+                  点が課題です。
+                </p>
+              </SubSection>
+              <SubSection title="Mini LED">
+                <p>
+                  Mini LEDは、SMDの高密度進化型ともいえる技術で、
+                  <strong>LEDチップを小型化し、より高密度に実装する</strong>
+                  方式です。
+                  <br />
+                  液晶パネルのバックライト用途や、ハイエンドディスプレイのローカルディミング制御に多く使われています。
+                  <br />
+                  また、<strong>SMDよりも明るさやコントラスト制御が向上</strong>
+                  しますが、構造上はまだチップを個別に配置するため、完全な面発光や自然なグラデーションには課題が残ります。
+                </p>
+              </SubSection>
+              <SubSection title="Micro LED">
+                <p>
+                  Micro
+                  LEDは、1画素=1LEDチップという構造で、各チップが個別に発光・制御できるため、
+                  <strong>有機EL（OLED）を超える性能が期待</strong>
+                  されています。
+                  <br />
+                  <strong>自己発光型</strong>
+                  であるため、
+                  <strong>極めて高いコントラストと応答速度を実現</strong>
+                  し、<strong>消費電力も非常に少ないのが特長</strong>です。
+                  <br />
+                  しかし、現在のところは製造コストが高く、微細実装の技術的ハードルが非常に高いため、量産には課題が多いのが実情です。
+                  <br />
+                  AppleやSamsungなどが積極的に開発を進めており、今後数年で一般普及に向けた転換点を迎えるとされています。
+                </p>
+              </SubSection>
+            </div>
+            <SubSection title="COBと次世代LED技術との連携と今後の展望">
               <p>
-                SMDは現在でも最も一般的に使われているLEDの実装方式で、個別のLEDチップを基板に半田付けして実装します。
+                COBは単体でも優れた性能を持っていますが、近年では
+                <strong>
+                  Mini LEDやMicro LEDと組み合わせたハイブリッド技術
+                </strong>
+                が進化を遂げつつあります。
                 <br />
-                コストが安く、大量生産に向いており、デジタルサイネージや屋内外の広告表示に広く普及しています。
+                たとえば、Mini LEDチップをCOB基板上に高密度実装する
+                <strong>「COB-Mini LED」</strong>
+                構造では、輝度・放熱性・省スペース性のすべてを両立した新世代ディスプレイが登場しています。
                 <br />
-                ただし、チップ間に距離があるため光のムラが出やすく、近距離での視認性や精細な表示には不向きとされています。
-                <br />
-                また、発光面積が小さいため、高輝度化や省スペース設計には限界がある点が課題です。
-              </p>
-            </SubSection>
-            <SubSection title="Mini LED：SMDの高密度進化型">
-              <p>
-                Mini
-                LEDは、SMDの発展形ともいえる技術で、LEDチップを小型化し、より高密度に実装する方式です。
-                <br />
-                液晶パネルのバックライト用途や、ハイエンドディスプレイのローカルディミング制御に多く使われています。
-                <br />
-                Mini
-                LEDは、SMDよりも明るさやコントラスト制御が向上しますが、構造上はまだチップを個別に配置するため、完全な面発光や自然なグラデーションには課題が残ります。
-              </p>
-            </SubSection>
-            <SubSection title="Micro LED：未来の本命技術">
-              <p>
-                Micro
-                LEDは、1画素＝1LEDチップという構造で、各チップが個別に発光・制御できるため、有機EL（OLED）を超える性能が期待されています。
-                <br />
-                自己発光型であるため、極めて高いコントラストと応答速度を実現し、消費電力も非常に少ないのが特長です。
-                <br />
-                しかし、現在のところは製造コストが高く、微細実装の技術的ハードルが非常に高いため、量産には課題が多いのが実情です。
-                <br />
-                AppleやSamsungなどが積極的に開発を進めており、今後数年で一般普及に向けた転換点を迎えるとされています。
-              </p>
-            </SubSection>
-            <SubSection title="COBと次世代LED技術との連携と展望">
-              <p>
-                COBは単体でも優れた性能を持っていますが、近年ではMini LEDやMicro
-                LEDと組み合わせたハイブリッド技術が進化を遂げつつあります。
-                <br />
-                たとえば、Mini LEDチップをCOB基板上に高密度実装する「COB-Mini
-                LED」構造では、輝度・放熱性・省スペース性のすべてを両立した新世代ディスプレイが登場しています。
-                <br />
-                このようなハイブリッド実装は、今後の8K超高精細ディスプレイやフレキシブルサイネージ、曲面型表示装置など、多様な応用に対応できると注目されています。
+                このようなハイブリッド実装は、今後の
+                <strong>8K超高精細ディスプレイ</strong>や
+                <strong>フレキシブルサイネージ</strong>、
+                <strong>曲面型表示装置</strong>
+                など、多様な応用に対応できると注目されています。
                 <br />
                 また、COBの放熱構造はMicro
-                LEDの発熱問題へのソリューションとしても活用が期待されており、COB技術自体が進化の“ベースプラットフォーム”として位置づけられ始めているのです。
+                LEDの発熱問題へのソリューションとしても活用が期待されており、COB技術自体が進化のベースプラットフォームとして位置づけられ始めているのです。
               </p>
             </SubSection>
           </Section>
@@ -776,45 +818,59 @@ export default async function AboutPage() {
           <Section id="section07" title={sectionTitles[7]}>
             <p className="mb-10 md:mb-16">
               COB
-              LEDを最大限に活用するためには、設置前の計画と環境評価が非常に重要です。高性能であるがゆえに、導入時に注意すべき点がいくつかあります。
+              LEDを最大限に活用するためには、設置前の計画と環境評価が非常に重要です。
+              <br />
+              高性能であるがゆえに、導入時に注意すべき点がいくつかあります。
             </p>
 
-            <SubSection title="熱対策を考慮した設置環境">
+            <SubSection title="1. 熱対策を考慮した設置環境">
               <p>
-                COBはLEDチップが高密度で実装されているため、高輝度出力に伴う熱が集中しやすい傾向があります。
+                COBは密閉空間や屋内の高温環境下では、
+                <strong>
+                  放熱が十分でないと寿命や性能に悪影響を及ぼす可能性があります
+                </strong>
+                。
                 <br />
-                特に密閉空間や屋内の高温環境下では、放熱が十分でないと寿命や性能に悪影響を及ぼす可能性があります。
-                <br />
-                そのため、ヒートシンクや自然通風、場合によってはファンなどを活用した放熱設計が重要です。
+                そのため、ヒートシンクや自然通風、場合によってはファンなどを活用した
+                <strong>放熱設計</strong>が重要です。
                 <br />
                 設置場所の通気性・温度環境を事前に確認し、必要であれば専用の熱拡散パネルなどを取り入れましょう。
               </p>
             </SubSection>
-            <SubSection title="視認距離と設置スペースの最適化">
+            <SubSection title="2. 視認距離と設置スペースの最適化">
               <p>
-                COBは非常に高輝度かつ均一な光源であるため、適切な視認距離を取ることで最大限の効果を発揮します。
+                COBは非常に高輝度かつ均一な光源であるため、
+                <strong>適切な視認距離を取ることで最大限の効果を発揮</strong>
+                します。
                 <br />
-                近すぎると眩しすぎたり、遠すぎると意図した印象が薄れることもあるため、目的に応じた距離設計が必要です。
+                近すぎると眩しすぎたり、遠すぎると意図した印象が薄れることもあるため、
+                <strong>目的に応じた距離設計</strong>が必要です。
                 <br />
                 また、COBユニットはコンパクトながら冷却構造を含めるとある程度の設置スペースが必要となります。
                 <br />
-                壁面や天井など、設置する箇所の構造や配線経路も事前に確認しておきましょう。
+                壁面や天井など、
+                <strong>設置する箇所の構造や配線経路も事前に確認</strong>
+                しておきましょう。
               </p>
             </SubSection>
-            <SubSection title="信頼できるパートナーの選定">
+            <SubSection title="3. 信頼できるパートナーの選定">
               <p>
-                COBはまだ普及初期段階にあるため、設計・施工ノウハウを持つ業者の存在が極めて重要です。
+                COBはまだ普及初期段階にあるため、
+                <strong>設計・施工ノウハウを持つ業者</strong>
+                の存在が極めて重要です。
                 <br />
-                安価な製品や未検証の中国製モジュールなども出回っており、性能差・信頼性の違いは一目瞭然です。
+                安価な製品や未検証のモジュールなども出回っており、性能差・信頼性の違いは一目瞭然です。
                 <br />
                 導入時は、過去の導入実績や設置環境に対する対応力をもとに、パートナー企業を慎重に選定してください。
                 <br />
                 特にアフターサポート・メンテナンス体制の有無は、長期的な運用コストにも直結します。
               </p>
             </SubSection>
-            <SubSection title="コストだけで判断しない">
+            <SubSection title="4. コストだけで判断しない">
               <p>
-                初期導入費用が若干高めになるCOBですが、消費電力の少なさや長寿命設計、演出効果の高さを考慮すれば、トータルでは高いコストパフォーマンスを発揮します。
+                初期導入費用が若干高めになるCOBですが、消費電力の少なさや長寿命設計、演出効果の高さを考慮すれば、
+                <strong>トータルでは高いコストパフォーマンスを発揮</strong>
+                します。
                 <br />
                 「価格」だけに目を向けず、ランニングコスト・メンテナンス性・設置の柔軟性などを含めた総合的な導入評価が求められます。
               </p>
@@ -823,15 +879,22 @@ export default async function AboutPage() {
 
           <Section id="section07" title={sectionTitles[8]}>
             <p className="mb-10 md:mb-16">
-              COB（Chip on
-              Board）LEDは、従来のSMD方式や他のLED技術に比べて、視認性・演出力・省スペース性で優れたパフォーマンスを発揮する新世代の光源技術です。
+              COB LEDは、従来のSMD方式や他のLED技術に比べて、
+              <strong>
+                視認性・演出力・省スペース性で優れたパフォーマンスを発揮
+              </strong>
+              する新世代の光源技術です。
               <br />
               その均一な面発光と高輝度特性は、ただの照明・表示にとどまらず、“映える”空間演出やブランド価値の向上に直結する表現力を持っています。
               <br />
-              これまで表現できなかった「明るくて自然な光」「立体的で奥行きある映像」「静かな高級感のある照明演出」などを可能にし、商業施設・展示会・レジャー空間・撮影スタジオなど、あらゆる場所で活用の幅が広がっています。
+              これまで表現できなかった
+              <strong>
+                「明るくて自然な光」「立体的で奥行きある映像」「静かな高級感のある照明演出」
+              </strong>
+              などを可能にし、商業施設・展示会・レジャー空間・撮影スタジオなど、あらゆる場所で活用の幅が広がっています。
               <br />
-              また、COBはMini LEDやMicro
-              LEDとの技術融合により、さらなる進化が見込まれており、今後のLEDディスプレイ市場を牽引する存在になると考えられています。
+              また、COBは<strong>Mini LEDやMicro LEDとの技術融合</strong>
+              により、さらなる進化が見込まれており、今後のLEDディスプレイ市場を牽引する存在になると考えられています。
             </p>
           </Section>
         </article>

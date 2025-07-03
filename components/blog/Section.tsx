@@ -27,7 +27,7 @@ type SubSectionProps = {
 
 export const SubSection = ({ title, children }: SubSectionProps) => {
   return (
-    <div className="mb-16 md:mb-20">
+    <div className="mb-10 md:mb-14">
       <h3>{title}</h3>
       {children}
     </div>
