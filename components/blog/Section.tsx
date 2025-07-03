@@ -7,14 +7,9 @@ type SectionProps = {
   className?: string;
 };
 
-export const Section = ({
-  id,
-  title,
-  children,
-  className = "",
-}: SectionProps) => {
+export const Section = ({ id, title, children }: SectionProps) => {
   return (
-    <section id={id} className={`mb-20 md:mb-36 ${className}`}>
+    <section id={id}>
       <h2>
         <span></span>
         {title}
@@ -30,13 +25,9 @@ type SubSectionProps = {
   className?: string;
 };
 
-export const SubSection = ({
-  title,
-  children,
-  className = "",
-}: SubSectionProps) => {
+export const SubSection = ({ title, children }: SubSectionProps) => {
   return (
-    <div className={`mb-10 md:mb-16 ${className}`}>
+    <div className="mb-16 md:mb-20">
       <h3>{title}</h3>
       {children}
     </div>

@@ -28,7 +28,7 @@ export default async function AboutPage() {
     `はじめに`,
     `LEDとは？基礎知識のおさらい`,
     `COB（Chip on Board）とは？`,
-    `LEDとCOBの違いをわかりやすく比較`,
+    `SMDとCOBの違いを比較`,
     `COB LED のメリット・デメリット`,
     `COBが活躍する具体的な用途`,
     `SMD、Mini LED、Micro LEDとの違いと今後の展望`,
@@ -84,15 +84,19 @@ export default async function AboutPage() {
           </div>
 
           <Section id="introduction" title={sectionTitles[0]}>
-            <div className="space-y-4 md:space-y-8 mb-10 md:mb-16">
+            <div className="space-y-4 md:space-y-8">
               <p>
-                「LED」と一口に言っても、その中にはさまざまな種類があります。中でも近年注目されているのが「COB（Chip
-                on Board）」と呼ばれる方式。
+                「LED」と一口に言っても、その中にはさまざまな種類があります。
                 <br />
-                従来のSMDタイプと何が違うのか、どんな場面で選ばれるのか、よくわからないという方も多いはず。
+                中でも近年注目されているのが
+                <strong>「COB（Chip on Board）」</strong>と呼ばれる方式です。
+                <br />
+                従来のSMDタイプと何が違うのか、どんな場面で選ばれるのかなど、よくわからないという方も多いのではないでしょうか。
               </p>
               <p>
-                本記事では、LEDの基本からCOBの仕組み、他の技術との違い、そして選び方までをわかりやすく解説。店舗照明・ディスプレイ導入・サイネージ設置を検討している方必見です。
+                本記事では、LEDの基本からCOBの仕組み、他の技術との違い、そして選び方までをわかりやすく解説いたします。
+                <br />
+                LEDディスプレイの導入やLEDサイネージの設置を検討している方は必見です。
               </p>
             </div>
           </Section>
@@ -100,10 +104,14 @@ export default async function AboutPage() {
           <TableOfContents items={sectionTitles} />
 
           <Section id="section01" title={sectionTitles[1]}>
-            <div className="flex flex-col sm:flex-row justify-center mx-auto mb-10 md:mb-16">
-              <p className="md:w-4/5 mb-5 md:mb-16">
+            <div className="flex flex-col sm:flex-row justify-center gap-5 mx-auto mb-10 md:mb-16">
+              <p className="md:w-4/5">
                 LED（Light Emitting
-                Diode/発光ダイオード）は、電流を流すと発光する半導体素子の一種で、電気エネルギーを直接光に変換するエレクトロルミネッセンス（EL）現象を応用した照明・表示デバイスです。
+                Diode/発光ダイオード）は、電流を流すと発光する半導体素子の一種で、
+                <strong>
+                  電気エネルギーを直接光に変換するエレクトロルミネッセンス（EL）現象を応用した
+                </strong>
+                照明・表示デバイスです。
                 <br />
                 一般的な白熱灯や蛍光灯とは異なり、フィラメントを加熱したり、ガス放電を利用することなく、物理的・化学的な反応によって光を発するため、効率や耐久性に優れています。
               </p>
@@ -113,24 +121,40 @@ export default async function AboutPage() {
                   alt=""
                   width={900}
                   height={900}
-                  className="object-contain w-full"
+                  className="object-contain w-1/2 sm:w-full mx-auto"
                 />
               </div>
             </div>
 
             <SubSection title="1. LEDの仕組み">
-              <p>
-                LEDは主にn型半導体とp型半導体の接合によって構成され、これをpn接合と呼びます。
-                <br />
-                電圧を加えることで電子と正孔（ホール）が接合部で再結合し、その際に余分なエネルギーが光子（フォトン）として放出される――これがLEDの発光原理です。
-              </p>
-              <p>
-                発光する光の波長（＝色）は、この半導体のバンドギャップエネルギーによって決まり、材料により赤・緑・青・紫外線・赤外線などが生成されます。
-              </p>
+              <div className="flex flex-col sm:flex-row justify-center gap-5 mx-auto mb-10 md:mb-16">
+                <p className="md:w-3/5">
+                  LEDは主に
+                  <strong>n型半導体とp型半導体の接合によって構成</strong>
+                  され、これを<strong>pn接合</strong>と呼びます。
+                  <br />
+                  電圧を加えることで電子と正孔（ホール）が接合部で再結合し、その際に余分なエネルギーが光子（フォトン）として放出される――これがLEDの発光原理です。
+                  <br />
+                  発光する光の波長（＝色）は、この半導体のバンドギャップエネルギーによって決まり、
+                  <strong>
+                    材料により赤・緑・青・紫外線・赤外線などが生成
+                  </strong>
+                  されます。
+                </p>
+                <div className="md:w-2/5 relative">
+                  <Image
+                    src="/images/blog/led-cob-difference/PN-junction.webp"
+                    alt=""
+                    width={900}
+                    height={900}
+                    className="object-contain w-full"
+                  />
+                </div>
+              </div>
             </SubSection>
 
             <SubSection title="2. LEDの構造と種類">
-              <p className="mb-5 md:mb-10">
+              <p className="mb-4 md:mb-5">
                 LEDチップ単体では微弱な光しか出せないため、通常は以下のような構造になっています。
               </p>
 
@@ -168,7 +192,7 @@ export default async function AboutPage() {
               </p>
               <table className="w-full [&_th]:border [&_th]:border-gray-500 [&_td]:border [&_td]:border-gray-500 [&_th]:p-2 [&_td]:p-2 [&_th]:md:p-4 [&_td]:md:p-4">
                 <tbody>
-                  <tr>
+                  <tr className="bg-white/5">
                     <th>実装方式</th>
                     <th>特徴</th>
                     <th>用途</th>
@@ -183,18 +207,20 @@ export default async function AboutPage() {
                     <td>コンパクトで量産向き</td>
                     <td>テレビ、照明、ディスプレイ</td>
                   </tr>
-                  <tr>
-                    <th>COB（Chip on Board）</th>
+                  <tr className="font-bold">
+                    <th className="text-yellow-300">COB（Chip on Board）</th>
                     <td>高密度・高輝度・放熱性が高い</td>
-                    <td>スポットライト、屋外ビジョン</td>
+                    <td>
+                      スポットライト、屋外用LEDビジョン、屋外用デジタルサイネージ
+                    </td>
                   </tr>
                 </tbody>
               </table>
             </SubSection>
 
-            <SubSection title="3. LEDの特徴と利点">
-              <p className="mb-5 md:mb-10">
-                LEDチップ単体では微弱な光しか出せないため、通常は以下のような構造になっています。
+            <SubSection title="3. LEDの特徴・メリット">
+              <p className="mb-4 md:mb-5">
+                LEDには以下のような特徴やメリットがあります。
               </p>
               <ul className="list-disc ml-5 md:ml-10 space-y-2 md:space-y-4 mb-10 md:mb-16 [&_li]:leading-loose">
                 <li>
@@ -226,8 +252,11 @@ export default async function AboutPage() {
                 <li>
                   <strong className="text-yellow-300">即時点灯</strong>
                   <br />
-                  白熱灯や蛍光灯は、スイッチを入れてから徐々に明るくなる性質がありますが、LEDはスイッチONと同時に
-                  <strong>0.1秒以下で最大輝度に達する瞬発性</strong>があります。
+                  白熱灯や蛍光灯は、スイッチを入れてから徐々に明るくなる性質がありますが、LEDは
+                  <strong>
+                    スイッチONと同時に0.1秒以下で最大輝度に達する瞬発性
+                  </strong>
+                  があります。
                   <br />
                   これはイベント演出やセンサー連動型のサイネージ、タイマー制御された広告など、動きや時間に連動するシーンで大きなアドバンテージとなります。
                 </li>
@@ -240,7 +269,11 @@ export default async function AboutPage() {
                   <br />
                   また、発熱量が非常に少なく、
                   <strong>放射熱が約1/5程度に抑えられる</strong>
-                  ため、周囲の空間に熱を与えにくく、空調への負担を軽減できます。
+                  ため、
+                  <strong>
+                    周囲の空間に熱を与えにくく、空調への負担を軽減
+                  </strong>
+                  できます。
                 </li>
                 <li>
                   <strong className="text-yellow-300">高耐久性</strong>
@@ -253,20 +286,19 @@ export default async function AboutPage() {
                   <br />
                   さらに、
                   <strong>-30℃〜+50℃程度の広い温度環境にも耐える</strong>
-                  ことができ、屋外使用や高温多湿な環境にも対応可能です。
+                  ことができ、
+                  <strong>屋外での使用や高温多湿な環境にも対応可能</strong>
+                  です。
                 </li>
               </ul>
             </SubSection>
           </Section>
 
           <Section id="section02" title={sectionTitles[2]}>
-            <div className="my-5 md:my-8">
-              <SubSection
-                title="高密度実装による高性能・高演出性を両立する次世代LED技術"
-                className="text-yellow-300 [&_p]:text-white"
-              >
-                <div className="flex flex-col sm:flex-row gap-5 justify-center mb-10 md:mb-16">
-                  <p className="sm:w-1/2 md:w-2/3">
+            <div className="text-yellow-300 [&_p]:text-white my-5 md:my-8">
+              <SubSection title="高密度実装による高性能・高演出性を両立する次世代LED技術">
+                <div className="flex flex-col sm:flex-row gap-5 justify-center">
+                  <p className="sm:w-1/2 md:w-3/4">
                     COB（Chip on Board）とは、
                     <strong>
                       複数のLEDチップを基板（ボード）に直接実装し、発光モジュールとして一体化
@@ -276,7 +308,7 @@ export default async function AboutPage() {
                     従来のSMD（Surface Mount
                     Device）方式と比べ、構造そのものが根本的に異なるため、光の質、耐久性、表現力において大きなアドバンテージがあります。
                   </p>
-                  <div className="sm:w-1/2 md:w-1/3 relative">
+                  <div className="sm:w-1/2 md:w-1/4 relative">
                     <Image
                       src="/images/blog/led-cob-difference/03.webp"
                       alt=""
@@ -288,12 +320,11 @@ export default async function AboutPage() {
                 </div>
               </SubSection>
 
-              <SubSection
-                title="● 均一で自然な面発光"
-                className="text-yellow-300 space-y-5 [&_p]:text-white"
-              >
+              <SubSection title="均一で自然な面発光">
                 <p>
-                  COBの最大の特長は、多数のLEDチップが極めて高密度で配置されることで、面全体が均一に発光する点です。
+                  COBの最大の特長は、
+                  <strong>多数のLEDチップが極めて高密度で配置される</strong>
+                  ことで、<strong>面全体が均一に発光する</strong>点です。
                   <br />
                   SMDではチップごとに明暗のムラが生じやすく、近距離での視認性や映像の滑らかさに課題がありましたが、COBではそれが大きく改善されています。
                 </p>
@@ -301,12 +332,12 @@ export default async function AboutPage() {
                 <p>
                   このムラのない均一な発光は、
                   <strong>高精細な映像表現や繊細なグラフィック表示</strong>
-                  に非常に有効で、特にショールーム・ブティック・百貨店など、“ブランド価値を視覚で魅せる”空間で力を発揮します。
+                  に非常に有効で、特にショールーム・ブティック・百貨店など、“ブランド価値を視覚で魅せる”空間で力を最大限に発揮します。
                 </p>
               </SubSection>
 
               <SubSection
-                title="● 高輝度 × 低消費電力の両立"
+                title="高輝度 × 低消費電力の両立"
                 className="text-yellow-300 space-y-5 [&_p]:text-white"
               >
                 <p>
@@ -314,7 +345,9 @@ export default async function AboutPage() {
                   <strong>少ない電力でも高輝度</strong>
                   を得られるため、エネルギー効率に優れた照明・映像ソリューションとしても注目されています。
                   <br />
-                  特に、大型のディスプレイやガラスファサードに透過型LEDとして展開する際にも、必要最小限の発光体で最大限の輝度を確保可能です。
+                  特に、大型のディスプレイやガラスファサードに透過型LEDディスプレイとして展開する際にも、
+                  <strong>必要最小限の発光体で最大限の輝度を確保</strong>
+                  可能です。
                   <br />
                   これにより、
                   <strong>省エネとインパクトを両立した広告・演出</strong>
@@ -323,7 +356,7 @@ export default async function AboutPage() {
               </SubSection>
 
               <SubSection
-                title="● 優れた放熱性で長寿命・安定稼働"
+                title="優れた放熱性で長寿命・安定稼働"
                 className="text-yellow-300 space-y-5 [&_p]:text-white"
               >
                 <p>
@@ -336,7 +369,7 @@ export default async function AboutPage() {
                   これは、長時間稼働が求められる商業施設や交通機関、イベントスペースなどでの安定運用にとって極めて重要です。
                 </p>
                 <p>
-                  結果として、LED素子そのものの劣化が抑えられ、
+                  結果として、<strong>LED素子そのものの劣化が抑えられ</strong>、
                   <strong>長寿命化・メンテナンス頻度の低減</strong>
                   が可能になります。
                   <br />
@@ -347,15 +380,15 @@ export default async function AboutPage() {
               </SubSection>
 
               <SubSection
-                title="● ピクセルピッチの極小化により、超近距離での使用にも対応"
+                title="ピクセルピッチの極小化により、超近距離での使用にも対応"
                 className="text-yellow-300 space-y-5 [&_p]:text-white"
               >
                 <p>
                   COBは、LEDチップ同士の隙間を極限まで縮められるため、ピクセルピッチ（画素の間隔）を1.0mm以下まで狭めることが可能です。
                   <br />
                   これにより、
-                  <strong>超高精細な表示が必要な近接ディスプレイ用途</strong>
-                  （例：ショーケース、カウンター、室内イベント）にも柔軟に対応可能です。
+                  <strong>超高精細な表示が必要な近接ディスプレイ</strong>
+                  （例：ショーケース、カウンター、室内イベントなど）にも柔軟に対応可能です。
                 </p>
                 <p>
                   従来のLEDディスプレイでは解像度の限界から
@@ -366,7 +399,7 @@ export default async function AboutPage() {
               </SubSection>
 
               <SubSection
-                title="● 耐衝撃性・防塵性・防水性も高く、多様な環境に対応"
+                title="耐衝撃性・防塵性・防水性も高く、多様な環境に対応"
                 className="text-yellow-300 space-y-5 [&_p]:text-white"
               >
                 <p>
@@ -383,13 +416,14 @@ export default async function AboutPage() {
               </SubSection>
 
               <SubSection
-                title="● 透明フィルム型LEDとの融合で、次世代の透過型サイネージへ"
+                title="透明フィルム型LEDとの融合で、次世代の透過型サイネージへ"
                 className="text-yellow-300 space-y-5 [&_p]:text-white"
               >
                 <p>
                   近年は、COB技術を応用した透明LEDフィルムの開発も進んでおり、COBならではの高密度発光と透過性の両立が実現しつつあります。
                   <br />
-                  これにより、“光の壁”のように見える未来的な広告体験や、外から見た時の透明感、内から見た時の視界確保という両立が可能になります。
+                  これにより、<strong>“透明な光の壁”</strong>
+                  のように見える未来的な広告体験や、外から見た時の透明感、内から見た時の視界確保という両立が可能になります。
                 </p>
                 <p>
                   このように、COBは単なる“高性能LED”という枠を超え、
@@ -404,121 +438,136 @@ export default async function AboutPage() {
 
           <Section id="section03" title={sectionTitles[3]}>
             <SubSection title="">
-              <p>
+              <p className="mb-5 md:mb-8">
                 LEDとひと口に言っても、実はその実装技術や発光方式には複数の種類があります。
                 <br />
                 なかでも現在主流の「SMD（Surface Mount
                 Device）」型と、近年急速に注目を集めている「COB（Chip on
                 Board）」型には、大きな違いがあります。
               </p>
-            </SubSection>
 
-            <table className="w-full [&_th]:border [&_th]:border-gray-500 [&_td]:border [&_td]:border-gray-500 [&_th]:p-2 [&_td]:p-2 [&_th]:md:p-4 [&_td]:md:p-4">
-              <tbody>
-                <tr>
-                  <th></th>
-                  <th>SMD</th>
-                  <th>COB</th>
-                </tr>
-                <tr>
-                  <td className="font-bold">発光方式</td>
-                  <td>点発光</td>
-                  <td>面発光（均一な光）</td>
-                </tr>
-                <tr>
-                  <td className="font-bold">輝度</td>
-                  <td>中〜高</td>
-                  <td>非常に高い</td>
-                </tr>
-                <tr>
-                  <td className="font-bold">放熱性</td>
-                  <td>標準</td>
-                  <td>高い（熱を分散しやすい）</td>
-                </tr>
-                <tr>
-                  <td className="font-bold">発光ムラ</td>
-                  <td>起きやすい</td>
-                  <td>少ない（自然な光）</td>
-                </tr>
-                <tr>
-                  <td className="font-bold">修理性</td>
-                  <td>チップ単位で交換</td>
-                  <td>モジュール単位の交換が主</td>
-                </tr>
-              </tbody>
-            </table>
+              <table className="w-full [&_th]:border [&_th]:border-gray-500 [&_td]:border [&_td]:border-gray-500 [&_th]:p-2 [&_td]:p-2 [&_th]:md:p-4 [&_td]:md:p-4">
+                <tbody>
+                  <tr>
+                    <th className="border-none"></th>
+                    <th className="bg-white/5">SMD</th>
+                    <th className="bg-white/5 text-yellow-300">COB</th>
+                  </tr>
+                  <tr>
+                    <td className="font-bold">発光方式</td>
+                    <td>点発光</td>
+                    <td className="font-bold">面発光（均一な光）</td>
+                  </tr>
+                  <tr>
+                    <td className="font-bold">輝度</td>
+                    <td>中〜高</td>
+                    <td className="font-bold">非常に高い</td>
+                  </tr>
+                  <tr>
+                    <td className="font-bold">放熱性</td>
+                    <td>標準</td>
+                    <td className="font-bold">高い（熱を分散しやすい）</td>
+                  </tr>
+                  <tr>
+                    <td className="font-bold">発光ムラ</td>
+                    <td>起きやすい</td>
+                    <td className="font-bold">少ない（自然な光）</td>
+                  </tr>
+                  <tr>
+                    <td className="font-bold">修理性</td>
+                    <td>チップ単位で交換</td>
+                    <td className="font-bold">モジュール単位の交換が主</td>
+                  </tr>
+                </tbody>
+              </table>
+            </SubSection>
           </Section>
 
           <Section id="section04" title={sectionTitles[4]}>
-            <SubSection title="【メリット】">
-              <ul className="list-decimal ml-5 space-y-8 md:space-y-10 [&_span]:text-[1.3em] [&_span]:font-bold [&_span]:text-yellow-300">
+            <SubSection title="メリット">
+              <ul className="list-decimal ml-5 space-y-8 md:space-y-10 [&_span]:text-[1.2em] [&_span]:font-bold [&_span]:text-yellow-300">
                 <li>
                   <span>高輝度かつムラのない面発光</span>
                   <br />
                   <p className="mt-3">
-                    COB
-                    LEDは、複数のLEDチップを密集して基板に直接実装しており、全体が面のように均一に発光します。
+                    COB LEDは、複数のLEDチップを密集して基板に直接実装しており、
+                    <strong>全体が面のように均一に発光</strong>します。
                     <br />
-                    これにより、従来のSMD型にありがちな「点の光」「明暗のムラ」を感じさせず、明るさと視認性に優れた表示が可能です。
-                    <br />
-                    特に、透明LEDディスプレイや大型ビジョンにおいて、光の均一性が重視される場面で大きな効果を発揮します。
+                    これにより、従来のSMD型にありがちな「点の光」「明暗のムラ」を感じさせず、
+                    <strong>明るさと視認性に優れた表示が可能</strong>です。
                   </p>
                 </li>
                 <li>
                   <span>放熱性に優れ、長寿命</span>
                   <br />
                   <p className="mt-3">
-                    COBは放熱構造にも優れており、発光効率が高いにもかかわらず熱を効率的に分散できます。
+                    COBは放熱構造にも優れており、
+                    <strong>
+                      発光効率が高いにもかかわらず熱を効率的に分散
+                    </strong>
+                    できます。
                     <br />
                     これにより、LED自体の劣化を抑え、長時間点灯にも耐える長寿命設計が可能となります。
-                    <br />
-                    一般的に、COB
-                    LEDは50,000〜100,000時間の寿命があり、メンテナンス頻度を減らすことにも貢献します。
                   </p>
                 </li>
                 <li>
                   <span>光が自然</span>
                   <br />
                   <p className="mt-3">
-                    COBは面全体で発光するため、自然光に近い柔らかな光を放ちます。
+                    COBは面全体で発光するため、
+                    <strong>自然光に近い柔らかな光</strong>を放ちます。
                     <br />
-                    また、演色性（CRI）が高い製品も多く、色再現性に優れ、店舗の陳列物や広告コンテンツの色味を忠実に表現できます。
+                    また、演色性（CRI）が高い製品も多く、
+                    <strong>
+                      色再現性に優れ、店舗の陳列物や広告コンテンツの色味を忠実に表現
+                    </strong>
+                    できます。
                     <br />
-                    ファッション、食品、美術展示など、色の見え方が購買に直結する業界では非常に有利な特性です。
+                    ファッション、食品、美術の展示など、色の見え方が購買に直結する業界では非常に有利な特性です。
                   </p>
                 </li>
                 <li>
                   <span>コンパクトな設計でデザイン自由度が高い</span>
                   <br />
                   <p className="mt-3">
-                    COBは小型モジュールに高密度な光源を詰め込めるため、薄型・軽量設計がしやすく、スペースを取らないのも魅力。
+                    COBは小型モジュールに高密度な光源を詰め込めるため、
+                    <strong>薄型・軽量設計</strong>
+                    がしやすく、<strong>スペースを取らない</strong>
+                    のも魅力です。
                     <br />
-                    これにより、曲面ガラスや建築物のファサードなど、自由度の高い設計が可能になります。
-                    <br />
-                    ガラス面への貼り付け型LEDや、柱・天井への隠し設置などにも最適です。
+                    これにより、ガラス面への貼り付け型LEDや、柱などの局面、天井への隠し設置など
+                    <strong>自由度の高い設計が可能</strong>になります。
                   </p>
                 </li>
               </ul>
             </SubSection>
-            <SubSection title="【デメリット】">
-              <ul className="list-decimal ml-5 space-y-8 md:space-y-10 [&_span]:text-[1.3em] [&_span]:font-bold [&_span]:text-yellow-300">
+            <SubSection title="デメリット">
+              <ul className="list-decimal ml-5 space-y-8 md:space-y-10 [&_span]:text-[1.2em] [&_span]:font-bold">
                 <li>
                   <span>修理やメンテナンスはSMDに比べて手間</span>
                   <br />
                   <p className="mt-3">
-                    COBはモジュール単位でLEDチップが密集している構造のため、万が一の故障時には一部だけの修理が難しいという側面があります。
+                    COBはモジュール単位でLEDチップが密集している構造のため、万が一の故障時には
+                    <strong>一部だけの修理が難しい</strong>
+                    という側面があります。
                     <br />
-                    SMD型のようにチップ単位での交換ができないため、修理の際にはモジュール全体の取り換えが必要となる場合が多く、メンテナンス性には注意が必要です。
+                    SMDのようにチップ単位での交換ができないため、修理の際には
+                    <strong>モジュール全体の取り換えが必要</strong>
+                    となる場合が多く、
+                    <strong>メンテナンスには注意が必要</strong>です。
                   </p>
                 </li>
                 <li>
-                  <span>初期コストはやや高め</span>
+                  <span>初期コストはやや高くなることが多い</span>
                   <br />
                   <p className="mt-3">
-                    COB
-                    LEDは製造技術や放熱設計が高度で、品質も高い分、初期導入コストがSMDよりも高めになることがあります。
+                    COB LEDは
+                    <strong>製造技術や放熱設計が高度であり、品質も高い</strong>
+                    分、初期導入コストがSMDよりも高めになることがあります。
                     <br />
-                    しかし、長寿命で省エネ性も高いため、トータルコストでは回収可能なケースが多く、ランニングコストを抑えたいBtoB用途（商業施設・交通機関・展示会など）には長期的に有利です。
+                    しかし、<strong>長寿命</strong>で
+                    <strong>省エネ性も高い</strong>
+                    ため、トータルコストでは回収可能なケースが多く、ランニングコストを抑えたいBtoB用途（商業施設・交通機関・展示会など）には長期的に有利です。
                   </p>
                 </li>
                 <li>
@@ -528,7 +577,10 @@ export default async function AboutPage() {
                     COB
                     LEDは高密度発光・高出力設計のため、既存の照明器具やドライバとの互換性に制限がある場合もあります。
                     <br />
-                    導入時には、対応機器のスペック確認や調光対応の有無など、細かなチェックが必要です。
+                    <strong>
+                      導入時には、対応機器のスペック確認や調光対応の有無など、細かなチェックが必要
+                    </strong>
+                    です。
                     <br />
                     特に、後付けでLEDを置き換える場合には、施工業者との事前確認が不可欠です。
                   </p>
@@ -538,77 +590,108 @@ export default async function AboutPage() {
           </Section>
 
           <Section id="section05" title={sectionTitles[5]}>
-            <p className="mb-5 md:mb-10">
-              COB（Chip on
-              Board）LEDは、光の密度が高く、明るくムラのない面発光が特徴の次世代LED技術です。
-              <br />
-              さらに、小型・高放熱・長寿命という特性を持ち合わせており、特に「省スペースで高輝度を実現したい現場」において、従来のSMD型LEDを大きく上回るパフォーマンスを発揮します。
+            <p className="mb-5 md:mb-12">
+              COB LEDは、特に
+              <strong>「省スペースで高輝度を実現したい現場」</strong>
+              において、従来のSMD型LEDを大きく上回るパフォーマンスを発揮します。
               <br />
               以下では、COB
               LEDが活躍する具体的な業界・用途別に、その技術的優位性と導入メリットを解説します。
             </p>
 
-            <SubSection title="高級アパレルショップのスポット照明">
-              <p>
-                COB
-                LEDは高い演色性（CRI）を誇るため、服の質感や色味を忠実に再現する光が求められるファッション業界で高評価を得ています。
-                <br />
-                とくにハイブランド店舗では、商品そのものが光によって魅力を左右されるため、明るすぎず、かつムラのない美しい照明が必須。
-                <br />
-                COBの面発光特性により影が出にくく、対象物を自然に浮かび上がらせる演出が可能です。
-                <br />
-                また、スポットライトに内蔵しやすいコンパクト設計のため、内装デザインを邪魔せず、ミニマルな美しさを損なわない照明ソリューションとして活用されています。
-              </p>
-            </SubSection>
-            <SubSection title="展示会ブース・ショールームのディスプレイ演出">
-              <p>
-                展示会やショールームでは、限られたスペース内でいかに印象的な演出を行うかが勝負となります。
-                <br />
-                COBは小型で高輝度なため、目立ちにくい場所に設置しても強い発光効果を得られるのが強み。
-                <br />
-                また、光のムラが少ないため、大型モニターや装飾壁に組み込んだ場合でもコンテンツを均一に照らすことが可能です。
-                <br />
-                とくにインタラクティブなブースやLEDビジョンと連携する演出においては、COBの面発光性・放熱性・デザイン自由度が高く評価されています。
-              </p>
-            </SubSection>
-            <SubSection title="屋外サイネージ・大型LEDビジョン">
-              <p>
-                COBのもう一つの得意分野が屋外向けの大型LEDディスプレイです。
-                <br />
-                従来のSMD方式では発光点が分離して見えやすく、視認距離によってはちらつきや粒状感が出ることも。
-                <br />
-                COBは密集したLEDチップを基板に一体化しているため、画素密度が高く、より滑らかな映像表示が可能になります。
-                <br />
-                また、放熱性能にも優れているため、長時間稼働する屋外ディスプレイや電子看板での使用にも適しています。
-                <br />
-                特に天候や気温変化が激しい環境下でも安定したパフォーマンスを維持できるため、交通広告や屋外イベントのサイネージにも安心して導入できます。
-              </p>
-            </SubSection>
-            <SubSection title="撮影・スタジオ照明（映像制作・放送業界）">
-              <p>
-                映像や写真撮影において、照明はクオリティを大きく左右する要素です。
-                <br />
-                COB
-                LEDは高演色性（CRI90以上）かつ、自然な色再現ができるため、人物の肌色・商品の質感を忠実に描写することが可能です。
-                <br />
-                また、即時点灯性・フリッカーフリー（ちらつき防止）性能が高く、動画撮影やライブ配信などにも最適。
-                <br />
-                SMDに比べてノイズの少ない均一な光を得られるため、映像編集時の色補正の手間も軽減されます。
-                <br />
-                多くのプロフェッショナル用照明メーカーがCOBベースの製品を採用しており、映像制作現場でも事実上のスタンダードになりつつあります。
-              </p>
-            </SubSection>
-            <SubSection title="医療現場・精密作業のための作業灯">
-              <p>
-                COBの面発光特性と高演色性は、医療用ライトや工業系の作業照明にも最適です。
-                <br />
-                影が出にくく、長時間の作業でも目が疲れにくい自然な光を提供できるため、外科手術、歯科治療、電子基板の検査・修理といった細かい作業においても活躍。
-                <br />
-                また、発熱が少なく器具の表面温度も上がりにくいため、作業環境の安全性にも貢献します。
-                <br />
-                長寿命かつメンテナンス頻度が低いことから、医療機器・検査装置にも多数採用実績があります。
-              </p>
-            </SubSection>
+            <div className="[&_h3]:inline-block [&_h3]:border-b [&_h3]:px-1 [&_p]:text-white">
+              <SubSection title="アパレルショップのウィンドウ広告">
+                <div className="flex flex-col sm:flex-row justify-center gap-3 mx-auto mb-10 md:mb-16">
+                  <p className="w-full md:w-3/5">
+                    COB LEDは<strong>高い演色性（CRI）を誇る</strong>
+                    ため、服の質感や色味を忠実に再現する光が求められるファッション業界で高評価を得ています。
+                    <br />
+                    とくにハイブランド店舗では、商品そのものが光によって魅力を左右されるため、明るすぎず、かつムラのない美しい照明が必須です。
+                    <br />
+                    COBの面発光特性により影が出にくく、
+                    <strong>対象物を自然に浮かび上がらせる演出</strong>
+                    が可能です。
+                  </p>
+                  <div className="w-full md:w-2/5 relative">
+                    {/* <Image
+                      src="/images/blog/led-cob-difference/PN-junction.webp"
+                      alt=""
+                      width={900}
+                      height={900}
+                      className="object-contain w-full"
+                    /> */}
+                    <div className="relative w-full pb-[56.25%]">
+                      <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="absolute inset-0 w-full h-full object-cover"
+                      >
+                        <source src="/videos/film03.mp4" type="video/mp4" />
+                      </video>
+                    </div>
+                  </div>
+                </div>
+              </SubSection>
+              <SubSection title="展示会ブース・ショールームのディスプレイ演出">
+                <p>
+                  展示会やショールームでは、限られたスペース内でいかに印象的な演出を行うかが勝負となります。
+                  <br />
+                  COBは小型で高輝度なため、
+                  <strong>
+                    目立ちにくい場所に設置しても強い発光効果を得られる
+                  </strong>
+                  のが強みです。
+                  <br />
+                  また、光のムラが少ないため、
+                  <strong>
+                    大型モニターや装飾壁に組み込んだ場合でもコンテンツを均一に照らす
+                  </strong>
+                  ことが可能です。
+                  <br />
+                  とくにインタラクティブなブースやLEDビジョンと連携する演出においては、COBの面発光性・放熱性・デザイン自由度が高く評価されています。
+                </p>
+              </SubSection>
+              <SubSection title="屋外サイネージ・大型LEDビジョン">
+                <p>
+                  COBのもう一つの得意分野が屋外向けの大型LEDディスプレイです。
+                  <br />
+                  従来のSMD方式では発光点が分離して見えやすく、視認距離によってはちらつきや粒状感が出ることも。
+                  <br />
+                  COBは密集したLEDチップを基板に一体化しているため、画素密度が高く、より滑らかな映像表示が可能になります。
+                  <br />
+                  また、放熱性能にも優れているため、長時間稼働する屋外ディスプレイや電子看板での使用にも適しています。
+                  <br />
+                  特に天候や気温変化が激しい環境下でも安定したパフォーマンスを維持できるため、交通広告や屋外イベントのサイネージにも安心して導入できます。
+                </p>
+              </SubSection>
+              <SubSection title="撮影・スタジオ照明（映像制作・放送業界）">
+                <p>
+                  映像や写真撮影において、照明はクオリティを大きく左右する要素です。
+                  <br />
+                  COB
+                  LEDは高演色性（CRI90以上）かつ、自然な色再現ができるため、人物の肌色・商品の質感を忠実に描写することが可能です。
+                  <br />
+                  また、即時点灯性・フリッカーフリー（ちらつき防止）性能が高く、動画撮影やライブ配信などにも最適。
+                  <br />
+                  SMDに比べてノイズの少ない均一な光を得られるため、映像編集時の色補正の手間も軽減されます。
+                  <br />
+                  多くのプロフェッショナル用照明メーカーがCOBベースの製品を採用しており、映像制作現場でも事実上のスタンダードになりつつあります。
+                </p>
+              </SubSection>
+              <SubSection title="医療現場・精密作業のための作業灯">
+                <p>
+                  COBの面発光特性と高演色性は、医療用ライトや工業系の作業照明にも最適です。
+                  <br />
+                  影が出にくく、長時間の作業でも目が疲れにくい自然な光を提供できるため、外科手術、歯科治療、電子基板の検査・修理といった細かい作業においても活躍。
+                  <br />
+                  また、発熱が少なく器具の表面温度も上がりにくいため、作業環境の安全性にも貢献します。
+                  <br />
+                  長寿命かつメンテナンス頻度が低いことから、医療機器・検査装置にも多数採用実績があります。
+                </p>
+              </SubSection>
+            </div>
 
             <p>
               このように、COB

@@ -34,7 +34,7 @@ export default async function ProductsPage() {
           </h2>
 
           <section className="mb-28 md:mb-40">
-            <h3 className="text-2xl md:text-3xl lg:text-4xl md:!leading-loose mb-8 md:mb-10">
+            <h3 className="text-xl md:text-2xl lg:text-3xl md:!leading-loose mb-3 md:mb-5">
               圧倒的なインパクトで
               <br className="xs:hidden" />
               周囲と差をつける。
@@ -123,7 +123,7 @@ export default async function ProductsPage() {
               </div>
               <div className="flex justify-center">
                 <Image
-                  src="/images/products/02.webp.png"
+                  src="/images/products/02.webp"
                   alt={`${mainData.keyWords}`}
                   width={500}
                   height={300}
@@ -151,7 +151,6 @@ export default async function ProductsPage() {
             <p className="text-center mb-12 md:mb-20">
               Youtubeに掲載されている{mainData.keyWords}
               ・デジタルサイネージの事例をご紹介します。
-              <br />
               <br />
               <span className="text-[0.9em]">
                 ※当サイトでは、より分かりやすい情報提供のため、YouTube動画を引用・埋め込み形式で掲載しています。著作権は各権利者に帰属します。

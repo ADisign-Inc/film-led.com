@@ -19,8 +19,22 @@ const data = [
   {
     label: "所在地",
     value: [
-      "福岡支店\n〒812-0008 福岡県福岡市博多区東光2-2-13",
-      "京都支店\n〒604-8426 京都府京都市中京区西ノ京船塚町16-27",
+      "福岡本社\n" +
+        mainData.companyAddress.postalCode +
+        " " +
+        mainData.companyAddress.location,
+      "京都支店\n" +
+        mainData.companyAddressKyoto.postalCode +
+        " " +
+        mainData.companyAddressKyoto.location,
+      "福岡倉庫\n" +
+        mainData.warehouseFukuoka.postalCode +
+        " " +
+        mainData.warehouseFukuoka.location,
+      "埼玉倉庫\n" +
+        mainData.warehouseSaitama.postalCode +
+        " " +
+        mainData.warehouseSaitama.location,
     ],
   },
   { label: "代表取締役", value: mainData.representative },
@@ -58,14 +72,22 @@ export default function CompanyPage() {
                       {typeof item.value === "string"
                         ? item.value
                         : Array.isArray(item.value)
-                        ? item.value.map((line, i) => (
-                            <div key={i} className={i === 0 ? "mb-3" : ""}>
-                              {line.split("\n").map((part, j) => (
-                                <div key={j}>{part}</div>
-                              ))}
-                            </div>
-                          ))
-                        : item.value}
+                          ? item.value.map((line, i) => (
+                              <div
+                                key={i}
+                                className={
+                                  item.label === "所在地" &&
+                                  i < item.value.length - 1
+                                    ? "mb-3"
+                                    : ""
+                                }
+                              >
+                                {line.split("\n").map((part, j) => (
+                                  <div key={j}>{part}</div>
+                                ))}
+                              </div>
+                            ))
+                          : item.value}
                     </td>
                   </tr>
                 ))}

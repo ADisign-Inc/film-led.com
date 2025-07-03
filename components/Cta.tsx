@@ -195,7 +195,7 @@ export function Cta() {
         </p>
 
         <div className="flex justify-center">
-          <div className="grid grid-cols-3 lg:grid-cols-6 gap-1 justify-center items-center">
+          <div className="grid grid-cols-3 lg:grid-cols-6 gap-2 md:gap-3 justify-center items-center">
             {products.map((product) => (
               <Link
                 href={product.url}

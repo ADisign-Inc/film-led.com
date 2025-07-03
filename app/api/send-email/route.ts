@@ -24,6 +24,9 @@ export async function POST(request: NextRequest) {
       type,
     });
 
+    // 送信元メールアドレスの設定
+    const fromEmail = process.env.FROM_EMAIL || "noreply@film-led.com";
+
     // お問い合わせ種別の日本語変換
     const typeLabels = {
       general: "一般的なお問い合わせ",
@@ -36,7 +39,7 @@ export async function POST(request: NextRequest) {
 
     // 管理者向けメール送信
     await resend.emails.send({
-      from: "noreply@film-led.com", // 認証済みドメインを使用
+      from: fromEmail,
       to: [process.env.ADMIN_EMAIL || "shiwa.adisign@gmail.com"],
       subject: `お問い合わせ: ${name}様より`,
       html: `
@@ -70,10 +73,10 @@ export async function POST(request: NextRequest) {
     // お客様向け自動返信メール送信
     console.log("=== お客様向けメール送信開始 ===");
     console.log("送信先:", email);
-    console.log("送信元:", "noreply@resend.dev");
+    console.log("送信元:", fromEmail);
 
     const customerEmailResult = await resend.emails.send({
-      from: "noreply@film-led.com", // 認証済みドメインを使用
+      from: fromEmail,
       to: [email],
       subject: "お問い合わせを受け付けました - film-led.com",
       html: `

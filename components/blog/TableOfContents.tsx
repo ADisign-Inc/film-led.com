@@ -7,8 +7,8 @@ type TableOfContentsProps = {
 
 export const TableOfContents = ({ items }: TableOfContentsProps) => {
   return (
-    <section className="index md:w-2/3 mx-auto bg-white/10 backdrop-blur-sm p-8 xs:p-10 md:p-16">
-      <p className="text-lg md:text-xl lg:text-2xl text-center font-semibold mb-6 md:mb-10">
+    <section className="index w-11/12 xs:w-5/6 sm:w-2/3 lg:w-3/5 mx-auto bg-white/10 backdrop-blur-sm px-6 py-8 md:py-12 md:px-16">
+      <p className="text-xl md:text-2xl lg:text-3xl text-center font-semibold mb-3 md:mb-6">
         目 次
       </p>
       <ul className="list-decimal ml-5 space-y-4 sm:space-y-6">

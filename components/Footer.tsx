@@ -7,18 +7,18 @@ const FooterItems = [
   { href: "/cases", label: "活用事例" },
   { href: "/archives", label: "導入実績" },
   { href: "/products", label: "製品情報" },
-  { href: "/contents", label: "コンテンツ制作" },
-  { href: "/flow", label: "導入の流れ" },
-  { href: "/blog", label: "ブログ" },
 ];
 
 const FooterItems02 = [
+  { href: "/contents", label: "コンテンツ制作" },
+  { href: "/flow", label: "導入の流れ" },
+  { href: "/blog", label: "ブログ" },
   { href: "/faq", label: "FAQ" },
-  { href: "/company", label: "会社概要" },
-  { href: mainData.contact.url, label: "お問い合わせ" },
 ];
 
 const FooterItems03 = [
+  { href: "/company", label: "会社概要" },
+  { href: mainData.contact.url, label: "お問い合わせ" },
   { href: "/privacy-policy", label: "プライバシーポリシー" },
   // { href: "#", label: "利用規約" },
   // { href: "#", label: "特定商取引法に基づく表記" },
@@ -30,7 +30,7 @@ export function Footer() {
       <div className="container max-w-7xl mx-auto">
         <div className="md:flex gap-x-10 md:justify-between">
           <div className="mb-12 md:mb-0">
-            <div className="w-32 md:w-40 mb-2">
+            <div className="w-32 md:w-40 mb-3">
               <Link href="/">
                 <Image
                   src="/images/logo-dark.svg"
@@ -42,11 +42,11 @@ export function Footer() {
               </Link>
             </div>
 
-            <p className="mb-6">{mainData.companyName}</p>
+            <p className="mb-5">{mainData.companyName}</p>
 
             <div className="flex gap-x-10">
               <ul>
-                <li className="font-bold mb-1">福岡支店</li>
+                <li className="font-bold mb-1">福岡本社</li>
                 <li>{mainData.companyAddress.postalCode}</li>
                 <li className="mb-1">{mainData.companyAddress.location}</li>
                 <li>TEL: {mainData.contact.telFukuoka}</li>
@@ -58,7 +58,6 @@ export function Footer() {
                 <li className="mb-1">
                   {mainData.companyAddressKyoto.location}
                 </li>
-                {/* <li>TEL: {mainData.contact.telKyoto}</li> */}
               </ul>
             </div>
           </div>
@@ -91,7 +90,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-gray-400/50 mt-8 pt-3 md:pt-8 flex flex-col sm:flex-row justify-between items-center">
-          <p className="text-[10px] sm:text-xs text-gray-400">
+          <p className="text-[10px] sm:text-xs text-gray-300">
             © {new Date().getFullYear()} {mainData.companyNameEn} All Rights
             Reserved.
           </p>

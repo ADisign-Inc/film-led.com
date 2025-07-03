@@ -86,7 +86,7 @@ strong {
   }
 
   h2 {
-    @apply text-lg md:text-2xl lg:text-3xl text-start flex items-center border-b border-gray-500 pb-3 md:pb-5 gap-4 md:gap-6 mb-10 md:mb-20 after:hidden;
+    @apply text-lg md:text-2xl lg:text-3xl text-start flex items-center border-b border-gray-500 pb-3 md:pb-5 gap-4 md:gap-6 mb-8 md:mb-14 after:hidden;
     span {
       @apply w-1 h-6 sm:h-8 md:h-10 bg-yellow-400/90 mt-0;
     }
@@ -97,7 +97,7 @@ strong {
   }
 
   section {
-    @apply mb-20 md:mb-32;
+    @apply mb-16 md:mb-28;
   }
 
   p {
