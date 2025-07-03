@@ -635,23 +635,34 @@ export default async function AboutPage() {
                 </div>
               </SubSection>
               <SubSection title="展示会ブース・ショールームのディスプレイ演出">
-                <p>
-                  展示会やショールームでは、限られたスペース内でいかに印象的な演出を行うかが勝負となります。
-                  <br />
-                  COBは小型で高輝度なため、
-                  <strong>
-                    目立ちにくい場所に設置しても強い発光効果を得られる
-                  </strong>
-                  のが強みです。
-                  <br />
-                  また、光のムラが少ないため、
-                  <strong>
-                    大型モニターや装飾壁に組み込んだ場合でもコンテンツを均一に照らす
-                  </strong>
-                  ことが可能です。
-                  <br />
-                  とくにインタラクティブなブースやLEDビジョンと連携する演出においては、COBの面発光性・放熱性・デザイン自由度が高く評価されています。
-                </p>
+                <div className="flex flex-col sm:flex-row justify-center gap-3 mx-auto mb-10 md:mb-16">
+                  <p className="w-full md:w-3/5">
+                    展示会やショールームでは、限られたスペース内でいかに印象的な演出を行うかが勝負となります。
+                    <br />
+                    COBは小型で高輝度なため、
+                    <strong>
+                      目立ちにくい場所に設置しても強い発光効果を得られる
+                    </strong>
+                    のが強みです。
+                    <br />
+                    また、光のムラが少ないため、
+                    <strong>
+                      大型モニターや装飾壁に組み込んだ場合でもコンテンツを均一に照らす
+                    </strong>
+                    ことが可能です。
+                    <br />
+                    とくにインタラクティブなブースやLEDビジョンと連携する演出においては、COBの面発光性・放熱性・デザイン自由度が高く評価されています。
+                  </p>
+                  <div className="w-full md:w-2/5 relative">
+                    <Image
+                      src="/images/cases/exhibition02.webp"
+                      alt=""
+                      width={900}
+                      height={900}
+                      className="object-contain w-full"
+                    />
+                  </div>
+                </div>
               </SubSection>
               <SubSection title="屋外サイネージ・大型LEDビジョン">
                 <p>

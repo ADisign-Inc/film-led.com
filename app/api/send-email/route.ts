@@ -1,10 +1,28 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// ビルド時にはResendを初期化しない（環境変数が未設定のため）
+let resend: Resend | null = null;
+
+// 実行時にResendを初期化
+function getResend() {
+  if (!resend && process.env.RESEND_API_KEY) {
+    resend = new Resend(process.env.RESEND_API_KEY);
+  }
+  return resend;
+}
 
 export async function POST(request: NextRequest) {
   try {
+    // APIキーが設定されていない場合はエラーを返す
+    if (!process.env.RESEND_API_KEY) {
+      console.error("RESEND_API_KEY が設定されていません");
+      return NextResponse.json(
+        { message: "メール送信サービスが設定されていません" },
+        { status: 500 }
+      );
+    }
+
     const body = await request.json();
     const { name, email, company, phone, message, type } = body;
 
@@ -38,7 +56,15 @@ export async function POST(request: NextRequest) {
     const typeLabel = typeLabels[type as keyof typeof typeLabels] || "未選択";
 
     // 管理者向けメール送信
-    await resend.emails.send({
+    const resendInstance = getResend();
+    if (!resendInstance) {
+      return NextResponse.json(
+        { message: "メール送信サービスが利用できません" },
+        { status: 500 }
+      );
+    }
+
+    await resendInstance.emails.send({
       from: fromEmail,
       to: [process.env.ADMIN_EMAIL || "shiwa.adisign@gmail.com"],
       subject: `お問い合わせ: ${name}様より`,
@@ -75,7 +101,7 @@ export async function POST(request: NextRequest) {
     console.log("送信先:", email);
     console.log("送信元:", fromEmail);
 
-    const customerEmailResult = await resend.emails.send({
+    const customerEmailResult = await resendInstance.emails.send({
       from: fromEmail,
       to: [email],
       subject: "お問い合わせを受け付けました - film-led.com",
